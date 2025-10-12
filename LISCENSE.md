@@ -1,1 +1,1 @@
-Pending
+License: Pending partner confirmation
