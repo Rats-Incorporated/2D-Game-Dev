@@ -12,3 +12,11 @@ Roxlynn Beecher – beecheco@oregonstate.edu
 **Partner:** none?
 **Repo Created:** October 2025  
 **Default Branch:** main  
+
+## Branching and Reviews
+
+- Create new branches for features: `feature/<short-description>`
+- Open a Pull Request into `main`
+- At least one team member must review before merging
+  
+
