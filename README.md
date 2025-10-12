@@ -9,7 +9,7 @@ Austin Christian – chrisaus@oregonstate.edu
 Michael Hand – handm@oregonstate.edu  
 Roxlynn Beecher – beecheco@oregonstate.edu  
 
-**Partner:** Alex Ulbrich
+**Partner:** Alex Ulbrich  
 **Repo Created:** October 2025  
 **Default Branch:** main  
 
