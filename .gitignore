@@ -1,0 +1,5 @@
+.gitignore
+2DGame/Library
+2DGame/Temp
+2DGame/Logs
+2DGame/UserSettings
