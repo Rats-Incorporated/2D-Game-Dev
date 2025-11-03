@@ -86,7 +86,11 @@ Review Guidelines:
 
 ## CI/CD
 
-(Link to pipeline definitions, list mandatory jobs, how to view logs/re-run jobs, and what must pass before merge/release.)  
+We are using GameCI Unity CI:
+https://github.com/neales44/2D-Game-Dev/blob/main/.github/workflows/unityci.yml
+
+Documentation found here:
+https://game.ci/docs/github/getting-started#simple-example
 
 ## Security & Secrets
 
