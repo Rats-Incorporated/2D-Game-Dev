@@ -30,6 +30,8 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
+          unityVersion: 6000.2.8f1
+          projectPath: "Unity Files"
 
       # Build
       - name: Build project
