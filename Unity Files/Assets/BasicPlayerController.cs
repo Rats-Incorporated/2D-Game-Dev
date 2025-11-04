@@ -125,7 +125,7 @@ public class BasicPlayerController : MonoBehaviour
         if (downTimer > 0) {
             if (rb.linearVelocity.y > 0) {
                 downTimer -= Time.deltaTime;
-                var downVec = new Vector3(0, -(downForce * Time.deltaTime), 0);
+                var downVec = new Vector2(0, -(downForce * Time.deltaTime));
                 rb.linearVelocity = rb.linearVelocity - downVec;
             } else {
                 downTimer = 0;
