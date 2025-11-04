@@ -59,7 +59,7 @@ jobs:
           targetPlatform: WebGL
           projectPath: "Unity Files"
           allowDirtyBuild: true
-          unityImage: unityci/editor:ubuntu-6000.2.8f1-webgl-3
+          customImage: unityci/editor:ubuntu-6000.2.8f1-base-0
         env:
           UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL}}
