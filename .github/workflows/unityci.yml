@@ -2,6 +2,11 @@ name: Actions 😎
 
 on: [push, pull_request]
 
+permissions:
+  contents: read
+  checks: write
+  pull-requests: write
+
 jobs:
   build:
     name: Build my project ✨
