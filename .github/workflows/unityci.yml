@@ -47,24 +47,11 @@ jobs:
           unityVersion: 6000.2.8f1
           targetPlatform: WebGL
           projectPath: "Unity Files"
+          allowDirtyBuild: true
         env:
           UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL}}
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
-
-      # CI sometimes crashes on Docker teardown, verifying it’s a false alarm
-      - name: Checking for Unity crash (debug)
-        if: ${{ steps.build.outcome == 'failure' }}
-        run: |
-          echo "Unity builder reported failure, checking logs..."
-          if grep -q "Run succeeded, no failures occurred" "Unity Files/Logs/Logfile.log" 2>/dev/null || \
-             grep -q "Run succeeded, no failures occurred" "/github/workspace/Unity Files/Logs/Logfile.log" 2>/dev/null; then
-            echo "✅ Build completed successfully, ignoring false Docker 139"
-            exit 0
-          else
-            echo "❌ Real failure detected"
-            exit 1
-          fi
 
       # Output
       - uses: actions/upload-artifact@v4
