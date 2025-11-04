@@ -56,7 +56,7 @@ jobs:
         continue-on-error: true
         with:
           unityVersion: 6000.2.8f1
-          targetPlatform: WebGL
+          targetPlatform: StandaloneWindows64
           projectPath: "Unity Files"
           allowDirtyBuild: true
           customImage: unityci/editor:ubuntu-6000.2.8f1-base-3
