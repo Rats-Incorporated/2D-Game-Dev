@@ -6,6 +6,7 @@ public class hit : MonoBehaviour
 {
 
     public SpriteRenderer spriteText;
+    public LogicScript Logic;
 
     private void Start()
     {
@@ -16,6 +17,9 @@ public class hit : MonoBehaviour
     {
         spriteText.enabled = true;
         Debug.Log("Player collided with " + collision.name);
+
+        // Slightly conflicting implementation: Set WinScreen to true here -- Can decide on which implementation to use moving forward.
+        Logic.WinGame();
     }
     void OnTriggerExit2D(Collider2D collision)
     {

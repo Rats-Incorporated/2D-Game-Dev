@@ -3,6 +3,7 @@ using UnityEngine;
 public class win_block : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public LogicScript Logic;
     void Start()
     {
         
@@ -18,10 +19,11 @@ public class win_block : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<BasicPlayerController>().can_win){
             Destroy(gameObject);
+            Logic.TempMessage("Door Unlocked!", 2f);
         }
         else
         {
-            Debug.Log("Can't pass this yet...");
+            Logic.TempMessage("Can't go through here yet...", 2f);
         }
     }
 }
