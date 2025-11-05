@@ -28,9 +28,9 @@ public class BasicPlayerController : MonoBehaviour
     
     // this is how long the player has to hold space for max height
     // otherwise, letting go applies a little downward force
-    public float jumpTimer = 0.4f;
+    public float jumpTimer = 0.6f;
     private float jumpTimerStore = 0.0f;
-    public float downForce = 0.1f;
+    public float downForce = 0.4f;
     private float downTimer = 0.0f;
 
     // pickup values (items, etc)
