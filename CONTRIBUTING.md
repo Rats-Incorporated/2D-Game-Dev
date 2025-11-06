@@ -49,7 +49,7 @@ Pushing to main should only be done after atleast 1 peer review
 Explain how to file issues, required templates/labels, estimation, and triage/assignment practices.  
 
 Issues/bug reports should be added to:  
-https://github.com/neales44/2D-Game-Dev/issues  
+https://github.com/Rats-Incorporated/2D-Game-Dev/issues  
 
 New Features should added to the Project Plan Board:  
 https://github.com/users/neales44/projects/3  
@@ -87,7 +87,7 @@ Review Guidelines:
 ## CI/CD
 
 We are using GameCI Unity CI:
-https://github.com/neales44/2D-Game-Dev/blob/main/.github/workflows/unityci.yml
+https://github.com/Rats-Incorporated/2D-Game-Dev/blob/main/.github/workflows/unityci.yml
 
 Documentation found here:
 https://game.ci/docs/github/getting-started#simple-example
