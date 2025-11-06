@@ -64,10 +64,6 @@ public class BasicPlayerController : MonoBehaviour
         // ground collision
         // making some left/right rays to cast based on input distance
 
-
-
-
-
         // adjust for player scale size
         float scalex = Mathf.Abs(transform.lossyScale.x);
         float scaley = Mathf.Abs(transform.lossyScale.y);
