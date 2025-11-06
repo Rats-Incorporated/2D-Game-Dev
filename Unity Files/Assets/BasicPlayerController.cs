@@ -21,6 +21,7 @@ public class BasicPlayerController : MonoBehaviour
     private bool spaceLocked = false;
     private bool alreadyJumped = false;
     
+    
     // this is to make jumps distinct, basically only rechecking to reset jumps
     // once the player has fully left the ground or this pity timer has expired
     public float pityTimer = 0.2f;
@@ -36,9 +37,16 @@ public class BasicPlayerController : MonoBehaviour
     // pickup values (items, etc)
     public bool can_win = false;
 
+    Animator animator;
+    bool isFacingRight = false;
+    float horizontalInput;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        rb.freezeRotation = true; //Turns off char rotation
+        animator = GetComponent<Animator>();
+
         jumpCount = jumpTotal;
     }
 
@@ -49,18 +57,34 @@ public class BasicPlayerController : MonoBehaviour
         var UpDirection = new Vector2(0, 10);
         var RightDirection = new Vector2(10, 0);
 
+        // flipping sprite
+        horizontalInput = Input.GetAxis("Horizontal");
+        FlipSprite();
+
         // ground collision
         // making some left/right rays to cast based on input distance
-        var left_ray = transform.position;
+
+
+
+
+
+        // adjust for player scale size
+        float scalex = Mathf.Abs(transform.lossyScale.x);
+        float scaley = Mathf.Abs(transform.lossyScale.y);
+        float scaleHalf = rayWidth * scalex;
+        Vector2 scaleloc = transform.position;
+        
+        var left_ray = scaleloc + Vector2.left * scaleHalf;
         left_ray.x -= rayWidth;
 
-        var right_ray = transform.position;
+        var right_ray = scaleloc + Vector2.right * scaleHalf;
         right_ray.x += rayWidth;
 
+
         // create each raycast for checking
-        RaycastHit2D center_hit = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDist, groundLayer);
-        RaycastHit2D left_hit = Physics2D.Raycast(left_ray, Vector2.down, groundCheckDist, groundLayer);
-        RaycastHit2D right_hit = Physics2D.Raycast(right_ray, Vector2.down, groundCheckDist, groundLayer);
+        RaycastHit2D center_hit = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDist * scaley, groundLayer);
+        RaycastHit2D left_hit = Physics2D.Raycast(left_ray, Vector2.down, groundCheckDist * scaley, groundLayer);
+        RaycastHit2D right_hit = Physics2D.Raycast(right_ray, Vector2.down, groundCheckDist * scaley, groundLayer);
 
         // if any of the rays hit, set onGround to true
         if (center_hit.collider != null || left_hit.collider != null || right_hit.collider != null)
@@ -79,6 +103,11 @@ public class BasicPlayerController : MonoBehaviour
         // Move Up
         if (Input.GetKey(KeyCode.Space))
         {
+            if (onGround)
+            {
+                onGround = false;
+                animator.SetBool("isJumping", !onGround);
+            }
             // spaceLocked prevents holding the space bar causing all jumps to be used rapidly
             if (jumpCount > 0 && !spaceLocked)
             {
@@ -151,6 +180,29 @@ public class BasicPlayerController : MonoBehaviour
         }
     }
 
+    void FlipSprite()
+    {
+        if(isFacingRight && horizontalInput < 0f || !isFacingRight && horizontalInput > 0f)
+        {
+            isFacingRight = !isFacingRight;
+            Vector3 ls = transform.localScale;
+            ls.x *= -1f;
+            transform.localScale = ls;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        onGround = true;
+        animator.SetBool("isJumping", !onGround);
+    }
+
+
+    private void FixedUpdate()
+    {
+        animator.SetFloat("xVelocity", Mathf.Abs(rb.linearVelocity.x));
+        animator.SetFloat("yVelocity", rb.linearVelocity.y);
+    }
     private bool pityTimerIncrement()
     {
         pityTimerStore += Time.deltaTime;
