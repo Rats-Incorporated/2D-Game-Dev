@@ -42,5 +42,10 @@ public class LogicScript : MonoBehaviour
     {
         WinScreen.SetActive(true);
     }
+
+    public void CloseWinScreen()
+    {
+        WinScreen.SetActive(false);
+    }
     
 }
