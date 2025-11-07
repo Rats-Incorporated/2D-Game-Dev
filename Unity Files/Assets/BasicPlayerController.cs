@@ -14,7 +14,7 @@ public class BasicPlayerController : MonoBehaviour
     // ground collision + jumping
     public int jumpTotal;
     private int jumpCount;
-    public float groundCheckDist;
+    public float groundCheckDist = 0.51f;
     public float rayWidth = 0.5f;
     public LayerMask groundLayer;
     private bool onGround = false;
@@ -81,7 +81,6 @@ public class BasicPlayerController : MonoBehaviour
         var right_ray = scaleloc + Vector2.right * scaleHalf;
         right_ray.x += rayWidth;
 
-
         // create each raycast for checking
         RaycastHit2D center_hit = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDist * scaley, groundLayer);
         RaycastHit2D left_hit = Physics2D.Raycast(left_ray, Vector2.down, groundCheckDist * scaley, groundLayer);
@@ -97,18 +96,13 @@ public class BasicPlayerController : MonoBehaviour
         }
 
         // purely for visual debugging, the visual lines represent the raycast checks
-        Debug.DrawRay(transform.position, Vector2.down * groundCheckDist, center_hit.collider != null ? Color.green : Color.red);
-        Debug.DrawRay(left_ray, Vector2.down * groundCheckDist, left_hit.collider != null ? Color.green : Color.red);
-        Debug.DrawRay(right_ray, Vector2.down * groundCheckDist, right_hit.collider != null ? Color.green : Color.red);
+        Debug.DrawRay(transform.position, Vector2.down * groundCheckDist * scaley, center_hit.collider != null ? Color.green : Color.red);
+        Debug.DrawRay(left_ray, Vector2.down * groundCheckDist * scaley, left_hit.collider != null ? Color.green : Color.red);
+        Debug.DrawRay(right_ray, Vector2.down * groundCheckDist * scaley, right_hit.collider != null ? Color.green : Color.red);
 
         // Move Up
         if (Input.GetKey(KeyCode.Space))
         {
-            if (onGround)
-            {
-                onGround = false;
-                animator.SetBool("isJumping", !onGround);
-            }
             // spaceLocked prevents holding the space bar causing all jumps to be used rapidly
             if (jumpCount > 0 && !spaceLocked)
             {
@@ -124,6 +118,7 @@ public class BasicPlayerController : MonoBehaviour
                 jumpTimerStore = 0;
                 pityTimerStore = 0;
                 jumpCount--;
+                animator.SetBool("isJumping", true);
             }
 
             if (spaceLocked) {
