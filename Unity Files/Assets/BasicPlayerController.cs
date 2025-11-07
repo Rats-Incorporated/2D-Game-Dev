@@ -48,6 +48,7 @@ public class BasicPlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
 
         jumpCount = jumpTotal;
+        FlipSpriteLogic();
     }
 
     void Update()
@@ -176,14 +177,21 @@ public class BasicPlayerController : MonoBehaviour
         }
     }
 
+    // Actual Sprite Flip
+    void FlipSpriteLogic()
+    {
+        isFacingRight = !isFacingRight;
+        Vector3 ls = transform.localScale;
+        ls.x *= -1f;
+        transform.localScale = ls;
+    }
+
+    //Calls Sprite Flip if conditions are met
     void FlipSprite()
     {
         if(isFacingRight && horizontalInput < 0f || !isFacingRight && horizontalInput > 0f)
         {
-            isFacingRight = !isFacingRight;
-            Vector3 ls = transform.localScale;
-            ls.x *= -1f;
-            transform.localScale = ls;
+            FlipSpriteLogic();
         }
     }
 
@@ -193,7 +201,7 @@ public class BasicPlayerController : MonoBehaviour
         animator.SetBool("isJumping", !onGround);
     }
 
-
+    // Updates Vars for VSM
     private void FixedUpdate()
     {
         animator.SetFloat("xVelocity", Mathf.Abs(rb.linearVelocity.x));
