@@ -25,7 +25,13 @@ jobs:
           key: Library-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
           restore-keys: |
             Library-
+      # Quality
+      - name: Install .net
+        run: dotnet tool install -g dotnet-format
 
+      - name: Format
+        run: dotnet format --verify-no-changes --verbosity diagnostic --folder "Unity Files" --include '**/*.cs'
+        
       # Tests
       - name: Run tests
         id: tests
@@ -48,13 +54,6 @@ jobs:
           docker system prune -af
         env:
           TMPDIR: /tmp
-
-      # Quality
-      - name: Install .net
-        run: dotnet tool install -g dotnet-format
-
-      - name: Format
-        run: dotnet format --verify-no-changes --verbosity diagnostic --include '**/*.cs'
 
       # Build
       - name: Build project
