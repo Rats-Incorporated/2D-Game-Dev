@@ -1,4 +1,4 @@
-name: Actions 😎
+name: Unity CI
 
 on: [push, pull_request]
 
@@ -8,29 +8,32 @@ permissions:
   pull-requests: write
 
 jobs:
-  build:
-    name: Build my project ✨
+  test:
+    name: Run Unity Tests
     runs-on: ubuntu-22.04
     steps:
-      # Checkout
+  
+      # checkout
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           lfs: true
 
-      # Cache
-      - uses: actions/cache@v3
+      # cache
+      - name: Cache
+        uses: actions/cache@v3
         with:
           path: Library
           key: Library-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
           restore-keys: |
             Library-
 
-      # Tests
+      # test
       - name: Run tests
         id: tests
         uses: game-ci/unity-test-runner@v4
-        continue-on-error: true
+        # commenting this out as it seems to not crash anymore?
+        # continue-on-error: true
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           unityVersion: 6000.2.8f1
@@ -41,7 +44,7 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
           TMPDIR: /tmp
 
-      # Help with memory / segfault issues
+      # help with memory / segfault issues
       - name: Clean up docker space
         run: |
           echo "Removing unused docker images and containers..."
@@ -49,11 +52,23 @@ jobs:
         env:
           TMPDIR: /tmp
 
-      # Build
+  build:
+    name: Build Unity Project
+    runs-on: ubuntu-22.04
+    needs: test
+    steps:
+
+      # checkout
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      # build
       - name: Build project
         id: build
         uses: game-ci/unity-builder@v4
-        continue-on-error: true
+        # continue-on-error: true
         with:
           unityVersion: 6000.2.8f1
           targetPlatform: StandaloneWindows64
@@ -69,8 +84,19 @@ jobs:
           BUILD_FILE: SamuRat.exe
           TMPDIR: /tmp
 
-      # Output
+      # output compiled build
       - uses: actions/upload-artifact@v4
         with:
           name: Build
           path: build
+
+  # linter
+  lint:
+    name: Lint C# Code
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run C# linter
+        run: |
+          dotnet tool install --global dotnet-format
+          dotnet format Unity Files
