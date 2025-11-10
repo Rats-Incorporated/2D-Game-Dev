@@ -8,9 +8,45 @@ permissions:
   pull-requests: write
 
 jobs:
+  cache:
+    name: Compile Library Folder
+    runs-on: ubuntu-22.04
+    steps:
+
+      # checkout
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      # cache
+      - name: Check cache for files
+        uses: actions/cache@v3
+        with:
+          path: Unity Files/Library
+          key: Library-${{ hashFiles('Unity Files/Assets/**', 'Unity Files/Packages/**', 'Unity Files/ProjectSettings/**') }}
+          restore-keys: |
+            Library-
+      
+      - name: Setup Unity Library folder
+        continue-on-error: true
+        uses: game-ci/unity-builder@v4
+        with:
+          unityVersion: 6000.2.8f1
+          targetPlatform: StandaloneWindows64
+          projectPath: "Unity Files"
+          allowDirtyBuild: true
+          customImage: unityci/editor:ubuntu-6000.2.8f1-windows-mono-3
+        env:
+          UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL}}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+          TMPDIR: /tmp
+
   test:
     name: Run Unity Tests
     runs-on: ubuntu-22.04
+    needs: cache
     steps:
   
       # checkout
@@ -20,7 +56,7 @@ jobs:
           lfs: true
 
       # cache
-      - name: Cache
+      - name: Check cache for files
         uses: actions/cache@v3
         with:
           path: Unity Files/Library
@@ -47,12 +83,12 @@ jobs:
           TMPDIR: /tmp
 
       # help with memory / segfault issues
-      - name: Clean up docker space
-        run: |
-          echo "Removing unused docker images and containers..."
-          docker system prune -af
-        env:
-          TMPDIR: /tmp
+      # - name: Clean up docker space
+      #   run: |
+      #     echo "Removing unused docker images and containers..."
+      #     docker system prune -af
+      #   env:
+      #     TMPDIR: /tmp
 
   build:
     name: Build Unity Project
@@ -66,7 +102,7 @@ jobs:
         with:
           lfs: true
 
-      - name: Cache
+      - name: Check cache for files
         uses: actions/cache@v3
         with:
           path: Unity Files/Library
@@ -104,13 +140,14 @@ jobs:
   lint:
     name: Lint C# Code
     runs-on: ubuntu-22.04
+    needs: cache
     steps:
 
       # checkout
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Cache
+      - name: Check cache for files
         uses: actions/cache@v3
         with:
           path: Unity Files/Library
