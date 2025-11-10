@@ -1,4 +1,4 @@
-name: Actions 😎
+name: Unity CI
 
 on: [push, pull_request]
 
@@ -8,58 +8,127 @@ permissions:
   pull-requests: write
 
 jobs:
-  build:
-    name: Build my project ✨
+  cache:
+    name: Compile Library Folder
     runs-on: ubuntu-22.04
     steps:
-      # Checkout
+
+      # checkout
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           lfs: true
 
-      # Cache
-      - uses: actions/cache@v3
+      # cache
+      - name: Check cache for files
+        id: unity-cache
+        uses: actions/cache@v3
         with:
-          path: Library
-          key: Library-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
+          path: Unity Files/Library
+          key: Library-${{ hashFiles('Unity Files/Assets/**', 'Unity Files/Packages/**', 'Unity Files/ProjectSettings/**') }}
+          restore-keys: |
+            Library-
+
+      - name: Check cache status
+        run: |
+          if [ "${{ steps.unity-cache.outputs.cache-hit }}" = "true" ]; then
+            echo "Cache found - skipping Library rebuild"
+          else
+            echo "No cache - rebuilding Library"
+          fi
+      
+      - name: Setup Unity Library folder
+        if: steps.unity-cache.outputs.cache-hit != 'true'
+        continue-on-error: true
+        uses: game-ci/unity-builder@v4
+        with:
+          unityVersion: 6000.2.8f1
+          targetPlatform: StandaloneWindows64
+          projectPath: "Unity Files"
+          allowDirtyBuild: true
+          customImage: unityci/editor:ubuntu-6000.2.8f1-windows-mono-3
+        env:
+          UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+          TMPDIR: /tmp
+
+  test:
+    name: Run Unity Tests
+    runs-on: ubuntu-22.04
+    needs: cache
+    steps:
+  
+      # checkout
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      # cache
+      - name: Check cache for files
+        uses: actions/cache@v3
+        with:
+          path: Unity Files/Library
+          key: Library-${{ hashFiles('Unity Files/Assets/**', 'Unity Files/Packages/**', 'Unity Files/ProjectSettings/**') }}
           restore-keys: |
             Library-
       # Quality
       - name: Install .net
         run: dotnet tool install -g dotnet-format
 
-      - name: Format
-        run: dotnet format . --folder --verify-no-changes --verbosity diagnostic --include '**/*.cs'
-        
-      # Tests
-      - name: Run tests
+      # test
+      - name: Run PlayMode tests
         id: tests
         uses: game-ci/unity-test-runner@v4
-        continue-on-error: true
+        # commenting this out as it seems to not crash anymore?
+        # continue-on-error: true
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           unityVersion: 6000.2.8f1
           projectPath: "Unity Files"
+          customImage: unityci/editor:ubuntu-6000.2.8f1-windows-mono-3
+          testMode: PlayMode
         env:
           UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL}}
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
           TMPDIR: /tmp
 
-      # Help with memory / segfault issues
-      - name: Clean up docker space
-        run: |
-          echo "Removing unused docker images and containers..."
-          docker system prune -af
-        env:
-          TMPDIR: /tmp
+      # help with memory / segfault issues
+      # - name: Clean up docker space
+      #   run: |
+      #     echo "Removing unused docker images and containers..."
+      #     docker system prune -af
+      #   env:
+      #     TMPDIR: /tmp
 
-      # Build
+  build:
+    name: Build Unity Project
+    runs-on: ubuntu-22.04
+    needs: test
+    steps:
+
+      # checkout
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      # cache
+      - name: Check cache for files
+        uses: actions/cache@v3
+        with:
+          path: Unity Files/Library
+          key: Library-${{ hashFiles('Unity Files/Assets/**', 'Unity Files/Packages/**', 'Unity Files/ProjectSettings/**') }}
+          restore-keys: |
+            Library-
+
+      # build
       - name: Build project
         id: build
         uses: game-ci/unity-builder@v4
-        continue-on-error: true
+        # continue-on-error: true
         with:
           unityVersion: 6000.2.8f1
           targetPlatform: StandaloneWindows64
@@ -75,8 +144,72 @@ jobs:
           BUILD_FILE: SamuRat.exe
           TMPDIR: /tmp
 
-      # Output
+      # output compiled build
       - uses: actions/upload-artifact@v4
         with:
           name: Build
           path: build
+
+  # linter
+  lint:
+    name: Lint C# Code
+    runs-on: ubuntu-22.04
+    needs: cache
+    permissions:
+      contents: write # to commit the linting changes
+    steps:
+
+      # checkout
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # cache
+      - name: Check cache for files
+        uses: actions/cache@v3
+        with:
+          path: Unity Files/Library
+          key: Library-${{ hashFiles('Unity Files/Assets/**', 'Unity Files/Packages/**', 'Unity Files/ProjectSettings/**') }}
+          restore-keys: |
+            Library-
+
+      # unity setup & sln file
+      - name: Setup Unity & generate sln
+        continue-on-error: true
+        uses: game-ci/unity-builder@v4
+        with:
+          unityVersion: 6000.2.8f1
+          projectPath: "Unity Files"
+          buildMethod: Packages.Rider.Editor.RiderScriptEditor.SyncSolution
+          customImage: unityci/editor:ubuntu-6000.2.8f1-windows-mono-3
+          targetPlatform: StandaloneWindows64
+        env:
+          UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL}}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+          TMPDIR: /tmp
+
+      - name: Install dotnet-format
+        run: dotnet tool install --global dotnet-format
+
+      - name: Add dotnet tools to PATH
+        run: echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
+
+      - name: List files to double check
+        run: ls -R "Unity Files"
+
+      - name: Run dotnet-format linter
+        run: |
+          dotnet-format "Unity Files/Unity Files.sln"
+
+      - name: Configure git for commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit formatted code
+        run: |
+          git add .
+          git commit -m "Apply dotnet-format fixes" || echo "No changes to commit"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

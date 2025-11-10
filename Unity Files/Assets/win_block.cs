@@ -7,18 +7,19 @@ public class win_block : MonoBehaviour
     public GameObject key;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.GetComponent<BasicPlayerController>().can_win){
+        if (collision.gameObject.GetComponent<BasicPlayerController>().can_win)
+        {
             Destroy(gameObject);
             Logic.TempMessage("Door Unlocked!", 2f);
             key.SetActive(false);

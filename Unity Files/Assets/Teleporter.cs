@@ -10,5 +10,5 @@ public class Teleporter : MonoBehaviour
     {
         return destination;
     }
-    
+
 }

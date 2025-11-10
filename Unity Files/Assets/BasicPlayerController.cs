@@ -20,13 +20,13 @@ public class BasicPlayerController : MonoBehaviour
     private bool onGround = false;
     private bool spaceLocked = false;
     private bool alreadyJumped = false;
-    
-    
+
+
     // this is to make jumps distinct, basically only rechecking to reset jumps
     // once the player has fully left the ground or this pity timer has expired
     public float pityTimer = 0.2f;
     private float pityTimerStore = 0.0f;
-    
+
     // this is how long the player has to hold space for max height
     // otherwise, letting go applies a little downward force
     public float jumpTimer = 0.6f;
@@ -55,7 +55,8 @@ public class BasicPlayerController : MonoBehaviour
     {
 
         // Disable movement if game is paused
-        if (Logic.Paused == true){
+        if (Logic.Paused == true)
+        {
             return;
         }
 
@@ -75,7 +76,7 @@ public class BasicPlayerController : MonoBehaviour
         float scaley = Mathf.Abs(transform.lossyScale.y);
         float scaleHalf = rayWidth * scalex;
         Vector2 scaleloc = transform.position;
-        
+
         var left_ray = scaleloc + Vector2.left * scaleHalf;
         left_ray.x -= rayWidth;
 
@@ -91,7 +92,8 @@ public class BasicPlayerController : MonoBehaviour
         if (center_hit.collider != null || left_hit.collider != null || right_hit.collider != null)
         {
             onGround = true;
-            if (!alreadyJumped) {
+            if (!alreadyJumped)
+            {
                 jumpCount = jumpTotal; // resets jumps every time ground is touched
             }
         }
@@ -122,19 +124,22 @@ public class BasicPlayerController : MonoBehaviour
                 animator.SetBool("isJumping", true);
             }
 
-            if (spaceLocked) {
+            if (spaceLocked)
+            {
                 jumpTimerStore += Time.deltaTime;
             }
-            
+
         }
 
         // prevent jump storage when getting into the air
-        if (alreadyJumped) {
+        if (alreadyJumped)
+        {
             // if timer expires, set false
             alreadyJumped = pityTimerIncrement();
             // if timer still hasn't expired, check ground
             // if off ground, set false
-            if (alreadyJumped) {
+            if (alreadyJumped)
+            {
                 alreadyJumped = onGround;
             }
         }
@@ -148,12 +153,16 @@ public class BasicPlayerController : MonoBehaviour
 
         // adding downward force on letting go of space
         // only applies if traveling upwards
-        if (downTimer > 0) {
-            if (rb.linearVelocity.y > 0) {
+        if (downTimer > 0)
+        {
+            if (rb.linearVelocity.y > 0)
+            {
                 downTimer -= Time.deltaTime;
                 var downVec = new Vector2(0, downForce * Time.deltaTime);
                 rb.linearVelocity = rb.linearVelocity - downVec;
-            } else {
+            }
+            else
+            {
                 downTimer = 0;
             }
         }
@@ -189,7 +198,7 @@ public class BasicPlayerController : MonoBehaviour
     //Calls Sprite Flip if conditions are met
     void FlipSprite()
     {
-        if(isFacingRight && horizontalInput < 0f || !isFacingRight && horizontalInput > 0f)
+        if (isFacingRight && horizontalInput < 0f || !isFacingRight && horizontalInput > 0f)
         {
             FlipSpriteLogic();
         }
@@ -210,9 +219,12 @@ public class BasicPlayerController : MonoBehaviour
     private bool pityTimerIncrement()
     {
         pityTimerStore += Time.deltaTime;
-        if (pityTimerStore <= pityTimer) {
+        if (pityTimerStore <= pityTimer)
+        {
             return true;
-        } else {
+        }
+        else
+        {
             return false;
         }
     }
