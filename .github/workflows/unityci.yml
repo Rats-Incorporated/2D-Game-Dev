@@ -168,18 +168,36 @@ jobs:
             Library-
 
       # unity setup & sln file
-      - name: Setup Unity & generate sln
-        continue-on-error: true
-        uses: game-ci/unity-builder@v4
+      # - name: Setup Unity & generate sln
+      #   continue-on-error: true
+      #   uses: game-ci/unity-builder@v4
+      #   with:
+      #     unityVersion: 6000.2.8f1
+      #     projectPath: "Unity Files"
+      #     customImage: unityci/editor:ubuntu-6000.2.8f1-windows-mono-3
+      #     targetPlatform: StandaloneWindows64
+      #     customParameters: -nographics -executeMethod UnityEditor.SyncVS.SyncSolution
+      #   env:
+      #     UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
+      #     UNITY_EMAIL: ${{ secrets.UNITY_EMAIL}}
+      #     UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+      #     TMPDIR: /tmp
+
+      # trying using Unity directly in docker
+      - name: Generate .sln and .csproj files
+        uses: docker://unityci/editor:ubuntu-6000.2.8f1-windows-mono-3
         with:
-          unityVersion: 6000.2.8f1
-          projectPath: "Unity Files"
-          customImage: unityci/editor:ubuntu-6000.2.8f1-windows-mono-3
-          targetPlatform: StandaloneWindows64
-          customParameters: -nographics -executeMethod UnityEditor.SyncVS.SyncSolution
+          args: >
+            /opt/unity/Editor/Unity
+            -batchmode
+            -nographics
+            -quit
+            -logfile /dev/stdout
+            -projectPath "Unity Files"
+            -executeMethod UnityEditor.SyncVS.SyncSolution
         env:
           UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
-          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL}}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
           TMPDIR: /tmp
 
