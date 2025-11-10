@@ -33,9 +33,9 @@ public class PlayerTests
         var RightDirection = new Vector2(10, 0);
         Vector2 playerPosition = player.transform.position;
 
-        rb.AddForce(RightDirection * movementIntensity * Time.deltaTime);
         while (timePassed < 3f)
         {
+            rb.AddForce(RightDirection * movementIntensity * Time.deltaTime);
             timePassed += Time.deltaTime;
             yield return null;
         }
@@ -44,9 +44,9 @@ public class PlayerTests
 
         playerPosition = player.transform.position;
 
-        rb.AddForce(-RightDirection * movementIntensity * Time.deltaTime);
         while (timePassed < 3f)
         {
+            rb.AddForce(-RightDirection * movementIntensity * Time.deltaTime);
             timePassed += Time.deltaTime;
             yield return null;
         }
