@@ -95,8 +95,28 @@ jobs:
     name: Lint C# Code
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v4
-      - name: Run C# linter
+      # checkout
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Unity for sln file generation
+        uses: game-ci/unity-builder@v4
+        with:
+          unityVersion: 6000.2.8f1
+
+      - name: Install dotnet-format
+        run: dotnet tool install --global dotnet-format
+
+      - name: Add dotnet tools to PATH
+        run: echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
+
+      - name: Generate Unity sln
         run: |
-          dotnet tool install --global dotnet-format
-          dotnet format --include "Unity Files"
+          /opt/unity/Editor/Unity \
+            -batchmode \
+            -projectPath . \
+            -quit
+
+      - name: Run dotnet-format linter
+        run: |
+          dotnet-format "Unity Files.sln" --verify-no-changes --folder ./Assets
