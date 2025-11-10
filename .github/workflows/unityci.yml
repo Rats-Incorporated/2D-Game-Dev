@@ -188,13 +188,16 @@ jobs:
         uses: docker://unityci/editor:ubuntu-6000.2.8f1-windows-mono-3
         with:
           args: >
-            /opt/unity/Editor/Unity
-            -batchmode
-            -nographics
-            -quit
+            /bin/bash -c "
+            /opt/unity/Editor/Unity -batchmode -nographics -quit
             -logfile /dev/stdout
-            -projectPath "Unity Files"
+            -projectPath 'Unity Files'
+            -executeMethod UnityEditor.EditorPrefs.SetString 'kScriptsDefaultApp' 'code';
+            /opt/unity/Editor/Unity -batchmode -nographics -quit
+            -logfile /dev/stdout
+            -projectPath 'Unity Files'
             -executeMethod UnityEditor.SyncVS.SyncSolution
+            "
         env:
           UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
