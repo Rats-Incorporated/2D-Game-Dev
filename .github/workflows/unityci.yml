@@ -212,4 +212,4 @@ jobs:
 
       - name: Run dotnet-format linter
         run: |
-          dotnet-format --check "Unity Files/Unity Files.sln"
+          dotnet-format --check "Unity Files/*.sln"
