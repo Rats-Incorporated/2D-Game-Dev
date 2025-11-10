@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class PlayerTests
 {
 
-    
+
     [UnityTest]
     public IEnumerator PlayerExistAndMove()
     {
