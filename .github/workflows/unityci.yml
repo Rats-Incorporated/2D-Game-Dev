@@ -73,6 +73,9 @@ jobs:
           key: Library-${{ hashFiles('Unity Files/Assets/**', 'Unity Files/Packages/**', 'Unity Files/ProjectSettings/**') }}
           restore-keys: |
             Library-
+      # Quality
+      - name: Install .net
+        run: dotnet tool install -g dotnet-format
 
       # test
       - name: Run PlayMode tests
