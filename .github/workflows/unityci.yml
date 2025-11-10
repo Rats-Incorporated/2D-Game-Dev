@@ -38,7 +38,7 @@ jobs:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           unityVersion: 6000.2.8f1
           projectPath: "Unity Files"
-          customImage: unityci/editor:ubuntu-6000.2.8f1-mono-3
+          customImage: unityci/editor:ubuntu-6000.2.8f1-windows-mono-3
           testMode: PlayMode
         env:
           UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
