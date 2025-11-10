@@ -100,14 +100,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Unity for sln file generation
+      - name: Setup Unity & generate sln
         uses: game-ci/unity-builder@v4
         with:
           unityVersion: 6000.2.8f1
-          targetPlatform: StandaloneWindows64
+          targetPlatform: None
           projectPath: "Unity Files"
           allowDirtyBuild: true
-          customImage: unityci/editor:ubuntu-6000.2.8f1-windows-mono-3
+          customImage: unityci/editor:ubuntu-6000.2.8f1-mono-3
         env:
           UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL}}
@@ -120,13 +120,6 @@ jobs:
       - name: Add dotnet tools to PATH
         run: echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
 
-      - name: Generate Unity sln
-        run: |
-          /opt/unity/Editor/Unity \
-            -batchmode \
-            -projectPath . \
-            -quit
-
       - name: Run dotnet-format linter
         run: |
-          dotnet-format "Unity Files.sln" --verify-no-changes --folder ./Assets
+          dotnet-format "Unity Files/Unity Files.sln" --verify-no-changes --folder ./Assets
