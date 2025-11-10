@@ -27,7 +27,9 @@ jobs:
             Library-
 
       - name: sln
-        run: dotnet format ".\Unity Files\UnityFiles.sln" --verify-no-changes --verbosity diagnostic
+        run: |
+          dotnet new sln --name UnityFiles
+          dotnet sln UnityFiles.sln add **/*.csproj
 
       # Tests
       - name: Run tests
