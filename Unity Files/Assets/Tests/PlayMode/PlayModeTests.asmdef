@@ -1,0 +1,12 @@
+{
+    "name": "PlayModeTests",
+    "references": [
+        "Assembly-CSharp"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ]
+}

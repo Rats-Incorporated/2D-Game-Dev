@@ -99,4 +99,4 @@ jobs:
       - name: Run C# linter
         run: |
           dotnet tool install --global dotnet-format
-          dotnet format Unity Files
+          dotnet format --include "Unity Files"
