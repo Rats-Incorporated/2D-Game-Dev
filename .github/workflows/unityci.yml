@@ -104,10 +104,10 @@ jobs:
         uses: game-ci/unity-builder@v4
         with:
           unityVersion: 6000.2.8f1
-          targetPlatform: None
+          targetPlatform: StandaloneWindows64
           projectPath: "Unity Files"
           allowDirtyBuild: true
-          customImage: unityci/editor:ubuntu-6000.2.8f1-mono-3
+          customImage: unityci/editor:ubuntu-6000.2.8f1-windows-mono-3
         env:
           UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL}}
