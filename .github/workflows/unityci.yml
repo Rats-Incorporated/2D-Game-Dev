@@ -31,6 +31,9 @@ jobs:
           dotnet new sln --name UnityFiles
           dotnet sln UnityFiles.sln add **/*.csproj
 
+      - name: check format
+        run: dotnet format "UnityFiles.sln" --verify-no-changes --verbosity diagnostic
+
       # Tests
       - name: Run tests
         id: tests
