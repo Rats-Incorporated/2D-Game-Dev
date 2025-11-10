@@ -30,7 +30,7 @@ jobs:
         run: dotnet tool install -g dotnet-format
 
       - name: Format
-        run: dotnet format whitespace "Unity Files" --verify-no-changes --verbosity diagnostic --folder --include '**/*.cs'
+        run: dotnet format . --folder --verify-no-changes --verbosity diagnostic --include '**/*.cs'
         
       # Tests
       - name: Run tests
