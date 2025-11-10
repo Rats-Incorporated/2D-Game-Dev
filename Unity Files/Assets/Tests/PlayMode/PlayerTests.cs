@@ -26,7 +26,7 @@ public class PlayerTests
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         Assert.IsNotNull(player, "Player object must be within the scene");
 
-        var movementIntensity = 10;
+        var movementIntensity = 4;
 
         Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
         Assert.IsNotNull(rb, "Player is expected to have Rigidbody2D component");
@@ -34,9 +34,9 @@ public class PlayerTests
         var RightDirection = new Vector2(10, 0);
         Vector2 playerPosition = player.transform.position;
 
-        while (timePassed < 1f)
+        rb.AddForce(RightDirection * movementIntensity);
+        while (timePassed < 3f)
         {
-            rb.AddForce(RightDirection * movementIntensity * Time.deltaTime);
             timePassed += Time.deltaTime;
             yield return null;
         }
@@ -45,9 +45,9 @@ public class PlayerTests
 
         playerPosition = player.transform.position;
 
-        while (timePassed < 1f)
+        rb.AddForce(-RightDirection * movementIntensity);
+        while (timePassed < 3f)
         {
-            rb.AddForce(-RightDirection * movementIntensity * Time.deltaTime);
             timePassed += Time.deltaTime;
             yield return null;
         }
