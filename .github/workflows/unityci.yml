@@ -13,24 +13,6 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
 
-      # this was taken from https://github.com/marketplace/actions/free-disk-space-ubuntu, which
-      # was found from https://game.ci/docs/troubleshooting/common-issues/#no-space-left-on-device
-      - name: Free Disk Space (Ubuntu)
-        uses: jlumbroso/free-disk-space@main
-        with:
-          # this might remove tools that are actually needed,
-          # if set to "true" but frees about 6 GB
-          tool-cache: false
-          
-          # all of these default to true, but feel free to set to
-          # "false" if necessary for your workflow
-          android: true
-          dotnet: true
-          haskell: true
-          large-packages: true
-          docker-images: true
-          swap-storage: true
-
       # checkout
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -54,6 +36,24 @@ jobs:
           else
             echo "No cache - rebuilding Library"
           fi
+
+      # this was taken from https://github.com/marketplace/actions/free-disk-space-ubuntu, which
+      # was found from https://game.ci/docs/troubleshooting/common-issues/#no-space-left-on-device
+      - name: Free Disk Space (Ubuntu)
+        uses: jlumbroso/free-disk-space@main
+        with:
+          # this might remove tools that are actually needed,
+          # if set to "true" but frees about 6 GB
+          tool-cache: false
+          
+          # all of these default to true, but feel free to set to
+          # "false" if necessary for your workflow
+          android: true
+          dotnet: true
+          haskell: true
+          large-packages: true
+          docker-images: true
+          swap-storage: true
 
       - name: Clearing space on Docker
         run: |
