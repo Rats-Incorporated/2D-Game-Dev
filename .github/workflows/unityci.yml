@@ -50,7 +50,8 @@ jobs:
           dotnet: false
           haskell: true
           large-packages: true
-          docker-images: true
+          # maybe this will fix build & push issues
+          docker-images: false
           swap-storage: true
 
       - name: Build and push
