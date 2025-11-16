@@ -33,10 +33,6 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
-      - name: List directory (debug)
-        run: |
-          ls -R .
-
       # this was taken from https://github.com/marketplace/actions/free-disk-space-ubuntu, which
       # was found from https://game.ci/docs/troubleshooting/common-issues/#no-space-left-on-device
       - name: Free Disk Space (Ubuntu)
@@ -58,15 +54,10 @@ jobs:
           docker-images: false
           swap-storage: true
 
-      - name: List directory 2 (debug)
-        run: |
-          ls -R .
-
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
-          #context: .
-          file: ./Dockerfile
+          context: .
           tags: myimage:latest
           outputs: type=docker,dest=/tmp/myimage.tar
 
