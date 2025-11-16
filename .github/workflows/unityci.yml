@@ -50,7 +50,9 @@ jobs:
           # all of these default to true, but feel free to set to
           # "false" if necessary for your workflow
           android: true
-          dotnet: true
+          # letting dotnet stay on all instances since we use C#
+          # if for some reason we need 4GB more, re-eval this
+          dotnet: false
           haskell: true
           large-packages: true
           docker-images: true
@@ -89,7 +91,7 @@ jobs:
           tool-cache: false
           
           android: true
-          dotnet: true
+          dotnet: false
           haskell: true
           large-packages: true
           docker-images: true
@@ -144,7 +146,7 @@ jobs:
           tool-cache: false
           
           android: true
-          dotnet: true
+          dotnet: false
           haskell: true
           large-packages: true
           docker-images: true
