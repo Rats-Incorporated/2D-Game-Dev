@@ -54,11 +54,15 @@ jobs:
           docker-images: false
           swap-storage: true
 
+      - name: List directory (debug)
+        run: |
+          ls -R .
+
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
           context: .
-          file: ./Dockerfile
+          file: Dockerfile
           tags: myimage:latest
           outputs: type=docker,dest=/tmp/myimage.tar
 
