@@ -37,7 +37,9 @@ jobs:
         id: unity-cache
         uses: actions/cache@v3
         with:
-          path: Unity Files/Library
+          path: | 
+            Unity Files/Library
+            Unity Files/Unity Files.sln
           key: Library-${{ hashFiles('Unity Files/Assets/**', 'Unity Files/Packages/**', 'Unity Files/ProjectSettings/**') }}
           restore-keys: |
             Library-
@@ -77,10 +79,10 @@ jobs:
         uses: game-ci/unity-builder@v4
         with:
           unityVersion: 6000.2.8f1
-          targetPlatform: StandaloneWindows64
           projectPath: "Unity Files"
-          allowDirtyBuild: true
+          buildMethod: Packages.Rider.Editor.RiderScriptEditor.SyncSolution
           customImage: unityci/editor:ubuntu-6000.2.8f1-windows-mono-3
+          targetPlatform: StandaloneWindows64
         env:
           UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
@@ -225,15 +227,17 @@ jobs:
 
       # cache
       - name: Check cache for files
+        id: unity-cache
         uses: actions/cache@v3
         with:
-          path: Unity Files/Library
+          path: Unity Files/Unity Files.sln
           key: Library-${{ hashFiles('Unity Files/Assets/**', 'Unity Files/Packages/**', 'Unity Files/ProjectSettings/**') }}
           restore-keys: |
             Library-
 
       # unity setup & sln file
       - name: Setup Unity & generate sln
+        if: steps.unity-cache.outputs.cache-hit != 'true'
         continue-on-error: true
         uses: game-ci/unity-builder@v4
         with:
