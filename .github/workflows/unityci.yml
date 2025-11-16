@@ -7,11 +7,84 @@ permissions:
   checks: write
   pull-requests: write
 
+# generally how this works is:
+# cache checks for library files
+# if C# & scripts are different -> rebuild library files -> cache them
+# after caching is complete, pass on to linting & testing
+# linting takes from cache, compiles project in unity to make a .sln file to then check the C# code
+# testing takes from cache, compiles project in unity to run the unit test format that unity itself provides
+# if tests pass -> build & compile code into .exe in the build job
+
+# if caching fails -> a memory or unity crash problem; needs re-run or manual review
+# if linting fails -> usually formatting problems; will auto fix
+# if testing fails -> code needs fixing / tests need re-evaluation; manual review
+# if building fails -> compiler errors; review C# scripts for errors
+
 jobs:
+
+  # setup and use from https://github.com/docker/build-push-action/issues/225
+  setup:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      # this was taken from https://github.com/marketplace/actions/free-disk-space-ubuntu, which
+      # was found from https://game.ci/docs/troubleshooting/common-issues/#no-space-left-on-device
+      - name: Free Disk Space (Ubuntu)
+        uses: jlumbroso/free-disk-space@main
+        with:
+          # this might remove tools that are actually needed,
+          # if set to "true" but frees about 6 GB
+          tool-cache: false
+          
+          # all of these default to true, but feel free to set to
+          # "false" if necessary for your workflow
+          android: true
+          # letting dotnet stay on all instances since we use C#
+          # if for some reason we need 4GB more, re-eval this
+          dotnet: false
+          haskell: true
+          large-packages: true
+          docker-images: true
+          swap-storage: true
+
+      - name: Build and push
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: ./Dockerfile
+          tags: myimage:latest
+          outputs: type=docker,dest=/tmp/myimage.tar
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: myimage
+          path: /tmp/myimage.tar
+
   cache:
     name: Compile Library Folder
     runs-on: ubuntu-22.04
+    needs: setup
     steps:
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+  
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: myimage
+          path: /tmp
+    
+      - name: Load Docker image
+        run: |
+          docker load --input /tmp/myimage.tar
+          docker image ls -a
 
       # checkout
       - name: Checkout repository
@@ -37,31 +110,26 @@ jobs:
             echo "No cache - rebuilding Library"
           fi
 
-      # this was taken from https://github.com/marketplace/actions/free-disk-space-ubuntu, which
-      # was found from https://game.ci/docs/troubleshooting/common-issues/#no-space-left-on-device
-      - name: Free Disk Space (Ubuntu)
-        if: steps.unity-cache.outputs.cache-hit != 'true'
-        uses: jlumbroso/free-disk-space@main
-        with:
-          # this might remove tools that are actually needed,
-          # if set to "true" but frees about 6 GB
-          tool-cache: false
+      # # this was taken from https://github.com/marketplace/actions/free-disk-space-ubuntu, which
+      # # was found from https://game.ci/docs/troubleshooting/common-issues/#no-space-left-on-device
+      # - name: Free Disk Space (Ubuntu)
+      #   if: steps.unity-cache.outputs.cache-hit != 'true'
+      #   uses: jlumbroso/free-disk-space@main
+      #   with:
+      #     # this might remove tools that are actually needed,
+      #     # if set to "true" but frees about 6 GB
+      #     tool-cache: false
           
-          # all of these default to true, but feel free to set to
-          # "false" if necessary for your workflow
-          android: true
-          # letting dotnet stay on all instances since we use C#
-          # if for some reason we need 4GB more, re-eval this
-          dotnet: false
-          haskell: true
-          large-packages: true
-          docker-images: true
-          swap-storage: true
-
-      - name: Clearing space on Docker
-        if: steps.unity-cache.outputs.cache-hit != 'true'
-        run: |
-          docker system prune -af --volumes
+      #     # all of these default to true, but feel free to set to
+      #     # "false" if necessary for your workflow
+      #     android: true
+      #     # letting dotnet stay on all instances since we use C#
+      #     # if for some reason we need 4GB more, re-eval this
+      #     dotnet: false
+      #     haskell: true
+      #     large-packages: true
+      #     docker-images: true
+      #     swap-storage: true
       
       - name: Setup Unity Library folder
         if: steps.unity-cache.outputs.cache-hit != 'true'
@@ -85,17 +153,31 @@ jobs:
     needs: cache
     steps:
 
-      - name: Free Disk Space (Ubuntu)
-        uses: jlumbroso/free-disk-space@main
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+  
+      - name: Download artifact
+        uses: actions/download-artifact@v2
         with:
-          tool-cache: false
+          name: myimage
+          path: /tmp
+    
+      - name: Load Docker image
+        run: |
+          docker load --input /tmp/myimage.tar
+          docker image ls -a
+
+      # - name: Free Disk Space (Ubuntu)
+      #   uses: jlumbroso/free-disk-space@main
+      #   with:
+      #     tool-cache: false
           
-          android: true
-          dotnet: false
-          haskell: true
-          large-packages: true
-          docker-images: true
-          swap-storage: true
+      #     android: true
+      #     dotnet: false
+      #     haskell: true
+      #     large-packages: true
+      #     docker-images: true
+      #     swap-storage: true
   
       # checkout
       - name: Checkout repository
@@ -116,13 +198,12 @@ jobs:
       - name: Run PlayMode tests
         id: tests
         uses: game-ci/unity-test-runner@v4
-        # commenting this out as it seems to not crash anymore?
-        # continue-on-error: true
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           unityVersion: 6000.2.8f1
           projectPath: "Unity Files"
           customImage: unityci/editor:ubuntu-6000.2.8f1-windows-mono-3
+          # PlayMode is what runs it as the actual game, otherwise EditorMode is for logic checking
           testMode: PlayMode
         env:
           UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
@@ -130,27 +211,37 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
           TMPDIR: /tmp
 
-      - name: Clearing space on Docker
-        run: |
-          docker system prune -af --volumes
-
   build:
     name: Build Unity Project
     runs-on: ubuntu-22.04
     needs: test
     steps:
 
-      - name: Free Disk Space (Ubuntu)
-        uses: jlumbroso/free-disk-space@main
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+  
+      - name: Download artifact
+        uses: actions/download-artifact@v2
         with:
-          tool-cache: false
+          name: myimage
+          path: /tmp
+    
+      - name: Load Docker image
+        run: |
+          docker load --input /tmp/myimage.tar
+          docker image ls -a
+
+      # - name: Free Disk Space (Ubuntu)
+      #   uses: jlumbroso/free-disk-space@main
+      #   with:
+      #     tool-cache: false
           
-          android: true
-          dotnet: false
-          haskell: true
-          large-packages: true
-          docker-images: true
-          swap-storage: true
+      #     android: true
+      #     dotnet: false
+      #     haskell: true
+      #     large-packages: true
+      #     docker-images: true
+      #     swap-storage: true
 
       # checkout
       - name: Checkout repository
@@ -193,10 +284,6 @@ jobs:
           name: Build
           path: build
 
-      - name: Clearing space on Docker
-        run: |
-          docker system prune -af --volumes
-
   # linter
   lint:
     name: Lint C# Code
@@ -206,18 +293,32 @@ jobs:
       contents: write # to commit the linting changes
     steps:
 
-      - name: Free Disk Space (Ubuntu)
-        uses: jlumbroso/free-disk-space@main
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+  
+      - name: Download artifact
+        uses: actions/download-artifact@v2
         with:
-          tool-cache: false
+          name: myimage
+          path: /tmp
+    
+      - name: Load Docker image
+        run: |
+          docker load --input /tmp/myimage.tar
+          docker image ls -a
 
-          # docker images & dotnet false for the dotnet install & commands
-          android: true
-          dotnet: false
-          haskell: true
-          large-packages: true
-          docker-images: false
-          swap-storage: true
+      # - name: Free Disk Space (Ubuntu)
+      #   uses: jlumbroso/free-disk-space@main
+      #   with:
+      #     tool-cache: false
+
+      #     # docker images & dotnet false for the dotnet install & commands
+      #     android: true
+      #     dotnet: false
+      #     haskell: true
+      #     large-packages: true
+      #     docker-images: false
+      #     swap-storage: true
 
       # checkout
       - name: Checkout repository
@@ -274,6 +375,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Clearing space on Docker
-        run: |
-          docker system prune -af --volumes
