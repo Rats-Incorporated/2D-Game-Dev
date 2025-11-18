@@ -14,12 +14,6 @@ public class LogicScript : MonoBehaviour
     public GameObject PauseScreen;
     public bool Paused = false;
 
-    // Player States
-    // could store this here, or in another logic storage
-    // file to pull from, but just leaving this as an idea
-    // in case this of interest
-    // public bool onGround = false;
-
     public void TempMessage(string msg, float dur = 2f)
     {
         BottomRightText.text = msg;

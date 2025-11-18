@@ -8,41 +8,25 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 public class PlayerController : MonoBehaviour
 {
     // other classes
-    public LogicScript Logic;
-    public PlayerGroundJump JumpState;
+    public LogicScript Logic; // game state
+    public PlayerGroundJump JumpState; // player jumping & ground collision tracking
 
     // general movement
-    private Rigidbody2D rb;
-    public GameObject cameraTarget;
-    public float movementIntensity;
-    public float downIntensity = 100.0f;
-    public float jumpVelocity;
+    private Rigidbody2D rb; // physics object
+    public GameObject cameraTarget; // what the camera is following
+    public float movementIntensity; // how fast left/right movements are
+    public float downIntensity = 100.0f; // how hard letting go of the spacebar pushes down
+    public float jumpVelocity; // jump speed/height
+    public float slowSpeed = 50.0f; // how fast the player slows down when pressing neither A or D
 
-    // ground collision + jumping
-    public int jumpTotal;
-    //private int jumpCount;
-    //public float groundCheckDist = 0.51f;
-    //public float rayWidth = 0.25f;
-    //public LayerMask groundLayer;
-    //private bool onGround = false;
-    //private bool spaceLocked = false;
-    //private bool alreadyJumped = false;
-
-    // this is to make jumps distinct, basically only rechecking to reset jumps
-    // once the player has fully left the ground or this pity timer has expired
-    //public float pityTimer = 0.2f;
-    //private float pityTimerStore = 0.0f;
-
-    // this is how long the player has to hold space for max height
-    // otherwise, letting go applies a little downward force
-    //public float jumpTimer = 0.6f;
-    //private float jumpTimerStore = 0.0f;
-    //public float downForce = 0.4f;
-    //private float downTimer = 0.0f;
+    // capacities
+    public int jumpTotal = 1;
+    public float maxHorizontalSpeed = 12.0f;
 
     // pickup values (items, etc)
     public bool can_win = false;
 
+    // sprite animation
     Animator animator;
     bool isFacingRight = false;
     float horizontalInput;
@@ -52,8 +36,6 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.freezeRotation = true; // Turns off char rotation
         animator = GetComponent<Animator>();
-
-        //jumpCount = jumpTotal;
         FlipSpriteLogic();
     }
 
@@ -74,7 +56,6 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         FlipSprite();
 
-
         // Jumping
         if (Input.GetKey(KeyCode.Space))
         {
@@ -89,7 +70,6 @@ public class PlayerController : MonoBehaviour
             JumpState.SetSpaceUpVars();
         }
 
-
         // adding downward force on letting go of space
         JumpDownforce();
 
@@ -102,25 +82,35 @@ public class PlayerController : MonoBehaviour
         // Move Right
         if (Input.GetKey(KeyCode.D))
         {
-            //rb.linearVelocityX = movementIntensity;
-            rb.AddForce(RightDirection * movementIntensity * Time.deltaTime);
+            if (maxHorizontalSpeed > rb.linearVelocityX) 
+            {
+                rb.AddForce(RightDirection * movementIntensity * Time.deltaTime);
+            }
         }
 
         // Move Left
         if (Input.GetKey(KeyCode.A))
         {
-            //rb.linearVelocityX = -movementIntensity;
-            rb.AddForce(-RightDirection * movementIntensity * Time.deltaTime);
+            if (-maxHorizontalSpeed < rb.linearVelocityX) 
+            {
+                rb.AddForce(-RightDirection * movementIntensity * Time.deltaTime);
+            }
         }
 
         // Not pressing either direction
-        // Right now this sets to zero, but could implement a tiny function that does a little slide into velocity of 0
-        // so that it gives the impression of a little momentum without being uncontrollable
-        // would also be worth looking into code of just switching standing position if clicking the opposite the last direction without moving
-        //if ((!Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.A)) || (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.A)))
-        //{
-        //    rb.linearVelocityX = 0;
-        //}
+        if ((!Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.A)) || (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.A)))
+        {
+            // moving left
+            if (rb.linearVelocityX < 0) 
+            {
+                rb.AddForce(RightDirection * slowSpeed * Time.deltaTime * Mathf.Abs(rb.linearVelocityX));
+            } 
+            // moving right
+            else if (rb.linearVelocityX > 0)
+            {
+                rb.AddForce(-RightDirection * slowSpeed * Time.deltaTime * Mathf.Abs(rb.linearVelocityX));
+            }
+        }
     }
 
     // Actual Sprite Flip
@@ -164,6 +154,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // applying the downward force on the player when letting go of space early
     private void JumpDownforce()
     {
         if (JumpState.downForceActive == true)
@@ -176,6 +167,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // handing all the conditions for when the player is jumping
     private void PlayerJump (Vector2 UpDirection)
     {
         // spaceLocked prevents holding the space bar causing all jumps to be used rapidly

@@ -19,14 +19,13 @@ public class PlayerGroundJump : MonoBehaviour
     public bool spaceLocked = false;
     public bool alreadyJumped = false;
     public bool downForceActive = false;
-    public bool pityTimerOverride = false;
 
     // private vars
-    public int jumpTotal;
-    public int jumpCount;
-    public float pityTimerStore = 0.0f;
-    public float jumpTimerStore = 0.0f;
-    public float downTimer = 0.0f;
+    private int jumpTotal;
+    private int jumpCount;
+    private float pityTimerStore = 0.0f;
+    private float jumpTimerStore = 0.0f;
+    private float downTimer = 0.0f;
 
     void Start()
     {

@@ -89,7 +89,7 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
           TMPDIR: /tmp
 
-  test:
+  build:
     name: Run Unity Tests & Build Game
     runs-on: ubuntu-22.04
     needs: cache
@@ -126,7 +126,6 @@ jobs:
 
       # test
       - name: Run PlayMode tests
-        id: tests
         uses: game-ci/unity-test-runner@v4
         # commenting this out as it seems to not crash anymore?
         # continue-on-error: true
@@ -144,7 +143,6 @@ jobs:
 
         # build
       - name: Build project
-        id: build
         uses: game-ci/unity-builder@v4
         # continue-on-error: true
         with:
@@ -167,65 +165,6 @@ jobs:
         with:
           name: Build
           path: build
-
-  # build:
-  #   name: Build Unity Project
-  #   runs-on: ubuntu-22.04
-  #   needs: test
-  #   steps:
-
-  #     # checkout
-  #     - name: Checkout repository
-  #       uses: actions/checkout@v4
-  #       with:
-  #         lfs: true
-
-  #     # cache
-  #     - name: Check cache for files
-  #       uses: actions/cache@v3
-  #       with:
-  #         path: Unity Files/Library
-  #         key: Library-${{ hashFiles('Unity Files/Assets/**', 'Unity Files/Packages/**', 'Unity Files/ProjectSettings/**') }}
-  #         restore-keys: |
-  #           Library-
-
-  #     - name: Free Disk Space (Ubuntu)
-  #       uses: jlumbroso/free-disk-space@main
-  #       with:
-  #         tool-cache: false
-          
-  #         android: true
-  #         dotnet: false
-  #         haskell: true
-  #         large-packages: true
-  #         docker-images: true
-  #         swap-storage: true
-
-  #     # build
-  #     - name: Build project
-  #       id: build
-  #       uses: game-ci/unity-builder@v4
-  #       # continue-on-error: true
-  #       with:
-  #         unityVersion: 6000.2.8f1
-  #         targetPlatform: StandaloneWindows64
-  #         projectPath: "Unity Files"
-  #         allowDirtyBuild: true
-  #         customImage: unityci/editor:ubuntu-6000.2.8f1-windows-mono-3
-  #       env:
-  #         UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
-  #         UNITY_EMAIL: ${{ secrets.UNITY_EMAIL}}
-  #         UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
-  #         BUILD_NAME: SamuRat
-  #         BUILD_PATH: build/SamuRat
-  #         BUILD_FILE: SamuRat.exe
-  #         TMPDIR: /tmp
-
-  #     # output compiled build
-  #     - uses: actions/upload-artifact@v4
-  #       with:
-  #         name: Build
-  #         path: build
 
   # linter
   lint:
@@ -294,7 +233,7 @@ jobs:
 
       - name: Run dotnet-format linter
         run: |
-          dotnet-format "Unity Files/Unity Files.sln"
+          dotnet-format -v diag "Unity Files/Unity Files.sln"
 
       - name: Configure git for commit
         run: |
