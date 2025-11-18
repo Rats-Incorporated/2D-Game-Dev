@@ -5,13 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class LogicScript : MonoBehaviour
 {
+    // Game States
     public Text InstructionText;
     public Text BottomRightText;
-    public BasicPlayerController player;
+    public PlayerController player;
     public win_block w_block;
     public GameObject WinScreen;
     public GameObject PauseScreen;
     public bool Paused = false;
+
+    // Player States
+    // could store this here, or in another logic storage
+    // file to pull from, but just leaving this as an idea
+    // in case this of interest
+    // public bool onGround = false;
 
     public void TempMessage(string msg, float dur = 2f)
     {
@@ -41,7 +48,7 @@ public class LogicScript : MonoBehaviour
 
     }
 
-    public void restartGame()
+    public void RestartGame()
     {
         Paused = false;
         Time.timeScale = 1.0f;

@@ -20,7 +20,7 @@ public class key : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.GetComponent<BasicPlayerController>().pickupkey();
+            collision.GetComponent<PlayerController>().PickupKey();
             InventoryKey.SetActive(true);
             Destroy(gameObject);
         }

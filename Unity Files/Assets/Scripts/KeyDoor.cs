@@ -18,7 +18,7 @@ public class win_block : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.GetComponent<BasicPlayerController>().can_win)
+        if (collision.gameObject.GetComponent<PlayerController>().can_win)
         {
             Destroy(gameObject);
             Logic.TempMessage("Door Unlocked!", 2f);
