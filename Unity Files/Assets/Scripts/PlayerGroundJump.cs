@@ -22,11 +22,11 @@ public class PlayerGroundJump : MonoBehaviour
     public bool pityTimerOverride = false;
 
     // private vars
-    private int jumpTotal;
-    private int jumpCount;
-    private float pityTimerStore = 0.0f;
-    private float jumpTimerStore = 0.0f;
-    private float downTimer = 0.0f;
+    public int jumpTotal;
+    public int jumpCount;
+    public float pityTimerStore = 0.0f;
+    public float jumpTimerStore = 0.0f;
+    public float downTimer = 0.0f;
 
     void Start()
     {
@@ -38,6 +38,13 @@ public class PlayerGroundJump : MonoBehaviour
     {
         GetGround();
         LeaveGroundCheck();
+
+        if (spaceLocked)
+        {
+            JumpTimerIncrement();
+        }
+
+        CheckDownForceActive();
     }
 
     // ground collision
@@ -95,6 +102,21 @@ public class PlayerGroundJump : MonoBehaviour
         }
     }
 
+    // function to check for when the downforce factor is active
+    private void CheckDownForceActive()
+    {
+        if (downTimer > 0.0f)
+        {
+            downTimer -= Time.deltaTime;
+            downForceActive = true;
+        }
+        else
+        {
+            downForceActive = false;
+            downTimer = 0.0f;
+        }
+    }
+
     // function to help with pity timer storage (pityTimerStore)
     private bool PityTimerIncrement()
     {
@@ -107,5 +129,33 @@ public class PlayerGroundJump : MonoBehaviour
         {
             return false;
         }
+    }
+
+    // function to increment the jumpTimerStore
+    private void JumpTimerIncrement()
+    {
+        jumpTimerStore += Time.deltaTime;
+    }
+
+    public int GetJumpCount()
+    {
+        return jumpCount;
+    }
+
+    // on jump vars
+    public void SetJumpVars()
+    {
+        jumpTimerStore = 0;
+        pityTimerStore = 0;
+        jumpCount--;
+        spaceLocked = true;
+        alreadyJumped = true;
+    }
+
+    // on letting go of space vars
+    public void SetSpaceUpVars()
+    {
+        downTimer = jumpTimer - jumpTimerStore;
+        spaceLocked = false;
     }
 }
