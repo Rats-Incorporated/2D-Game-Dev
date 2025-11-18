@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     // general movement
     private Rigidbody2D rb; // physics object
     public GameObject cameraTarget; // what the camera is following
-    public float movementIntensity; // how fast left/right movements are
+    public float movementIntensity = 70.0f; // how fast left/right movements are
     public float downIntensity = 100.0f; // how hard letting go of the spacebar pushes down
     public float jumpVelocity; // jump speed/height
     public float slowSpeed = 50.0f; // how fast the player slows down when pressing neither A or D
@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour
         // Move Right
         if (Input.GetKey(KeyCode.D))
         {
-            if (maxHorizontalSpeed > rb.linearVelocityX) 
+            if (maxHorizontalSpeed > rb.linearVelocityX)
             {
                 rb.AddForce(RightDirection * movementIntensity * Time.deltaTime);
             }
@@ -91,7 +91,7 @@ public class PlayerController : MonoBehaviour
         // Move Left
         if (Input.GetKey(KeyCode.A))
         {
-            if (-maxHorizontalSpeed < rb.linearVelocityX) 
+            if (-maxHorizontalSpeed < rb.linearVelocityX)
             {
                 rb.AddForce(-RightDirection * movementIntensity * Time.deltaTime);
             }

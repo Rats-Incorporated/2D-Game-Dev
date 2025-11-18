@@ -1032,7 +1032,7 @@ MonoBehaviour:
   Logic: {fileID: 189914681}
   JumpState: {fileID: 202558639}
   cameraTarget: {fileID: 2138870788}
-  movementIntensity: 8
+  movementIntensity: 90
   downIntensity: 100
   jumpVelocity: 1.1
   jumpTotal: 1
