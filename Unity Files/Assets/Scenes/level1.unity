@@ -300,6 +300,7 @@ GameObject:
   - component: {fileID: 92869122}
   - component: {fileID: 92869121}
   - component: {fileID: 92869120}
+  - component: {fileID: 92869128}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -391,18 +392,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BasicPlayerController
   Logic: {fileID: 1392659143}
+  JumpState: {fileID: 92869128}
   cameraTarget: {fileID: 1415337373}
-  movementIntensity: 70
-  jumpVelocity: 1.1
+  movementIntensity: 120
+  downIntensity: 100
+  jumpVelocity: 1.2
+  slowSpeed: 50
   jumpTotal: 1
-  groundCheckDist: 0.51
-  rayWidth: 0.25
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 1
-  pityTimer: 0.4
-  jumpTimer: 0.65
-  downForce: 12
+  maxHorizontalSpeed: 18
   can_win: 0
 --- !u!61 &92869124
 BoxCollider2D:
@@ -550,6 +547,31 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &92869128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92869119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a055ed3675fcc834cbc7026c0d2efa50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerGroundJump
+  player: {fileID: 92869123}
+  groundCheckDist: 0.51
+  rayWidth: 0.25
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 1
+  pityTimer: 0.2
+  jumpTimer: 0.6
+  downForce: 10
+  onGround: 0
+  spaceLocked: 0
+  alreadyJumped: 0
+  downForceActive: 0
 --- !u!1 &144824262
 GameObject:
   m_ObjectHideFlags: 0

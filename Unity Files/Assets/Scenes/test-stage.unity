@@ -1032,10 +1032,12 @@ MonoBehaviour:
   Logic: {fileID: 189914681}
   JumpState: {fileID: 202558639}
   cameraTarget: {fileID: 2138870788}
-  movementIntensity: 90
+  movementIntensity: 120
   downIntensity: 100
-  jumpVelocity: 1.1
+  jumpVelocity: 1.2
+  slowSpeed: 50
   jumpTotal: 1
+  maxHorizontalSpeed: 18
   can_win: 0
 --- !u!61 &202558632
 BoxCollider2D:
@@ -1274,12 +1276,11 @@ MonoBehaviour:
     m_Bits: 1
   pityTimer: 0.2
   jumpTimer: 0.6
-  downForce: 0.4
+  downForce: 10
   onGround: 0
   spaceLocked: 0
   alreadyJumped: 0
   downForceActive: 0
-  pityTimerOverride: 0
 --- !u!1 &203644212
 GameObject:
   m_ObjectHideFlags: 0

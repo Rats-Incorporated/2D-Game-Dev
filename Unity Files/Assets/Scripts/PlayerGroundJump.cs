@@ -76,6 +76,10 @@ public class PlayerGroundJump : MonoBehaviour
             {
                 jumpCount = jumpTotal; // resets jumps every time ground is touched
             }
+        } 
+        else
+        {
+            onGround = false;
         }
 
         // purely for visual debugging, the visual lines represent the raycast checks

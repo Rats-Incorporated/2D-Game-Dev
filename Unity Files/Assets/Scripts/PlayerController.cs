@@ -82,34 +82,20 @@ public class PlayerController : MonoBehaviour
         // Move Right
         if (Input.GetKey(KeyCode.D))
         {
-            if (maxHorizontalSpeed > rb.linearVelocityX)
-            {
-                rb.AddForce(RightDirection * movementIntensity * Time.deltaTime);
-            }
+            PlayerMove(RightDirection, 1);
         }
 
         // Move Left
         if (Input.GetKey(KeyCode.A))
         {
-            if (-maxHorizontalSpeed < rb.linearVelocityX)
-            {
-                rb.AddForce(-RightDirection * movementIntensity * Time.deltaTime);
-            }
+            PlayerMove(RightDirection, -1);
         }
 
         // Not pressing either direction
         if ((!Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.A)) || (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.A)))
         {
-            // moving left
-            if (rb.linearVelocityX < 0) 
-            {
-                rb.AddForce(RightDirection * slowSpeed * Time.deltaTime * Mathf.Abs(rb.linearVelocityX));
-            } 
-            // moving right
-            else if (rb.linearVelocityX > 0)
-            {
-                rb.AddForce(-RightDirection * slowSpeed * Time.deltaTime * Mathf.Abs(rb.linearVelocityX));
-            }
+            ControlFriction(RightDirection, -1); // moving left
+            ControlFriction(RightDirection, 1); // moving right
         }
     }
 
@@ -133,8 +119,6 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Unsure of how this might interact with other functions so disabling for now
-        // onGround = true;
         animator.SetBool("isJumping", false);
     }
 
@@ -154,6 +138,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void ControlFriction(Vector2 vec, int dir)
+    {
+        if (rb.linearVelocityX * dir > 0)
+        {
+            rb.AddForce(-vec * dir * slowSpeed * Time.deltaTime * Mathf.Abs(rb.linearVelocityX));
+        }
+    }
+
     // applying the downward force on the player when letting go of space early
     private void JumpDownforce()
     {
@@ -165,6 +157,17 @@ public class PlayerController : MonoBehaviour
                 rb.linearVelocity = rb.linearVelocity - downVec;
             }
         }
+    }
+
+    // horizontal movement
+    private void PlayerMove(Vector2 vec, int dir)
+    {
+        if (maxHorizontalSpeed > rb.linearVelocityX * dir)
+        {
+            rb.AddForce(vec * dir * movementIntensity * Time.deltaTime);
+        }
+
+        ControlFriction(vec, -dir);
     }
 
     // handing all the conditions for when the player is jumping
