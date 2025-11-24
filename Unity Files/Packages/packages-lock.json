@@ -77,7 +77,7 @@
       }
     },
     "com.unity.2d.tilemap.extras": {
-      "version": "5.0.1",
+      "version": "5.0.2",
       "depth": 0,
       "source": "registry",
       "dependencies": {
