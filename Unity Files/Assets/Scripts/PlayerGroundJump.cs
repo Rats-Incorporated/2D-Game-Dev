@@ -76,7 +76,7 @@ public class PlayerGroundJump : MonoBehaviour
             {
                 jumpCount = jumpTotal; // resets jumps every time ground is touched
             }
-        } 
+        }
         else
         {
             onGround = false;

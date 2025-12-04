@@ -43,5 +43,5 @@ public class PlayerAttack : MonoBehaviour
         Destroy(hitbox, attackDuration);
     }
 
-    
+
 }

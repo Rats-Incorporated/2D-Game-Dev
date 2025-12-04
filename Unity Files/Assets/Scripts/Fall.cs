@@ -28,19 +28,19 @@ public class fall : MonoBehaviour
 
     private IEnumerator Fall()
     {
-       
+
         yield return new WaitForSeconds(fallDelay);
 
         rb.bodyType = RigidbodyType2D.Dynamic;
 
-       
+
         yield return new WaitForSeconds(respawnDelay);
 
         // Respawn logic
-        rb.bodyType = RigidbodyType2D.Static;    
+        rb.bodyType = RigidbodyType2D.Static;
         rb.linearVelocity = Vector2.zero;               // reset leftover falling velocity
         rb.angularVelocity = 0f;
 
-        transform.position = originalPosition;  
+        transform.position = originalPosition;
     }
 }

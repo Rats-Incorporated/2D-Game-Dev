@@ -4,7 +4,7 @@ using UnityEngine;
 public class EnvironmentHazard : MonoBehaviour
 {
     public float damageAmount = 25f;
-    public float damageInterval = 1.5f; 
+    public float damageInterval = 1.5f;
 
     private PlayerHealth currentPlayer;
     private float damageTimer;
@@ -24,11 +24,11 @@ public class EnvironmentHazard : MonoBehaviour
             if (damageTimer >= damageInterval)
             {
                 currentPlayer.TakeDamage(damageAmount);
-                damageTimer = 0f; 
+                damageTimer = 0f;
             }
         }
     }
-    
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -37,8 +37,8 @@ public class EnvironmentHazard : MonoBehaviour
             if (currentPlayer != null)
             {
                 playerInHazard = true;
-                currentPlayer.TakeDamage(damageAmount); 
-                damageTimer = 0f; 
+                currentPlayer.TakeDamage(damageAmount);
+                damageTimer = 0f;
             }
         }
     }

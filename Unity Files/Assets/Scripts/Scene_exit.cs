@@ -11,17 +11,19 @@ public class Scene_exit : MonoBehaviour
     {
         mainSceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
-    
+
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Return) && playerInExitZone)
         {
-            if (mainSceneIndex == 0){
+            if (mainSceneIndex == 0)
+            {
                 mainSceneIndex = 1;
                 SceneManager.LoadScene(1); // load sams scene from the main scene
             }
-            else if (mainSceneIndex == 1){
+            else if (mainSceneIndex == 1)
+            {
                 mainSceneIndex = 0;
                 SceneManager.LoadScene(0); // load main scene from sams scene
             }

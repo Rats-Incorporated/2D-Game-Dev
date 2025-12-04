@@ -34,10 +34,16 @@ public class LogicScript : MonoBehaviour
             InstructionText.text = "Key Found!";
         }
 
-        if (Input.GetKey(KeyCode.Escape)) // Pause Game
+        if (Input.GetKeyDown(KeyCode.Escape)) // Pause Game
         {
-            PauseScreen.SetActive(true);
-            Time.timeScale = 0f; // pause physics and animations
+            if (Paused == true)
+            {
+                Resume();
+            }
+            else
+            {
+                Pause();
+            }
         }
 
 
@@ -70,6 +76,13 @@ public class LogicScript : MonoBehaviour
         Time.timeScale = 1.0f; // resume physics, animations
         PauseScreen.SetActive(false);
         WinScreen.SetActive(false);
+    }
+
+    public void Pause()
+    {
+        Paused = true;
+        Time.timeScale = 0f;
+        PauseScreen.SetActive(true);
     }
 
 }

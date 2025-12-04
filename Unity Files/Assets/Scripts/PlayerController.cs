@@ -171,7 +171,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // handing all the conditions for when the player is jumping
-    private void PlayerJump (Vector2 UpDirection)
+    private void PlayerJump(Vector2 UpDirection)
     {
         // spaceLocked prevents holding the space bar causing all jumps to be used rapidly
         if (JumpState.GetJumpCount() > 0 && !JumpState.spaceLocked)
