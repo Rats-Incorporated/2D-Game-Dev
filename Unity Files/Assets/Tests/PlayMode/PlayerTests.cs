@@ -7,16 +7,14 @@ using UnityEngine.SceneManagement;
 public class PlayerTests
 {
 
-
     [UnityTest]
-    public IEnumerator PlayerExistAndMove()
+    public IEnumerator PlayerExist()
     {
-        // this test loads our main scene and checks for:
-        // player existing, player left/right movement working
-        SceneManager.LoadScene("test-stage");
+        // this test loads the test scene and makes sure the player exists
+        SceneManager.LoadScene("test-base");
 
         float timePassed = 0f;
-        while (timePassed < 3f)
+        while (timePassed < 0.3f)
         {
             timePassed += Time.deltaTime;
             yield return null;
@@ -26,34 +24,76 @@ public class PlayerTests
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         Assert.IsNotNull(player, "Player object must be within the scene");
 
-        var movementIntensity = 4;
-
         Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
         Assert.IsNotNull(rb, "Player is expected to have Rigidbody2D component");
 
-        var RightDirection = new Vector2(10, 0);
-        Vector2 playerPosition = player.transform.position;
+        PlayerController pc = player.GetComponent<PlayerController>();
+        Assert.IsNotNull(pc, "Player is expected to have a PlayerController component");
 
-        rb.AddForce(RightDirection * movementIntensity);
-        while (timePassed < 3f)
+    }
+
+    [UnityTest]
+    public IEnumerator PlayerMove()
+    {
+        SceneManager.LoadScene("test-base");
+
+        float timePassed = 0f;
+        while (timePassed < 1.2f)
         {
             timePassed += Time.deltaTime;
             yield return null;
         }
         timePassed = 0f;
-        Assert.Greater(player.transform.position.x, playerPosition.x);
 
-        playerPosition = player.transform.position;
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        PlayerController pc = player.GetComponent<PlayerController>();
 
-        rb.AddForce(-RightDirection * movementIntensity);
-        while (timePassed < 3f)
+        float starterPlayerX = player.transform.position.x;
+        while (timePassed < 1f)
+        {
+            pc.PlayerMove(new Vector2(10, 0), -1);
+            timePassed += Time.deltaTime;
+            yield return null;
+        }
+        timePassed = 0f;
+        float endPlayerX = player.transform.position.x;
+        Assert.Greater(starterPlayerX, endPlayerX);
+
+        starterPlayerX = player.transform.position.x;
+        while (timePassed < 1f)
+        {
+            pc.PlayerMove(new Vector2(10, 0), 1);
+            timePassed += Time.deltaTime;
+            yield return null;
+        }
+        endPlayerX = player.transform.position.x;
+        Assert.Less(starterPlayerX, endPlayerX);
+    }
+
+    [UnityTest]
+    public IEnumerator PlayerJump()
+    {
+        SceneManager.LoadScene("test-base");
+
+        float timePassed = 0f;
+        while (timePassed < 2f)
         {
             timePassed += Time.deltaTime;
             yield return null;
         }
         timePassed = 0f;
-        Assert.Greater(playerPosition.x, player.transform.position.x);
 
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        PlayerController pc = player.GetComponent<PlayerController>();
 
+        float starterPlayerY = player.transform.position.y; 
+        while (timePassed < 1f)
+        {
+            pc.PlayerJump(new Vector2(0, 10));
+            timePassed += Time.deltaTime;
+            yield return null;
+        }
+        float endPlayerY = player.transform.position.y;
+        Assert.Less(starterPlayerY, endPlayerY);
     }
 }

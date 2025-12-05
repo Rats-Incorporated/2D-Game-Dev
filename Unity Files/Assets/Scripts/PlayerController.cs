@@ -1,10 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.Rendering.UI;
-using static UnityEngine.LightAnchor;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 public class PlayerController : MonoBehaviour
 {
     // other classes
@@ -160,7 +156,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // horizontal movement
-    private void PlayerMove(Vector2 vec, int dir)
+    public void PlayerMove(Vector2 vec, int dir)
     {
         if (maxHorizontalSpeed > rb.linearVelocityX * dir)
         {
@@ -171,7 +167,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // handing all the conditions for when the player is jumping
-    private void PlayerJump(Vector2 UpDirection)
+    public void PlayerJump(Vector2 UpDirection)
     {
         // spaceLocked prevents holding the space bar causing all jumps to be used rapidly
         if (JumpState.GetJumpCount() > 0 && !JumpState.spaceLocked)
