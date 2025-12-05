@@ -8,12 +8,20 @@ public class LogicScript : MonoBehaviour
     // Game States
     public Text InstructionText;
     public Text BottomRightText;
+    public Text WinText;
     public PlayerController player;
     public win_block w_block;
     public GameObject WinScreen;
     public GameObject PauseScreen;
     public GameObject LoseScreen;
     public bool Paused = false;
+    private float curTime;
+    public Text TimerText;
+
+    void Start()
+    {
+        curTime = Time.time;
+    }
 
     public void TempMessage(string msg, float dur = 2f)
     {
@@ -29,6 +37,10 @@ public class LogicScript : MonoBehaviour
     }
     private void Update()
     {
+        if (!Paused) { 
+            float totaltime = Time.time - curTime;
+            TimerText.text = timeString(totaltime);
+        }
         if (player.can_win)
         {
             InstructionText.text = "Key Found!";
@@ -60,6 +72,13 @@ public class LogicScript : MonoBehaviour
     {
         Paused = true;
         Time.timeScale = 0f; // pause physics, animations
+        float totaltime = Time.time - curTime;
+        WinText.text = "LEVEL COMPLETE\nTime: " + timeString(totaltime);
+        TimerText.text = timeString(totaltime);
+
+        string finishTime = timeString(totaltime);
+        
+
         WinScreen.SetActive(true);
     }
 
@@ -85,4 +104,13 @@ public class LogicScript : MonoBehaviour
         PauseScreen.SetActive(true);
     }
 
+    private string timeString(float curT)
+    {
+        int min = Mathf.FloorToInt(curT/ 60);
+        int sec = Mathf.FloorToInt(curT%60);
+        int ms = Mathf.FloorToInt(curT*1000%1000)/10;
+
+        return $"{min:00}:{sec:00}:{ms:00}";
+
+    }
 }

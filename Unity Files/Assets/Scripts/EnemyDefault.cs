@@ -34,7 +34,7 @@ public class EnemyDefault : MonoBehaviour
         }
         SetNewWanderTarget();
         originalScale = transform.localScale;
-        animator.SetBool("Walk", false); 
+        //animator.SetBool("Walk", false); 
     }
 
     // Update is called once per frame
@@ -51,7 +51,7 @@ public class EnemyDefault : MonoBehaviour
 
         // 1. Raycast Check (for state transitions)
         CheckForPlayer();
-        Debug.Log("Current State: " + currentState.ToString());
+        //Debug.Log("Current State: " + currentState.ToString());
 
         // 2. Execute Current State Behavior
         switch (currentState)
@@ -72,7 +72,7 @@ public class EnemyDefault : MonoBehaviour
         if (playerTransform == null) return;
 
         float distanceToPlayer = Vector2.Distance(transform.position, playerTransform.position);
-        Debug.Log("Distance to Player: " + distanceToPlayer.ToString("F2") + " units");
+        //Debug.Log("Distance to Player: " + distanceToPlayer.ToString("F2") + " units");
         
         // Use direct distance check instead of Raycast, as it's simpler for this 2D behavior
         // If you still prefer the Raycast for line-of-sight, you can replace the distance check.
@@ -103,7 +103,7 @@ public class EnemyDefault : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
 
         // Animation: Always walking in Wander state
-        animator.SetBool("Walk", false); 
+        //animator.SetBool("Walk", false); 
 
         // Check if the enemy has reached the target
         if (Vector2.Distance(transform.position, targetPosition) < 0.1f)
@@ -135,13 +135,13 @@ public class EnemyDefault : MonoBehaviour
         {
             // Player is farther than 1 unit: Chase
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
-            animator.SetBool("Walk", false); // Run animation
+            //animator.SetBool("Walk", false); // Run animation
         }
         else 
         {
             // Player is within 1 unit: Stop/Idle 
             // The damage will be handled by OnTriggerEnter2D
-            animator.SetBool("Walk", true); // Idle animation
+            //animator.SetBool("Walk", true); // Idle animation
             // NOTE: Add your specific close-range/stop animation logic here if different from Idle.
         }
         

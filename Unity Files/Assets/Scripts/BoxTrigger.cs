@@ -19,7 +19,12 @@ public class hit : MonoBehaviour
         Debug.Log("Player collided with " + collision.name);
 
         // Slightly conflicting implementation: Set WinScreen to true here -- Can decide on which implementation to use moving forward.
-        Logic.WinGame();
+
+        if(collision.name != "Rat2")
+        {
+            Logic.WinGame();
+        }
+        
     }
     void OnTriggerExit2D(Collider2D collision)
     {
