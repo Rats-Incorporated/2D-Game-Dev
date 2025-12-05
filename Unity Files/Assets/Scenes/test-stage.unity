@@ -1962,6 +1962,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: b459be59ad2f34eb99e69c898b4d992e, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: b459be59ad2f34eb99e69c898b4d992e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7354904469318738088, guid: b459be59ad2f34eb99e69c898b4d992e, type: 3}
     - target: {fileID: 7878350319992209165, guid: b459be59ad2f34eb99e69c898b4d992e, type: 3}
       propertyPath: m_LocalScale.x
       value: 10
@@ -10774,7 +10782,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -10802,7 +10810,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 14.190001
+  m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
@@ -10816,7 +10824,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 2
 --- !u!114 &1588473559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10831,7 +10839,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   damageAmount: 25
   enemyHealth: 50
-  enemyCurrentHealth: 0
+  moveSpeed: 3
+  chaseRange: 10
+  stopRange: 1
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &1629312091
 GameObject:
   m_ObjectHideFlags: 0
