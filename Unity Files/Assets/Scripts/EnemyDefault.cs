@@ -51,7 +51,7 @@ public class EnemyDefault : MonoBehaviour
 
         // 1. Raycast Check (for state transitions)
         CheckForPlayer();
-        Debug.Log("Current State: " + currentState.ToString());
+        //Debug.Log("Current State: " + currentState.ToString());
 
         // 2. Execute Current State Behavior
         switch (currentState)
@@ -72,7 +72,7 @@ public class EnemyDefault : MonoBehaviour
         if (playerTransform == null) return;
 
         float distanceToPlayer = Vector2.Distance(transform.position, playerTransform.position);
-        Debug.Log("Distance to Player: " + distanceToPlayer.ToString("F2") + " units");
+        //Debug.Log("Distance to Player: " + distanceToPlayer.ToString("F2") + " units");
         
         // Use direct distance check instead of Raycast, as it's simpler for this 2D behavior
         // If you still prefer the Raycast for line-of-sight, you can replace the distance check.
