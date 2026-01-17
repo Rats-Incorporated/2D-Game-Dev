@@ -38,7 +38,7 @@ public class EnemyDefault : MonoBehaviour
     }
 
     // Update is called once per frame
-   void Update()
+    void Update()
     {
         // Handle death check
         if (enemyCurrentHealth <= 0)
@@ -64,8 +64,8 @@ public class EnemyDefault : MonoBehaviour
                 break;
         }
     }
-    
-   // --- Player Detection and State Logic ---
+
+    // --- Player Detection and State Logic ---
 
     void CheckForPlayer()
     {
@@ -73,7 +73,7 @@ public class EnemyDefault : MonoBehaviour
 
         float distanceToPlayer = Vector2.Distance(transform.position, playerTransform.position);
         //Debug.Log("Distance to Player: " + distanceToPlayer.ToString("F2") + " units");
-        
+
         // Use direct distance check instead of Raycast, as it's simpler for this 2D behavior
         // If you still prefer the Raycast for line-of-sight, you can replace the distance check.
 
@@ -88,7 +88,7 @@ public class EnemyDefault : MonoBehaviour
             if (currentState != EnemyState.Wander)
             {
                 currentState = EnemyState.Wander;
-                SetNewWanderTarget(); 
+                SetNewWanderTarget();
             }
         }
     }
@@ -98,7 +98,7 @@ public class EnemyDefault : MonoBehaviour
     void WanderBehavior()
     {
         // Lock Y position
-        Vector2 targetPosition = new Vector2(currentWanderTarget.x, transform.position.y); 
+        Vector2 targetPosition = new Vector2(currentWanderTarget.x, transform.position.y);
 
         transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
 
@@ -108,9 +108,9 @@ public class EnemyDefault : MonoBehaviour
         // Check if the enemy has reached the target
         if (Vector2.Distance(transform.position, targetPosition) < 0.1f)
         {
-            SetNewWanderTarget(); 
+            SetNewWanderTarget();
         }
-        
+
         // Flip sprite based on movement direction
         if (targetPosition.x < transform.position.x)
         {
@@ -125,9 +125,9 @@ public class EnemyDefault : MonoBehaviour
     void ChaseBehavior()
     {
         if (playerTransform == null) return;
-        
+
         float distanceToPlayer = Vector2.Distance(transform.position, playerTransform.position);
-        
+
         // Lock Y position
         Vector2 targetPosition = new Vector2(playerTransform.position.x, transform.position.y);
 
@@ -137,14 +137,14 @@ public class EnemyDefault : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
             //animator.SetBool("Walk", false); // Run animation
         }
-        else 
+        else
         {
             // Player is within 1 unit: Stop/Idle 
             // The damage will be handled by OnTriggerEnter2D
             //animator.SetBool("Walk", true); // Idle animation
             // NOTE: Add your specific close-range/stop animation logic here if different from Idle.
         }
-        
+
         // Flip sprite to face the player (only check X position)
         if (playerTransform.position.x < transform.position.x)
         {
@@ -161,7 +161,7 @@ public class EnemyDefault : MonoBehaviour
     void SetNewWanderTarget()
     {
         float wanderRadius = 5f;
-        float randomX = Random.Range(-wanderRadius, wanderRadius); 
+        float randomX = Random.Range(-wanderRadius, wanderRadius);
         currentWanderTarget = new Vector2(transform.position.x + randomX, transform.position.y);
     }
 

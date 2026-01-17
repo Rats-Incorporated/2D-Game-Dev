@@ -20,11 +20,11 @@ public class hit : MonoBehaviour
 
         // Slightly conflicting implementation: Set WinScreen to true here -- Can decide on which implementation to use moving forward.
 
-        if(collision.name != "Rat2")
+        if (collision.name != "Rat2")
         {
             Logic.WinGame();
         }
-        
+
     }
     void OnTriggerExit2D(Collider2D collision)
     {

@@ -86,7 +86,7 @@ public class PlayerTests
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         PlayerController pc = player.GetComponent<PlayerController>();
 
-        float starterPlayerY = player.transform.position.y; 
+        float starterPlayerY = player.transform.position.y;
         while (timePassed < 1f)
         {
             pc.PlayerJump(new Vector2(0, 10));
