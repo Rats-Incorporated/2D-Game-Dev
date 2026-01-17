@@ -21,13 +21,14 @@ public class HitScript : MonoBehaviour
         {
             mainSceneIndex = SceneManager.GetActiveScene().buildIndex;
             SceneManager.LoadScene(0); //should be the first level?
-        } 
+        }
         if (collision.CompareTag("Text"))
         {
-            Destroy(collision.gameObject);
+            TutorialTrigger trigger = collision.GetComponent<TutorialTrigger>();
+            if (trigger != null)
+            {
+                trigger.Trigger();
+            }
         }
     }
-
-
-
 }
