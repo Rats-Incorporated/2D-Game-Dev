@@ -6,7 +6,7 @@ public class garbage_pile : MonoBehaviour
     private float currentEatTime = 0f;   // current eat time
     private bool playerInRange = false;  // is player inside trigger?
 
-  
+
     public GameObject bossPrefab;        // boss to spawn
     public Transform bossSpawnPoint;     // where boss appears
     private bool bossSpawned = false;    // prevent double spawn
