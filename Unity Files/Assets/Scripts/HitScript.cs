@@ -30,5 +30,15 @@ public class HitScript : MonoBehaviour
                 trigger.Trigger();
             }
         }
+
+       
+        FlyBoss boss = collision.GetComponent<FlyBoss>();
+        if (boss != null)
+        {
+            boss.BossTakeDamage(damageAmount);
+        }
+
+
+
     }
 }
