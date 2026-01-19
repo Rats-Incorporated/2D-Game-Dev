@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     public GameObject hitboxPrefab;
-    public float attackDuration = 0.25f;
+    public float attackDuration = 0.25f;//backup 0.25f
     public float attackDistance = 2.5f;
     public float attackDmg = 25f;
     public float attackCooldown = 0.7f; // Cooldown between attacks
@@ -11,6 +11,13 @@ public class PlayerAttack : MonoBehaviour
     private Vector2 facingDirection = Vector2.right; // default facing right
     private bool canAttack = true; // Track if player can attack
     private float cooldownTimer = 0f; // Timer for tracking cooldown
+
+    Animator anim;
+
+    void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     void Update()
     {
@@ -33,10 +40,40 @@ public class PlayerAttack : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.J) && canAttack)
         {
             SpawnAttack();
+            anim.SetTrigger("PlayerAttack");
         }
     }
-
     void SpawnAttack()
+    {
+        // Start cooldown
+        canAttack = false;
+        cooldownTimer = attackCooldown;
+
+        // Spawn in front of the player based on facing direction
+        Vector3 spawnPos = transform.position + (Vector3)(facingDirection * attackDistance);
+
+        // Instantiate hitbox
+        GameObject hitbox = Instantiate(hitboxPrefab, spawnPos, Quaternion.identity);
+
+        // Flip the hitbox sprite if facing left
+        if (facingDirection == Vector2.left)
+        {
+            Vector3 scale = hitbox.transform.localScale;
+            scale.x *= -1;
+            hitbox.transform.localScale = scale;
+        }
+
+        //Temporary fix for hiding sprite on old sword
+        SpriteRenderer sr = hitbox.GetComponent<SpriteRenderer>();
+        Color hidecolor = sr.color;
+        hidecolor.a = 0f;
+        sr.color = hidecolor;
+
+
+        // Destroy hitbox after a short time
+        Destroy(hitbox, attackDuration);
+    }
+    void SpawnAttackBackup()
     {
         // Start cooldown
         canAttack = false;

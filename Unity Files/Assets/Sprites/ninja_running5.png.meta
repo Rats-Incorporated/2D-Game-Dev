@@ -1,82 +1,82 @@
 fileFormatVersion: 2
-guid: 3a8ddca23ced99c4b8d991d8d4003421
+guid: fc7b85d1177820d4ebddd68caa35d362
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2759152716061183957
-    second: ninja_0
+      213: -6996594798282554975
+    second: ninja_running5_0
   - first:
-      213: -5278401223733279651
-    second: ninja_1
+      213: -9074934785032531946
+    second: ninja_running5_1
   - first:
-      213: 7650544888257819398
-    second: ninja_2
+      213: -6436867543930480263
+    second: ninja_running5_2
   - first:
-      213: 6895404226505592437
-    second: ninja_3
+      213: -7966222092452087310
+    second: ninja_running5_3
   - first:
-      213: -7284473103597384837
-    second: ninja_4
+      213: 3065592909627670567
+    second: ninja_running5_4
   - first:
-      213: -9034525157243315170
-    second: ninja_5
+      213: -1716096392161176780
+    second: ninja_running5_5
   - first:
-      213: 7766104227058486404
-    second: ninja_6
+      213: -1196246895095316698
+    second: ninja_running5_6
   - first:
-      213: 3201718221767417709
-    second: ninja_7
+      213: 6276751500581348542
+    second: ninja_running5_7
   - first:
-      213: -7152223486056173435
-    second: ninja_8
+      213: -5869278778779546903
+    second: ninja_running5_8
   - first:
-      213: 5125832055453794580
-    second: ninja_9
+      213: 3940448345643960983
+    second: ninja_running5_9
   - first:
-      213: -7637988016015160798
-    second: ninja_10
+      213: 8579697280428529911
+    second: ninja_running5_10
   - first:
-      213: 8418297355577319098
-    second: ninja_11
+      213: -2902818661325595843
+    second: ninja_running5_11
   - first:
-      213: 7909209693416409694
-    second: ninja_12
+      213: -5543558295036566130
+    second: ninja_running5_12
   - first:
-      213: -3976133688951447518
-    second: ninja_13
+      213: 6089002051673983845
+    second: ninja_running5_13
   - first:
-      213: -2891631275481539281
-    second: ninja_14
+      213: 3729504161165212142
+    second: ninja_running5_14
   - first:
-      213: 3865020406490666318
-    second: ninja_15
+      213: -423426658864769383
+    second: ninja_running5_15
   - first:
-      213: -7409790378696218503
-    second: ninja_16
+      213: 5948889460496873202
+    second: ninja_running5_16
   - first:
-      213: 5951295587313179317
-    second: ninja_17
+      213: 1279481764577328849
+    second: ninja_running5_17
   - first:
-      213: -3703432290753294360
-    second: ninja_18
+      213: 2477727225919493057
+    second: ninja_running5_18
   - first:
-      213: 6883102672462304247
-    second: ninja_19
+      213: 5972610847020863065
+    second: ninja_running5_19
   - first:
-      213: -8897499924752706312
-    second: ninja_20
+      213: 7662850866393163922
+    second: ninja_running5_20
   - first:
-      213: -576974666226715136
-    second: ninja_21
+      213: 4874027956731529979
+    second: ninja_running5_21
   - first:
-      213: 7220827363671793285
-    second: ninja_22
+      213: -8598745600023775443
+    second: ninja_running5_22
   - first:
-      213: 6547651502755696752
-    second: ninja_23
+      213: 5813139019733773606
+    second: ninja_running5_23
   - first:
-      213: 5744790591687142572
-    second: ninja_24
+      213: -8035530300702990226
+    second: ninja_running5_24
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -172,13 +172,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ninja_0
+      name: ninja_running5_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 2112
-        width: 528
-        height: 528
+        y: 4096
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b207e1e293585b9d0800000000000000
-      internalID: -2759152716061183957
+      spriteID: 1a1c50bb91a17ee90800000000000000
+      internalID: -6996594798282554975
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ninja_1
+      name: ninja_running5_1
       rect:
         serializedVersion: 2
-        x: 528
-        y: 2112
-        width: 528
-        height: 528
+        x: 1024
+        y: 4096
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,20 +209,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d54046d9d0a5fb6b0800000000000000
-      internalID: -5278401223733279651
+      spriteID: 610dc42e4ea5f0280800000000000000
+      internalID: -9074934785032531946
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ninja_2
+      name: ninja_running5_2
       rect:
         serializedVersion: 2
-        x: 1056
-        y: 2112
-        width: 528
-        height: 528
+        x: 2048
+        y: 4096
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,20 +231,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 603b9c2aa023c2a60800000000000000
-      internalID: 7650544888257819398
+      spriteID: 97958c1a217aba6a0800000000000000
+      internalID: -6436867543930480263
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ninja_3
+      name: ninja_running5_3
       rect:
         serializedVersion: 2
-        x: 1584
-        y: 2112
-        width: 528
-        height: 528
+        x: 3072
+        y: 4096
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -253,20 +253,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 57ec79f4c9561bf50800000000000000
-      internalID: 6895404226505592437
+      spriteID: 2f93689b63b427190800000000000000
+      internalID: -7966222092452087310
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ninja_4
+      name: ninja_running5_4
       rect:
         serializedVersion: 2
-        x: 2112
-        y: 2112
-        width: 528
-        height: 528
+        x: 4096
+        y: 4096
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -275,130 +275,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b7bc03c9e4a58ea90800000000000000
-      internalID: -7284473103597384837
+      spriteID: 7204054528c2b8a20800000000000000
+      internalID: 3065592909627670567
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ninja_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1584
-        width: 528
-        height: 528
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e1c9e288c3bee9280800000000000000
-      internalID: -9034525157243315170
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ninja_6
-      rect:
-        serializedVersion: 2
-        x: 528
-        y: 1584
-        width: 528
-        height: 528
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 48c0b7ed5aeb6cb60800000000000000
-      internalID: 7766104227058486404
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ninja_7
-      rect:
-        serializedVersion: 2
-        x: 1056
-        y: 1584
-        width: 528
-        height: 528
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d6f975f52c9ce6c20800000000000000
-      internalID: 3201718221767417709
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ninja_8
-      rect:
-        serializedVersion: 2
-        x: 1584
-        y: 1584
-        width: 528
-        height: 528
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5807a6f22a23ebc90800000000000000
-      internalID: -7152223486056173435
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ninja_9
-      rect:
-        serializedVersion: 2
-        x: 2112
-        y: 1584
-        width: 528
-        height: 528
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 41142abb81d922740800000000000000
-      internalID: 5125832055453794580
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ninja_10
+      name: ninja_running5_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 1056
-        width: 528
-        height: 528
+        y: 3072
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -407,20 +297,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 22ac9b20e5a600690800000000000000
-      internalID: -7637988016015160798
+      spriteID: 43357e07c633f28e0800000000000000
+      internalID: -1716096392161176780
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ninja_11
+      name: ninja_running5_6
       rect:
         serializedVersion: 2
-        x: 528
-        y: 1056
-        width: 528
-        height: 528
+        x: 1024
+        y: 3072
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -429,20 +319,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: abedbc4c7dcc3d470800000000000000
-      internalID: 8418297355577319098
+      spriteID: 62ffd2279c3166fe0800000000000000
+      internalID: -1196246895095316698
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ninja_12
+      name: ninja_running5_7
       rect:
         serializedVersion: 2
-        x: 1056
-        y: 1056
-        width: 528
-        height: 528
+        x: 2048
+        y: 3072
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -451,20 +341,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e5a4926bf4823cd60800000000000000
-      internalID: 7909209693416409694
+      spriteID: eb42d8feb308b1750800000000000000
+      internalID: 6276751500581348542
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ninja_13
+      name: ninja_running5_8
       rect:
         serializedVersion: 2
-        x: 1584
-        y: 1056
-        width: 528
-        height: 528
+        x: 3072
+        y: 3072
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -473,20 +363,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 220e592f97fe1d8c0800000000000000
-      internalID: -3976133688951447518
+      spriteID: 9ea4b172c022c8ea0800000000000000
+      internalID: -5869278778779546903
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ninja_14
+      name: ninja_running5_9
       rect:
         serializedVersion: 2
-        x: 2112
-        y: 1056
-        width: 528
-        height: 528
+        x: 4096
+        y: 3072
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -495,20 +385,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f2d538becacded7d0800000000000000
-      internalID: -2891631275481539281
+      spriteID: 79a42e994e84fa630800000000000000
+      internalID: 3940448345643960983
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ninja_15
+      name: ninja_running5_10
       rect:
         serializedVersion: 2
         x: 0
-        y: 528
-        width: 528
-        height: 528
+        y: 2048
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -517,20 +407,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e45138af49f43a530800000000000000
-      internalID: 3865020406490666318
+      spriteID: 7f8d3582835311770800000000000000
+      internalID: 8579697280428529911
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ninja_16
+      name: ninja_running5_11
       rect:
         serializedVersion: 2
-        x: 528
-        y: 528
-        width: 528
-        height: 528
+        x: 1024
+        y: 2048
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -539,20 +429,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 97864b9c8e22b2990800000000000000
-      internalID: -7409790378696218503
+      spriteID: d3b105caecd17b7d0800000000000000
+      internalID: -2902818661325595843
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ninja_17
+      name: ninja_running5_12
       rect:
         serializedVersion: 2
-        x: 1056
-        y: 528
-        width: 528
-        height: 528
+        x: 2048
+        y: 2048
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -561,20 +451,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5bad62b2ecf379250800000000000000
-      internalID: 5951295587313179317
+      spriteID: e85eca80a135113b0800000000000000
+      internalID: -5543558295036566130
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ninja_18
+      name: ninja_running5_13
       rect:
         serializedVersion: 2
-        x: 1584
-        y: 528
-        width: 528
-        height: 528
+        x: 3072
+        y: 2048
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -583,20 +473,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8ef40f304f3ca9cc0800000000000000
-      internalID: -3703432290753294360
+      spriteID: 56b07a6ea1b708450800000000000000
+      internalID: 6089002051673983845
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ninja_19
+      name: ninja_running5_14
       rect:
         serializedVersion: 2
-        x: 2112
-        y: 528
-        width: 528
-        height: 528
+        x: 4096
+        y: 2048
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -605,20 +495,130 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7f358a09961b58f50800000000000000
-      internalID: 6883102672462304247
+      spriteID: ee9f79a564cd1c330800000000000000
+      internalID: 3729504161165212142
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ninja_20
+      name: ninja_running5_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9965fe972bfaf1af0800000000000000
+      internalID: -423426658864769383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ninja_running5_16
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f63bfc1273be8250800000000000000
+      internalID: 5948889460496873202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ninja_running5_17
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1deb83ac2e1a1c110800000000000000
+      internalID: 1279481764577328849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ninja_running5_18
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c3de3fc8c7a26220800000000000000
+      internalID: 2477727225919493057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ninja_running5_19
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 1024
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95ec25ecbe9f2e250800000000000000
+      internalID: 5972610847020863065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ninja_running5_20
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 528
-        height: 528
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -627,20 +627,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8f4dc0c95fab58480800000000000000
-      internalID: -8897499924752706312
+      spriteID: 298a822734ae75a60800000000000000
+      internalID: 7662850866393163922
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ninja_21
+      name: ninja_running5_21
       rect:
         serializedVersion: 2
-        x: 528
+        x: 1024
         y: 0
-        width: 528
-        height: 528
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -649,20 +649,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0063827199c2ef7f0800000000000000
-      internalID: -576974666226715136
+      spriteID: bfa4e4a5a9604a340800000000000000
+      internalID: 4874027956731529979
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ninja_22
+      name: ninja_running5_22
       rect:
         serializedVersion: 2
-        x: 1056
+        x: 2048
         y: 0
-        width: 528
-        height: 528
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -671,20 +671,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 58ed31cca38853460800000000000000
-      internalID: 7220827363671793285
+      spriteID: d2731a45f6e1ba880800000000000000
+      internalID: -8598745600023775443
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ninja_23
+      name: ninja_running5_23
       rect:
         serializedVersion: 2
-        x: 1584
+        x: 3072
         y: 0
-        width: 528
-        height: 528
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -693,20 +693,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0705ecec95eedda50800000000000000
-      internalID: 6547651502755696752
+      spriteID: 62da13d932b6ca050800000000000000
+      internalID: 5813139019733773606
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ninja_24
+      name: ninja_running5_24
       rect:
         serializedVersion: 2
-        x: 2112
+        x: 4096
         y: 0
-        width: 528
-        height: 528
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -715,8 +715,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: caca48e1b9899bf40800000000000000
-      internalID: 5744790591687142572
+      spriteID: e60e5bcf3cf0c7090800000000000000
+      internalID: -8035530300702990226
       vertices: []
       indices: 
       edges: []
@@ -725,7 +725,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 587d804e2ade1b44b8c01be01aacad8e
+    spriteID: bd95d3c751589f44d9bccb3b6b0b5316
     internalID: 0
     vertices: []
     indices: 
@@ -735,33 +735,33 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":528.0,"y":528.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1024.0,"y":1024.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      ninja_0: -2759152716061183957
-      ninja_1: -5278401223733279651
-      ninja_10: -7637988016015160798
-      ninja_11: 8418297355577319098
-      ninja_12: 7909209693416409694
-      ninja_13: -3976133688951447518
-      ninja_14: -2891631275481539281
-      ninja_15: 3865020406490666318
-      ninja_16: -7409790378696218503
-      ninja_17: 5951295587313179317
-      ninja_18: -3703432290753294360
-      ninja_19: 6883102672462304247
-      ninja_2: 7650544888257819398
-      ninja_20: -8897499924752706312
-      ninja_21: -576974666226715136
-      ninja_22: 7220827363671793285
-      ninja_23: 6547651502755696752
-      ninja_24: 5744790591687142572
-      ninja_3: 6895404226505592437
-      ninja_4: -7284473103597384837
-      ninja_5: -9034525157243315170
-      ninja_6: 7766104227058486404
-      ninja_7: 3201718221767417709
-      ninja_8: -7152223486056173435
-      ninja_9: 5125832055453794580
+      ninja_running5_0: -6996594798282554975
+      ninja_running5_1: -9074934785032531946
+      ninja_running5_10: 8579697280428529911
+      ninja_running5_11: -2902818661325595843
+      ninja_running5_12: -5543558295036566130
+      ninja_running5_13: 6089002051673983845
+      ninja_running5_14: 3729504161165212142
+      ninja_running5_15: -423426658864769383
+      ninja_running5_16: 5948889460496873202
+      ninja_running5_17: 1279481764577328849
+      ninja_running5_18: 2477727225919493057
+      ninja_running5_19: 5972610847020863065
+      ninja_running5_2: -6436867543930480263
+      ninja_running5_20: 7662850866393163922
+      ninja_running5_21: 4874027956731529979
+      ninja_running5_22: -8598745600023775443
+      ninja_running5_23: 5813139019733773606
+      ninja_running5_24: -8035530300702990226
+      ninja_running5_3: -7966222092452087310
+      ninja_running5_4: 3065592909627670567
+      ninja_running5_5: -1716096392161176780
+      ninja_running5_6: -1196246895095316698
+      ninja_running5_7: 6276751500581348542
+      ninja_running5_8: -5869278778779546903
+      ninja_running5_9: 3940448345643960983
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
