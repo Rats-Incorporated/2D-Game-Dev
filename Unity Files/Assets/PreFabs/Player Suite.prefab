@@ -1797,6 +1797,85 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraController
   player: {fileID: 8501677913154982329}
+--- !u!1 &5633271618928950886
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8488983357022245730}
+  - component: {fileID: 6790990928041314411}
+  - component: {fileID: 5830695515034311505}
+  m_Layer: 5
+  m_Name: Dash UI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &8488983357022245730
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5633271618928950886}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6979447784804715226}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -693, y: -350.61438}
+  m_SizeDelta: {x: 432.14, y: 75.4712}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &6790990928041314411
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5633271618928950886}
+  m_CullTransparentMesh: 1
+--- !u!114 &5830695515034311505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5633271618928950886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 75
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 163
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
 --- !u!1 &5760531753139604720
 GameObject:
   m_ObjectHideFlags: 0
@@ -1831,6 +1910,7 @@ RectTransform:
   - {fileID: 3549336180263041988}
   - {fileID: 6321058481412775315}
   - {fileID: 8175728153579951606}
+  - {fileID: 8488983357022245730}
   - {fileID: 3298842288287526348}
   - {fileID: 2876093063138218409}
   - {fileID: 73548417641877511}
@@ -3269,6 +3349,7 @@ GameObject:
   - component: {fileID: 581117276801622075}
   - component: {fileID: 3545524803519717338}
   - component: {fileID: 1505741492486227703}
+  - component: {fileID: 2210288823989525297}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -3436,13 +3517,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BasicPlayerController
   Logic: {fileID: 499432012368660693}
   JumpState: {fileID: 581117276801622075}
+  DashState: {fileID: 2210288823989525297}
   cameraTarget: {fileID: 5540920541973493969}
   movementIntensity: 120
   downIntensity: 100
   jumpVelocity: 1.2
+  dashVelocity: 1
   slowSpeed: 50
   jumpTotal: 1
   maxHorizontalSpeed: 18
+  dashTotal: 2
   can_win: 0
 --- !u!95 &6836477760344386809
 Animator:
@@ -3556,6 +3640,7 @@ MonoBehaviour:
   attackDuration: 0.25
   attackDistance: 2.5
   attackDmg: 25
+  attackCooldown: 0.7
 --- !u!114 &1505741492486227703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3572,6 +3657,22 @@ MonoBehaviour:
   currentHealth: 0
   healthFill: {fileID: 5694156018232245516}
   Logic: {fileID: 499432012368660693}
+--- !u!114 &2210288823989525297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8501677913154982329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2366bb10196cb71458a18e23c7926bc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: GameScripts::PlayerDash
+  player: {fileID: 6654558692795548727}
+  dashCD: 3
+  dashGCD: 0.6
+  inGCD: 0
 --- !u!1 &8538718023124776878
 GameObject:
   m_ObjectHideFlags: 0
@@ -3701,6 +3802,8 @@ MonoBehaviour:
   LoseScreen: {fileID: 5901322394434752540}
   Paused: 0
   TimerText: {fileID: 2359544639861589199}
+  DashController: {fileID: 2210288823989525297}
+  DashUI: {fileID: 5830695515034311505}
 --- !u!1 &8828741544421964896
 GameObject:
   m_ObjectHideFlags: 0

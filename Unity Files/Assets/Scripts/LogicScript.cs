@@ -2,6 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class LogicScript : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class LogicScript : MonoBehaviour
     public bool Paused = false;
     private float curTime;
     public Text TimerText;
+
+    public PlayerDash DashController;
+    public Text DashUI;
 
     void Start()
     {
@@ -41,6 +45,8 @@ public class LogicScript : MonoBehaviour
         {
             float totaltime = Time.time - curTime;
             TimerText.text = timeString(totaltime);
+
+            DashUI.text = Convert.ToString(DashController.GetTimeToCD());
         }
         if (player.can_win)
         {
