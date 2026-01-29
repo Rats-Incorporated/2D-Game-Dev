@@ -2,7 +2,6 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System;
 
 public class LogicScript : MonoBehaviour
 {
@@ -18,9 +17,8 @@ public class LogicScript : MonoBehaviour
     public bool Paused = false;
     private float curTime;
     public Text TimerText;
-
-    public PlayerDash DashController;
-    public Text DashUI;
+    public Text DashCDText;
+    public Text DashCountText;
 
     void Start()
     {
@@ -46,7 +44,11 @@ public class LogicScript : MonoBehaviour
             float totaltime = Time.time - curTime;
             TimerText.text = timeString(totaltime);
 
-            DashUI.text = Convert.ToString(DashController.GetTimeToCD());
+            float dashCD = player.DashState.GetTimeToCD();
+            int dashCount = player.DashState.GetDashCount();
+            // the F1 portion is rounding it to one decimal
+            DashCDText.text = $"{dashCD:F1}";
+            DashCountText.text = $"{dashCount}";
         }
         if (player.can_win)
         {
