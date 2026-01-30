@@ -31,7 +31,7 @@ public class HitScript : MonoBehaviour
             }
         }
 
-       
+
         FlyBoss boss = collision.GetComponent<FlyBoss>();
         if (boss != null)
         {
