@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
     // other classes
     public LogicScript Logic; // game state
     public PlayerGroundJump JumpState; // player jumping & ground collision tracking
+    public PlayerDash DashState; // player dash & other movement cooldowns
 
     // general movement
     private Rigidbody2D rb; // physics object
@@ -13,11 +14,13 @@ public class PlayerController : MonoBehaviour
     public float movementIntensity = 70.0f; // how fast left/right movements are
     public float downIntensity = 100.0f; // how hard letting go of the spacebar pushes down
     public float jumpVelocity; // jump speed/height
+    public float dashVelocity; // dash speed
     public float slowSpeed = 50.0f; // how fast the player slows down when pressing neither A or D
 
     // capacities
     public int jumpTotal = 1;
     public float maxHorizontalSpeed = 12.0f;
+    public int dashTotal = 2;
 
     // pickup values (items, etc)
     public bool can_win = false;
@@ -92,6 +95,17 @@ public class PlayerController : MonoBehaviour
         {
             ControlFriction(RightDirection, -1); // moving left
             ControlFriction(RightDirection, 1); // moving right
+        }
+
+        // Adding movement for a dash to the left or the right
+        if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.LeftShift))
+        {
+            PlayerDash(RightDirection, 1);
+        }
+
+        if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.LeftShift))
+        {
+            PlayerDash(RightDirection, -1);
         }
     }
 
@@ -181,6 +195,27 @@ public class PlayerController : MonoBehaviour
             rb.linearVelocity = curr_vel + (UpDirection * jumpVelocity);
             animator.SetBool("isJumping", true);
             JumpState.SetJumpVars();
+        }
+    }
+
+    public void PlayerDash(Vector2 vec, int dir)
+    {
+        if (DashState.GetDashCount() > 0 && !DashState.inGCD)
+        {
+            var curr_vel = rb.linearVelocity;
+            // basically if dashing in opposite direction of current momentum
+            // kill momentum and pivot
+            if (curr_vel.x < 0 && dir > 0)
+            {
+                curr_vel.x = 0;
+            } 
+            else if (curr_vel.x > 0 && dir < 0)
+            {
+                curr_vel.x = 0;
+            }
+
+            rb.linearVelocity = curr_vel + (vec * dir * dashVelocity);
+            DashState.SetDashVars();
         }
     }
 }
