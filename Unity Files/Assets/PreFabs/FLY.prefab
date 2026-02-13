@@ -199,5 +199,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 089e5150a8ca7244481686efd1f99568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: GameScripts::DamageFlash
-  flashDuration: 0.1
-  flashMaterial: {fileID: 0}
+  flashColor: {r: 1, g: 1, b: 1, a: 1}
+  flashDuration: 0.3

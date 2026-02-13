@@ -3558,6 +3558,7 @@ GameObject:
   - component: {fileID: 3545524803519717338}
   - component: {fileID: 1505741492486227703}
   - component: {fileID: 2210288823989525297}
+  - component: {fileID: 5079773566092881514}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -3881,6 +3882,21 @@ MonoBehaviour:
   dashCD: 3
   dashGCD: 0.6
   inGCD: 0
+--- !u!114 &5079773566092881514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8501677913154982329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d15f97096faba4342b629a99154bec3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: GameScripts::PlayerInvulnerability
+  invulnerabilityDuration: 1
+  flashCount: 8
+  dimAlpha: 0.5
 --- !u!1 &8538718023124776878
 GameObject:
   m_ObjectHideFlags: 0
