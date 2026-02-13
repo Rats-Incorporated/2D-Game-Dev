@@ -708,6 +708,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 1160356261127867848, guid: b459be59ad2f34eb99e69c898b4d992e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: b459be59ad2f34eb99e69c898b4d992e, type: 3}
       propertyPath: m_FlipX
       value: 0
@@ -726,7 +730,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: b459be59ad2f34eb99e69c898b4d992e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 110.86
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: b459be59ad2f34eb99e69c898b4d992e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -777,6 +781,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: b459be59ad2f34eb99e69c898b4d992e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1588473559}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: b459be59ad2f34eb99e69c898b4d992e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1588473563}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: b459be59ad2f34eb99e69c898b4d992e, type: 3}
 --- !u!114 &298399074 stripped
 MonoBehaviour:
@@ -6924,7 +6931,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8501677913154982329, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1475895180}
   m_SourcePrefab: {fileID: 100100000, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
 --- !u!1 &1130988223
 GameObject:
@@ -8127,6 +8137,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnvironmentHazard
   damageAmount: 25
   damageInterval: 1.5
+--- !u!1 &1475895167 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8501677913154982329, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
+  m_PrefabInstance: {fileID: 1055480223}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1475895180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475895167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d15f97096faba4342b629a99154bec3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  invulnerabilityDuration: 1
+  flashCount: 8
+  dimAlpha: 0.5
 --- !u!1 &1578794039
 GameObject:
   m_ObjectHideFlags: 0
@@ -8309,12 +8339,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   damageAmount: 25
   enemyHealth: 50
-  moveSpeed: 3
+  moveSpeed: 0
   chaseRange: 10
   stopRange: 1
   playerLayer:
     serializedVersion: 2
     m_Bits: 0
+--- !u!114 &1588473563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588473553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 089e5150a8ca7244481686efd1f99568, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: GameScripts::DamageFlash
+  flashDuration: 1
+  flashMaterial: {fileID: -876546973899608171, guid: 4d28b709620564842bad4727af8704de, type: 3}
 --- !u!1 &1692326422
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
+using static Unity.IO.LowLevel.Unsafe.AsyncReadManagerMetrics;
 
 public class EnemyDefault : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class EnemyDefault : MonoBehaviour
     public float chaseRange = 35f; // Distance for long-range player detection (Raycast length)
     public float stopRange = 15f;
     public LayerMask playerLayer; // Assign the Layer that your Player is on in the Inspector
+    DamageFlash flash;
 
     // --- Private/State Variables ---
     private Animator animator;
@@ -26,6 +28,7 @@ public class EnemyDefault : MonoBehaviour
     {
         enemyCurrentHealth = enemyHealth;
         animator = GetComponent<Animator>();
+        flash = GetComponent<DamageFlash>();
         // Find the player object and store its transform
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
         if (playerObject != null)
@@ -185,6 +188,10 @@ public class EnemyDefault : MonoBehaviour
     {
         enemyCurrentHealth -= amount;
         enemyCurrentHealth = Mathf.Clamp(enemyCurrentHealth, 0, enemyHealth); // prevents negative damage
+        Debug.Log("Flash test");
+        if (flash != null)
+            Debug.Log("FLASH");
+            flash.Flash();
 
         // Check if enemy health is low to trigger a specific animation/behavior (if needed)
         // Your original logic: if (enemyCurrentHealth < 26) { animator.SetBool("Walk", true); }

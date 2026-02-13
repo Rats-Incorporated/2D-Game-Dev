@@ -10,7 +10,7 @@ public class HitScript : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            EnemyDefault enemy = collision.GetComponent<EnemyDefault>();
+            EnemyDefault enemy = collision.GetComponentInParent<EnemyDefault>();
             if (enemy != null)
             {
                 enemy.EnemyTakeDamage(damageAmount);

@@ -21383,6 +21383,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2593647323766579742, guid: 3fd04bca4f6918f49a7ac85f46a3030c, type: 3}
+      propertyPath: flashDuration
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2680783119671521244, guid: 3fd04bca4f6918f49a7ac85f46a3030c, type: 3}
       propertyPath: m_Name
       value: FLY (3)
@@ -21426,6 +21430,10 @@ PrefabInstance:
     - target: {fileID: 2943652682082404281, guid: 3fd04bca4f6918f49a7ac85f46a3030c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167143696621958524, guid: 3fd04bca4f6918f49a7ac85f46a3030c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -36917,7 +36925,7 @@ PrefabInstance:
       addedObject: {fileID: 1554242206}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8501677913154982329, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
-      insertIndex: -1
+      insertIndex: 12
       addedObject: {fileID: 511017164}
   m_SourcePrefab: {fileID: 100100000, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
 --- !u!1001 &9110676440765629228
