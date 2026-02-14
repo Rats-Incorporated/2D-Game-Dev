@@ -208,7 +208,7 @@ public class PlayerController : MonoBehaviour
             if (curr_vel.x < 0 && dir > 0)
             {
                 curr_vel.x = 0;
-            } 
+            }
             else if (curr_vel.x > 0 && dir < 0)
             {
                 curr_vel.x = 0;

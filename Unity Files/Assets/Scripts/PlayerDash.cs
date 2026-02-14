@@ -43,7 +43,7 @@ public class PlayerDash : MonoBehaviour
                 dashCount++;
                 cdTimer = 0.0f;
             }
-        } 
+        }
     }
 
     private void CheckGCD()

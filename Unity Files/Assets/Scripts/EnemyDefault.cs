@@ -191,7 +191,7 @@ public class EnemyDefault : MonoBehaviour
         Debug.Log("Flash test");
         if (flash != null)
             Debug.Log("FLASH");
-            flash.Flash();
+        flash.Flash();
 
         // Check if enemy health is low to trigger a specific animation/behavior (if needed)
         // Your original logic: if (enemyCurrentHealth < 26) { animator.SetBool("Walk", true); }
