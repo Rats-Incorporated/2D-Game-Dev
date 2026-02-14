@@ -27,6 +27,10 @@ public class Scene_exit : MonoBehaviour
                 mainSceneIndex = 0;
                 SceneManager.LoadScene(0); // load main scene from sams scene
             }
+            else
+            {
+                SceneManager.LoadScene(1); // load sams scene from the main scene
+            }
         }
     }
 
