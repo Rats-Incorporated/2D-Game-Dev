@@ -10,15 +10,12 @@ public class LogicScript : MonoBehaviour
     public Text BottomRightText;
     public Text WinText;
     public PlayerController player;
-    public win_block w_block;
     public GameObject WinScreen;
     public GameObject PauseScreen;
     public GameObject LoseScreen;
     public bool Paused = false;
     private float curTime;
     public Text TimerText;
-    public Text DashCDText;
-    public Text DashCountText;
 
     void Start()
     {
@@ -43,12 +40,6 @@ public class LogicScript : MonoBehaviour
         {
             float totaltime = Time.time - curTime;
             TimerText.text = timeString(totaltime);
-
-            float dashCD = player.DashState.GetTimeToCD();
-            int dashCount = player.DashState.GetDashCount();
-            // the F1 portion is rounding it to one decimal
-            DashCDText.text = $"{dashCD:F1}";
-            DashCountText.text = $"{dashCount}";
         }
         if (player.can_win)
         {
@@ -96,6 +87,20 @@ public class LogicScript : MonoBehaviour
         Paused = true;
         Time.timeScale = 0f; // pause physics, animations
         LoseScreen.SetActive(true);
+    }
+
+    public void LoadHub()
+    {
+        Paused = false;
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene("HubScene");
+    }
+
+    public void LoadNext()
+    {
+        Paused = false;
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void Resume()

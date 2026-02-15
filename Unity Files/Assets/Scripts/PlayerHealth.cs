@@ -33,6 +33,14 @@ public class PlayerHealth : MonoBehaviour
 
     }
 
+    public void HealDamage(float percent)
+    {
+        currentHealth += maxHealth * (percent / 100); // percent is 0 -> 100
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth); // prevents going over max
+
+        UpdateHealthUI();
+    }
+
     void UpdateHealthUI()
     {
         healthFill.fillAmount = currentHealth / maxHealth;
