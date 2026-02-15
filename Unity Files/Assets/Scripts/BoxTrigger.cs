@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class hit : MonoBehaviour
 {
+
+    public SpriteRenderer spriteText;
     public LogicScript Logic;
 
     private void Start()
     {
+        spriteText.enabled = false;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        // Debug.Log("Player collided with " + collision.name);
+        spriteText.enabled = true;
+        Debug.Log("Player collided with " + collision.name);
 
         // Slightly conflicting implementation: Set WinScreen to true here -- Can decide on which implementation to use moving forward.
 
@@ -24,6 +28,7 @@ public class hit : MonoBehaviour
     }
     void OnTriggerExit2D(Collider2D collision)
     {
-        // Debug.Log("Player left the collision with " + collision.name);
+        spriteText.enabled = false;
+        Debug.Log("Player left the collision with " + collision.name);
     }
 }

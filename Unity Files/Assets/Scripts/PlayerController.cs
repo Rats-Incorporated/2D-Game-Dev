@@ -6,8 +6,7 @@ public class PlayerController : MonoBehaviour
     // other classes
     public LogicScript Logic; // game state
     public PlayerGroundJump JumpState; // player jumping & ground collision tracking
-    public PlayerDash DashState; // player dash controls and values
-    public PlayerStamina StaminaState; // controls player stamina for movement
+    public PlayerDash DashState; // player dash & other movement cooldowns
 
     // general movement
     private Rigidbody2D rb; // physics object
@@ -47,10 +46,6 @@ public class PlayerController : MonoBehaviour
         {
             return;
         }
-
-        // stamina / dash related vars
-        StaminaState.StaminaRegen();
-        StaminaState.staminaRegenLock = DashState.inStam;
 
         // movement direction vectors
         var UpDirection = new Vector2(0, 10);
@@ -205,7 +200,7 @@ public class PlayerController : MonoBehaviour
 
     public void PlayerDash(Vector2 vec, int dir)
     {
-        if (StaminaState.currentStamina > DashState.stamCost && !DashState.inGCD)
+        if (DashState.GetDashCount() > 0 && !DashState.inGCD)
         {
             var curr_vel = rb.linearVelocity;
             // basically if dashing in opposite direction of current momentum
