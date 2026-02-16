@@ -10,7 +10,7 @@ public class HitScript : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            EnemyDefault enemy = collision.GetComponent<EnemyDefault>();
+            EnemyDefault enemy = collision.GetComponentInParent<EnemyDefault>();
             if (enemy != null)
             {
                 enemy.EnemyTakeDamage(damageAmount);
@@ -20,7 +20,7 @@ public class HitScript : MonoBehaviour
         if (collision.CompareTag("StartButton"))
         {
             mainSceneIndex = SceneManager.GetActiveScene().buildIndex;
-            SceneManager.LoadScene(0); //should be the first level?
+            SceneManager.LoadScene(1); //should be the first level?
         }
         if (collision.CompareTag("Text"))
         {

@@ -8,19 +8,37 @@ public class PlayerHealth : MonoBehaviour
     public float currentHealth;
     public Image healthFill;
     public LogicScript Logic;
+    PlayerInvulnerability invuln;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         currentHealth = maxHealth;
     }
-
+    void Awake()
+    {
+        invuln = GetComponent<PlayerInvulnerability>();
+    }
     public void TakeDamage(float amount)
     {
+        if (invuln != null && invuln.IsInvulnerable())
+            return;
+
         currentHealth -= amount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth); // prevents negative damage
+        if (invuln != null)
+            invuln.TriggerInvulnerability();
+
         UpdateHealthUI();
 
+    }
+
+    public void HealDamage(float percent)
+    {
+        currentHealth += maxHealth * (percent / 100); // percent is 0 -> 100
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth); // prevents going over max
+
+        UpdateHealthUI();
     }
 
     void UpdateHealthUI()
