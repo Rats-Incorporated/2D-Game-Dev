@@ -11,6 +11,9 @@ public class garbage_pile : MonoBehaviour
     public Transform bossSpawnPoint;     // where boss appears
     private bool bossSpawned = false;    // prevent double spawn
 
+    private GameObject bossRef;          // tracking the spawned boss
+    public BossDoor bossDoor;            // door object
+
     void Update()
     {
         if (playerInRange && !bossSpawned)
@@ -38,7 +41,8 @@ public class garbage_pile : MonoBehaviour
                 ? bossSpawnPoint.position
                 : transform.position;
 
-            Instantiate(bossPrefab, spawnPos, Quaternion.identity);
+            bossRef = Instantiate(bossPrefab, spawnPos, Quaternion.identity);
+            bossDoor.SetBoss(bossRef);
             bossSpawned = true;
         }
         else
