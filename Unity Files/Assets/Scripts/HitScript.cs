@@ -38,6 +38,9 @@ public class HitScript : MonoBehaviour
             boss.BossTakeDamage(damageAmount);
         }
 
+        BearBoss bearBoss = collision.GetComponent<BearBoss>();
+        if (bearBoss != null)
+            bearBoss.BossTakeDamage(damageAmount);
 
 
     }

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f3c0b04705d32d24696c2c1775416e0f
+guid: 7838c6f9ec8a3614c8ed48895c64fbe5
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -127,9 +127,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Grass Floor
+  - name: Bear
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.70212764, y: -1.117647}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -137,9 +137,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 150
-      height: 150
-    spriteID: 53b89971b1e7ca94ca6f67f012ac6d35
+      width: 47
+      height: 34
+    spriteID: a6150056da0b8fb44a6965929fedc2e2
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -153,25 +153,25 @@ ScriptedImporter:
   asepriteLayers:
   - layerIndex: 0
     uuid:
-      value0: 1332843598
+      value0: 291594208
       value1: 0
       value2: 0
       value3: 0
     guid: 0
-    name: Grass Floor
+    name: Bear
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Grass Floor
+    - name: Bear
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 150
-        height: 150
-      spriteId: 53b89971b1e7ca94ca6f67f012ac6d35
+        x: 17
+        y: 38
+        width: 47
+        height: 34
+      spriteId: a6150056da0b8fb44a6965929fedc2e2
     linkedCells: []
     tileCells: []
     tileSetIndex: 0
@@ -181,5 +181,5 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 150, y: 150}
-  previousTextureSize: {x: 256, y: 256}
+  canvasSize: {x: 100, y: 100}
+  previousTextureSize: {x: 64, y: 64}
