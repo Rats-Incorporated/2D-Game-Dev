@@ -1,6 +1,7 @@
 using System.Data;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 
 public class PlayerDash : MonoBehaviour
 {
@@ -20,6 +21,12 @@ public class PlayerDash : MonoBehaviour
     private float cdTimer = 0.0f;
     private float gcdTimer = 0.0f;
 
+    // stamina regen
+    private float staminaRegenRate = 0.5f / 3f; // 50% over 3 seconds
+    private bool regeneratingStamina = false;
+
+    public Image stamFill;
+
     void Start()
     {
         dashTotal = player.dashTotal;
@@ -30,6 +37,8 @@ public class PlayerDash : MonoBehaviour
     {
         CheckCD();
         CheckGCD();
+        RegenStamina();
+        Debug.Log(stamFill.fillAmount);
         // print(cdTimer);
     }
 
@@ -63,6 +72,11 @@ public class PlayerDash : MonoBehaviour
         dashCount--;
         gcdTimer = 0.0f;
         inGCD = true;
+
+        stamFill.fillAmount -= 0.5f;              // subtract 50%
+        stamFill.fillAmount = Mathf.Clamp01(stamFill.fillAmount);
+
+        regeneratingStamina = true;               // begin regen
     }
 
     public int GetDashCount()
@@ -73,5 +87,19 @@ public class PlayerDash : MonoBehaviour
     public float GetTimeToCD()
     {
         return dashCD - cdTimer;
+    }
+
+    private void RegenStamina()
+    {
+        if (regeneratingStamina && stamFill.fillAmount < 1f)
+        {
+            stamFill.fillAmount += staminaRegenRate * Time.deltaTime;
+
+            if (stamFill.fillAmount >= 1f)
+            {
+                stamFill.fillAmount = 1f;
+                regeneratingStamina = false;
+            }
+        }
     }
 }
