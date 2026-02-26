@@ -30,12 +30,13 @@ public class PlayerShuriken : MonoBehaviour
 
     void ThrowShuriken()
     {
-        GameObject shuriken = Instantiate(shurikenPrefab, firePoint.position, Quaternion.identity);
+        Vector2 direction = transform.localScale.x > 0 ? Vector2.right : Vector2.left;
 
-        float facingDirection = Mathf.Sign(transform.localScale.x);
-        Vector2 direction = new Vector2(facingDirection, 0f);
+        GameObject shuriObj = Instantiate(shurikenPrefab, firePoint.position, Quaternion.identity);
 
-        shuriken.GetComponent<Shuriken>().Initialize(-direction);
+        Shuriken shuri = shuriObj.GetComponent<Shuriken>();
+        shuri.Initialize(-direction);
+
     }
 
     void HandleCooldownUI()
