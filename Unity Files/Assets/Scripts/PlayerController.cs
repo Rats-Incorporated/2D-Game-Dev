@@ -223,5 +223,8 @@ public class PlayerController : MonoBehaviour
             DashState.SetDashVars();
         }
     }
+
+    // want the player vector elsewhere so am doing this to make it easier
+    public Vector2 GetPlayerVector() { return rb.linearVelocity; }
 }
 
