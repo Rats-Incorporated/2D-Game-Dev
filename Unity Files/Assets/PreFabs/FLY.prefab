@@ -34,11 +34,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 12574098bd0f7af499e527a478593048, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.71
+      value: 77.31
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 12574098bd0f7af499e527a478593048, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.69
+      value: 6.09
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 12574098bd0f7af499e527a478593048, type: 3}
       propertyPath: m_LocalPosition.z
@@ -199,5 +199,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 089e5150a8ca7244481686efd1f99568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: GameScripts::DamageFlash
-  flashColor: {r: 1, g: 1, b: 1, a: 1}
-  flashDuration: 0.3
+  flashDuration: 0.5
+  dimAlpha: 0.5
