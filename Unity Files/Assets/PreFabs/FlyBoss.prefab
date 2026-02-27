@@ -136,10 +136,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   moveSpeed: 2
   stopDistance: 3
-  projectilePrefab: {fileID: 0}
-  firePoint: {fileID: 5393837850953433421}
-  fireRate: 2
+  projectilePrefab: {fileID: 3022708416966305038, guid: b0b2101c6dceca744b7c958f3d4182aa, type: 3}
+  firePointLeft: {fileID: 0}
+  firePointRight: {fileID: 0}
+  fireInterval: 1.5
   projectileSpeed: 5
+  bossHealth: 200
 --- !u!50 &7277667922885015752
 Rigidbody2D:
   serializedVersion: 5
