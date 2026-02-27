@@ -151,6 +151,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b832912c768415419d55e55cbdd4666, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  bounce: 20
+  cooldown: 0.4
 --- !u!50 &7450046830162466807
 Rigidbody2D:
   serializedVersion: 5
