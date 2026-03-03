@@ -11,6 +11,8 @@ public class EnemyDefault : MonoBehaviour
     public float chaseRange = 35f; // Distance for long-range player detection (Raycast length)
     public float stopRange = 15f;
     public LayerMask playerLayer; // Assign the Layer that your Player is on in the Inspector
+    public float patrolMinX = -10f; //walking range
+    public float patrolMaxX = 10f;
     DamageFlash flash;
 
     // --- Private/State Variables ---
@@ -102,11 +104,17 @@ public class EnemyDefault : MonoBehaviour
     {
         // Lock Y position
         Vector2 targetPosition = new Vector2(currentWanderTarget.x, transform.position.y);
-
         transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
 
         // Animation: Always walking in Wander state
-        //animator.SetBool("Walk", false); 
+        //animator.SetBool("Walk", false);
+
+        // Clamp position to patrol bounds
+        transform.position = new Vector3(
+            Mathf.Clamp(transform.position.x, patrolMinX, patrolMaxX),
+            transform.position.y,
+            transform.position.z
+        );
 
         // Check if the enemy has reached the target
         if (Vector2.Distance(transform.position, targetPosition) < 0.1f)
@@ -138,11 +146,19 @@ public class EnemyDefault : MonoBehaviour
         {
             // Player is farther than 1 unit: Chase
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+
+            // Clamp position to patrol bounds
+            transform.position = new Vector3(
+                Mathf.Clamp(transform.position.x, patrolMinX, patrolMaxX),
+                transform.position.y,
+                transform.position.z
+            );
+
             //animator.SetBool("Walk", false); // Run animation
         }
         else
         {
-            // Player is within 1 unit: Stop/Idle 
+            // Player is within 1 unit: Stop/Idle
             // The damage will be handled by OnTriggerEnter2D
             //animator.SetBool("Walk", true); // Idle animation
             // NOTE: Add your specific close-range/stop animation logic here if different from Idle.
@@ -165,7 +181,8 @@ public class EnemyDefault : MonoBehaviour
     {
         float wanderRadius = 5f;
         float randomX = Random.Range(-wanderRadius, wanderRadius);
-        currentWanderTarget = new Vector2(transform.position.x + randomX, transform.position.y);
+        float clampedX = Mathf.Clamp(transform.position.x + randomX, patrolMinX, patrolMaxX);
+        currentWanderTarget = new Vector2(clampedX, transform.position.y);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

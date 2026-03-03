@@ -2,53 +2,80 @@
 
 public class BearBoss : MonoBehaviour
 {
-    [Header("Movement")]
+    [Header("Arena Bounds")]
+    public float arenaMinX = -10f;
+    public float arenaMaxX = 10f;
     public float moveSpeed = 2f;
     public float stopDistance = 2.5f;
 
+    [Header("Too-Close Shove")]
+    public float shoveDistance = 1.4f;         // how close the player needs to be
+    public float shoveLingerTime = 0.5f;       // how long they have to stay that close before getting blasted
+    public float shoveForce = 14f;
+    public float shoveUpForce = 6f;
+    public float shoveCooldown = 1.2f;         // gap before it can trigger again
+    private float shoveLingerTimer = 0f;
+    private float shoveCooldownTimer = 0f;
+
+    [Header("Damage Cooldown")]
+    public float damageCooldown = 0.3f;   // min time between incoming hits — breaks button spam
+    private float damageCooldownTimer = 0f;
+
     [Header("Attack Timing")]
-    public float attackInterval = 2.5f;   // seconds between attack attempts
+    public float attackInterval = 1.5f;
     [Range(0f, 1f)]
-    public float lungeChance = 0.5f;      // 50/50 by default, tweak in Inspector
+    public float lungeChance = 0.5f;
 
     [Header("Lunge Attack")]
-    public float lungeHorizontalSpeed = 10f;  // how fast he crosses the ground
-    public float lungeJumpForce = 12f;         // upward impulse at launch
-    public float lungeCooldownAfter = 0.6f;    // pause after landing
+    public float lungeHorizontalSpeed = 10f;
+    public float lungeJumpForce = 12f;
+    public float lungeCooldownAfter = 0.6f;
 
     [Header("Paw Swipe Attack")]
-    public Transform swipeHitbox;         // empty child GameObject positioned in front of bear
+    public Transform swipeHitbox;
     public float swipeRadius = 1.2f;
     public float swipeDamage = 20f;
-    public float swipeDuration = 0.3f;    // hitbox stays active this long
+    public float swipeDuration = 0.3f;
 
     [Header("Damage")]
     public float lungeDamage = 30f;
+
+    [Header("Player Knockback")]
+    public float hitKnockbackForce = 6f;
+    public float hitKnockbackUp = 3f;
+
+    [Header("Stuck / Back-jump")]
+    public float stuckTimeThreshold = 2f;
+    public float stuckMoveThreshold = 0.05f;
+    public float backJumpHorizontalSpeed = 6f;
+    public float backJumpForce = 9f;
 
     [Header("Health")]
     public float bossHealth = 300f;
     private float bossCurrentHealth;
 
-    // State machine 
-    private enum BossState { Idle, Moving, Lunging, SwipingPaw, Cooldown }
+    // State machine
+    private enum BossState { Idle, Moving, Lunging, SwipingPaw, Cooldown, BackJump }
     private BossState state = BossState.Idle;
 
     private Transform player;
     private Rigidbody2D rb;
 
     private float attackTimer;
-    private float stateTimer;        // general purpose per state countdown
-    private float lungeDirectionX;   // -1 or 1, horizontal only
+    private float stateTimer;
+    private float lungeDirectionX;
     private bool isGrounded = false;
 
-    //  Swipe hitbox tracking
     private bool swipeActive = false;
     private bool swipeHitRegistered = false;
-
-    // Lunge hit tracking
     private bool lungeHitRegistered = false;
 
-    //  Facing 
+    private float stuckTimer = 0f;
+    private Vector2 lastPosition;
+    private float backJumpDirectionX;
+
+    private Animator anim;
+
     private Vector3 originalScale;
 
     void Start()
@@ -56,17 +83,16 @@ public class BearBoss : MonoBehaviour
         bossCurrentHealth = bossHealth;
         rb = GetComponent<Rigidbody2D>();
         originalScale = transform.localScale;
-
-        // Freeze rotation so physics can never tip the bear over
         rb.freezeRotation = true;
+        anim = GetComponent<Animator>();
 
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         if (playerObj != null)
             player = playerObj.transform;
 
         attackTimer = attackInterval;
+        lastPosition = rb.position;
 
-        // Make sure the swipe hitbox starts invisible / disabled
         if (swipeHitbox != null)
             swipeHitbox.gameObject.SetActive(false);
     }
@@ -76,14 +102,18 @@ public class BearBoss : MonoBehaviour
         if (bossCurrentHealth <= 0) return;
         if (player == null) return;
 
-        // Always face the player
         FacePlayer();
+
+        shoveCooldownTimer -= Time.deltaTime;
+        damageCooldownTimer -= Time.deltaTime;
 
         switch (state)
         {
             case BossState.Idle:
             case BossState.Moving:
                 HandleMovementAndTimer();
+                TrackStuck();
+                CheckTooClose();
                 break;
 
             case BossState.Lunging:
@@ -97,10 +127,25 @@ public class BearBoss : MonoBehaviour
             case BossState.Cooldown:
                 HandleCooldown();
                 break;
+
+            case BossState.BackJump:
+                HandleBackJump();
+                break;
+        }
+
+        lastPosition = rb.position;
+
+        // Keep bear inside arena bounds
+        if (rb.position.x < arenaMinX || rb.position.x > arenaMaxX)
+        {
+            Vector2 clamped = rb.position;
+            clamped.x = Mathf.Clamp(rb.position.x, arenaMinX, arenaMaxX);
+            rb.position = clamped;
+            rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
         }
     }
 
-    // Facing
+    // Facing 
 
     void FacePlayer()
     {
@@ -109,6 +154,56 @@ public class BearBoss : MonoBehaviour
         Vector3 s = originalScale;
         s.x = Mathf.Abs(s.x) * (dir < 0 ? -1f : 1f);
         transform.localScale = s;
+    }
+
+    // Too close shove
+
+    void CheckTooClose()
+    {
+        if (shoveCooldownTimer > 0f)
+        {
+            shoveLingerTimer = 0f;   // don't accumulate while on cooldown
+            return;
+        }
+
+        float distance = Mathf.Abs(player.position.x - transform.position.x);
+
+        if (distance < shoveDistance)
+        {
+            shoveLingerTimer += Time.deltaTime;
+
+            if (shoveLingerTimer >= shoveLingerTime)
+            {
+                shoveLingerTimer = 0f;
+                shoveCooldownTimer = shoveCooldown;
+                KnockbackPlayer(player.gameObject, shoveForce, shoveUpForce);
+
+                // Also immediately trigger an attack so the bear follows up after the shove
+                attackTimer = 0f;
+            }
+        }
+        else
+        {
+            shoveLingerTimer = 0f;   // reset if they back off
+        }
+    }
+
+    // Stuck detection
+
+    void TrackStuck()
+    {
+        float moved = Mathf.Abs(rb.position.x - lastPosition.x);
+
+        if (moved < stuckMoveThreshold)
+            stuckTimer += Time.deltaTime;
+        else
+            stuckTimer = 0f;
+
+        if (stuckTimer >= stuckTimeThreshold)
+        {
+            stuckTimer = 0f;
+            BeginBackJump();
+        }
     }
 
     // Normal movement + attack selection
@@ -121,7 +216,6 @@ public class BearBoss : MonoBehaviour
         {
             state = BossState.Moving;
             float dirX = Mathf.Sign(player.position.x - transform.position.x);
-            // Only set X — leave Y alone so gravity keeps him grounded
             rb.linearVelocity = new Vector2(dirX * moveSpeed, rb.linearVelocity.y);
         }
         else
@@ -140,34 +234,48 @@ public class BearBoss : MonoBehaviour
 
     void ChooseAttack()
     {
-        // Stop horizontal movement before attacking, keep Y so gravity still applies
         rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
 
-        // Weighted coin flip — lungeChance slider controls fairness
         if (Random.value < lungeChance)
             BeginLunge();
         else
             BeginSwipe();
     }
 
-    // Lunge Attack 
+    //  Back jump (unstuck)
+
+    void BeginBackJump()
+    {
+        state = BossState.BackJump;
+        backJumpDirectionX = -Mathf.Sign(player.position.x - transform.position.x);
+        rb.linearVelocity = new Vector2(backJumpDirectionX * backJumpHorizontalSpeed, backJumpForce);
+    }
+
+    void HandleBackJump()
+    {
+        rb.linearVelocity = new Vector2(backJumpDirectionX * backJumpHorizontalSpeed, rb.linearVelocity.y);
+
+        if (isGrounded && rb.linearVelocity.y <= 0f)
+        {
+            rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+            EnterCooldown(0.3f);
+        }
+    }
+
+    // Lunge Attack
 
     void BeginLunge()
     {
         state = BossState.Lunging;
         lungeDirectionX = Mathf.Sign(player.position.x - transform.position.x);
         lungeHitRegistered = false;
-
-        // Apply horizontal speed + upward impulse, gravity handles the arc
         rb.linearVelocity = new Vector2(lungeDirectionX * lungeHorizontalSpeed, lungeJumpForce);
     }
 
     void HandleLunge()
     {
-        // Keep horizontal speed constant through the air
         rb.linearVelocity = new Vector2(lungeDirectionX * lungeHorizontalSpeed, rb.linearVelocity.y);
 
-        // Land once he's back on the ground after leaving it
         if (isGrounded && rb.linearVelocity.y <= 0f)
         {
             rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
@@ -175,17 +283,16 @@ public class BearBoss : MonoBehaviour
         }
     }
 
-    // Any part of the bear touching the player during a lunge deals damage
     void OnCollisionEnter2D(Collision2D collision)
     {
+        CheckGrounded(collision);
         TryLungeDamage(collision);
     }
 
     void OnCollisionStay2D(Collision2D collision)
     {
-        // Covers the case where the player walks under or into the bear mid arc
-        TryLungeDamage(collision);
         CheckGrounded(collision);
+        TryLungeDamage(collision);
     }
 
     void TryLungeDamage(Collision2D collision)
@@ -198,15 +305,14 @@ public class BearBoss : MonoBehaviour
         if (ph != null)
             ph.TakeDamage(lungeDamage);
 
-        lungeHitRegistered = true;
+        KnockbackPlayer(collision.gameObject, hitKnockbackForce, hitKnockbackUp);
 
-        // Kill horizontal momentum on impact so he doesn't slide through
+        lungeHitRegistered = true;
         rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
     }
 
     void OnCollisionExit2D(Collision2D collision)
     {
-        // When no contacts remain he's airborne
         isGrounded = false;
     }
 
@@ -214,7 +320,6 @@ public class BearBoss : MonoBehaviour
     {
         foreach (ContactPoint2D contact in collision.contacts)
         {
-            // A normal pointing mostly upward means we're standing on something
             if (contact.normal.y > 0.5f)
             {
                 isGrounded = true;
@@ -223,7 +328,21 @@ public class BearBoss : MonoBehaviour
         }
     }
 
-    // ── Paw attack :)
+    // Player knockback helper 
+
+    void KnockbackPlayer(GameObject playerObj, float horizontal, float vertical)
+    {
+        Rigidbody2D playerRb = playerObj.GetComponent<Rigidbody2D>();
+        if (playerRb == null) return;
+
+        // Bear always faces the player so localScale.x tells us which way is "away"
+        float awayDir = Mathf.Sign(transform.localScale.x);
+
+        playerRb.linearVelocity = Vector2.zero;   // clear current momentum first
+        playerRb.AddForce(new Vector2(awayDir * horizontal, vertical), ForceMode2D.Impulse);
+    }
+
+    // Paw Swipe Attack 
 
     void BeginSwipe()
     {
@@ -234,17 +353,18 @@ public class BearBoss : MonoBehaviour
 
         if (swipeHitbox != null)
             swipeHitbox.gameObject.SetActive(true);
+
+        if (anim != null) anim.SetTrigger("Swipe"); // <-- add this line
     }
 
     void HandleSwipe()
     {
-        // Check for player overlap while hitbox is active
         if (swipeActive && !swipeHitRegistered && swipeHitbox != null)
         {
             Collider2D hit = Physics2D.OverlapCircle(
                 swipeHitbox.position,
                 swipeRadius,
-                LayerMask.GetMask("Player")   // make sure your Player layer is set
+                LayerMask.GetMask("Player")
             );
 
             if (hit != null && hit.CompareTag("Player"))
@@ -253,7 +373,8 @@ public class BearBoss : MonoBehaviour
                 if (ph != null)
                     ph.TakeDamage(swipeDamage);
 
-                swipeHitRegistered = true;   // one hit per swing
+                KnockbackPlayer(hit.gameObject, hitKnockbackForce, hitKnockbackUp);
+                swipeHitRegistered = true;
             }
         }
 
@@ -264,11 +385,11 @@ public class BearBoss : MonoBehaviour
             if (swipeHitbox != null)
                 swipeHitbox.gameObject.SetActive(false);
 
-            EnterCooldown(0f);   // no extra cooldown for swipe
+            EnterCooldown(0f);
         }
     }
 
-    // Cooldown / recovery
+    //  Cooldown / recovery
 
     void EnterCooldown(float duration)
     {
@@ -282,7 +403,7 @@ public class BearBoss : MonoBehaviour
         if (stateTimer <= 0f)
         {
             state = BossState.Moving;
-            attackTimer = attackInterval;   // reset so he doesn't instantly attack again
+            attackTimer = attackInterval;
         }
     }
 
@@ -290,22 +411,26 @@ public class BearBoss : MonoBehaviour
 
     void OnDrawGizmosSelected()
     {
-        // Visualise swipe range in Scene view
         if (swipeHitbox != null)
         {
             Gizmos.color = new Color(1f, 0.3f, 0f, 0.4f);
             Gizmos.DrawWireSphere(swipeHitbox.position, swipeRadius);
         }
 
-        // Visualise stop distance
         Gizmos.color = new Color(0f, 1f, 0f, 0.25f);
         Gizmos.DrawWireSphere(transform.position, stopDistance);
+
+        Gizmos.color = new Color(1f, 0f, 0f, 0.25f);
+        Gizmos.DrawWireSphere(transform.position, shoveDistance);
     }
 
-    // Health
+    //  Health
 
     public void BossTakeDamage(float amount)
     {
+        if (damageCooldownTimer > 0f) return;
+
+        damageCooldownTimer = damageCooldown;
         bossCurrentHealth -= amount;
         bossCurrentHealth = Mathf.Clamp(bossCurrentHealth, 0f, bossHealth);
 
