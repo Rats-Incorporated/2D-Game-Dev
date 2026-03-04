@@ -1,5 +1,98 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &557224613504856825
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2636387082676193758}
+  m_Layer: 0
+  m_Name: FIrePointRIght
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2636387082676193758
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557224613504856825}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -0.75, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2317459211980439705}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1 &2178318734753512810
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 596684539992488655}
+  m_Layer: 0
+  m_Name: SlamFirePointLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &596684539992488655
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2178318734753512810}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -1, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2317459211980439705}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1 &2723903422570637525
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5597497084461153323}
+  m_Layer: 0
+  m_Name: SlamFirePointRight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5597497084461153323
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2723903422570637525}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.75, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2317459211980439705}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4583822828008418064
 GameObject:
   m_ObjectHideFlags: 0
@@ -25,7 +118,7 @@ Transform:
   m_GameObject: {fileID: 4583822828008418064}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.092, y: 1.208, z: 0}
+  m_LocalPosition: {x: 0.658, y: -0.042000055, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 2.1924338}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -101,6 +194,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7878350319992209165, guid: c21727a52d5cd154ba609870f0a8b144, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5393837850953433421}
+    - targetCorrespondingSourceObject: {fileID: 7878350319992209165, guid: c21727a52d5cd154ba609870f0a8b144, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2636387082676193758}
+    - targetCorrespondingSourceObject: {fileID: 7878350319992209165, guid: c21727a52d5cd154ba609870f0a8b144, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5597497084461153323}
+    - targetCorrespondingSourceObject: {fileID: 7878350319992209165, guid: c21727a52d5cd154ba609870f0a8b144, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 596684539992488655}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: c21727a52d5cd154ba609870f0a8b144, type: 3}
       insertIndex: -1
@@ -136,12 +238,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   moveSpeed: 2
   stopDistance: 3
+  minX: 252
+  maxX: 296
   projectilePrefab: {fileID: 3022708416966305038, guid: b0b2101c6dceca744b7c958f3d4182aa, type: 3}
-  firePointLeft: {fileID: 0}
-  firePointRight: {fileID: 0}
-  fireInterval: 1.5
+  firePointLeft: {fileID: 5393837850953433421}
+  firePointRight: {fileID: 2636387082676193758}
+  fireInterval: 2
   projectileSpeed: 5
+  slamProjectilePrefab: {fileID: 5846753326078357607, guid: c25094da26fc5bb41a3a091452f47661, type: 3}
+  slamFirePointLeft: {fileID: 596684539992488655}
+  slamFirePointRight: {fileID: 5597497084461153323}
+  slamCooldown: 6
+  slamSpeed: 8
   bossHealth: 200
+  contactDamage: 15
+  contactDamageCooldown: 1
 --- !u!50 &7277667922885015752
 Rigidbody2D:
   serializedVersion: 5
@@ -154,7 +265,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 5
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
