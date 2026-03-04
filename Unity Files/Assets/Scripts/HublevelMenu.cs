@@ -7,6 +7,7 @@ public class HublevelMenu : MonoBehaviour
     private bool playerInExitZone = false;
     private int mainSceneIndex;
     public GameObject canvasGameObject;
+    public bool Paused = false;
 
     void Start()
     {
@@ -17,28 +18,35 @@ public class HublevelMenu : MonoBehaviour
         }
     }
 
+    public void Resume()
+    {
+        Paused = false;
+        Time.timeScale = 1.0f; // resume physics, animations
+        canvasGameObject.SetActive(false);
+        
+    }
+
+    public void Pause()
+    {
+        Paused = true;
+        Time.timeScale = 0f;
+        canvasGameObject.SetActive(true);
+    }
+
 
     void Update()
     {
-        // if (Input.GetKeyDown(KeyCode.Return) && playerInExitZone)
-        // {
-        //     if (mainSceneIndex == 0)
-        //     {
-        //         mainSceneIndex = 1;
-        //         SceneManager.LoadScene(1); // load sams scene from the main scene
-        //     }
-        //     else if (mainSceneIndex == 1)
-        //     {
-        //         mainSceneIndex = 0;
-        //         SceneManager.LoadScene(0); // load main scene from sams scene
-        //     }
-        //     else
-        //     {
-        //         SceneManager.LoadScene(1); // load sams scene from the main scene
-        //     }
-        // }
+       
         if (Input.GetKeyDown(KeyCode.Return) && playerInExitZone){
             canvasGameObject.SetActive(!canvasGameObject.activeSelf);
+            if(Paused == false){
+                Pause();
+            }
+            else{
+                Resume();
+            }
+            
+            
         }
         
     }
@@ -62,6 +70,7 @@ public class HublevelMenu : MonoBehaviour
     public void ExitMenu()
     {
         canvasGameObject.SetActive(!canvasGameObject.activeSelf);
+        Resume();
     }
 
      public void Scene1()
