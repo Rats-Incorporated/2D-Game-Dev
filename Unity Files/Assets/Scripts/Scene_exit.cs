@@ -32,6 +32,7 @@ public class Scene_exit : MonoBehaviour
                 SceneManager.LoadScene(1); // load sams scene from the main scene
             }
         }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
