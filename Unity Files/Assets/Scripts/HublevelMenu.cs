@@ -75,11 +75,13 @@ public class HublevelMenu : MonoBehaviour
 
      public void Scene1()
     {
+        Resume();
         SceneManager.LoadScene(1);
     }
     
      public void Scene2()
     {
+        Resume();
         SceneManager.LoadScene(6);
     }
 }
