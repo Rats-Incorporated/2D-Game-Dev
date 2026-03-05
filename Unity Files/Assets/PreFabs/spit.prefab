@@ -164,5 +164,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90066d868c7041f4e9283e10f8281c1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: GameScripts::BossProjectile
-  lifeTime: 5
+  lifeTime: 20000
   damage: 10

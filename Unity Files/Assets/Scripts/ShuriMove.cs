@@ -31,6 +31,14 @@ public class Shuriken : MonoBehaviour
             return;
         }
 
+        BearBoss bearboss = collision.GetComponent<BearBoss>();
+        if (bearboss != null)
+        {
+            bearboss.BossTakeDamage(damage);
+            Destroy(gameObject);
+            return;
+        }
+
         EnemyDefault enemy = collision.GetComponentInParent<EnemyDefault>();
         if (enemy != null)
         {

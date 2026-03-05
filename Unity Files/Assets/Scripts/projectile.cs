@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BossProjectile : MonoBehaviour
 {
-    public float lifeTime = 5f;
+    public float lifeTime = 200f;
     public float damage = 10f;
 
     void Start()

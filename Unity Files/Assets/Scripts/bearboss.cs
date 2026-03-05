@@ -354,7 +354,7 @@ public class BearBoss : MonoBehaviour
         if (swipeHitbox != null)
             swipeHitbox.gameObject.SetActive(true);
 
-        if (anim != null) anim.SetTrigger("Swipe"); // <-- add this line
+        
     }
 
     void HandleSwipe()
