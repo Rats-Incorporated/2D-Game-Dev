@@ -27,16 +27,16 @@ public class PlayerController : MonoBehaviour
     public bool can_win = false;
 
     // sprite animation
-    Animator animator;
-    bool isFacingRight = false;
+    [SerializeField] private Animator animator;
+    [SerializeField] private Transform spriteTransform;
+    bool isFacingRight = true;
     float horizontalInput;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.freezeRotation = true; // Turns off char rotation
-        animator = GetComponent<Animator>();
-        FlipSpriteLogic();
+        //FlipSpriteLogic();
     }
 
     void Update()
@@ -118,9 +118,9 @@ public class PlayerController : MonoBehaviour
     void FlipSpriteLogic()
     {
         isFacingRight = !isFacingRight;
-        Vector3 ls = transform.localScale;
+        Vector3 ls = spriteTransform.localScale;
         ls.x *= -1f;
-        transform.localScale = ls;
+        spriteTransform.localScale = ls;
     }
 
     // Calls Sprite Flip if conditions are met

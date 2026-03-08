@@ -12,11 +12,11 @@ public class PlayerAttack : MonoBehaviour
     private bool canAttack = true; // Track if player can attack
     private float cooldownTimer = 0f; // Timer for tracking cooldown
 
-    Animator anim;
+    [SerializeField] private Animator anim;
 
     void Start()
     {
-        anim = GetComponent<Animator>();
+
     }
 
     void Update()
