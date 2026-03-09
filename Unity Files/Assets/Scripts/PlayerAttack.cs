@@ -6,7 +6,7 @@ public class PlayerAttack : MonoBehaviour
     public float attackDuration = 0.25f;//backup 0.25f
     public float attackDistance = 2.5f;
     public float attackDmg = 25f;
-    public float attackCooldown = 0.7f; // Cooldown between attacks
+    public float attackCooldown = 0.2f; // Cooldown between attacks
 
     private Vector2 facingDirection = Vector2.right; // default facing right
     private bool canAttack = true; // Track if player can attack
