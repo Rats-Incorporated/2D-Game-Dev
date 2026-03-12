@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
     // sprite animation
     [SerializeField] private Animator animator;
     [SerializeField] private Transform spriteTransform;
-    bool isFacingRight = true;
+    public bool isFacingRight = true;
     float horizontalInput;
 
     void Start()

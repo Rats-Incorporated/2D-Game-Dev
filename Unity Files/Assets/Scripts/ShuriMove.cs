@@ -13,16 +13,20 @@ public class Shuriken : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    public void Initialize(Vector2 direction)
+    // New Initialize method that takes player velocity
+    public void Initialize(Vector2 direction, Vector2 playerVelocity)
     {
-        rb.linearVelocity = direction.normalized * speed;
+        // Only add the horizontal component of the player velocity
+        Vector2 inheritedVelocity = new Vector2(playerVelocity.x, 0);
+
+        rb.linearVelocity = direction.normalized * speed + inheritedVelocity;
+
         Destroy(gameObject, lifetime);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Damage enemy
-
         FlyBoss boss = collision.GetComponent<FlyBoss>();
         if (boss != null)
         {

@@ -1252,7 +1252,7 @@ Transform:
   m_GameObject: {fileID: 3506278781095339139}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5, y: -0.37, z: 0}
+  m_LocalPosition: {x: -0.5, y: -1.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19268,6 +19268,7 @@ MonoBehaviour:
   can_win: 0
   animator: {fileID: 3691923090656739867}
   spriteTransform: {fileID: 3529947247739330478}
+  isFacingRight: 1
 --- !u!95 &6836477760344386809
 Animator:
   serializedVersion: 7
@@ -19465,6 +19466,7 @@ MonoBehaviour:
   cooldown: 3
   cooldownOverlay: {fileID: 8897648967574985794}
   cooldownText: {fileID: 3503831585744875619}
+  playerController: {fileID: 6654558692795548727}
 --- !u!1 &8538718023124776878
 GameObject:
   m_ObjectHideFlags: 0
