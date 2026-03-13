@@ -19433,6 +19433,7 @@ MonoBehaviour:
   invulnerabilityDuration: 1
   flashCount: 8
   dimAlpha: 0.5
+  playerSpriteRenderer: {fileID: 9104103758114453206}
 --- !u!114 &6962179413157139317
 MonoBehaviour:
   m_ObjectHideFlags: 0
