@@ -14,8 +14,8 @@ public class CameraSpeedZoom : MonoBehaviour
 
     private float holding_ratio;
     private float holding_timer;
-    
-   void Start()
+
+    void Start()
     {
         cam = GetComponent<Camera>();
         max_speed = player.maxHorizontalSpeed - speed_threshold;
@@ -32,11 +32,12 @@ public class CameraSpeedZoom : MonoBehaviour
         if (holding_timer < zoom_hold_time && speed <= 0)
         {
             holding_timer += Time.deltaTime;
-        } else if (holding_timer >= zoom_hold_time)
+        }
+        else if (holding_timer >= zoom_hold_time)
         {
             holding_ratio = 0;
         }
-        
+
         if (speed > 0)
         {
             float ratio = Mathf.Clamp01(speed / max_speed); // clamping between 0 and 1
