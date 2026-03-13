@@ -13,12 +13,14 @@ public class PlayerShuriken : MonoBehaviour
 
     [Header("UI")]
     public Image cooldownOverlay;
-    public Text cooldownText;  // change to Text if not using TMP
+    public Text cooldownText;  // use Text if not using TMP
+
+    [Header("References")]
+    public PlayerController playerController;
 
     void Update()
     {
         cooldownTimer += Time.deltaTime;
-
         HandleCooldownUI();
 
         if (Input.GetKeyDown(KeyCode.K) && cooldownTimer >= cooldown)
@@ -30,13 +32,23 @@ public class PlayerShuriken : MonoBehaviour
 
     void ThrowShuriken()
     {
-        Vector2 direction = transform.localScale.x > 0 ? Vector2.right : Vector2.left;
+        // Determine direction based on player facing
+        Vector2 direction = playerController.isFacingRight ? Vector2.right : Vector2.left;
 
-        GameObject shuriObj = Instantiate(shurikenPrefab, firePoint.position, Quaternion.identity);
+        // Flip firePoint X offset based on facing
+        Vector3 localOffset = firePoint.localPosition;
+        localOffset.x = Mathf.Abs(localOffset.x) * (playerController.isFacingRight ? 1 : -1);
 
+        // Calculate spawn position in world space
+        Vector3 spawnPos = playerController.transform.position + localOffset;
+
+        // Spawn the shuriken
+        GameObject shuriObj = Instantiate(shurikenPrefab, spawnPos, Quaternion.identity);
         Shuriken shuri = shuriObj.GetComponent<Shuriken>();
-        shuri.Initialize(-direction);
 
+        // Get player velocity to add to the shuriken
+        Vector2 playerVel = playerController.GetPlayerVector();
+        shuri.Initialize(direction, new Vector2(playerVel.x, 0)); // only horizontal component
     }
 
     void HandleCooldownUI()

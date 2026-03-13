@@ -1,22 +1,32 @@
 using System.Collections;
 using UnityEngine;
 
-[RequireComponent(typeof(SpriteRenderer))]
+[RequireComponent(typeof(PlayerInvulnerability))]
 public class PlayerInvulnerability : MonoBehaviour
 {
-    [Header("Invulnerability Settings")]
     public float invulnerabilityDuration = 1.0f;
     public int flashCount = 8;
     public float dimAlpha = 0.5f;
 
-    SpriteRenderer sr;
-    Color originalColor;
-    bool invulnerable;
+    public SpriteRenderer playerSpriteRenderer; // assign in inspector
+
+    private Color originalColor;
+    private bool invulnerable;
 
     void Awake()
     {
-        sr = GetComponent<SpriteRenderer>();
-        originalColor = sr.color;
+        if (playerSpriteRenderer == null)
+        {
+            Debug.LogWarning("PlayerSpriteRenderer not assigned! Attempting to find child 'PlayerSprite'...");
+            Transform child = transform.Find("PlayerSprite");
+            if (child != null)
+                playerSpriteRenderer = child.GetComponent<SpriteRenderer>();
+        }
+
+        if (playerSpriteRenderer != null)
+            originalColor = playerSpriteRenderer.color;
+        else
+            Debug.LogError("No SpriteRenderer found for invulnerability flashing!");
     }
 
     public bool IsInvulnerable()
@@ -32,6 +42,8 @@ public class PlayerInvulnerability : MonoBehaviour
 
     IEnumerator InvulnerabilityRoutine()
     {
+        if (playerSpriteRenderer == null) yield break;
+
         invulnerable = true;
 
         float flashInterval = invulnerabilityDuration / (flashCount * 2f);
@@ -39,15 +51,16 @@ public class PlayerInvulnerability : MonoBehaviour
         for (int i = 0; i < flashCount; i++)
         {
             // Flash white
-            sr.color = Color.white;
+            playerSpriteRenderer.color = Color.white;
             yield return new WaitForSeconds(flashInterval);
 
             // Dim
-            sr.color = new Color(1f, 1f, 1f, dimAlpha);
+            playerSpriteRenderer.color = new Color(1f, 1f, 1f, dimAlpha);
             yield return new WaitForSeconds(flashInterval);
         }
 
-        sr.color = originalColor;
+        // Restore original color
+        playerSpriteRenderer.color = originalColor;
         invulnerable = false;
     }
 }

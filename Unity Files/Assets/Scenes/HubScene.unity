@@ -219,6 +219,8 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 0
+  patrolMinX: -10
+  patrolMaxX: 10
 --- !u!1 &174016559
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,6 +517,14 @@ PrefabInstance:
     - target: {fileID: 4833720274967549768, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895009555095093690, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6246910225837725638, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8803306526735391229, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
       propertyPath: m_IsActive
@@ -5274,6 +5284,8 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 0
+  patrolMinX: -10
+  patrolMaxX: 10
 --- !u!1 &2013449405
 GameObject:
   m_ObjectHideFlags: 0

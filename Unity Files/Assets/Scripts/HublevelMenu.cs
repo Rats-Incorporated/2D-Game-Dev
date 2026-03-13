@@ -23,7 +23,7 @@ public class HublevelMenu : MonoBehaviour
         Paused = false;
         Time.timeScale = 1.0f; // resume physics, animations
         canvasGameObject.SetActive(false);
-        
+
     }
 
     public void Pause()
@@ -36,19 +36,22 @@ public class HublevelMenu : MonoBehaviour
 
     void Update()
     {
-       
-        if (Input.GetKeyDown(KeyCode.Return) && playerInExitZone){
+
+        if (Input.GetKeyDown(KeyCode.Return) && playerInExitZone)
+        {
             canvasGameObject.SetActive(!canvasGameObject.activeSelf);
-            if(Paused == false){
+            if (Paused == false)
+            {
                 Pause();
             }
-            else{
+            else
+            {
                 Resume();
             }
-            
-            
+
+
         }
-        
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -73,13 +76,13 @@ public class HublevelMenu : MonoBehaviour
         Resume();
     }
 
-     public void Scene1()
+    public void Scene1()
     {
         Resume();
         SceneManager.LoadScene(1);
     }
-    
-     public void Scene2()
+
+    public void Scene2()
     {
         Resume();
         SceneManager.LoadScene(6);

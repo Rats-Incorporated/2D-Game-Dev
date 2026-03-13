@@ -38,10 +38,10 @@ public class CameraController : MonoBehaviour
 
             float x_target = Mathf.Lerp(playerPosition.x, playerPosition.x + x_value, ratio);
             float y_target = Mathf.Lerp(playerPosition.y, playerPosition.y + y_value, ratio);
-            
+
             float x_pos = Mathf.Lerp(camPosition.x, x_target, Time.deltaTime * smoothing);
             float y_pos = Mathf.Lerp(camPosition.y, y_target, Time.deltaTime * smoothing);
-            
+
             camPosition.x = x_pos;
             camPosition.y = y_pos;
             transform.position = camPosition;

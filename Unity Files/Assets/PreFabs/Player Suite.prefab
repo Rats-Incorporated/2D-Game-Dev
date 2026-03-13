@@ -1252,7 +1252,7 @@ Transform:
   m_GameObject: {fileID: 3506278781095339139}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5, y: -0.37, z: 0}
+  m_LocalPosition: {x: -0.5, y: -1.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2437,8 +2437,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -783.3332, y: -22.471252}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -783.3332, y: 346.9}
+  m_SizeDelta: {x: 225.2, y: 143.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7601104361020841429
 CanvasRenderer:
@@ -2468,7 +2468,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2759152716061183957, guid: 3a8ddca23ced99c4b8d991d8d4003421, type: 3}
+  m_Sprite: {fileID: -3386701401382361006, guid: dd48082d689cb8e49bcd57dc93b94337, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -19268,6 +19268,7 @@ MonoBehaviour:
   can_win: 0
   animator: {fileID: 3691923090656739867}
   spriteTransform: {fileID: 3529947247739330478}
+  isFacingRight: 1
 --- !u!95 &6836477760344386809
 Animator:
   serializedVersion: 7
@@ -19377,11 +19378,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
   hitboxPrefab: {fileID: 1898403894570680039, guid: e10ffe2205db84c47a972d05ae5293a1, type: 3}
-  attackDuration: 0.25
   attackDistance: 2.5
+  attackDuration: 0.25
   attackDmg: 25
   attackCooldown: 0.7
   anim: {fileID: 3691923090656739867}
+  playerController: {fileID: 6654558692795548727}
 --- !u!114 &1505741492486227703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19431,6 +19433,7 @@ MonoBehaviour:
   invulnerabilityDuration: 1
   flashCount: 8
   dimAlpha: 0.5
+  playerSpriteRenderer: {fileID: 9104103758114453206}
 --- !u!114 &6962179413157139317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19465,6 +19468,7 @@ MonoBehaviour:
   cooldown: 3
   cooldownOverlay: {fileID: 8897648967574985794}
   cooldownText: {fileID: 3503831585744875619}
+  playerController: {fileID: 6654558692795548727}
 --- !u!1 &8538718023124776878
 GameObject:
   m_ObjectHideFlags: 0

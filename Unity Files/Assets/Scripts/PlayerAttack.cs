@@ -2,98 +2,75 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
+    [Header("Hitbox")]
     public GameObject hitboxPrefab;
-    public float attackDuration = 0.25f;//backup 0.25f
     public float attackDistance = 2.5f;
+    public float attackDuration = 0.25f;
     public float attackDmg = 25f;
-    public float attackCooldown = 0.1f; // Cooldown between attacks
 
-    private Vector2 facingDirection = Vector2.right; // default facing right
-    private bool canAttack = true; // Track if player can attack
-    private float cooldownTimer = 0f; // Timer for tracking cooldown
+    [Header("Cooldown")]
+    public float attackCooldown = 0.1f;
+    private bool canAttack = true;
+    private float cooldownTimer = 0f;
 
+    [Header("References")]
     [SerializeField] private Animator anim;
-
-    void Start()
-    {
-
-    }
+    public PlayerController playerController; // assign in inspector
 
     void Update()
     {
-        // Handle attack cooldown timer
+        // Handle cooldown
         if (!canAttack)
         {
             cooldownTimer -= Time.deltaTime;
             if (cooldownTimer <= 0f)
-            {
                 canAttack = true;
-            }
         }
 
-        // Example: detect facing direction from horizontal input
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        if (horizontal != 0)
-            facingDirection = horizontal > 0 ? Vector2.right : Vector2.left;
+        // Determine facing direction using PlayerController
+        Vector2 facingDirection = playerController.isFacingRight ? Vector2.right : Vector2.left;
 
-        // Attack input with cooldown check
+        // Attack input
         if (Input.GetKeyDown(KeyCode.J) && canAttack)
         {
-            SpawnAttack();
+            SpawnAttack(facingDirection);
             anim.SetTrigger("PlayerAttack");
         }
     }
-    void SpawnAttack()
+
+    void SpawnAttack(Vector2 facingDirection)
     {
         // Start cooldown
         canAttack = false;
         cooldownTimer = attackCooldown;
 
-        // Spawn in front of the player based on facing direction
-        Vector3 spawnPos = transform.position + (Vector3)(facingDirection * attackDistance);
+        // Spawn position relative to player
+        Vector3 localOffset = new Vector3(facingDirection.x * attackDistance, 0f, 0f);
+        Vector3 spawnPos = transform.position + localOffset;
 
         // Instantiate hitbox
         GameObject hitbox = Instantiate(hitboxPrefab, spawnPos, Quaternion.identity);
 
-        // Flip the hitbox sprite if facing left
-        if (facingDirection == Vector2.left)
+        // Parent to player so it moves with them
+        hitbox.transform.parent = transform;
+
+        // Flip hitbox sprite if facing left
+        if (!playerController.isFacingRight)
         {
             Vector3 scale = hitbox.transform.localScale;
-            scale.x *= -1;
+            scale.x *= -1f;
             hitbox.transform.localScale = scale;
         }
 
-        //Temporary fix for hiding sprite on old sword
-        SpriteRenderer sr = hitbox.GetComponent<SpriteRenderer>();
-        Color hidecolor = sr.color;
-        hidecolor.a = 0f;
-        sr.color = hidecolor;
-
-
-        // Destroy hitbox after a short time
-        Destroy(hitbox, attackDuration);
-    }
-    void SpawnAttackBackup()
-    {
-        // Start cooldown
-        canAttack = false;
-        cooldownTimer = attackCooldown;
-
-        // Spawn in front of the player based on facing direction
-        Vector3 spawnPos = transform.position + (Vector3)(facingDirection * attackDistance);
-
-        // Instantiate hitbox
-        GameObject hitbox = Instantiate(hitboxPrefab, spawnPos, Quaternion.identity);
-
-        // Flip the hitbox sprite if facing left
-        if (facingDirection == Vector2.left)
+        // Optional: give hitbox Rigidbody2D horizontal velocity to match player movement
+        Rigidbody2D rb = hitbox.GetComponent<Rigidbody2D>();
+        if (rb != null)
         {
-            Vector3 scale = hitbox.transform.localScale;
-            scale.x *= -1;
-            hitbox.transform.localScale = scale;
+            Vector2 playerVel = playerController.GetPlayerVector();
+            rb.linearVelocity = new Vector2(playerVel.x, 0); // only horizontal
         }
 
-        // Destroy hitbox after a short time
+        // Destroy hitbox after attack duration
         Destroy(hitbox, attackDuration);
     }
 }

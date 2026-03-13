@@ -12,10 +12,10 @@ public class BossDoor : MonoBehaviour
         bossRef = boss;
         bossSpawned = true;
     }
-    
+
     void Start()
     {
-        
+
     }
 
     void Update()

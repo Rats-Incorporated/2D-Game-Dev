@@ -21,11 +21,11 @@ public class HPPickup : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     void Update()
     {
-        
+
     }
 }
