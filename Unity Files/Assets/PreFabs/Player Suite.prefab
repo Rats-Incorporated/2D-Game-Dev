@@ -2339,7 +2339,7 @@ GameObject:
   - component: {fileID: 6665780179061561914}
   - component: {fileID: 3672343003785569359}
   m_Layer: 5
-  m_Name: Shuriken(bear)
+  m_Name: Shuriken
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2393,7 +2393,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6028112964657013578, guid: 7838c6f9ec8a3614c8ed48895c64fbe5, type: 3}
+  m_Sprite: {fileID: -2845445929213920030, guid: 1bad689f3ab79994a8baefccfc629f73, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
