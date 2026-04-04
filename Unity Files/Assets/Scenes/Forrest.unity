@@ -29290,7 +29290,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 0
-  patrolMinX: 52
+  patrolMinX: 55
   patrolMaxX: 65
 --- !u!1001 &913356564
 PrefabInstance:
@@ -34795,6 +34795,10 @@ PrefabInstance:
       propertyPath: slide
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9104103758114453206, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 7006895195798517509, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
@@ -36843,8 +36847,16 @@ PrefabInstance:
       value: Teleporter
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 6ddb128f8a2be164e9f07dfe1bc39b60, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: 6ddb128f8a2be164e9f07dfe1bc39b60, type: 3}
       propertyPath: m_SortingOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: 6ddb128f8a2be164e9f07dfe1bc39b60, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 6ddb128f8a2be164e9f07dfe1bc39b60, type: 3}
       propertyPath: m_LocalScale.x
@@ -36860,11 +36872,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 6ddb128f8a2be164e9f07dfe1bc39b60, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 213.71
+      value: 213.24
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 6ddb128f8a2be164e9f07dfe1bc39b60, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.1799994
+      value: -7.66
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 6ddb128f8a2be164e9f07dfe1bc39b60, type: 3}
       propertyPath: m_LocalPosition.z
@@ -37813,7 +37825,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 0
-  patrolMinX: 98
+  patrolMinX: 99
   patrolMaxX: 113
 --- !u!1 &1624123395 stripped
 GameObject:
@@ -88297,7 +88309,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 0
-  patrolMinX: 155
+  patrolMinX: 157
   patrolMaxX: 169
 --- !u!1001 &2055244570
 PrefabInstance:

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fd63559d6250c4fd3862c2fb8af8454d
+guid: 9e580a689fc7c624fb7de95c2fc331d9
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -127,9 +127,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Dunes
+  - name: dune2
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.48117158, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -137,9 +137,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 360
-      height: 120
-    spriteID: d6a56082f9fe44fc9a8b14102f3eaef2
+      width: 478
+      height: 117
+    spriteID: 4de61912e9329b043a85fd9dd911aeef
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -153,25 +153,25 @@ ScriptedImporter:
   asepriteLayers:
   - layerIndex: 0
     uuid:
-      value0: 3853523365
+      value0: 3853482182
       value1: 0
       value2: 0
       value3: 0
     guid: 0
-    name: Dunes
+    name: dune2
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Dunes
+    - name: dune2
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 0
+        x: 20
         y: 0
-        width: 360
-        height: 120
-      spriteId: d6a56082f9fe44fc9a8b14102f3eaef2
+        width: 478
+        height: 117
+      spriteId: 4de61912e9329b043a85fd9dd911aeef
     linkedCells: []
     tileCells: []
     tileSetIndex: 0
@@ -181,5 +181,5 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 360, y: 180}
+  canvasSize: {x: 500, y: 157}
   previousTextureSize: {x: 512, y: 128}
