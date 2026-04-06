@@ -31,6 +31,12 @@ public class HitScript : MonoBehaviour
             }
         }
 
+        TutorialRat rat = collision.GetComponent<TutorialRat>();
+        if (rat != null)
+        {
+            rat.OnHit();
+        }
+
 
         FlyBoss boss = collision.GetComponent<FlyBoss>();
         if (boss != null)

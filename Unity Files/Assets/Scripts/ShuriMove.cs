@@ -26,6 +26,14 @@ public class Shuriken : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        TutorialRat rat = collision.GetComponentInParent<TutorialRat>();
+        if (rat != null)
+        {
+            rat.OnHit();
+            Destroy(gameObject);
+            return;
+        }
+
         // Damage enemy
         FlyBoss boss = collision.GetComponent<FlyBoss>();
         if (boss != null)
@@ -50,6 +58,8 @@ public class Shuriken : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
+        
 
         // Destroy on ANY non-player object
         if (!collision.CompareTag("Player"))
