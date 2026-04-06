@@ -59,7 +59,7 @@ public class Shuriken : MonoBehaviour
             return;
         }
 
-        
+
 
         // Destroy on ANY non-player object
         if (!collision.CompareTag("Player"))
