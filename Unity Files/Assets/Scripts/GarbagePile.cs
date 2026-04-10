@@ -18,7 +18,7 @@ public class garbage_pile : MonoBehaviour
     {
         if (playerInRange && !bossSpawned)
         {
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetButton("Interact"))
             {
                 currentEatTime += Time.deltaTime;
 

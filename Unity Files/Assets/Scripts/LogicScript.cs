@@ -46,7 +46,7 @@ public class LogicScript : MonoBehaviour
             InstructionText.text = "Key Found!";
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape)) // Pause Game
+        if (Input.GetButtonDown("Pause")) // Pause Game
         {
             if (Paused == true)
             {

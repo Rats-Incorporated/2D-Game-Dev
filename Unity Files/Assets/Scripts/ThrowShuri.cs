@@ -23,7 +23,7 @@ public class PlayerShuriken : MonoBehaviour
         cooldownTimer += Time.deltaTime;
         HandleCooldownUI();
 
-        if (Input.GetKeyDown(KeyCode.K) && cooldownTimer >= cooldown)
+        if (Input.GetButton("Shuriken") && cooldownTimer >= cooldown)
         {
             ThrowShuriken();
             cooldownTimer = 0f;

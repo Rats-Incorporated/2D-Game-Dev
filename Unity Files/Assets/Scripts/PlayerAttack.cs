@@ -31,7 +31,7 @@ public class PlayerAttack : MonoBehaviour
         Vector2 facingDirection = playerController.isFacingRight ? Vector2.right : Vector2.left;
 
         // Attack input
-        if (Input.GetKeyDown(KeyCode.J) && canAttack)
+        if (Input.GetButton("Attack") && canAttack)
         {
             SpawnAttack(facingDirection);
             anim.SetTrigger("PlayerAttack");
