@@ -13,7 +13,7 @@ public class ShieldPickup : MonoBehaviour
 
         if (collision.CompareTag("Player"))
         {
-            
+
             shieldObject.SetActive(true);
 
             GetComponent<MeshRenderer>().enabled = false;
@@ -29,7 +29,7 @@ public class ShieldPickup : MonoBehaviour
 
     IEnumerator ShieldTimer()
     {
-        
+
         yield return new WaitForSeconds(dur);
         gameObject.SetActive(false);
         shieldObject.SetActive(false);
