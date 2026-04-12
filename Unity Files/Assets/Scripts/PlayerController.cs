@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,7 +22,6 @@ public class PlayerController : MonoBehaviour
     // capacities
     public int jumpTotal = 1;
     public float maxHorizontalSpeed = 12.0f;
-    public int dashTotal = 2;
 
     // pickup values (items, etc)
     public bool can_win = false;
@@ -57,58 +57,67 @@ public class PlayerController : MonoBehaviour
         var RightDirection = new Vector2(10, 0);
 
         // flipping sprite
-        horizontalInput = Input.GetAxis("Horizontal");
+        horizontalInput = Input.GetAxis("LeftRight");
         FlipSprite();
 
+        // reading controller sticks
+        Vector2 LeftStick = new Vector2(Input.GetAxis("LeftRight"), Input.GetAxis("UpDown"));
+        var StickDeadzone = 0.2f;
+        // print(LeftStick);
+
         // Jumping
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetButtonDown("Jump"))
         {
             PlayerJump(UpDirection);
         }
 
-        // Checking for letting go of Space
-        if (Input.GetKeyUp(KeyCode.Space))
+        // Checking for letting go of Jump
+        if (Input.GetButtonUp("Jump"))
         {
             // sets timer to provide downward force
             // longer this timer, more force downward
             JumpState.SetSpaceUpVars();
         }
 
-        // adding downward force on letting go of space
+        // adding downward force on letting go of jump button
         JumpDownforce();
 
         // Move Down
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetButton("FastFall") || LeftStick.y < -StickDeadzone)
         {
             rb.AddForce(-UpDirection * downIntensity * Time.deltaTime);
         }
 
+        // adding some bools here to help maintain code readability
+        bool PlayerGoRight = (Input.GetButton("MoveRight") || LeftStick.x > StickDeadzone);
+        bool PlayerGoLeft = (Input.GetButton("MoveLeft") || LeftStick.x < -StickDeadzone);
+
         // Move Right
-        if (Input.GetKey(KeyCode.D))
+        if (PlayerGoRight)
         {
             PlayerMove(RightDirection, 1);
         }
 
         // Move Left
-        if (Input.GetKey(KeyCode.A))
+        if (PlayerGoLeft)
         {
             PlayerMove(RightDirection, -1);
         }
 
         // Not pressing either direction
-        if ((!Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.A)) || (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.A)))
+        if ((!PlayerGoRight && !PlayerGoLeft) || PlayerGoRight && PlayerGoLeft)
         {
             ControlFriction(RightDirection, -1); // moving left
             ControlFriction(RightDirection, 1); // moving right
         }
 
         // Adding movement for a dash to the left or the right
-        if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.LeftShift))
+        if (PlayerGoRight && Input.GetButtonDown("Dash"))
         {
             PlayerDash(RightDirection, 1);
         }
 
-        if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.LeftShift))
+        if (PlayerGoLeft && Input.GetButtonDown("Dash"))
         {
             PlayerDash(RightDirection, -1);
         }

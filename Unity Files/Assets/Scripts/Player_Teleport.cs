@@ -7,7 +7,7 @@ public class Player_Teleport : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && currentTeleporter != null)
+        if (Input.GetButton("Interact") && currentTeleporter != null)
         {
             Vector3 teleportLocation = currentTeleporter.GetComponent<Teleporter>().GetDestination().position;
             transform.position = teleportLocation;
