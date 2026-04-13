@@ -4,7 +4,9 @@ using System.Collections;
 public class ShieldPickup : MonoBehaviour
 {
     [SerializeField] private GameObject shieldObject;
-    [SerializeField] private float dur = 7f;
+    [SerializeField] private float dur = 8f;
+
+    private PlayerInvulnerability invuln;
 
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -13,6 +15,10 @@ public class ShieldPickup : MonoBehaviour
 
         if (collision.CompareTag("Player"))
         {
+
+            invuln = collision.GetComponent<PlayerInvulnerability>();
+            invuln.TriggerInvulnerabilityPermaOn();
+
 
             shieldObject.SetActive(true);
 
@@ -33,6 +39,7 @@ public class ShieldPickup : MonoBehaviour
         yield return new WaitForSeconds(dur);
         gameObject.SetActive(false);
         shieldObject.SetActive(false);
+        invuln.TriggerInvulnerabilityPermaOff();
     }
 
     void Start()

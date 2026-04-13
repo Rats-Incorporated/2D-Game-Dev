@@ -40,6 +40,15 @@ public class PlayerInvulnerability : MonoBehaviour
         StartCoroutine(InvulnerabilityRoutine());
     }
 
+    public void TriggerInvulnerabilityPermaOn()
+    {
+        invulnerable = true;
+    }
+    public void TriggerInvulnerabilityPermaOff()
+    {
+        invulnerable = false;
+    }
+
     IEnumerator InvulnerabilityRoutine()
     {
         if (playerSpriteRenderer == null) yield break;
