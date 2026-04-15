@@ -216,6 +216,14 @@ public class PlayerController : MonoBehaviour
     {
         if (StaminaState.currentStamina > DashState.stamCost && !DashState.inGCD)
         {
+            //dash invuln
+            PlayerInvulnerability invuln = GetComponent<PlayerInvulnerability>();
+
+            if (invuln != null)
+            {
+                invuln.TriggerInvulnerability(0.5f);
+            }
+
             var curr_vel = rb.linearVelocity;
             // basically if dashing in opposite direction of current momentum
             // kill momentum and pivot
