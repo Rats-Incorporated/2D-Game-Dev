@@ -32,12 +32,18 @@ public class PlayerInvulnerability : MonoBehaviour
     public bool IsInvulnerable()
     {
         return invulnerable;
+    } 
+
+
+    public void TriggerInvulnerability(float duration)
+    {
+        if (!gameObject.activeInHierarchy) return;
+        StartCoroutine(InvulnerabilityRoutine(duration));
     }
 
     public void TriggerInvulnerability()
     {
-        if (!gameObject.activeInHierarchy) return;
-        StartCoroutine(InvulnerabilityRoutine());
+        TriggerInvulnerability(invulnerabilityDuration);
     }
 
     public void TriggerInvulnerabilityPermaOn()
@@ -49,13 +55,13 @@ public class PlayerInvulnerability : MonoBehaviour
         invulnerable = false;
     }
 
-    IEnumerator InvulnerabilityRoutine()
+    IEnumerator InvulnerabilityRoutine(float duration)
     {
         if (playerSpriteRenderer == null) yield break;
 
         invulnerable = true;
 
-        float flashInterval = invulnerabilityDuration / (flashCount * 2f);
+        float flashInterval = duration / (flashCount * 2f);
 
         for (int i = 0; i < flashCount; i++)
         {
