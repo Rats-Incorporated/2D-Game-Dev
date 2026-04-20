@@ -5,17 +5,19 @@ public class PlayerAttack : MonoBehaviour
     [Header("Hitbox")]
     public GameObject hitboxPrefab;
     public float attackDistance = 2.5f;
-    public float attackDuration = 0.25f;
+    public float attackDuration = 0.1f;
     public float attackDmg = 25f;
 
     [Header("Cooldown")]
-    public float attackCooldown = 0.1f;
+    public float attackCooldown = 0.01f;
     private bool canAttack = true;
     private float cooldownTimer = 0f;
 
     [Header("References")]
     [SerializeField] private Animator anim;
     public PlayerController playerController; // assign in inspector
+
+    private bool primaryAttack = true;
 
     void Update()
     {
@@ -34,12 +36,26 @@ public class PlayerAttack : MonoBehaviour
         if (Input.GetButton("Attack") && canAttack)
         {
             SpawnAttack(facingDirection);
-            anim.SetTrigger("PlayerAttack2");
+            if (primaryAttack)
+            {
+                anim.SetTrigger("PlayerAttack2");
+            }
+            else
+            {
+                anim.SetTrigger("PlayerAttack3");
+            }
+            primaryAttack = !primaryAttack;
+            
         }
         if (Input.GetButton("Attack2") && canAttack)
         {
             SpawnAttack(facingDirection);
             anim.SetTrigger("PlayerAttack");
+        }
+        if (Input.GetButton("AttackFlurry") && canAttack)
+        {
+            SpawnAttack(facingDirection);
+            anim.SetTrigger("PlayerAttackFlurry");
         }
     }
 
@@ -57,7 +73,7 @@ public class PlayerAttack : MonoBehaviour
         GameObject hitbox = Instantiate(hitboxPrefab, spawnPos, Quaternion.identity);
 
         // Parent to player so it moves with them
-        hitbox.transform.parent = transform;
+        hitbox.transform.SetParent(transform);
 
         // Flip hitbox sprite if facing left
         if (!playerController.isFacingRight)
