@@ -5,11 +5,11 @@ public class PlayerAttack : MonoBehaviour
     [Header("Hitbox")]
     public GameObject hitboxPrefab;
     public float attackDistance = 2.5f;
-    public float attackDuration = 0.1f;
+    public float attackDuration = 0.25f;
     public float attackDmg = 25f;
 
     [Header("Cooldown")]
-    public float attackCooldown = 0.01f;
+    public float attackCooldown = 0.1f;
     private bool canAttack = true;
     private float cooldownTimer = 0f;
 
@@ -17,7 +17,7 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private Animator anim;
     public PlayerController playerController; // assign in inspector
 
-    private bool primaryAttack = true;
+    //private bool primaryAttack = true;
 
     void Update()
     {
@@ -36,7 +36,11 @@ public class PlayerAttack : MonoBehaviour
         if (Input.GetButton("Attack") && canAttack)
         {
             SpawnAttack(facingDirection);
-            if (primaryAttack)
+
+            int primaryAttack = Random.Range(0, 2);
+
+
+            if (primaryAttack==0)
             {
                 anim.SetTrigger("PlayerAttack2");
             }
@@ -44,7 +48,7 @@ public class PlayerAttack : MonoBehaviour
             {
                 anim.SetTrigger("PlayerAttack3");
             }
-            primaryAttack = !primaryAttack;
+           // primaryAttack = !primaryAttack;
             
         }
         if (Input.GetButton("Attack2") && canAttack)
