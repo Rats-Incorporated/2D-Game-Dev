@@ -34,12 +34,12 @@ public class PlayerAttack : MonoBehaviour
         if (Input.GetButton("Attack") && canAttack)
         {
             SpawnAttack(facingDirection);
-            anim.SetTrigger("PlayerAttack");
+            anim.SetTrigger("PlayerAttack2");
         }
         if (Input.GetButton("Attack2") && canAttack)
         {
             SpawnAttack(facingDirection);
-            anim.SetTrigger("PlayerAttack2");
+            anim.SetTrigger("PlayerAttack");
         }
     }
 
