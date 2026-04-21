@@ -8,6 +8,8 @@ public class ShieldPickup : MonoBehaviour
 
     private PlayerInvulnerability invuln;
 
+    private float warningTime = 2f;
+
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -35,8 +37,23 @@ public class ShieldPickup : MonoBehaviour
 
     IEnumerator ShieldTimer()
     {
+        yield return new WaitForSeconds(dur-warningTime);
 
-        yield return new WaitForSeconds(dur);
+        Material shieldMat = shieldObject.GetComponent<Renderer>().material;
+
+
+        while (warningTime > 0f)
+        {
+            warningTime -= Time.deltaTime;
+
+            float pulse = Mathf.PingPong(Time.time * 5f, 1f);
+            shieldMat.SetFloat("_Pulse", pulse);
+
+            yield return null; 
+        }
+
+        shieldMat.SetFloat("_Pulse", 0f);
+
         gameObject.SetActive(false);
         shieldObject.SetActive(false);
         invuln.TriggerInvulnerabilityPermaOff();

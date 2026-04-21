@@ -3,7 +3,7 @@ Shader "Custom/Shield"
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
-
+        _Pulse ("Fade", Range(0,1)) = 1
     }
 
     SubShader
@@ -21,6 +21,7 @@ Shader "Custom/Shield"
             #include "UnityCG.cginc"
 
             sampler2D _MainTex;
+            float _Pulse;
 
             struct appdata
             {
@@ -70,11 +71,11 @@ Shader "Custom/Shield"
 
                 float3 mainColor = float3(0.1, 0.3, 0.92);
 
-                float3 shield = mainColor + borderColor * fresnel;
+                float3 shield = mainColor + borderColor * fresnel ;
 
 
 
-                return float4(shield, fresnel);
+                return float4(shield, fresnel*_Pulse);
             }
 
             ENDCG
