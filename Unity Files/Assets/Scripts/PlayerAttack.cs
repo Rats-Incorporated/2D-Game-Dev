@@ -17,6 +17,8 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private Animator anim;
     public PlayerController playerController; // assign in inspector
 
+    //private bool primaryAttack = true;
+
     void Update()
     {
         // Handle cooldown
@@ -34,7 +36,30 @@ public class PlayerAttack : MonoBehaviour
         if (Input.GetButton("Attack") && canAttack)
         {
             SpawnAttack(facingDirection);
+
+            int primaryAttack = Random.Range(0, 2);
+
+
+            if (primaryAttack==0)
+            {
+                anim.SetTrigger("PlayerAttack2");
+            }
+            else
+            {
+                anim.SetTrigger("PlayerAttack3");
+            }
+           // primaryAttack = !primaryAttack;
+            
+        }
+        if (Input.GetButton("Attack2") && canAttack)
+        {
+            SpawnAttack(facingDirection);
             anim.SetTrigger("PlayerAttack");
+        }
+        if (Input.GetButton("AttackFlurry") && canAttack)
+        {
+            SpawnAttack(facingDirection);
+            anim.SetTrigger("PlayerAttackFlurry");
         }
     }
 
@@ -52,7 +77,7 @@ public class PlayerAttack : MonoBehaviour
         GameObject hitbox = Instantiate(hitboxPrefab, spawnPos, Quaternion.identity);
 
         // Parent to player so it moves with them
-        hitbox.transform.parent = transform;
+        hitbox.transform.SetParent(transform);
 
         // Flip hitbox sprite if facing left
         if (!playerController.isFacingRight)

@@ -16,10 +16,16 @@ public class LogicScript : MonoBehaviour
     public bool Paused = false;
     private float curTime;
     public Text TimerText;
+    public int totalCollectables;
+    public int pickedUpCollectables;
 
     void Start()
     {
         curTime = Time.time;
+        pickedUpCollectables = 0;
+        totalCollectables = FindObjectsOfType<CheesePickup>().Length;
+
+
     }
 
     public void TempMessage(string msg, float dur = 2f)
@@ -73,7 +79,15 @@ public class LogicScript : MonoBehaviour
         Paused = true;
         Time.timeScale = 0f; // pause physics, animations
         float totaltime = Time.time - curTime;
-        WinText.text = "LEVEL COMPLETE\nTime: " + timeString(totaltime);
+
+        string collectablesText = "";
+        if (totalCollectables > 0)
+        {
+            collectablesText = $"\nCollectables: {pickedUpCollectables}/{totalCollectables}";
+        }
+
+
+        WinText.text = $"LEVEL COMPLETE\nTime:{timeString(totaltime)}{collectablesText}";
         TimerText.text = timeString(totaltime);
 
         string finishTime = timeString(totaltime);
@@ -126,5 +140,10 @@ public class LogicScript : MonoBehaviour
 
         return $"{min:00}:{sec:00}:{ms:00}";
 
+    }
+
+    public void AddCollectableCount()
+    {
+        pickedUpCollectables += 1;
     }
 }

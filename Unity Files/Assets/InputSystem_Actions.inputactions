@@ -16,6 +16,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Attack2",
+                    "type": "Button",
+                    "id": "5cbeee22-d31b-4e5b-8c79-076e6acc0131",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Interact",
                     "type": "Button",
                     "id": "852140f2-7766-474d-8707-702459ba45f3",
@@ -73,6 +82,15 @@
                     "name": "FastFall",
                     "type": "Button",
                     "id": "b7b03e62-c53d-4b71-9aa3-5eef8ea40a98",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "AttackFlurry",
+                    "type": "Button",
+                    "id": "71f29a61-e850-4a9e-8c86-95511035a9a0",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -264,6 +282,28 @@
                     "processors": "",
                     "groups": ";Gamepad",
                     "action": "FastFall",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "72a8480c-9a95-4e4d-9ebf-846ebfd50b0b",
+                    "path": "<Keyboard>/n",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Attack2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7a2f2f05-4567-43a2-b8a5-ae840ef2516c",
+                    "path": "<Keyboard>/m",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "AttackFlurry",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
