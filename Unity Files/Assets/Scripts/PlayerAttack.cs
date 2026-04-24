@@ -40,7 +40,7 @@ public class PlayerAttack : MonoBehaviour
             int primaryAttack = Random.Range(0, 2);
 
 
-            if (primaryAttack==0)
+            if (primaryAttack == 0)
             {
                 anim.SetTrigger("PlayerAttack2");
             }
@@ -48,8 +48,8 @@ public class PlayerAttack : MonoBehaviour
             {
                 anim.SetTrigger("PlayerAttack3");
             }
-           // primaryAttack = !primaryAttack;
-            
+            // primaryAttack = !primaryAttack;
+
         }
         if (Input.GetButton("Attack2") && canAttack)
         {
