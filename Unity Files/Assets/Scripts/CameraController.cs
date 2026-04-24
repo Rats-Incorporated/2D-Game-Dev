@@ -21,6 +21,23 @@ public class CameraController : MonoBehaviour
     {
         Vector3 camPosition = transform.position;
         Vector3 playerPosition = player.transform.position;
+
+        // input handling for moving the camera around
+        var StickDeadzone = 0.1f;
+        Vector2 RightStick = new Vector2(Input.GetAxis("LeftRightCamera"), Input.GetAxis("UpDownCamera"));
+        if (RightStick.x < StickDeadzone && RightStick.x > -StickDeadzone)
+        {
+            RightStick.x = 0;
+        }
+        if (RightStick.y < StickDeadzone && RightStick.y > -StickDeadzone)
+        {
+            RightStick.y = 0;
+        }
+        RightStick = RightStick * 6.7f;
+        // we add it to the player position since it already has a smoothing and
+        // lerp implementation for moving based on character movement ^^
+        playerPosition += new Vector3(RightStick.x, RightStick.y, 0);
+
         if (!slide)
         {
             camPosition.x = playerPosition.x;
