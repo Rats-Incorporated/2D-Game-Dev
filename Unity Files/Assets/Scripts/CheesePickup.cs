@@ -4,19 +4,19 @@ using System.Collections;
 public class CheesePickup : MonoBehaviour
 {
 
-    bool preventDuplicate = false;
+    //bool preventDuplicate = false;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (preventDuplicate == true)
-        {
-            return;
-        }
+        //if (preventDuplicate == true)
+        //{
+        //    return;
+        //}
         if (collision.CompareTag("Player"))
         {
 
-            preventDuplicate = true;
+            //preventDuplicate = true;
 
             Destroy(gameObject);
 
