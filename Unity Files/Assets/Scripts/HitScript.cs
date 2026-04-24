@@ -10,12 +10,21 @@ public class HitScript : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            EnemyDefault enemy = collision.GetComponentInParent<EnemyDefault>();
-            if (enemy != null)
+            EnemySlap slapEnemy = collision.GetComponentInParent<EnemySlap>();
+            if (slapEnemy != null)
             {
-                enemy.EnemyTakeDamage(damageAmount);
+                slapEnemy.EnemyTakeDamage(damageAmount);
+            }
+
+            EnemyDefault defaultEnemy = collision.GetComponentInParent<EnemyDefault>();
+            if (defaultEnemy != null)
+            {
+                defaultEnemy.EnemyTakeDamage(damageAmount);
             }
         }
+
+
+
         // for start screen
         if (collision.CompareTag("StartButton"))
         {
