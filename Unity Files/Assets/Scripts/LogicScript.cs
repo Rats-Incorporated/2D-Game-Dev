@@ -18,12 +18,13 @@ public class LogicScript : MonoBehaviour
     public Text TimerText;
     public int totalCollectables;
     public int pickedUpCollectables;
+    public Text CheeseCount;
 
     void Start()
     {
         curTime = Time.time;
         pickedUpCollectables = 0;
-        totalCollectables = FindObjectsOfType<CheesePickup>().Length;
+        //totalCollectables = FindObjectsOfType<CheesePickup>().Length;
 
 
     }
@@ -145,5 +146,6 @@ public class LogicScript : MonoBehaviour
     public void AddCollectableCount()
     {
         pickedUpCollectables += 1;
+        CheeseCount.text = "Cheese Count: " + pickedUpCollectables + "/3";
     }
 }

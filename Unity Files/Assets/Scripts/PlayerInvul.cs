@@ -32,7 +32,7 @@ public class PlayerInvulnerability : MonoBehaviour
     public bool IsInvulnerable()
     {
         return invulnerable;
-    } 
+    }
 
 
     public void TriggerInvulnerability(float duration)

@@ -48,7 +48,7 @@ public class ShieldPickup : MonoBehaviour
 
     IEnumerator ShieldTimer()
     {
-        yield return new WaitForSeconds(dur-warningDur);
+        yield return new WaitForSeconds(dur - warningDur);
 
         Material shieldMat = shieldObject.GetComponent<Renderer>().material;
 
@@ -61,7 +61,7 @@ public class ShieldPickup : MonoBehaviour
             float pulse = Mathf.PingPong(Time.time * 5f, 1f);
             shieldMat.SetFloat("_Pulse", pulse);
 
-            yield return null; 
+            yield return null;
         }
 
         shieldMat.SetFloat("_Pulse", 0f);
