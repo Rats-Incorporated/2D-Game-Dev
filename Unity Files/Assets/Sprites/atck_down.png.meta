@@ -1,31 +1,28 @@
 fileFormatVersion: 2
-guid: 32e6fc4c8f4d2044aaf38222af312610
+guid: 4daa67c5f11165b488083572ae1470df
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6529958140663899661
-    second: char_attack_2_0
+      213: 2584693240198403777
+    second: atck_down_0
   - first:
-      213: -5090291515901092584
-    second: char_attack_2_1
+      213: 7288413590490390678
+    second: atck_down_1
   - first:
-      213: 3688065358409309243
-    second: char_attack_2_2
+      213: -6852212593213332088
+    second: atck_down_2
   - first:
-      213: -2050837903618109548
-    second: char_attack_2_3
+      213: -6180893796911155197
+    second: atck_down_3
   - first:
-      213: -3016605281220845951
-    second: char_attack_2_4
+      213: -863235021960015532
+    second: atck_down_4
   - first:
-      213: -6907783280063240941
-    second: char_attack_2_5
+      213: 6021019066171785238
+    second: atck_down_5
   - first:
-      213: 4175526815168460375
-    second: char_attack_2_6
-  - first:
-      213: 3034023635762074814
-    second: char_attack_2_7
+      213: 2446519252502940189
+    second: atck_down_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -121,133 +118,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: char_attack_2_0
+      name: atck_down_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
+        y: 128
         width: 128
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3f9de831bade065a0800000000000000
-      internalID: -6529958140663899661
+      spriteID: 1c61163ceccaed320800000000000000
+      internalID: 2584693240198403777
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char_attack_2_1
+      name: atck_down_1
       rect:
         serializedVersion: 2
         x: 128
-        y: 64
+        y: 128
         width: 128
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 81dd787f5d6ab59b0800000000000000
-      internalID: -5090291515901092584
+      spriteID: 6902f4d7b85a52560800000000000000
+      internalID: 7288413590490390678
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char_attack_2_2
+      name: atck_down_2
       rect:
         serializedVersion: 2
         x: 256
-        y: 64
+        y: 128
         width: 128
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b3c196c37e3ae2330800000000000000
-      internalID: 3688065358409309243
+      spriteID: 885af0873fc08e0a0800000000000000
+      internalID: -6852212593213332088
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char_attack_2_3
+      name: atck_down_3
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 128
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 49f8feedac5f983e0800000000000000
-      internalID: -2050837903618109548
+      spriteID: 308f1b8e6dd093aa0800000000000000
+      internalID: -6180893796911155197
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: char_attack_2_4
+      name: atck_down_4
       rect:
         serializedVersion: 2
-        x: 129
+        x: 128
         y: 0
         width: 128
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 18e9349ba7dd226d0800000000000000
-      internalID: -3016605281220845951
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: char_attack_2_5
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 128
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 315a27ea4bf9220a0800000000000000
-      internalID: -6907783280063240941
+      spriteID: 4519566325c2504f0800000000000000
+      internalID: -863235021960015532
       vertices: []
       indices: 
       edges: []
@@ -256,7 +231,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7819861e14d6b1d4f89c2945a2e0d588
+    spriteID: 7713fa783b97cb14c86f296a46695388
     internalID: 0
     vertices: []
     indices: 
@@ -266,14 +241,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      char_attack_2_0: -6529958140663899661
-      char_attack_2_1: -5090291515901092584
-      char_attack_2_2: 3688065358409309243
-      char_attack_2_3: -2050837903618109548
-      char_attack_2_4: -3016605281220845951
-      char_attack_2_5: -6907783280063240941
+      atck_down_0: 2584693240198403777
+      atck_down_1: 7288413590490390678
+      atck_down_2: -6852212593213332088
+      atck_down_3: -6180893796911155197
+      atck_down_4: -863235021960015532
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

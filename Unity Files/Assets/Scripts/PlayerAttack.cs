@@ -40,19 +40,30 @@ public class PlayerAttack : MonoBehaviour
         Vector2 facingDirection = playerController.isFacingRight ? Vector2.right : Vector2.left;
 
         // ======================
-        // PRIMARY ATTACK (random anim)
+        // PRIMARY ATTACK (random anim) (Also downwards attack)
         // ======================
         if (Input.GetButton("Attack") && attackTimer >= attackCooldown)
         {
-            SpawnAttack(facingDirection);
-            attackTimer = 0f;
-
-            int rand = Random.Range(0, 2);
-
-            if (rand == 0)
-                anim.SetTrigger("PlayerAttack2");
+            //DOWWNWARDS ATTACK
+            if (Input.GetAxisRaw("UpDown") < -0.5f)
+            {
+                SpawnAttack(facingDirection);
+                attackTimer = 0f;
+                anim.SetTrigger("PlayerAttackDown");
+            }
+            //NORMAL ATTACK
             else
-                anim.SetTrigger("PlayerAttack3");
+            {
+                SpawnAttack(facingDirection);
+                attackTimer = 0f;
+
+                int rand = Random.Range(0, 2);
+
+                if (rand == 0)
+                    anim.SetTrigger("PlayerAttack2");
+                else
+                    anim.SetTrigger("PlayerAttack3");
+            }
         }
 
         // ======================
@@ -64,6 +75,7 @@ public class PlayerAttack : MonoBehaviour
             attack2Timer = 0f;
             anim.SetTrigger("PlayerAttack");
         }
+
 
         // ======================
         // FLURRY
