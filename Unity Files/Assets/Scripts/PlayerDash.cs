@@ -1,6 +1,7 @@
 using System.Data;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 
 public class PlayerDash : MonoBehaviour
 {
@@ -28,6 +29,10 @@ public class PlayerDash : MonoBehaviour
     private float gcdTimer = 0.0f;
     private float stamTimer = 0.0f;
 
+    [Header("UI")]
+    public Image DashOverlay;
+    public Text DashText;
+
     void Start()
     {
         //dashTotal = player.dashTotal;
@@ -38,6 +43,7 @@ public class PlayerDash : MonoBehaviour
     {
         //CheckCD();
         CheckGCD();
+        UpdateDashUI();
     }
 
     //private void CheckCD()
@@ -82,6 +88,29 @@ public class PlayerDash : MonoBehaviour
         player.StaminaState.UseStamina(stamCost);
         inGCD = true;
         inStam = true;
+    }
+
+    private void UpdateDashUI()
+    {
+        if (DashOverlay == null) return;
+
+        float percent = inGCD ? (1 - (gcdTimer / dashGCD)) : 0f;
+
+        DashOverlay.fillAmount = percent;
+        DashOverlay.color = new Color(0, 0, 0, 0.6f);
+
+        if (DashText != null)
+        {
+            if (inGCD)
+            {
+                DashText.gameObject.SetActive(true);
+                DashText.text = Mathf.Ceil(dashGCD - gcdTimer).ToString();
+            }
+            else
+            {
+                DashText.gameObject.SetActive(false);
+            }
+        }
     }
 
     //public int GetDashCount()
