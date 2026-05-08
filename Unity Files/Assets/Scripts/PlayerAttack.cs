@@ -30,6 +30,24 @@ public class PlayerAttack : MonoBehaviour
     public Image flurryOverlay;
     public Text flurryText;
 
+    public Material mat;
+    private bool isCharging = false;
+
+    //private SpriteRenderer sr;
+    //private Material mat;
+
+    private float TotalChargeTime = 1f;
+    private float ChargeTime = 0f;
+
+    void Awake()
+    {
+        // sr = GetComponent<SpriteRenderer>();
+        // mat = sr.material;
+        mat.SetFloat("_Charge", 0f);
+        mat.SetFloat("_FullyCharged", 0f);
+
+    }
+
     void Update()
     {
         // timers
@@ -82,9 +100,36 @@ public class PlayerAttack : MonoBehaviour
         // ======================
         if (Input.GetButton("AttackFlurry") && flurryTimer >= attackCooldown)
         {
+            mat.SetFloat("_Charge", 1f);
+            ChargeTime += Time.deltaTime;
+
+
+            //SpawnAttack(facingDirection);
+            //flurryTimer = 0f;
+            //anim.SetTrigger("PlayerAttackFlurry");
+
+            if(ChargeTime > TotalChargeTime)
+            {
+                mat.SetFloat("_FullyCharged", 1f);
+            }
+
+        }
+
+        if (Input.GetButtonUp("AttackFlurry") && ChargeTime >= TotalChargeTime && flurryTimer >= attackCooldown)
+        {
+            mat.SetFloat("_Charge", 1f);
+
             SpawnAttack(facingDirection);
             flurryTimer = 0f;
             anim.SetTrigger("PlayerAttackFlurry");
+
+            ChargeTime = 0f;
+        }
+        if (Input.GetButtonUp("AttackFlurry") && ChargeTime < TotalChargeTime)
+        {
+            mat.SetFloat("_Charge", 0f);
+            mat.SetFloat("_FullyCharged", 0f);
+            ChargeTime = 0f;
         }
 
         // ======================
