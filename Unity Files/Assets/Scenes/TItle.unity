@@ -197,6 +197,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Suite
       objectReference: {fileID: 0}
+    - target: {fileID: 1509079596376826174, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2410795691830987881, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3515132072085124383, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -257,12 +265,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7114523341672754709, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8414414967889658886, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8908816207311472524, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5540920541973493969, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
@@ -9527,8 +9544,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Hit me!         Press J to attack!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6662dc7ee1a14c54fb0b491d65856aed, type: 2}
-  m_sharedMaterial: {fileID: -1864648294847410227, guid: 6662dc7ee1a14c54fb0b491d65856aed, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7b02c425ec4413e4eb5ab1a48f89908c, type: 2}
+  m_sharedMaterial: {fileID: -2321010782806834449, guid: 7b02c425ec4413e4eb5ab1a48f89908c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9624,7 +9641,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1864648294847410227, guid: 6662dc7ee1a14c54fb0b491d65856aed, type: 2}
+  - {fileID: -2321010782806834449, guid: 7b02c425ec4413e4eb5ab1a48f89908c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11210,8 +11227,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: START
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6662dc7ee1a14c54fb0b491d65856aed, type: 2}
-  m_sharedMaterial: {fileID: -1864648294847410227, guid: 6662dc7ee1a14c54fb0b491d65856aed, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7b02c425ec4413e4eb5ab1a48f89908c, type: 2}
+  m_sharedMaterial: {fileID: -2321010782806834449, guid: 7b02c425ec4413e4eb5ab1a48f89908c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -11307,7 +11324,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1864648294847410227, guid: 6662dc7ee1a14c54fb0b491d65856aed, type: 2}
+  - {fileID: -2321010782806834449, guid: 7b02c425ec4413e4eb5ab1a48f89908c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12540,8 +12557,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Hit me for a tutorial!!         Press J to attack!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6662dc7ee1a14c54fb0b491d65856aed, type: 2}
-  m_sharedMaterial: {fileID: -1864648294847410227, guid: 6662dc7ee1a14c54fb0b491d65856aed, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7b02c425ec4413e4eb5ab1a48f89908c, type: 2}
+  m_sharedMaterial: {fileID: -2321010782806834449, guid: 7b02c425ec4413e4eb5ab1a48f89908c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12637,7 +12654,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1864648294847410227, guid: 6662dc7ee1a14c54fb0b491d65856aed, type: 2}
+  - {fileID: -2321010782806834449, guid: 7b02c425ec4413e4eb5ab1a48f89908c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13609,8 +13626,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: RAT SAMURAI
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6662dc7ee1a14c54fb0b491d65856aed, type: 2}
-  m_sharedMaterial: {fileID: -1864648294847410227, guid: 6662dc7ee1a14c54fb0b491d65856aed, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7b02c425ec4413e4eb5ab1a48f89908c, type: 2}
+  m_sharedMaterial: {fileID: -2321010782806834449, guid: 7b02c425ec4413e4eb5ab1a48f89908c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -13706,7 +13723,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1864648294847410227, guid: 6662dc7ee1a14c54fb0b491d65856aed, type: 2}
+  - {fileID: -2321010782806834449, guid: 7b02c425ec4413e4eb5ab1a48f89908c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

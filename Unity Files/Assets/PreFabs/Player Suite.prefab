@@ -1166,7 +1166,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 103
+    m_FontSize: 80
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -20716,7 +20716,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 897ee4f46cad8664da98807427e88c2c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21100,6 +21100,7 @@ MonoBehaviour:
   attack2Text: {fileID: 5173020729629083894}
   flurryOverlay: {fileID: 2602751678071334709}
   flurryText: {fileID: 4428469897358217108}
+  mat: {fileID: 2100000, guid: 897ee4f46cad8664da98807427e88c2c, type: 2}
 --- !u!114 &1505741492486227703
 MonoBehaviour:
   m_ObjectHideFlags: 0
