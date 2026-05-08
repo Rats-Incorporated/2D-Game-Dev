@@ -30,6 +30,24 @@ public class PlayerAttack : MonoBehaviour
     public Image flurryOverlay;
     public Text flurryText;
 
+    public Material mat;
+    private bool isCharging = false;
+
+    //private SpriteRenderer sr;
+    //private Material mat;
+
+    private float TotalChargeTime = 1f;
+    private float ChargeTime = 0f;
+
+    void Awake()
+    {
+        // sr = GetComponent<SpriteRenderer>();
+        // mat = sr.material;
+        mat.SetFloat("_Charge", 0f);
+        mat.SetFloat("_FullyCharged", 0f);
+
+    }
+
     void Update()
     {
         // timers
@@ -40,19 +58,30 @@ public class PlayerAttack : MonoBehaviour
         Vector2 facingDirection = playerController.isFacingRight ? Vector2.right : Vector2.left;
 
         // ======================
-        // PRIMARY ATTACK (random anim)
+        // PRIMARY ATTACK (random anim) (Also downwards attack)
         // ======================
         if (Input.GetButton("Attack") && attackTimer >= attackCooldown)
         {
-            SpawnAttack(facingDirection);
-            attackTimer = 0f;
-
-            int rand = Random.Range(0, 2);
-
-            if (rand == 0)
-                anim.SetTrigger("PlayerAttack2");
+            //DOWWNWARDS ATTACK
+            if (Input.GetAxisRaw("UpDown") < -0.5f)
+            {
+                SpawnAttack(facingDirection);
+                attackTimer = 0f;
+                anim.SetTrigger("PlayerAttackDown");
+            }
+            //NORMAL ATTACK
             else
-                anim.SetTrigger("PlayerAttack3");
+            {
+                SpawnAttack(facingDirection);
+                attackTimer = 0f;
+
+                int rand = Random.Range(0, 2);
+
+                if (rand == 0)
+                    anim.SetTrigger("PlayerAttack2");
+                else
+                    anim.SetTrigger("PlayerAttack3");
+            }
         }
 
         // ======================
@@ -65,14 +94,42 @@ public class PlayerAttack : MonoBehaviour
             anim.SetTrigger("PlayerAttack");
         }
 
+
         // ======================
         // FLURRY
         // ======================
         if (Input.GetButton("AttackFlurry") && flurryTimer >= attackCooldown)
         {
+            mat.SetFloat("_Charge", 1f);
+            ChargeTime += Time.deltaTime;
+
+
+            //SpawnAttack(facingDirection);
+            //flurryTimer = 0f;
+            //anim.SetTrigger("PlayerAttackFlurry");
+
+            if(ChargeTime > TotalChargeTime)
+            {
+                mat.SetFloat("_FullyCharged", 1f);
+            }
+
+        }
+
+        if (Input.GetButtonUp("AttackFlurry") && ChargeTime >= TotalChargeTime && flurryTimer >= attackCooldown)
+        {
+            mat.SetFloat("_Charge", 1f);
+
             SpawnAttack(facingDirection);
             flurryTimer = 0f;
             anim.SetTrigger("PlayerAttackFlurry");
+
+            ChargeTime = 0f;
+        }
+        if (Input.GetButtonUp("AttackFlurry") && ChargeTime < TotalChargeTime)
+        {
+            mat.SetFloat("_Charge", 0f);
+            mat.SetFloat("_FullyCharged", 0f);
+            ChargeTime = 0f;
         }
 
         // ======================
