@@ -10112,7 +10112,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press K to throw a shuriken at me!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6662dc7ee1a14c54fb0b491d65856aed, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7b02c425ec4413e4eb5ab1a48f89908c, type: 2}
   m_sharedMaterial: {fileID: -1864648294847410227, guid: 6662dc7ee1a14c54fb0b491d65856aed, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -10181,7 +10181,7 @@ MonoBehaviour:
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_renderer: {fileID: 888304464}
   m_maskType: 0
 --- !u!23 &888304464
@@ -11588,7 +11588,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press SHIFT to dash over here and attack me!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6662dc7ee1a14c54fb0b491d65856aed, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7b02c425ec4413e4eb5ab1a48f89908c, type: 2}
   m_sharedMaterial: {fileID: -1864648294847410227, guid: 6662dc7ee1a14c54fb0b491d65856aed, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -11657,7 +11657,7 @@ MonoBehaviour:
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_renderer: {fileID: 1134825913}
   m_maskType: 0
 --- !u!23 &1134825913
@@ -11735,7 +11735,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1147323037}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.2}
   m_LocalScale: {x: 1.22, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11781,8 +11781,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press SPACE to jump up here and then attack me!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6662dc7ee1a14c54fb0b491d65856aed, type: 2}
-  m_sharedMaterial: {fileID: -1864648294847410227, guid: 6662dc7ee1a14c54fb0b491d65856aed, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7b02c425ec4413e4eb5ab1a48f89908c, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -11850,7 +11850,7 @@ MonoBehaviour:
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_renderer: {fileID: 1147323041}
   m_maskType: 0
 --- !u!23 &1147323041
@@ -11878,7 +11878,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1864648294847410227, guid: 6662dc7ee1a14c54fb0b491d65856aed, type: 2}
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11927,7 +11927,7 @@ Transform:
   m_GameObject: {fileID: 1261231084}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.77, y: 1.53, z: 0}
+  m_LocalPosition: {x: 1.77, y: 1.53, z: -0.1}
   m_LocalScale: {x: 0.59, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
