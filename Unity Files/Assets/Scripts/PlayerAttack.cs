@@ -39,6 +39,7 @@ public class PlayerAttack : MonoBehaviour
     private float TotalChargeTime = 1f;
     private float ChargeTime = 0f;
 
+
     void Awake()
     {
         // sr = GetComponent<SpriteRenderer>();
@@ -63,9 +64,9 @@ public class PlayerAttack : MonoBehaviour
         if (Input.GetButton("Attack") && attackTimer >= attackCooldown)
         {
             //DOWWNWARDS ATTACK
-            if (Input.GetAxisRaw("UpDown") < -0.5f)
+            if (Input.GetAxisRaw("UpDown") < -0.5f) 
             {
-                SpawnAttack(facingDirection);
+                SpawnAttack(facingDirection, true);
                 attackTimer = 0f;
                 anim.SetTrigger("PlayerAttackDown");
             }
@@ -140,22 +141,40 @@ public class PlayerAttack : MonoBehaviour
         UpdateCooldownUI(flurryOverlay, flurryText, flurryTimer);
     }
 
-    void SpawnAttack(Vector2 facingDirection)
+    void SpawnAttack(Vector2 facingDirection, bool downwardAttack = false)
     {
-        Vector3 spawnPos = transform.position + (Vector3)(facingDirection * attackDistance);
+        Vector3 spawnPos;
+
+        if (downwardAttack)
+        {
+            // spawn BELOW player
+            spawnPos = transform.position + Vector3.down * attackDistance;
+        }
+        else
+        {
+            // normal side attack
+            spawnPos = transform.position + (Vector3)(facingDirection * attackDistance);
+        }
 
         GameObject hitbox = Instantiate(hitboxPrefab, spawnPos, Quaternion.identity);
         hitbox.transform.SetParent(transform);
 
         // flip hitbox if facing left
-        if (!playerController.isFacingRight)
+        if (!playerController.isFacingRight && !downwardAttack)
         {
             Vector3 scale = hitbox.transform.localScale;
             scale.x *= -1f;
             hitbox.transform.localScale = scale;
         }
 
-        // match player velocity
+        // pass downward flag into hitbox
+        HitScript hit = hitbox.GetComponent<HitScript>();
+        if (hit != null)
+        {
+            hit.isDownwardAttack = downwardAttack;
+            hit.player = playerController;
+        }
+
         Rigidbody2D rb = hitbox.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
