@@ -64,7 +64,9 @@ public class TutorialManager : MonoBehaviour
                 platform3.SetActive(false);
                 platform2.SetActive(false);
                 platform1.SetActive(false);
+                rat4.SetActive(false);
                 startrat.SetActive(true);
+                // possibly could restart and set step back to start?
                 cameraShake.Shake();
                 break;
         }

@@ -95,7 +95,9 @@ public class EnemySlap : MonoBehaviour
 
     void WanderBehavior()
     {
-        animator.SetBool("Walk", true);
+        // Unity has been complaining about there being no "Walk" parameter
+        // commenting this out for now
+        // animator.SetBool("Walk", true);
 
         Vector2 target = new Vector2(currentWanderTarget.x, transform.position.y);
 
@@ -115,7 +117,8 @@ public class EnemySlap : MonoBehaviour
 
     void ChaseBehavior()
     {
-        animator.SetBool("Walk", true);
+        // same as above
+        // animator.SetBool("Walk", true);
 
         Vector2 target = new Vector2(playerTransform.position.x, transform.position.y);
 
