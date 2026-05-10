@@ -120,9 +120,9 @@ public class PlayerAttack : MonoBehaviour
         {
             mat.SetFloat("_Charge", 1f);
 
-            SpawnAttack(facingDirection);
+            StartCoroutine(FlurryAttack(facingDirection));
             flurryTimer = 0f;
-            anim.SetTrigger("PlayerAttackFlurry");
+            anim.SetTrigger("PlayerAttackFlurry"); ;
 
             ChargeTime = 0f;
         }
@@ -183,6 +183,19 @@ public class PlayerAttack : MonoBehaviour
         }
 
         Destroy(hitbox, attackDuration);
+    }
+
+    System.Collections.IEnumerator FlurryAttack(Vector2 facingDirection)
+    {
+        int hitCount = 3;
+        float delay = 0.08f;
+
+        for (int i = 0; i < hitCount; i++)
+        {
+            SpawnAttack(facingDirection);
+
+            yield return new WaitForSeconds(delay);
+        }
     }
 
     void UpdateCooldownUI(Image overlay, Text text, float timer)
