@@ -33,6 +33,12 @@ public class PlayerAttack : MonoBehaviour
     public Material mat;
     private bool isCharging = false;
 
+    [Header("Materials")]
+    public SpriteRenderer playerSpriteRenderer;
+
+    public Material defaultMaterial;
+    public Material chargeMaterial;
+
     //private SpriteRenderer sr;
     //private Material mat;
 
@@ -101,6 +107,8 @@ public class PlayerAttack : MonoBehaviour
         // ======================
         if (Input.GetButton("AttackFlurry") && flurryTimer >= attackCooldown)
         {
+            // change material
+            playerSpriteRenderer.material = chargeMaterial;
             mat.SetFloat("_Charge", 1f);
             ChargeTime += Time.deltaTime;
 
@@ -125,12 +133,14 @@ public class PlayerAttack : MonoBehaviour
             anim.SetTrigger("PlayerAttackFlurry"); ;
 
             ChargeTime = 0f;
+            playerSpriteRenderer.material = defaultMaterial;
         }
         if (Input.GetButtonUp("AttackFlurry") && ChargeTime < TotalChargeTime)
         {
             mat.SetFloat("_Charge", 0f);
             mat.SetFloat("_FullyCharged", 0f);
             ChargeTime = 0f;
+            playerSpriteRenderer.material = defaultMaterial;
         }
 
         // ======================

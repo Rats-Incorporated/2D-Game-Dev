@@ -20929,7 +20929,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 897ee4f46cad8664da98807427e88c2c, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21314,6 +21314,9 @@ MonoBehaviour:
   flurryOverlay: {fileID: 2602751678071334709}
   flurryText: {fileID: 4428469897358217108}
   mat: {fileID: 2100000, guid: 897ee4f46cad8664da98807427e88c2c, type: 2}
+  playerSpriteRenderer: {fileID: 9104103758114453206}
+  defaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  chargeMaterial: {fileID: 2100000, guid: 897ee4f46cad8664da98807427e88c2c, type: 2}
 --- !u!114 &1505741492486227703
 MonoBehaviour:
   m_ObjectHideFlags: 0
