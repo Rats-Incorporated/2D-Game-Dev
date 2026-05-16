@@ -51,12 +51,19 @@ public class Shuriken : MonoBehaviour
             return;
         }
 
-        EnemyDefault enemy = collision.GetComponentInParent<EnemyDefault>();
-        if (enemy != null)
+        if (collision.CompareTag("Enemy"))
         {
-            enemy.EnemyTakeDamage(damage);
-            Destroy(gameObject);
-            return;
+            EnemySlap slapEnemy = collision.GetComponentInParent<EnemySlap>();
+            if (slapEnemy != null)
+            {
+                slapEnemy.EnemyTakeDamage(damage);
+            }
+
+            EnemyDefault defaultEnemy = collision.GetComponentInParent<EnemyDefault>();
+            if (defaultEnemy != null)
+            {
+                defaultEnemy.EnemyTakeDamage(damage);
+            }
         }
 
 

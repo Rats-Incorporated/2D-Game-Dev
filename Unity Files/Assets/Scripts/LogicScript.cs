@@ -111,6 +111,13 @@ public class LogicScript : MonoBehaviour
         SceneManager.LoadScene("HubScene");
     }
 
+    public void LoadMainMenu()
+    {
+        Paused = false;
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene("TItle");
+    }
+
     public void LoadNext()
     {
         Paused = false;

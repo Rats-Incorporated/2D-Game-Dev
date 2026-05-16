@@ -81,13 +81,19 @@ public class HublevelMenu : MonoBehaviour
     public void Scene1()
     {
         Resume();
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("level1");
     }
 
     public void Scene2()
     {
         Resume();
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene("Forrest");
+    }
+
+    public void Scene3()
+    {
+        Resume();
+        SceneManager.LoadScene("Desert");
     }
 
     public void Scene3()
