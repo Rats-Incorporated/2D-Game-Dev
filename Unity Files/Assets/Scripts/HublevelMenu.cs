@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -76,6 +77,7 @@ public class HublevelMenu : MonoBehaviour
         Resume();
     }
 
+
     public void Scene1()
     {
         Resume();
@@ -86,5 +88,17 @@ public class HublevelMenu : MonoBehaviour
     {
         Resume();
         SceneManager.LoadScene(6);
+    }
+
+    public void Scene3()
+    {
+        Resume();
+        StartCoroutine(LoadSceneAfterDelay(3f, 7));
+    }
+
+    IEnumerator LoadSceneAfterDelay(float seconds, int sceneIndex)
+    {
+        yield return new WaitForSeconds(seconds);
+        SceneManager.LoadScene(sceneIndex);
     }
 }
