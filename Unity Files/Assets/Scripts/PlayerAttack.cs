@@ -33,11 +33,18 @@ public class PlayerAttack : MonoBehaviour
     public Material mat;
     private bool isCharging = false;
 
+    [Header("Materials")]
+    public SpriteRenderer playerSpriteRenderer;
+
+    public Material defaultMaterial;
+    public Material chargeMaterial;
+
     //private SpriteRenderer sr;
     //private Material mat;
 
     private float TotalChargeTime = 1f;
     private float ChargeTime = 0f;
+
 
     void Awake()
     {
@@ -63,9 +70,9 @@ public class PlayerAttack : MonoBehaviour
         if (Input.GetButton("Attack") && attackTimer >= attackCooldown)
         {
             //DOWWNWARDS ATTACK
-            if (Input.GetAxisRaw("UpDown") < -0.5f)
+            if (Input.GetAxisRaw("UpDown") < -0.5f) 
             {
-                SpawnAttack(facingDirection);
+                SpawnAttack(facingDirection, true);
                 attackTimer = 0f;
                 anim.SetTrigger("PlayerAttackDown");
             }
@@ -100,6 +107,8 @@ public class PlayerAttack : MonoBehaviour
         // ======================
         if (Input.GetButton("AttackFlurry") && flurryTimer >= attackCooldown)
         {
+            // change material
+            playerSpriteRenderer.material = chargeMaterial;
             mat.SetFloat("_Charge", 1f);
             ChargeTime += Time.deltaTime;
 
@@ -119,17 +128,19 @@ public class PlayerAttack : MonoBehaviour
         {
             mat.SetFloat("_Charge", 1f);
 
-            SpawnAttack(facingDirection);
+            StartCoroutine(FlurryAttack(facingDirection));
             flurryTimer = 0f;
-            anim.SetTrigger("PlayerAttackFlurry");
+            anim.SetTrigger("PlayerAttackFlurry"); ;
 
             ChargeTime = 0f;
+            playerSpriteRenderer.material = defaultMaterial;
         }
         if (Input.GetButtonUp("AttackFlurry") && ChargeTime < TotalChargeTime)
         {
             mat.SetFloat("_Charge", 0f);
             mat.SetFloat("_FullyCharged", 0f);
             ChargeTime = 0f;
+            playerSpriteRenderer.material = defaultMaterial;
         }
 
         // ======================
@@ -140,22 +151,40 @@ public class PlayerAttack : MonoBehaviour
         UpdateCooldownUI(flurryOverlay, flurryText, flurryTimer);
     }
 
-    void SpawnAttack(Vector2 facingDirection)
+    void SpawnAttack(Vector2 facingDirection, bool downwardAttack = false)
     {
-        Vector3 spawnPos = transform.position + (Vector3)(facingDirection * attackDistance);
+        Vector3 spawnPos;
+
+        if (downwardAttack)
+        {
+            // spawn BELOW player
+            spawnPos = transform.position + Vector3.down * attackDistance;
+        }
+        else
+        {
+            // normal side attack
+            spawnPos = transform.position + (Vector3)(facingDirection * attackDistance);
+        }
 
         GameObject hitbox = Instantiate(hitboxPrefab, spawnPos, Quaternion.identity);
         hitbox.transform.SetParent(transform);
 
         // flip hitbox if facing left
-        if (!playerController.isFacingRight)
+        if (!playerController.isFacingRight && !downwardAttack)
         {
             Vector3 scale = hitbox.transform.localScale;
             scale.x *= -1f;
             hitbox.transform.localScale = scale;
         }
 
-        // match player velocity
+        // pass downward flag into hitbox
+        HitScript hit = hitbox.GetComponent<HitScript>();
+        if (hit != null)
+        {
+            hit.isDownwardAttack = downwardAttack;
+            hit.player = playerController;
+        }
+
         Rigidbody2D rb = hitbox.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
@@ -164,6 +193,19 @@ public class PlayerAttack : MonoBehaviour
         }
 
         Destroy(hitbox, attackDuration);
+    }
+
+    System.Collections.IEnumerator FlurryAttack(Vector2 facingDirection)
+    {
+        int hitCount = 3;
+        float delay = 0.08f;
+
+        for (int i = 0; i < hitCount; i++)
+        {
+            SpawnAttack(facingDirection);
+
+            yield return new WaitForSeconds(delay);
+        }
     }
 
     void UpdateCooldownUI(Image overlay, Text text, float timer)

@@ -61,6 +61,8 @@ public class PlayerInvulnerability : MonoBehaviour
 
         invulnerable = true;
 
+        Debug.Log("FLASHING: " + playerSpriteRenderer.name);
+
         float flashInterval = duration / (flashCount * 2f);
 
         for (int i = 0; i < flashCount; i++)
