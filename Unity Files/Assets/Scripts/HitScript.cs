@@ -89,6 +89,15 @@ public class HitScript : MonoBehaviour
             bearBoss.BossTakeDamage(damageAmount);
             ApplyPogo();
         }
+
+        ScorpionBoss scorpBoss = collision.GetComponentInParent<ScorpionBoss>();
+        if (scorpBoss != null)
+        {
+            scorpBoss.BossTakeDamage(damageAmount);
+            ApplyPogo();
+        }
+
+
     }
 
     void ApplyPogo()
