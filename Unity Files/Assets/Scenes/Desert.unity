@@ -252048,6 +252048,63 @@ Transform:
   - {fileID: 1765195916}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1028560212
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 203399843156028958, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -93.39421
+      objectReference: {fileID: 0}
+    - target: {fileID: 203399843156028958, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -136.45639
+      objectReference: {fileID: 0}
+    - target: {fileID: 203399843156028958, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203399843156028958, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 203399843156028958, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203399843156028958, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203399843156028958, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203399843156028958, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203399843156028958, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203399843156028958, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2228462406216399284, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
+      propertyPath: m_Name
+      value: shuriAmmo (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
 --- !u!1001 &1042884522
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -259461,6 +259518,63 @@ MonoBehaviour:
   launchCooldown: 0.4
   jumpForce: 10
   jumpInterval: 5
+--- !u!1001 &1759332718
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 203399843156028958, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 96.64949
+      objectReference: {fileID: 0}
+    - target: {fileID: 203399843156028958, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -67.99505
+      objectReference: {fileID: 0}
+    - target: {fileID: 203399843156028958, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203399843156028958, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 203399843156028958, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203399843156028958, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203399843156028958, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203399843156028958, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203399843156028958, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203399843156028958, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2228462406216399284, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
+      propertyPath: m_Name
+      value: shuriAmmo (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
 --- !u!1 &1761625732 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2253911629886400664, guid: 24dab801b2e7f6042bc3c439154dd267, type: 3}
@@ -262393,6 +262507,63 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 9053328931184322162, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
   m_PrefabInstance: {fileID: 2049815040}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2083460116
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 203399843156028958, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 134.00226
+      objectReference: {fileID: 0}
+    - target: {fileID: 203399843156028958, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -35.104816
+      objectReference: {fileID: 0}
+    - target: {fileID: 203399843156028958, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203399843156028958, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 203399843156028958, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203399843156028958, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203399843156028958, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203399843156028958, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203399843156028958, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 203399843156028958, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2228462406216399284, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
+      propertyPath: m_Name
+      value: shuriAmmo
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
 --- !u!1 &2083473803
 GameObject:
   m_ObjectHideFlags: 0
@@ -262804,3 +262975,6 @@ SceneRoots:
   - {fileID: 1542708000}
   - {fileID: 33287632}
   - {fileID: 1915887522}
+  - {fileID: 2083460116}
+  - {fileID: 1028560212}
+  - {fileID: 1759332718}
