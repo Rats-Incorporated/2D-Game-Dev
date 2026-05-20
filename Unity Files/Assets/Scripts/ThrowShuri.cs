@@ -18,14 +18,20 @@ public class PlayerShuriken : MonoBehaviour
     [Header("References")]
     public PlayerController playerController;
 
+    [Header("Inventory")]
+    public int shuriCount = 3;
+    public Text shuriCountText;
+
     void Update()
     {
         cooldownTimer += Time.deltaTime;
         HandleCooldownUI();
+        shuriCountText.text = shuriCount.ToString();
 
-        if (Input.GetButton("Shuriken") && cooldownTimer >= cooldown)
+        if (Input.GetButton("Shuriken") && cooldownTimer >= cooldown && shuriCount > 0)
         {
             ThrowShuriken();
+            shuriCount--;
             cooldownTimer = 0f;
         }
     }
