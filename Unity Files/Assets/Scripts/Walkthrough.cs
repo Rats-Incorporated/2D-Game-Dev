@@ -3,9 +3,7 @@ using UnityEngine;
 public enum TutorialStep
 {
     BasicAttack,
-    Charge,
     Jump,
-    Down,
     Dash,
     Shuriken,
     Complete
@@ -29,8 +27,6 @@ public class TutorialManager : MonoBehaviour
     public GameObject rat2;
     public GameObject rat3;
     public GameObject rat4;
-    public GameObject rat5;
-    public GameObject rat6;
     public GameObject startrat;
 
     void Awake()
@@ -43,37 +39,23 @@ public class TutorialManager : MonoBehaviour
         switch (currentStep)
         {
             case TutorialStep.BasicAttack:
-                //platform1.SetActive(true);
+                platform1.SetActive(true);
                 rat2.SetActive(true);
-                currentStep = TutorialStep.Charge;
+                currentStep = TutorialStep.Jump;
                 startrat.SetActive(false);
                 cameraShake.Shake();
                 break;
 
-            case TutorialStep.Charge:
-                platform1.SetActive(true);
-                rat3.SetActive(true);
-                currentStep = TutorialStep.Jump;
-                cameraShake.Shake();
-                break;
-
             case TutorialStep.Jump:
-                //platform2.SetActive(true);
-                rat4.SetActive(true);
-                currentStep = TutorialStep.Down;
-                cameraShake.Shake();
-                break;
-
-            case TutorialStep.Down:
                 platform2.SetActive(true);
-                rat5.SetActive(true);
+                rat3.SetActive(true);
                 currentStep = TutorialStep.Dash;
                 cameraShake.Shake();
                 break;
 
             case TutorialStep.Dash:
                 platform3.SetActive(true);
-                rat6.SetActive(true);
+                rat4.SetActive(true);
                 currentStep = TutorialStep.Shuriken;
                 cameraShake.Shake();
                 break;
@@ -82,7 +64,7 @@ public class TutorialManager : MonoBehaviour
                 platform3.SetActive(false);
                 platform2.SetActive(false);
                 platform1.SetActive(false);
-                rat6.SetActive(false);
+                rat4.SetActive(false);
                 startrat.SetActive(true);
                 // possibly could restart and set step back to start?
                 cameraShake.Shake();
