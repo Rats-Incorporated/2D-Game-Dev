@@ -281,6 +281,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9041775981676437943, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
+      propertyPath: shuriCount
+      value: 300
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 5540920541973493969, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
