@@ -70,7 +70,7 @@ public class PlayerAttack : MonoBehaviour
         if (Input.GetButton("Attack") && attackTimer >= attackCooldown)
         {
             //DOWWNWARDS ATTACK
-            if (Input.GetAxisRaw("UpDown") < -0.5f) 
+            if (Input.GetAxisRaw("UpDown") < -0.5f)
             {
                 SpawnAttack(facingDirection, true);
                 attackTimer = 0f;
@@ -117,7 +117,7 @@ public class PlayerAttack : MonoBehaviour
             //flurryTimer = 0f;
             //anim.SetTrigger("PlayerAttackFlurry");
 
-            if(ChargeTime > TotalChargeTime)
+            if (ChargeTime > TotalChargeTime)
             {
                 mat.SetFloat("_FullyCharged", 1f);
             }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class garbage_pile : MonoBehaviour
 {
@@ -14,6 +15,19 @@ public class garbage_pile : MonoBehaviour
     private GameObject bossRef;          // tracking the spawned boss
     public BossDoor bossDoor;            // door object
 
+
+    public GameObject GarbageMessageContainer;
+    public GameObject GarbageLoadingBarContainer;
+    public GameObject GarbageLoadingBar;
+    private CanvasGroup cg;
+
+    public Material bossHealthBarMaterial;
+    public GameObject bossHealthBar;
+    void Start()
+    {
+        cg = GarbageMessageContainer.GetComponent<CanvasGroup>();
+        cg.alpha = 0;
+    }
     void Update()
     {
         if (playerInRange && !bossSpawned)
@@ -23,6 +37,13 @@ public class garbage_pile : MonoBehaviour
                 currentEatTime += Time.deltaTime;
 
                 Debug.Log("Eating progress: " + currentEatTime + " / " + eatTimeRequired);
+
+                if (currentEatTime > 0)
+                {
+                    GarbageLoadingBarContainer.SetActive(true);
+                    float eatTimePercent = currentEatTime / eatTimeRequired;
+                    GarbageLoadingBar.GetComponent<RectTransform>().localScale = new Vector3(eatTimePercent * 1.0f, 1f, 1f);
+                }
 
                 if (currentEatTime >= eatTimeRequired)
                 {
@@ -44,6 +65,10 @@ public class garbage_pile : MonoBehaviour
             bossRef = Instantiate(bossPrefab, spawnPos, Quaternion.identity);
             bossDoor.SetBoss(bossRef);
             bossSpawned = true;
+
+            bossHealthBarMaterial.SetFloat("_Fill", 1);
+
+            bossHealthBar.SetActive(true);
         }
         else
         {
@@ -56,6 +81,9 @@ public class garbage_pile : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = true;
+            // GarbageMessageContainer.SetActive(true);
+            cg = GarbageMessageContainer.GetComponent<CanvasGroup>();
+            cg.alpha = 1;
         }
     }
 
@@ -64,6 +92,9 @@ public class garbage_pile : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = false;
+            //GarbageMessageContainer.SetActive(false);
+            cg = GarbageMessageContainer.GetComponent<CanvasGroup>();
+            cg.alpha = 0;
         }
     }
 }
