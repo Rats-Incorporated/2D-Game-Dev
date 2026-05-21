@@ -96,7 +96,7 @@ public class HublevelMenu : MonoBehaviour
         StartCoroutine(LoadSceneAfterDelay("Desert")); // Example: delay of 4 seconds
     }
 
-    
+
     IEnumerator LoadSceneAfterDelay(string sceneName)
     {
         Resume();

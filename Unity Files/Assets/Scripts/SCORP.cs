@@ -71,7 +71,7 @@ public class ScorpionBoss : MonoBehaviour
         launchTimer = launchCooldown;
         jumpTimer = jumpInterval;
         stingTimer = stingCooldown;
-        
+
         stingTimer = 0f;
     }
 

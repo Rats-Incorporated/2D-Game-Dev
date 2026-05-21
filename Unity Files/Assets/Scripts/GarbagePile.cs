@@ -32,14 +32,14 @@ public class garbage_pile : MonoBehaviour
             if (Input.GetButton("Interact"))
             {
                 currentEatTime += Time.deltaTime;
-                
+
                 Debug.Log("Eating progress: " + currentEatTime + " / " + eatTimeRequired);
 
                 if (currentEatTime > 0)
                 {
                     GarbageLoadingBarContainer.SetActive(true);
                     float eatTimePercent = currentEatTime / eatTimeRequired;
-                    GarbageLoadingBar.GetComponent<RectTransform>().localScale = new Vector3(eatTimePercent*1.0f, 1f, 1f);
+                    GarbageLoadingBar.GetComponent<RectTransform>().localScale = new Vector3(eatTimePercent * 1.0f, 1f, 1f);
                 }
 
                 if (currentEatTime >= eatTimeRequired)
