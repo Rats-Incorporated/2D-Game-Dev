@@ -1196,6 +1196,8 @@ MonoBehaviour:
   bossSpawnPoint: {fileID: 0}
   bossDoor: {fileID: 1710820050}
   GarbageMessageContainer: {fileID: 1625677154}
+  GarbageLoadingBarContainer: {fileID: 353393475}
+  GarbageLoadingBar: {fileID: 1069421208}
 --- !u!1 &306814106
 GameObject:
   m_ObjectHideFlags: 0
@@ -1252,7 +1254,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &353393476
 RectTransform:
   m_ObjectHideFlags: 0
@@ -76137,7 +76139,7 @@ RectTransform:
   m_GameObject: {fileID: 1069421208}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 353393476}
@@ -76160,7 +76162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.23529412, g: 0.1764706, b: 0.45490196, a: 0.7372549}
+  m_Color: {r: 0.88235295, g: 1, b: 0.90588236, a: 0.7372549}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -169801,6 +169803,7 @@ GameObject:
   - component: {fileID: 1625677158}
   - component: {fileID: 1625677157}
   - component: {fileID: 1625677156}
+  - component: {fileID: 1625677159}
   m_Layer: 5
   m_Name: GarbageMessageContainer
   m_TagString: Untagged
@@ -169826,7 +169829,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 749, y: 473}
+  m_AnchoredPosition: {x: 750, y: 473}
   m_SizeDelta: {x: 1494, y: 945}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1625677156
@@ -169892,6 +169895,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!225 &1625677159
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625677154}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1710820045
 GameObject:
   m_ObjectHideFlags: 0
@@ -170462,7 +170477,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3372549, g: 0.28627452, b: 0.5254902, a: 0.42745098}
+  m_Color: {r: 0.23529412, g: 0.1764706, b: 0.45490196, a: 0.42745098}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -171220,11 +171235,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2756179398824030747, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 92.92
+      value: -196.8
       objectReference: {fileID: 0}
     - target: {fileID: 2756179398824030747, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -15.1
+      value: -42.5
       objectReference: {fileID: 0}
     - target: {fileID: 4194694610661830293, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
       propertyPath: m_LocalPosition.x
