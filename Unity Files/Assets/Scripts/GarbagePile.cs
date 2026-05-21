@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class garbage_pile : MonoBehaviour
 {
@@ -16,7 +17,14 @@ public class garbage_pile : MonoBehaviour
 
 
     public GameObject GarbageMessageContainer;
-
+    public GameObject GarbageLoadingBarContainer;
+    public GameObject GarbageLoadingBar;
+    private CanvasGroup cg;
+    void Start()
+    {
+        cg = GarbageMessageContainer.GetComponent<CanvasGroup>();
+        cg.alpha = 0;
+    }
     void Update()
     {
         if (playerInRange && !bossSpawned)
@@ -24,8 +32,15 @@ public class garbage_pile : MonoBehaviour
             if (Input.GetButton("Interact"))
             {
                 currentEatTime += Time.deltaTime;
-
+                
                 Debug.Log("Eating progress: " + currentEatTime + " / " + eatTimeRequired);
+
+                if (currentEatTime > 0)
+                {
+                    GarbageLoadingBarContainer.SetActive(true);
+                    float eatTimePercent = currentEatTime / eatTimeRequired;
+                    GarbageLoadingBar.GetComponent<RectTransform>().localScale = new Vector3(eatTimePercent*1.0f, 1f, 1f);
+                }
 
                 if (currentEatTime >= eatTimeRequired)
                 {
@@ -59,7 +74,9 @@ public class garbage_pile : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = true;
-            GarbageMessageContainer.SetActive(true);
+            // GarbageMessageContainer.SetActive(true);
+            cg = GarbageMessageContainer.GetComponent<CanvasGroup>();
+            cg.alpha = 1;
         }
     }
 
@@ -68,7 +85,9 @@ public class garbage_pile : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = false;
-            GarbageMessageContainer.SetActive(false);
+            //GarbageMessageContainer.SetActive(false);
+            cg = GarbageMessageContainer.GetComponent<CanvasGroup>();
+            cg.alpha = 0;
         }
     }
 }
