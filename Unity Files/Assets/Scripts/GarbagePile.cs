@@ -14,6 +14,9 @@ public class garbage_pile : MonoBehaviour
     private GameObject bossRef;          // tracking the spawned boss
     public BossDoor bossDoor;            // door object
 
+
+    public GameObject GarbageMessageContainer;
+
     void Update()
     {
         if (playerInRange && !bossSpawned)
@@ -56,6 +59,7 @@ public class garbage_pile : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = true;
+            GarbageMessageContainer.SetActive(true);
         }
     }
 
@@ -64,6 +68,7 @@ public class garbage_pile : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = false;
+            GarbageMessageContainer.SetActive(false);
         }
     }
 }
