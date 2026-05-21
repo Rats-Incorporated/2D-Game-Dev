@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +9,7 @@ public class HublevelMenu : MonoBehaviour
     private int mainSceneIndex;
     public GameObject canvasGameObject;
     public bool Paused = false;
+    public float sceneDelay = 3f;
 
     void Start()
     {
@@ -79,18 +81,31 @@ public class HublevelMenu : MonoBehaviour
     public void Scene1()
     {
         Resume();
-        SceneManager.LoadScene("level1");
+        StartCoroutine(LoadSceneAfterDelay("level1")); // Example: delay of 4 seconds
     }
 
     public void Scene2()
     {
         Resume();
-        SceneManager.LoadScene("Forrest");
+        StartCoroutine(LoadSceneAfterDelay("Forrest")); // Example: delay of 4 seconds
     }
 
     public void Scene3()
     {
         Resume();
-        SceneManager.LoadScene("Desert");
+        StartCoroutine(LoadSceneAfterDelay("Desert")); // Example: delay of 4 seconds
+    }
+
+    
+    IEnumerator LoadSceneAfterDelay(string sceneName)
+    {
+        Resume();
+
+        // play animation here if needed
+        // trainAnimator.SetTrigger("Depart");
+
+        yield return new WaitForSeconds(4f);
+
+        SceneManager.LoadScene(sceneName);
     }
 }

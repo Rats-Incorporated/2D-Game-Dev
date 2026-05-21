@@ -129,7 +129,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: cyberpunk
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: -0.10982659}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -138,8 +138,8 @@ ScriptedImporter:
       x: 4
       y: 4
       width: 108
-      height: 192
-    spriteID: 4a2c3f516fe8540cb966e67c31a1f39d
+      height: 173
+    spriteID: 33dd36213b53340a5b9bf1a7cd8d9f40
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -168,10 +168,10 @@ ScriptedImporter:
       additiveSortOrder: 0
       cellRect:
         x: 0
-        y: 0
+        y: 19
         width: 108
-        height: 192
-      spriteId: 4a2c3f516fe8540cb966e67c31a1f39d
+        height: 173
+      spriteId: 33dd36213b53340a5b9bf1a7cd8d9f40
     linkedCells: []
     tileCells: []
     tileSetIndex: 0
