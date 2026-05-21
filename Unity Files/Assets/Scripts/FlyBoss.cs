@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class FlyBoss : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public class FlyBoss : MonoBehaviour
 
     [Header("Health")]
     public float bossHealth = 200f;
+    public Material bossHealthBarMaterial;
 
     [Header("Contact Damage")]
     public float contactDamage = 15f;
@@ -42,6 +44,8 @@ public class FlyBoss : MonoBehaviour
 
     private float contactTimer;
 
+    public GameObject bossHealthBar;
+
     void Start()
     {
         bossCurrentHealth = bossHealth;
@@ -53,6 +57,8 @@ public class FlyBoss : MonoBehaviour
         fireTimer = fireInterval;
         slamTimer = slamCooldown;
         originalY = transform.position.y;
+
+        bossHealthBarMaterial.SetFloat("_Fill", 1f);
     }
 
     void Update()
@@ -67,6 +73,8 @@ public class FlyBoss : MonoBehaviour
         HandleAttack();
         HandleSlamTimer();
         ClampPosition();
+
+        
     }
 
     // MOVEMENT 
@@ -190,6 +198,9 @@ public class FlyBoss : MonoBehaviour
         bossCurrentHealth -= amount;
         bossCurrentHealth = Mathf.Clamp(bossCurrentHealth, 0, bossHealth);
 
+        float healthPercent = bossCurrentHealth / bossHealth;
+        bossHealthBarMaterial.SetFloat("_Fill", healthPercent);
+
         if (bossCurrentHealth <= 0)
         {
             Die();
@@ -198,7 +209,10 @@ public class FlyBoss : MonoBehaviour
 
     void Die()
     {
+        FindFirstObjectByType<BossUI>()?.Hide();
         Destroy(gameObject);
+
+        
     }
 
     private void OnCollisionStay2D(Collision2D collision)

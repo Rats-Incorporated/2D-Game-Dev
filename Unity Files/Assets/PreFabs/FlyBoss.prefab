@@ -251,6 +251,7 @@ MonoBehaviour:
   slamCooldown: 6
   slamSpeed: 8
   bossHealth: 200
+  bossHealthBarMaterial: {fileID: 2100000, guid: f15ca975c0da6e14a8bdf5327f3e0858, type: 2}
   contactDamage: 15
   contactDamageCooldown: 1
 --- !u!50 &7277667922885015752

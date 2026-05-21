@@ -20,6 +20,9 @@ public class garbage_pile : MonoBehaviour
     public GameObject GarbageLoadingBarContainer;
     public GameObject GarbageLoadingBar;
     private CanvasGroup cg;
+
+    public Material bossHealthBarMaterial;
+    public GameObject bossHealthBar;
     void Start()
     {
         cg = GarbageMessageContainer.GetComponent<CanvasGroup>();
@@ -62,6 +65,10 @@ public class garbage_pile : MonoBehaviour
             bossRef = Instantiate(bossPrefab, spawnPos, Quaternion.identity);
             bossDoor.SetBoss(bossRef);
             bossSpawned = true;
+
+            bossHealthBarMaterial.SetFloat("_Fill", 1);
+
+            bossHealthBar.SetActive(true);
         }
         else
         {
