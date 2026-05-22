@@ -260349,6 +260349,7 @@ MonoBehaviour:
   stingAnim: Sting
   walkAnim: Walk
   idleAnim: Idle
+  Logic: {fileID: 0}
 --- !u!50 &1666281051
 Rigidbody2D:
   serializedVersion: 5
@@ -264004,11 +264005,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2756179398824030747, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -81.15
+      value: 137.4
       objectReference: {fileID: 0}
     - target: {fileID: 2756179398824030747, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -42.52
+      value: -42
       objectReference: {fileID: 0}
     - target: {fileID: 2756179398824030747, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -264073,6 +264074,18 @@ PrefabInstance:
     - target: {fileID: 4194694610661830293, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4326055887992665395, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -291.30002
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321058481412775315, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 314
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654558692795548727, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
+      propertyPath: can_win
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8175728153579951606, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
       propertyPath: m_AnchoredPosition.y

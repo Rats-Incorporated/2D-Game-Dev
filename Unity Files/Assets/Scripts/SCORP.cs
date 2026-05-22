@@ -57,6 +57,9 @@ public class ScorpionBoss : MonoBehaviour
     private enum BossState { Wander, Chase }
     private BossState currentState = BossState.Wander;
 
+    public LogicScript Logic;
+
+
     //  Unity Lifecycle 
     void Start()
     {
