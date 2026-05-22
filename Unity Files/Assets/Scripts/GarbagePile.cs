@@ -71,7 +71,7 @@ public class garbage_pile : MonoBehaviour
             bossHealthBarMaterial.SetFloat("_Fill", 1);
 
             BossUI.Show();
-            BossUI.ShowExBossText();
+            BossUI.ShowFlyBossText();
         }
         else
         {

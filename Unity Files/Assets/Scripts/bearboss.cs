@@ -54,6 +54,7 @@ public class BearBoss : MonoBehaviour
     public float bossHealth = 300f;
     private float bossCurrentHealth;
     public Material bossHealthBarMaterial;
+    public DesertEndTriggerCheese HoneyTrigger;
 
 
     // State machine
@@ -454,5 +455,6 @@ public class BearBoss : MonoBehaviour
 
         FindFirstObjectByType<BossUI>()?.Hide();
         Destroy(gameObject);
+        HoneyTrigger.StartEnd();
     }
 }
