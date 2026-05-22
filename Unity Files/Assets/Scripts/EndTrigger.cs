@@ -39,8 +39,8 @@ public class DesertEndTriggerCheese : MonoBehaviour
 
     void Update()
     {
-        if (endStart && playerInRange) 
-        { 
+        if (endStart && playerInRange)
+        {
             if (Input.GetButton("Interact"))
             {
                 currentEatTime += Time.deltaTime;
