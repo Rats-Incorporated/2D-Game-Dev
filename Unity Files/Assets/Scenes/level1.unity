@@ -1205,6 +1205,7 @@ MonoBehaviour:
   GarbageLoadingBar: {fileID: 1069421208}
   bossHealthBarMaterial: {fileID: 2100000, guid: f15ca975c0da6e14a8bdf5327f3e0858, type: 2}
   bossHealthBar: {fileID: 82793636}
+  BossUI: {fileID: 1124155833}
 --- !u!1 &306814106
 GameObject:
   m_ObjectHideFlags: 0
@@ -76275,6 +76276,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1117129685}
   m_CullTransparentMesh: 1
+--- !u!114 &1124155833 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6263212010695946060, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
+  m_PrefabInstance: {fileID: 7242061655623237299}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 806a0fbe5d174014bbf7c8a432c810e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: GameScripts::BossUI
 --- !u!1001 &1156043273
 PrefabInstance:
   m_ObjectHideFlags: 0

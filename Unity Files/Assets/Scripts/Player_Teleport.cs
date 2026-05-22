@@ -3,6 +3,8 @@ using UnityEngine;
 public class Player_Teleport : MonoBehaviour
 {
     private GameObject currentTeleporter;
+    public BossUI bossUI;
+    public CaveTrigger CaveTrigger;
 
     // Update is called once per frame
     void Update()
@@ -11,6 +13,14 @@ public class Player_Teleport : MonoBehaviour
         {
             Vector3 teleportLocation = currentTeleporter.GetComponent<Teleporter>().GetDestination().position;
             transform.position = teleportLocation;
+
+            if (currentTeleporter.name == "Cave Opening")
+            {
+
+                CaveTrigger.Show();
+                bossUI.Show();
+                bossUI.ShowBearBossText();
+            }
         }
     }
 
