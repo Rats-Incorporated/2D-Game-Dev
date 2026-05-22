@@ -29,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Desert.unity
     guid: 84558ce452da84b82bf2edbb8e664512
+  - enabled: 1
+    path: Assets/Scenes/CutScene1.unity
+    guid: 1a510fb660685554b8968688783fdaab
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
