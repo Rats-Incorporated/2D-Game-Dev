@@ -23614,6 +23614,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -2253911629886400664, guid: dc7fa5519c5c6aa48b236d41b01c8379, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: dc7fa5519c5c6aa48b236d41b01c8379, type: 3}
       propertyPath: m_TagString
       value: Boss
       objectReference: {fileID: 0}
@@ -23692,6 +23696,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: dc7fa5519c5c6aa48b236d41b01c8379, type: 3}
       insertIndex: -1
       addedObject: {fileID: 424859281}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: dc7fa5519c5c6aa48b236d41b01c8379, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 424859284}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: dc7fa5519c5c6aa48b236d41b01c8379, type: 3}
 --- !u!1 &424859272 stripped
 GameObject:
@@ -23810,6 +23817,7 @@ MonoBehaviour:
   backJumpHorizontalSpeed: 6
   backJumpForce: 9
   bossHealth: 350
+  bossHealthBarMaterial: {fileID: 2100000, guid: f15ca975c0da6e14a8bdf5327f3e0858, type: 2}
 --- !u!4 &424859278 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7878350319992209165, guid: dc7fa5519c5c6aa48b236d41b01c8379, type: 3}
@@ -23829,6 +23837,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::DamageFlash
   flashDuration: 0.15
   dimAlpha: 0.5
+--- !u!114 &424859284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424859272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 990396c1c8d27aa4496870c2dd1f98ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: GameScripts::CaveTrigger
 --- !u!1 &426247801 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2253911629886400664, guid: ce1ac1e11d62ce541b0e649928785bdd, type: 3}
@@ -35128,6 +35148,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -44.2
       objectReference: {fileID: 0}
+    - target: {fileID: 3332937391269155187, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
+      propertyPath: BearBoss
+      value: 
+      objectReference: {fileID: 424859272}
+    - target: {fileID: 3332937391269155187, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
+      propertyPath: CaveTrigger
+      value: 
+      objectReference: {fileID: 424859284}
     - target: {fileID: 4194694610661830293, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 164.865
@@ -39360,7 +39388,7 @@ GameObject:
   - component: {fileID: 1706004374}
   - component: {fileID: 1706004373}
   m_Layer: 0
-  m_Name: Teleporter_1
+  m_Name: Teleporter_Cave
   m_TagString: Teleporter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

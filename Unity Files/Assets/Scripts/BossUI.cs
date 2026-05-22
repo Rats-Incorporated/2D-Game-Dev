@@ -8,6 +8,9 @@ public class BossUI : MonoBehaviour
 
     private Material runtimeMat;
 
+    public GameObject ExBossText;
+    public GameObject BearBossText;
+
     public void SetFill(float value)
     {
         if (runtimeMat != null)
@@ -23,5 +26,25 @@ public class BossUI : MonoBehaviour
     public void Hide()
     {
         bossHealthBarRoot.SetActive(false);
+    }
+    public void Show()
+    {
+        Debug.Log("Entered Cave Teleporter");
+        bossHealthBarRoot.SetActive(true);
+        SetFill(1);
+
+        
+    }
+    public void ShowBearBossText()
+    {
+        ExBossText.SetActive(false);
+        BearBossText.SetActive(true);
+
+    }
+    public void ShowExBossText()
+    {
+        ExBossText.SetActive(true);
+        BearBossText.SetActive(false);
+
     }
 }

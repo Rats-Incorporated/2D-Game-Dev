@@ -24,9 +24,13 @@ public class LogicScript : MonoBehaviour
     {
         curTime = Time.time;
         pickedUpCollectables = 0;
-        //totalCollectables = FindObjectsOfType<CheesePickup>().Length;
+        totalCollectables = FindObjectsOfType<CheesePickup>().Length;
 
 
+    }
+    void Awake()
+    {
+        pickedUpCollectables = 0;
     }
 
     public void TempMessage(string msg, float dur = 2f)
@@ -84,7 +88,7 @@ public class LogicScript : MonoBehaviour
         string collectablesText = "";
         if (totalCollectables > 0)
         {
-            collectablesText = $"\nCollectables: {pickedUpCollectables}/{totalCollectables}";
+            collectablesText = $"\nCheese: {pickedUpCollectables}/{totalCollectables}";
         }
 
 
@@ -153,6 +157,9 @@ public class LogicScript : MonoBehaviour
     public void AddCollectableCount()
     {
         pickedUpCollectables += 1;
-        CheeseCount.text = "Cheese Count: " + pickedUpCollectables + "/3";
+        if (CheeseCount != null)
+        {
+            CheeseCount.text = "Cheese Count: " + pickedUpCollectables + "/3";
+        }
     }
 }

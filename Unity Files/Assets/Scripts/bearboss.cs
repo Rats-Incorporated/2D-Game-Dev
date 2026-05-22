@@ -53,6 +53,8 @@ public class BearBoss : MonoBehaviour
     [Header("Health")]
     public float bossHealth = 300f;
     private float bossCurrentHealth;
+    public Material bossHealthBarMaterial;
+
 
     // State machine
     private enum BossState { Idle, Moving, Lunging, SwipingPaw, Cooldown, BackJump }
@@ -95,6 +97,8 @@ public class BearBoss : MonoBehaviour
 
         if (swipeHitbox != null)
             swipeHitbox.gameObject.SetActive(false);
+
+        bossHealthBarMaterial.SetFloat("_Fill", 1f);
     }
 
     void Update()
@@ -434,6 +438,9 @@ public class BearBoss : MonoBehaviour
         bossCurrentHealth -= amount;
         bossCurrentHealth = Mathf.Clamp(bossCurrentHealth, 0f, bossHealth);
 
+        float healthPercent = bossCurrentHealth / bossHealth;
+        bossHealthBarMaterial.SetFloat("_Fill", healthPercent);
+
         if (bossCurrentHealth <= 0f)
             Die();
     }
@@ -444,6 +451,8 @@ public class BearBoss : MonoBehaviour
             swipeHitbox.gameObject.SetActive(false);
 
         rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+
+        FindFirstObjectByType<BossUI>()?.Hide();
         Destroy(gameObject);
     }
 }

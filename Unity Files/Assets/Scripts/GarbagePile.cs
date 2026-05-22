@@ -23,6 +23,8 @@ public class garbage_pile : MonoBehaviour
 
     public Material bossHealthBarMaterial;
     public GameObject bossHealthBar;
+
+    public BossUI BossUI;
     void Start()
     {
         cg = GarbageMessageContainer.GetComponent<CanvasGroup>();
@@ -68,7 +70,8 @@ public class garbage_pile : MonoBehaviour
 
             bossHealthBarMaterial.SetFloat("_Fill", 1);
 
-            bossHealthBar.SetActive(true);
+            BossUI.Show();
+            BossUI.ShowExBossText();
         }
         else
         {
