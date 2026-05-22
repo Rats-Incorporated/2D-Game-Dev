@@ -8,6 +8,8 @@ public class HublevelMenu : MonoBehaviour
     private bool playerInExitZone = false;
     private int mainSceneIndex;
     public GameObject canvasGameObject;
+    public GameObject loadingScreen;
+    public GameObject uicanvas;
     public bool Paused = false;
     public float sceneDelay = 3f;
 
@@ -104,7 +106,11 @@ public class HublevelMenu : MonoBehaviour
         // play animation here if needed
         // trainAnimator.SetTrigger("Depart");
 
+        yield return new WaitForSeconds(2f);
+        loadingScreen.SetActive(true);
+        uicanvas.SetActive(false);
         yield return new WaitForSeconds(4f);
+
 
         SceneManager.LoadScene(sceneName);
     }

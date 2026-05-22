@@ -33,7 +33,7 @@ public class BossUI : MonoBehaviour
         bossHealthBarRoot.SetActive(true);
         SetFill(1);
 
-        
+
     }
     public void ShowBearBossText()
     {

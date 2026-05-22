@@ -74,7 +74,7 @@ public class FlyBoss : MonoBehaviour
         HandleSlamTimer();
         ClampPosition();
 
-        
+
     }
 
     // MOVEMENT 
@@ -212,7 +212,7 @@ public class FlyBoss : MonoBehaviour
         FindFirstObjectByType<BossUI>()?.Hide();
         Destroy(gameObject);
 
-        
+
     }
 
     private void OnCollisionStay2D(Collision2D collision)
