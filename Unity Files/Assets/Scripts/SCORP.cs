@@ -12,6 +12,9 @@ public class ScorpionBoss : MonoBehaviour
     public LayerMask playerLayer;
     public float patrolMinX = -15f;
     public float patrolMaxX = 15f;
+    public Material bossHealthBarMaterial;
+    public BossUI BossUI;
+    public DesertEndTriggerCheese EndTrigger;
 
     [Header("Contact Launch Settings")]
     public float launchForceX = 25f;
@@ -249,10 +252,17 @@ public class ScorpionBoss : MonoBehaviour
         currentHealth -= amount;
         currentHealth = Mathf.Clamp(currentHealth, 0, bossHealth);
 
+        float healthPercent = currentHealth / bossHealth;
+        bossHealthBarMaterial.SetFloat("_Fill", healthPercent);
+
         if (flash != null) flash.Flash();
 
         if (currentHealth <= 0)
+        {
             Destroy(gameObject);
+            BossUI.Hide();
+            EndTrigger.StartEnd();
+        }
     }
 
     // Helpers

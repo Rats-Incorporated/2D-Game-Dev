@@ -10,6 +10,8 @@ public class BossUI : MonoBehaviour
 
     public GameObject ExBossText;
     public GameObject BearBossText;
+    public GameObject FlyBossText;
+    public GameObject ScorpionBossText;
 
     public void SetFill(float value)
     {
@@ -35,16 +37,36 @@ public class BossUI : MonoBehaviour
 
 
     }
-    public void ShowBearBossText()
+
+    public void HideAllNames()
     {
         ExBossText.SetActive(false);
+        BearBossText.SetActive(false);
+        FlyBossText.SetActive(false);
+        ScorpionBossText.SetActive(false);
+    }
+    public void ShowBearBossText()
+    {
+        HideAllNames();
         BearBossText.SetActive(true);
 
     }
     public void ShowExBossText()
     {
+        HideAllNames();
         ExBossText.SetActive(true);
-        BearBossText.SetActive(false);
 
+    }
+
+    public void ShowFlyBossText()
+    {
+        HideAllNames();
+        FlyBossText.SetActive(true);
+    }
+
+    public void ShowScorpionBossText()
+    {
+        HideAllNames();
+        ScorpionBossText.SetActive(true);
     }
 }

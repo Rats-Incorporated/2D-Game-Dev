@@ -27,7 +27,7 @@ public class FlyBoss : MonoBehaviour
     public float slamSpeed = 8f;
 
     [Header("Health")]
-    public float bossHealth = 200f;
+    public float bossHealth = 300f;
     public Material bossHealthBarMaterial;
 
     [Header("Contact Damage")]
