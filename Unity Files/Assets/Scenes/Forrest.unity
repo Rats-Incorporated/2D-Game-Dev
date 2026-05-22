@@ -350,6 +350,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: dabee (6)
       objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
       propertyPath: m_SortingOrder
       value: 3
@@ -416,6 +420,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 937879304}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 937879307}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 937879306}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
 --- !u!1 &31821739 stripped
 GameObject:
@@ -836,6 +846,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: dabee (2)
       objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
       propertyPath: m_SortingOrder
       value: 3
@@ -902,6 +916,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1338839297}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1338839300}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1338839299}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
 --- !u!1 &90361131
 GameObject:
@@ -20529,6 +20549,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: dabee (12)
       objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
       propertyPath: m_SortingOrder
       value: 3
@@ -20595,6 +20619,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2068215687}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2068215690}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2068215689}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
 --- !u!1 &168295850
 GameObject:
@@ -21968,6 +21998,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: dabee (4)
       objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
       propertyPath: m_SortingOrder
       value: 3
@@ -22034,6 +22068,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1779392853}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1779392856}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1779392855}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
 --- !u!1001 &281715503
 PrefabInstance:
@@ -23091,6 +23131,47 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+--- !u!114 &374896914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374896911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 089e5150a8ca7244481686efd1f99568, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: GameScripts::DamageFlash
+  flashDuration: 0.15
+  dimAlpha: 0.5
+--- !u!50 &374896915
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374896911}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &377238551 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
@@ -23160,6 +23241,47 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+--- !u!50 &377238554
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377238551}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &377238555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377238551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 089e5150a8ca7244481686efd1f99568, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: GameScripts::DamageFlash
+  flashDuration: 0.15
+  dimAlpha: 0.5
 --- !u!1 &381530887 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2253911629886400664, guid: 7838c6f9ec8a3614c8ed48895c64fbe5, type: 3}
@@ -23245,7 +23367,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.09499999, y: 0.55}
+  m_Offset: {x: -0.09183399, y: 0.5705832}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.70212764, y: -1.117647}
@@ -23255,7 +23377,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.46999997, y: 0.34000003}
+  m_Size: {x: 0.53966546, y: 0.38116646}
   m_EdgeRadius: 0
 --- !u!114 &381530892
 MonoBehaviour:
@@ -24504,6 +24626,47 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+--- !u!50 &495166132
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495166129}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &495166133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495166129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 089e5150a8ca7244481686efd1f99568, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: GameScripts::DamageFlash
+  flashDuration: 0.15
+  dimAlpha: 0.5
 --- !u!1001 &513888725
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25165,6 +25328,47 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+--- !u!50 &548737153
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548737150}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &548737154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548737150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 089e5150a8ca7244481686efd1f99568, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: GameScripts::DamageFlash
+  flashDuration: 0.15
+  dimAlpha: 0.5
 --- !u!1001 &559810496
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26294,6 +26498,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: dabee (13)
       objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
       propertyPath: m_SortingOrder
       value: 3
@@ -26360,6 +26568,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 495166130}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 495166133}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 495166132}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
 --- !u!1001 &652921587
 PrefabInstance:
@@ -27115,6 +27329,47 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+--- !u!50 &696818677
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696818674}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &696818678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696818674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 089e5150a8ca7244481686efd1f99568, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: GameScripts::DamageFlash
+  flashDuration: 0.15
+  dimAlpha: 0.5
 --- !u!1001 &703114336
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27769,6 +28024,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: dabee (3)
       objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
       propertyPath: m_SortingOrder
       value: 3
@@ -27835,6 +28094,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1335036203}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1335036206}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1335036205}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
 --- !u!1 &783169089 stripped
 GameObject:
@@ -27921,7 +28186,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.09499999, y: 0.55}
+  m_Offset: {x: -0.090250716, y: 0.56741667}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.70212764, y: -1.117647}
@@ -27931,7 +28196,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.46999997, y: 0.34000003}
+  m_Size: {x: 0.5301678, y: 0.3748331}
   m_EdgeRadius: 0
 --- !u!114 &783169094
 MonoBehaviour:
@@ -28129,6 +28394,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: dabee (14)
       objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
       propertyPath: m_SortingOrder
       value: 3
@@ -28195,6 +28464,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1907483723}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1907483726}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1907483725}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
 --- !u!1001 &815114324
 PrefabInstance:
@@ -29206,6 +29481,47 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+--- !u!50 &888387785
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888387782}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &888387786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888387782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 089e5150a8ca7244481686efd1f99568, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: GameScripts::DamageFlash
+  flashDuration: 0.15
+  dimAlpha: 0.5
 --- !u!1 &892383718 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2253911629886400664, guid: 42346c61778547746af72bf4a15092ea, type: 3}
@@ -29526,7 +29842,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.09499999, y: 0.55}
+  m_Offset: {x: -0.087083206, y: 0.5689999}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.70212764, y: -1.117647}
@@ -29536,7 +29852,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.46999997, y: 0.34000003}
+  m_Size: {x: 0.5491669, y: 0.37800002}
   m_EdgeRadius: 0
 --- !u!114 &910201375
 MonoBehaviour:
@@ -30117,6 +30433,47 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+--- !u!50 &937879306
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937879303}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &937879307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937879303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 089e5150a8ca7244481686efd1f99568, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: GameScripts::DamageFlash
+  flashDuration: 0.15
+  dimAlpha: 0.5
 --- !u!1001 &938216790
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32697,7 +33054,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.09499999, y: 0.55}
+  m_Offset: {x: -0.09658368, y: 0.57375}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.70212764, y: -1.117647}
@@ -32707,7 +33064,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.46999997, y: 0.34000003}
+  m_Size: {x: 0.5174992, y: 0.38749993}
   m_EdgeRadius: 0
 --- !u!114 &1181556310
 MonoBehaviour:
@@ -33531,6 +33888,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: dabee (11)
       objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
       propertyPath: m_SortingOrder
       value: 3
@@ -33597,6 +33958,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 377238552}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 377238555}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 377238554}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
 --- !u!1001 &1272981549
 PrefabInstance:
@@ -34352,6 +34719,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: dabee (9)
       objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
       propertyPath: m_SortingOrder
       value: 3
@@ -34418,6 +34789,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1753718960}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1753718963}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1753718962}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
 --- !u!1 &1335036202 stripped
 GameObject:
@@ -34488,6 +34865,47 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+--- !u!114 &1335036205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335036202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 089e5150a8ca7244481686efd1f99568, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: GameScripts::DamageFlash
+  flashDuration: 0.15
+  dimAlpha: 0.5
+--- !u!50 &1335036206
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335036202}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1338839296 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
@@ -34557,6 +34975,47 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+--- !u!50 &1338839299
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338839296}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1338839300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338839296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 089e5150a8ca7244481686efd1f99568, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: GameScripts::DamageFlash
+  flashDuration: 0.15
+  dimAlpha: 0.5
 --- !u!1 &1340853803 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2253911629886400664, guid: ce1ac1e11d62ce541b0e649928785bdd, type: 3}
@@ -35142,11 +35601,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2756179398824030747, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -254.48
+      value: -254.87
       objectReference: {fileID: 0}
     - target: {fileID: 2756179398824030747, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -44.2
+      value: -44.28
       objectReference: {fileID: 0}
     - target: {fileID: 3332937391269155187, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
       propertyPath: BearBoss
@@ -35156,6 +35615,10 @@ PrefabInstance:
       propertyPath: CaveTrigger
       value: 
       objectReference: {fileID: 424859284}
+    - target: {fileID: 3529947247739330478, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.046
+      objectReference: {fileID: 0}
     - target: {fileID: 4194694610661830293, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 164.865
@@ -35237,6 +35700,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: dabee (5)
       objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
       propertyPath: m_SortingOrder
       value: 3
@@ -35303,6 +35770,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1647422349}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1647422352}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1647422351}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
 --- !u!1001 &1403043209
 PrefabInstance:
@@ -36098,6 +36571,47 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+--- !u!114 &1461605622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461605619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 089e5150a8ca7244481686efd1f99568, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: GameScripts::DamageFlash
+  flashDuration: 0.15
+  dimAlpha: 0.5
+--- !u!50 &1461605623
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461605619}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1474538756 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2253911629886400664, guid: 7838c6f9ec8a3614c8ed48895c64fbe5, type: 3}
@@ -36183,7 +36697,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.09499999, y: 0.55}
+  m_Offset: {x: -0.096583545, y: 0.57058334}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.70212764, y: -1.117647}
@@ -36193,7 +36707,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.46999997, y: 0.34000003}
+  m_Size: {x: 0.5618336, y: 0.3811667}
   m_EdgeRadius: 0
 --- !u!114 &1474538761
 MonoBehaviour:
@@ -38480,7 +38994,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.09499999, y: 0.55}
+  m_Offset: {x: -0.08391632, y: 0.5769167}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.70212764, y: -1.117647}
@@ -38490,7 +39004,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.46999997, y: 0.34000003}
+  m_Size: {x: 0.568167, y: 0.39383316}
   m_EdgeRadius: 0
 --- !u!114 &1622886512
 MonoBehaviour:
@@ -38701,6 +39215,47 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+--- !u!114 &1647422351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647422348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 089e5150a8ca7244481686efd1f99568, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: GameScripts::DamageFlash
+  flashDuration: 0.15
+  dimAlpha: 0.5
+--- !u!50 &1647422352
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647422348}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1654123100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38792,6 +39347,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: dabee (1)
       objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
       propertyPath: m_SortingOrder
       value: 3
@@ -38858,6 +39417,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 888387783}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 888387786}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 888387785}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
 --- !u!1 &1670123349 stripped
 GameObject:
@@ -39628,6 +40193,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: dabee (15)
       objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
       propertyPath: m_SortingOrder
       value: 3
@@ -39694,6 +40263,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 696818675}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 696818678}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 696818677}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
 --- !u!1001 &1724194765
 PrefabInstance:
@@ -39962,6 +40537,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: dabee (7)
       objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
       propertyPath: m_SortingOrder
       value: 3
@@ -40028,6 +40607,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1461605620}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1461605623}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1461605622}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
 --- !u!1 &1753718959 stripped
 GameObject:
@@ -40098,6 +40683,47 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+--- !u!114 &1753718962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753718959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 089e5150a8ca7244481686efd1f99568, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: GameScripts::DamageFlash
+  flashDuration: 0.15
+  dimAlpha: 0.5
+--- !u!50 &1753718963
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753718959}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1754333478 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
@@ -40167,6 +40793,47 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+--- !u!50 &1754333481
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754333478}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1754333482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754333478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 089e5150a8ca7244481686efd1f99568, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: GameScripts::DamageFlash
+  flashDuration: 0.15
+  dimAlpha: 0.5
 --- !u!1 &1755670562 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2253911629886400664, guid: ce1ac1e11d62ce541b0e649928785bdd, type: 3}
@@ -40726,6 +41393,47 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+--- !u!50 &1779392855
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779392852}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1779392856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779392852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 089e5150a8ca7244481686efd1f99568, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: GameScripts::DamageFlash
+  flashDuration: 0.15
+  dimAlpha: 0.5
 --- !u!1001 &1781104563
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40736,7 +41444,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3046036958284113223, guid: f8b5663622aa19f40b59307efef0d7cc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 206.59785
+      value: 207.13
       objectReference: {fileID: 0}
     - target: {fileID: 3046036958284113223, guid: f8b5663622aa19f40b59307efef0d7cc, type: 3}
       propertyPath: m_LocalPosition.y
@@ -42455,7 +43163,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.09499999, y: 0.55}
+  m_Offset: {x: -0.08391614, y: 0.5689998}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.70212764, y: -1.117647}
@@ -42465,7 +43173,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.46999997, y: 0.34000003}
+  m_Size: {x: 0.5745022, y: 0.37799978}
   m_EdgeRadius: 0
 --- !u!114 &1877464350
 MonoBehaviour:
@@ -42500,6 +43208,10 @@ PrefabInstance:
     - target: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
       propertyPath: m_Name
       value: dabee (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
       propertyPath: m_SortingOrder
@@ -42567,6 +43279,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1754333479}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1754333482}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1754333481}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
 --- !u!1001 &1898084879
 PrefabInstance:
@@ -42998,6 +43716,47 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+--- !u!114 &1907483725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907483722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 089e5150a8ca7244481686efd1f99568, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: GameScripts::DamageFlash
+  flashDuration: 0.15
+  dimAlpha: 0.5
+--- !u!50 &1907483726
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907483722}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1912807625
 GameObject:
   m_ObjectHideFlags: 0
@@ -79114,7 +79873,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.09499999, y: 0.55}
+  m_Offset: {x: -0.09183362, y: 0.5788013}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.70212764, y: -1.117647}
@@ -79124,7 +79883,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.46999997, y: 0.34000003}
+  m_Size: {x: 0.5333328, y: 0.39760256}
   m_EdgeRadius: 0
 --- !u!114 &2034231401
 MonoBehaviour:
@@ -79559,7 +80318,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.09499999, y: 0.55}
+  m_Offset: {x: -0.083915845, y: 0.57533336}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.70212764, y: -1.117647}
@@ -79569,7 +80328,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.46999997, y: 0.34000003}
+  m_Size: {x: 0.5745003, y: 0.39066672}
   m_EdgeRadius: 0
 --- !u!114 &2054584362
 MonoBehaviour:
@@ -79741,6 +80500,47 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+--- !u!114 &2068215689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068215686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 089e5150a8ca7244481686efd1f99568, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: GameScripts::DamageFlash
+  flashDuration: 0.15
+  dimAlpha: 0.5
+--- !u!50 &2068215690
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068215686}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2070026554
 GameObject:
   m_ObjectHideFlags: 0
@@ -79939,6 +80739,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: dabee
       objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
       propertyPath: m_SortingOrder
       value: 3
@@ -80005,6 +80809,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 374896912}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 374896915}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 374896914}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
 --- !u!1001 &2088233540
 PrefabInstance:
@@ -80017,6 +80827,10 @@ PrefabInstance:
     - target: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
       propertyPath: m_Name
       value: dabee (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
       propertyPath: m_SortingOrder
@@ -80084,6 +80898,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 548737151}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 548737154}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 548737153}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: 5db1d8be565f20b419f975318937f06d, type: 3}
 --- !u!1001 &2098429746
 PrefabInstance:

@@ -17,6 +17,7 @@ public class HitScript : MonoBehaviour
         // ENEMIES
         // =========================
 
+
         if (collision.CompareTag("Enemy"))
         {
             EnemySlap slapEnemy = collision.GetComponentInParent<EnemySlap>();
@@ -32,7 +33,26 @@ public class HitScript : MonoBehaviour
                 defaultEnemy.EnemyTakeDamage(damageAmount);
                 ApplyPogo();
             }
+
+            EnemyLauncher scorp = collision.GetComponentInParent<EnemyLauncher>();
+            if (scorp != null)
+            {
+                scorp.EnemyTakeDamage(damageAmount);
+                ApplyPogo();
+            }
+
+            MovingEnemyPlatform bee = collision.GetComponentInParent<MovingEnemyPlatform>();
+            if (bee != null)
+            {
+                bee.EnemyTakeDamage(damageAmount);
+                ApplyPogo();
+            }
+
+
+
+
         }
+
 
         // =========================
         // START BUTTON
