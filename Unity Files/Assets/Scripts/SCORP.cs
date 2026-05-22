@@ -54,6 +54,9 @@ public class ScorpionBoss : MonoBehaviour
     private enum BossState { Wander, Chase }
     private BossState currentState = BossState.Wander;
 
+    public LogicScript Logic;
+
+
     //  Unity Lifecycle 
     void Start()
     {
@@ -252,7 +255,11 @@ public class ScorpionBoss : MonoBehaviour
         if (flash != null) flash.Flash();
 
         if (currentHealth <= 0)
+        {
+            if (Logic != null)
+                Logic.WinGame();
             Destroy(gameObject);
+        }
     }
 
     // Helpers
