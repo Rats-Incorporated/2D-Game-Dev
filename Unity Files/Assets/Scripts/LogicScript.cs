@@ -28,6 +28,10 @@ public class LogicScript : MonoBehaviour
 
 
     }
+    void Awake()
+    {
+        pickedUpCollectables = 0;
+    }
 
     public void TempMessage(string msg, float dur = 2f)
     {
