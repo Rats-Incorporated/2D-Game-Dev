@@ -21,7 +21,9 @@ Roxlynn Beecher – beecheco@oregonstate.edu
 - At least one team member must review before merging
   
 
-## Unity Setup Instructions
+# Installation Instructions
+
+## Unity Setup
 
 ### Requirements
 - Unity v.6000.2.8f1
@@ -43,7 +45,7 @@ Roxlynn Beecher – beecheco@oregonstate.edu
 3. Click Build
 
 
-## Executable Instructions
+## Executable Setup
 
 1. Go to the latest release page:
    - GitHub → Releases → Latest
