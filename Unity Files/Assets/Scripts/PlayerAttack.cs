@@ -39,6 +39,10 @@ public class PlayerAttack : MonoBehaviour
     public Material defaultMaterial;
     public Material chargeMaterial;
 
+    [Header("Audio")]
+    public AudioClip attackSound;
+    public AudioClip flurrySound;
+
     //private SpriteRenderer sr;
     //private Material mat;
 
@@ -74,6 +78,10 @@ public class PlayerAttack : MonoBehaviour
             {
                 SpawnAttack(facingDirection, true);
                 attackTimer = 0f;
+                if (AudioController.Instance != null)
+                {
+                    AudioController.Instance.PlaySFX(attackSound);
+                }
                 anim.SetTrigger("PlayerAttackDown");
             }
             //NORMAL ATTACK
@@ -81,6 +89,10 @@ public class PlayerAttack : MonoBehaviour
             {
                 SpawnAttack(facingDirection);
                 attackTimer = 0f;
+                if (AudioController.Instance != null)
+                {
+                    AudioController.Instance.PlaySFX(attackSound);
+                }
 
                 int rand = Random.Range(0, 2);
 
@@ -98,6 +110,10 @@ public class PlayerAttack : MonoBehaviour
         {
             SpawnAttack(facingDirection);
             attack2Timer = 0f;
+            if (AudioController.Instance != null)
+            {
+                AudioController.Instance.PlaySFX(attackSound);
+            }
             anim.SetTrigger("PlayerAttack");
         }
 
@@ -110,6 +126,9 @@ public class PlayerAttack : MonoBehaviour
             // change material
             playerSpriteRenderer.material = chargeMaterial;
             mat.SetFloat("_Charge", 1f);
+
+
+
             ChargeTime += Time.deltaTime;
 
 
@@ -127,6 +146,12 @@ public class PlayerAttack : MonoBehaviour
         if (Input.GetButtonUp("AttackFlurry") && ChargeTime >= TotalChargeTime && flurryTimer >= attackCooldown)
         {
             mat.SetFloat("_Charge", 1f);
+
+            if (AudioController.Instance != null)
+            {
+                AudioController.Instance.PlaySFX(flurrySound);
+            }
+
 
             StartCoroutine(FlurryAttack(facingDirection));
             flurryTimer = 0f;

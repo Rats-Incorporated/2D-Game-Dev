@@ -34,6 +34,11 @@ public class FlyBoss : MonoBehaviour
     public float contactDamage = 15f;
     public float contactDamageCooldown = 1f;
 
+    [Header("Audio")]
+    public AudioClip spitSound1;
+    public AudioClip spitSound2;
+    public AudioClip slamSound;
+
     private float bossCurrentHealth;
     private Transform player;
     private float fireTimer;
@@ -43,6 +48,8 @@ public class FlyBoss : MonoBehaviour
     private float originalY;
 
     private float contactTimer;
+
+    private bool useFirstSpitSound = true;
 
     public GameObject bossHealthBar;
 
@@ -113,6 +120,21 @@ public class FlyBoss : MonoBehaviour
     {
         ShootFromFirePoint(firePointLeft, projectilePrefab);
         ShootFromFirePoint(firePointRight, projectilePrefab);
+
+        // PLAY ALTERNATING SPIT SOUND
+        if (AudioController.Instance != null)
+        {
+            if (useFirstSpitSound)
+            {
+                AudioController.Instance.PlaySFX(spitSound1);
+            }
+            else
+            {
+                AudioController.Instance.PlaySFX(spitSound2);
+            }
+
+            useFirstSpitSound = !useFirstSpitSound;
+        }
     }
 
     // SLAM TIMER 
@@ -149,6 +171,11 @@ public class FlyBoss : MonoBehaviour
         // Fire wave projectiles
         ShootFromFirePoint(slamFirePointLeft, slamProjectilePrefab);
         ShootFromFirePoint(slamFirePointRight, slamProjectilePrefab);
+
+        if (AudioController.Instance != null)
+        {
+            AudioController.Instance.PlaySFX(slamSound);
+        }
 
         yield return new WaitForSeconds(0.5f);
 

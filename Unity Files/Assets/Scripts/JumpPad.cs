@@ -7,6 +7,8 @@ public class JumpPad : MonoBehaviour
     public float bounce = 20f;
     public float cooldown = 0.4f;
     private float cd_timer;
+    
+    public AudioClip bounceSound;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -19,6 +21,8 @@ public class JumpPad : MonoBehaviour
                 rb.linearVelocityY = 0f;
             }
             rb.AddForce(Vector2.up * bounce, ForceMode2D.Impulse);
+
+            AudioController.Instance.PlaySFX(bounceSound);
         }
     }
 

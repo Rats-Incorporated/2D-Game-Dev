@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class ShuriPickup : MonoBehaviour
 {
+    public AudioClip pickupSound;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,13 +25,16 @@ public class ShuriPickup : MonoBehaviour
 
             //preventDuplicate = true;
 
+            if (AudioController.Instance != null)
+            {
+                AudioController.Instance.PlaySFX(pickupSound);
+            }
+
             Destroy(gameObject);
 
             PlayerShuriken player = collision.GetComponentInParent<PlayerShuriken>();
 
             player.shuriCount = 3;
-
-
 
 
 

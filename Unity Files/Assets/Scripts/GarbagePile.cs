@@ -25,6 +25,12 @@ public class garbage_pile : MonoBehaviour
     public GameObject bossHealthBar;
 
     public BossUI BossUI;
+
+   
+    public AudioClip eatingSound;
+
+    private bool eatingSoundPlayed = false;
+
     void Start()
     {
         cg = GarbageMessageContainer.GetComponent<CanvasGroup>();
@@ -36,6 +42,18 @@ public class garbage_pile : MonoBehaviour
         {
             if (Input.GetButton("Interact"))
             {
+
+                if (!eatingSoundPlayed)
+                {
+                    eatingSoundPlayed = true;
+
+                    if (AudioController.Instance != null)
+                    {
+                        AudioController.Instance.PlaySFX(eatingSound);
+                    }
+                }
+
+
                 currentEatTime += Time.deltaTime;
 
                 Debug.Log("Eating progress: " + currentEatTime + " / " + eatTimeRequired);
@@ -53,6 +71,14 @@ public class garbage_pile : MonoBehaviour
                     Destroy(gameObject);
                 }
             }
+
+            else
+            {
+                eatingSoundPlayed = false;
+            }
+
+
+
         }
     }
 

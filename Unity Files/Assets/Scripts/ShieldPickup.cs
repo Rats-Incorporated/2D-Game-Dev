@@ -12,6 +12,7 @@ public class ShieldPickup : MonoBehaviour
 
     Coroutine shieldRoutine;
 
+    public AudioClip shieldSound;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -19,6 +20,11 @@ public class ShieldPickup : MonoBehaviour
 
         if (collision.CompareTag("Player"))
         {
+
+            if (AudioController.Instance != null)
+            {
+                AudioController.Instance.PlaySFX(shieldSound);
+            }
 
             invuln = collision.GetComponent<PlayerInvulnerability>();
             invuln.TriggerInvulnerabilityPermaOn();

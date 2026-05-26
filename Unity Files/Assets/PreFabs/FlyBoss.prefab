@@ -254,6 +254,9 @@ MonoBehaviour:
   bossHealthBarMaterial: {fileID: 2100000, guid: f15ca975c0da6e14a8bdf5327f3e0858, type: 2}
   contactDamage: 15
   contactDamageCooldown: 1
+  spitSound1: {fileID: 8300000, guid: fde5546569c38b84cbb447ea2428c38f, type: 3}
+  spitSound2: {fileID: 8300000, guid: 7ac27364002a3ef45ae1c6b39ac9c3b2, type: 3}
+  slamSound: {fileID: 8300000, guid: 5afebde90d2f6b146b7fcd9940d8a78e, type: 3}
   bossHealthBar: {fileID: 0}
 --- !u!50 &7277667922885015752
 Rigidbody2D:

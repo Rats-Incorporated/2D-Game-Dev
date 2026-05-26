@@ -5,6 +5,7 @@ public class EnvironmentHazard : MonoBehaviour
 {
     public float damageAmount = 25f;
     public float damageInterval = 1.5f;
+    public AudioClip hazardSound;
 
     private PlayerHealth currentPlayer;
     private float damageTimer;
@@ -28,15 +29,21 @@ public class EnvironmentHazard : MonoBehaviour
             }
         }
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             currentPlayer = collision.GetComponent<PlayerHealth>();
+
             if (currentPlayer != null)
             {
                 playerInHazard = true;
+
+                if (AudioController.Instance != null)
+                {
+                    AudioController.Instance.PlaySFX(hazardSound);
+                }
+
                 currentPlayer.TakeDamage(damageAmount);
                 damageTimer = 0f;
             }
