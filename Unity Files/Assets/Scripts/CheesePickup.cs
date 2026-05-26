@@ -1,9 +1,10 @@
 using UnityEngine;
 using System.Collections;
 
+
 public class CheesePickup : MonoBehaviour
 {
-
+    public AudioClip pickupcheese;
     //bool preventDuplicate = false;
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -24,6 +25,12 @@ public class CheesePickup : MonoBehaviour
 
             //collectable count
             PlayerController pc = collision.GetComponentInParent<PlayerController>();
+
+            if (pickupcheese != null && AudioController.Instance != null)
+            {
+                AudioController.Instance.PlaySFX(pickupcheese);
+            }
+
 
             if (pc != null)
             {

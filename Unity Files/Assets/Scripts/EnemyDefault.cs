@@ -13,6 +13,8 @@ public class EnemyDefault : MonoBehaviour
     public LayerMask playerLayer; // Assign the Layer that your Player is on in the Inspector
     public float patrolMinX = -10f; //walking range
     public float patrolMaxX = 10f;
+    public AudioClip hitSound;
+    public AudioClip hitSound2;
     DamageFlash flash;
 
     // --- Private/State Variables ---
@@ -21,6 +23,8 @@ public class EnemyDefault : MonoBehaviour
     private Transform playerTransform; // Reference to the player's transform
     private Vector2 currentWanderTarget;
     private Vector3 originalScale;
+
+    private bool use1HitSound = true;
 
     // Defines the different behaviors the enemy can have
     private enum EnemyState { Wander, Chase }
@@ -205,7 +209,23 @@ public class EnemyDefault : MonoBehaviour
     {
         enemyCurrentHealth -= amount;
         enemyCurrentHealth = Mathf.Clamp(enemyCurrentHealth, 0, enemyHealth); // prevents negative damage
-        Debug.Log("Flash test");
+
+        if (AudioController.Instance != null)
+        {
+            if (use1HitSound)
+            {
+                AudioController.Instance.PlaySFX(hitSound);
+            }
+            else
+            {
+                AudioController.Instance.PlaySFX(hitSound2);
+            }
+
+            use1HitSound = !use1HitSound;
+        }
+    
+
+    Debug.Log("Flash test");
         if (flash != null)
             Debug.Log("FLASH");
         flash.Flash();

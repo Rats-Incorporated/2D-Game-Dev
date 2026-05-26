@@ -95,7 +95,7 @@ public class HublevelMenu : MonoBehaviour
     public void Scene3()
     {
         Resume();
-        StartCoroutine(LoadSceneAfterDelay("CutScene3")); // Example: delay of 4 seconds
+        StartCoroutine(LoadSceneAfterDelay("CutScene2")); // Example: delay of 4 seconds
     }
 
 

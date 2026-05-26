@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,6 +18,11 @@ public class PlayerController : MonoBehaviour
     public float jumpVelocity; // jump speed/height
     public float dashVelocity; // dash speed
     public float slowSpeed = 50.0f; // how fast the player slows down when pressing neither A or D
+
+    // audio
+    public AudioClip jumpSound;
+    public AudioClip dashSound;
+   
 
     // capacities
     public int jumpTotal = 1;
@@ -69,6 +74,11 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             PlayerJump(UpDirection);
+
+            if (AudioController.Instance != null)
+            {
+                AudioController.Instance.PlaySFX(jumpSound);
+            }
         }
 
         // Checking for letting go of Jump
@@ -115,11 +125,24 @@ public class PlayerController : MonoBehaviour
         if (PlayerGoRight && Input.GetButtonDown("Dash"))
         {
             PlayerDash(RightDirection, 1);
+
+            if (AudioController.Instance != null)
+            {
+                AudioController.Instance.PlaySFX(dashSound);
+            }
+
         }
 
         if (PlayerGoLeft && Input.GetButtonDown("Dash"))
         {
+
+
             PlayerDash(RightDirection, -1);
+
+            if (AudioController.Instance != null)
+            {
+                AudioController.Instance.PlaySFX(dashSound);
+            }
         }
     }
 
@@ -195,28 +218,31 @@ public class PlayerController : MonoBehaviour
     }
 
     // handing all the conditions for when the player is jumping
-    public void PlayerJump(Vector2 UpDirection)
+    public bool PlayerJump(Vector2 UpDirection)
     {
-        // spaceLocked prevents holding the space bar causing all jumps to be used rapidly
         if (JumpState.GetJumpCount() > 0 && !JumpState.spaceLocked)
         {
             var curr_vel = rb.linearVelocity;
+
             if (curr_vel.y < 0)
             {
                 curr_vel.y = 0;
             }
-            // removed Time.deltaTime, as this is a set velocity jump, not consistent movement
+
             rb.linearVelocity = curr_vel + (UpDirection * jumpVelocity);
             animator.SetBool("isJumping", true);
             JumpState.SetJumpVars();
+
+            return true; //  SUCCESS
         }
+
+        return false; //  FAILED
     }
 
-    public void PlayerDash(Vector2 vec, int dir)
+    public bool PlayerDash(Vector2 vec, int dir)
     {
         if (StaminaState.currentStamina > DashState.stamCost && !DashState.inGCD)
         {
-            //dash invuln
             PlayerInvulnerability invuln = GetComponent<PlayerInvulnerability>();
 
             if (invuln != null)
@@ -225,8 +251,7 @@ public class PlayerController : MonoBehaviour
             }
 
             var curr_vel = rb.linearVelocity;
-            // basically if dashing in opposite direction of current momentum
-            // kill momentum and pivot
+
             if (curr_vel.x < 0 && dir > 0)
             {
                 curr_vel.x = 0;
@@ -238,7 +263,11 @@ public class PlayerController : MonoBehaviour
 
             rb.linearVelocity = curr_vel + (vec * dir * dashVelocity);
             DashState.SetDashVars();
+
+            return true; //  SUCCESS
         }
+
+        return false; //  FAILED
     }
 
     // want the player vector elsewhere so am doing this to make it easier

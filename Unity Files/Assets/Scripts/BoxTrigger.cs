@@ -6,6 +6,8 @@ public class hit : MonoBehaviour
 {
     public LogicScript Logic;
 
+    public AudioClip winSound;
+
     private void Start()
     {
     }
@@ -18,6 +20,11 @@ public class hit : MonoBehaviour
 
         if (collision.name != "Rat2")
         {
+            if (AudioController.Instance != null)
+            {
+                AudioController.Instance.PlaySFX(winSound);
+            }
+
             Logic.WinGame();
         }
 
