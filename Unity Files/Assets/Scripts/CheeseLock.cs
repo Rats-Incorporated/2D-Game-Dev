@@ -27,7 +27,7 @@ public class CheeseLock : MonoBehaviour
             {
                 StartCoroutine(ShowBubble());
             }
-            else if (pc.Logic.pickedUpCollectables == 3)
+            else if (pc.Logic.pickedUpCollectables >= 3)
             {
                 GameObject.Destroy(gameObject);
             }
