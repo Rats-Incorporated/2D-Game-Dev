@@ -20825,7 +20825,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 7cdbef936ed74a94f840eb044789c0c1, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 7cdbef936ed74a94f840eb044789c0c1, type: 3}
       propertyPath: m_LocalScale.x
@@ -20898,7 +20898,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 7cdbef936ed74a94f840eb044789c0c1, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 7cdbef936ed74a94f840eb044789c0c1, type: 3}
       propertyPath: m_LocalScale.x
@@ -21441,7 +21441,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 7cdbef936ed74a94f840eb044789c0c1, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 7cdbef936ed74a94f840eb044789c0c1, type: 3}
       propertyPath: m_LocalScale.x
@@ -22469,6 +22469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::JumpPad
   bounce: 20
   cooldown: 0.4
+  bounceSound: {fileID: 0}
 --- !u!1001 &297062100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23624,6 +23625,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: 80
   patrolMaxX: 100
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!1001 &401464486
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23883,7 +23886,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 7cdbef936ed74a94f840eb044789c0c1, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 7cdbef936ed74a94f840eb044789c0c1, type: 3}
       propertyPath: m_LocalScale.x
@@ -24537,7 +24540,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 7cdbef936ed74a94f840eb044789c0c1, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 7cdbef936ed74a94f840eb044789c0c1, type: 3}
       propertyPath: m_LocalScale.x
@@ -25151,6 +25154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::JumpPad
   bounce: 20
   cooldown: 0.4
+  bounceSound: {fileID: 0}
 --- !u!1 &534678708 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2253911629886400664, guid: ce1ac1e11d62ce541b0e649928785bdd, type: 3}
@@ -26045,7 +26049,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 7cdbef936ed74a94f840eb044789c0c1, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 7cdbef936ed74a94f840eb044789c0c1, type: 3}
       propertyPath: m_LocalScale.x
@@ -27830,7 +27834,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 7cdbef936ed74a94f840eb044789c0c1, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 7cdbef936ed74a94f840eb044789c0c1, type: 3}
       propertyPath: m_LocalScale.x
@@ -28324,7 +28328,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 7cdbef936ed74a94f840eb044789c0c1, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 7cdbef936ed74a94f840eb044789c0c1, type: 3}
       propertyPath: m_LocalScale.x
@@ -28591,6 +28595,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: 120
   patrolMaxX: 140
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!1 &796995801 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2253911629886400664, guid: ce1ac1e11d62ce541b0e649928785bdd, type: 3}
@@ -30247,6 +30253,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: 55
   patrolMaxX: 65
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!1 &911762551
 GameObject:
   m_ObjectHideFlags: 0
@@ -31445,6 +31453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::EnvironmentHazard
   damageAmount: 1000
   damageInterval: 1.5
+  hazardSound: {fileID: 0}
 --- !u!212 &987541746
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -31804,7 +31813,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 7cdbef936ed74a94f840eb044789c0c1, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 7cdbef936ed74a94f840eb044789c0c1, type: 3}
       propertyPath: m_LocalScale.x
@@ -32521,6 +32530,11 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &1122415620 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4925603703823643628, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
+  m_PrefabInstance: {fileID: 1394941493}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1130463096 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2253911629886400664, guid: 765aa23b67d9fbd4497855938d1e55e4, type: 3}
@@ -33020,6 +33034,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::JumpPad
   bounce: 20
   cooldown: 0.4
+  bounceSound: {fileID: 0}
 --- !u!1 &1137071109 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9150569185014926769, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
@@ -33645,6 +33660,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: 60
   patrolMaxX: 80
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!4 &1181556312 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7878350319992209165, guid: 7838c6f9ec8a3614c8ed48895c64fbe5, type: 3}
@@ -35670,7 +35687,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 7cdbef936ed74a94f840eb044789c0c1, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 7cdbef936ed74a94f840eb044789c0c1, type: 3}
       propertyPath: m_LocalScale.x
@@ -36602,7 +36619,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 7cdbef936ed74a94f840eb044789c0c1, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 7cdbef936ed74a94f840eb044789c0c1, type: 3}
       propertyPath: m_LocalScale.x
@@ -37288,6 +37305,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: 100
   patrolMaxX: 120
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!1001 &1481238024
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38345,6 +38364,71 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1001 &1537979279
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 739786769027011926, guid: 829c8422eeced654aae34847639848c0, type: 3}
+      propertyPath: m_Name
+      value: shieldpickup_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1303779060511712039, guid: 829c8422eeced654aae34847639848c0, type: 3}
+      propertyPath: shieldSound
+      value: 
+      objectReference: {fileID: 8300000, guid: d3691b35d9e34a148b2b151aa5178aaf, type: 3}
+    - target: {fileID: 1303779060511712039, guid: 829c8422eeced654aae34847639848c0, type: 3}
+      propertyPath: shieldObject
+      value: 
+      objectReference: {fileID: 1122415620}
+    - target: {fileID: 4177539155482137347, guid: 829c8422eeced654aae34847639848c0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 183.51514
+      objectReference: {fileID: 0}
+    - target: {fileID: 4177539155482137347, guid: 829c8422eeced654aae34847639848c0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.4951673
+      objectReference: {fileID: 0}
+    - target: {fileID: 4177539155482137347, guid: 829c8422eeced654aae34847639848c0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4177539155482137347, guid: 829c8422eeced654aae34847639848c0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4177539155482137347, guid: 829c8422eeced654aae34847639848c0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4177539155482137347, guid: 829c8422eeced654aae34847639848c0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4177539155482137347, guid: 829c8422eeced654aae34847639848c0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4177539155482137347, guid: 829c8422eeced654aae34847639848c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4177539155482137347, guid: 829c8422eeced654aae34847639848c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4177539155482137347, guid: 829c8422eeced654aae34847639848c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 829c8422eeced654aae34847639848c0, type: 3}
 --- !u!1001 &1540472096
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38456,7 +38540,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 7cdbef936ed74a94f840eb044789c0c1, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 7cdbef936ed74a94f840eb044789c0c1, type: 3}
       propertyPath: m_LocalScale.x
@@ -39241,7 +39325,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 7cdbef936ed74a94f840eb044789c0c1, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 7cdbef936ed74a94f840eb044789c0c1, type: 3}
       propertyPath: m_LocalScale.x
@@ -39585,6 +39669,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: 99
   patrolMaxX: 113
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!1 &1624123395 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2253911629886400664, guid: ce1ac1e11d62ce541b0e649928785bdd, type: 3}
@@ -40149,6 +40235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::JumpPad
   bounce: 20
   cooldown: 0.4
+  bounceSound: {fileID: 0}
 --- !u!1001 &1671109493
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40680,7 +40767,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 7cdbef936ed74a94f840eb044789c0c1, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 7cdbef936ed74a94f840eb044789c0c1, type: 3}
       propertyPath: m_LocalScale.x
@@ -41052,6 +41139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::JumpPad
   bounce: 20
   cooldown: 0.4
+  bounceSound: {fileID: 0}
 --- !u!1001 &1746763268
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43830,6 +43918,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: 140
   patrolMaxX: 160
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!1001 &1888692908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -80615,6 +80705,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: 20
   patrolMaxX: 30
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!114 &2034231404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81060,6 +81152,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: 157
   patrolMaxX: 169
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!1001 &2055244570
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -82173,7 +82267,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 7cdbef936ed74a94f840eb044789c0c1, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 7cdbef936ed74a94f840eb044789c0c1, type: 3}
       propertyPath: m_LocalScale.x
@@ -82465,3 +82559,4 @@ SceneRoots:
   - {fileID: 1724194765}
   - {fileID: 284472851}
   - {fileID: 283446523}
+  - {fileID: 1537979279}
