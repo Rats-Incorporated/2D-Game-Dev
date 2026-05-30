@@ -791,6 +791,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Falling Blocks (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5256729633541708113, guid: a0fda7673f5e39145aac1433fef43ef3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6294084828832286578, guid: a0fda7673f5e39145aac1433fef43ef3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -70.26
@@ -53863,7 +53867,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.9019608, g: 0.06666666, b: 0.078151226, a: 1}
   m_FlipX: 0
@@ -75593,7 +75597,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.9019608, g: 0.06666666, b: 0.078151226, a: 1}
   m_FlipX: 0
@@ -76730,6 +76734,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Falling Blocks (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5256729633541708113, guid: a0fda7673f5e39145aac1433fef43ef3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6294084828832286578, guid: a0fda7673f5e39145aac1433fef43ef3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 57.044758
@@ -76930,7 +76938,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.9019608, g: 0.06666666, b: 0.078151226, a: 1}
   m_FlipX: 0
@@ -76984,6 +76992,10 @@ PrefabInstance:
     - target: {fileID: 2078278954340308689, guid: a0fda7673f5e39145aac1433fef43ef3, type: 3}
       propertyPath: m_Name
       value: Falling Blocks (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5256729633541708113, guid: a0fda7673f5e39145aac1433fef43ef3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6294084828832286578, guid: a0fda7673f5e39145aac1433fef43ef3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -139325,7 +139337,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.9019608, g: 0.06666666, b: 0.078151226, a: 1}
   m_FlipX: 0
@@ -170196,6 +170208,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Falling Blocks (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5256729633541708113, guid: a0fda7673f5e39145aac1433fef43ef3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6294084828832286578, guid: a0fda7673f5e39145aac1433fef43ef3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 166.25499
@@ -171540,6 +171556,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Falling Blocks (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5256729633541708113, guid: a0fda7673f5e39145aac1433fef43ef3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6294084828832286578, guid: a0fda7673f5e39145aac1433fef43ef3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 167.97281
@@ -171596,6 +171616,10 @@ PrefabInstance:
     - target: {fileID: 2078278954340308689, guid: a0fda7673f5e39145aac1433fef43ef3, type: 3}
       propertyPath: m_Name
       value: Falling Blocks (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5256729633541708113, guid: a0fda7673f5e39145aac1433fef43ef3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6294084828832286578, guid: a0fda7673f5e39145aac1433fef43ef3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -172015,7 +172039,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3529947247739330478, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.055
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3545524803519717338, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
       propertyPath: attackSound
@@ -172089,6 +172113,10 @@ PrefabInstance:
     - target: {fileID: 2078278954340308689, guid: a0fda7673f5e39145aac1433fef43ef3, type: 3}
       propertyPath: m_Name
       value: Square
+      objectReference: {fileID: 0}
+    - target: {fileID: 5256729633541708113, guid: a0fda7673f5e39145aac1433fef43ef3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6294084828832286578, guid: a0fda7673f5e39145aac1433fef43ef3, type: 3}
       propertyPath: m_LocalPosition.x
