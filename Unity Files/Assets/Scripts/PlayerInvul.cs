@@ -12,9 +12,11 @@ public class PlayerInvulnerability : MonoBehaviour
 
     private Color originalColor;
     private bool invulnerable;
+    private bool permaInvulnerable; //prevents sprint + shield interaction
 
     void Awake()
     {
+        permaInvulnerable = false;
         if (playerSpriteRenderer == null)
         {
             Debug.LogWarning("PlayerSpriteRenderer not assigned! Attempting to find child 'PlayerSprite'...");
@@ -49,10 +51,12 @@ public class PlayerInvulnerability : MonoBehaviour
     public void TriggerInvulnerabilityPermaOn()
     {
         invulnerable = true;
+        permaInvulnerable = true;
     }
     public void TriggerInvulnerabilityPermaOff()
     {
         invulnerable = false;
+        permaInvulnerable = false;
     }
 
     IEnumerator InvulnerabilityRoutine(float duration)
@@ -78,6 +82,10 @@ public class PlayerInvulnerability : MonoBehaviour
 
         // Restore original color
         playerSpriteRenderer.color = originalColor;
-        invulnerable = false;
+        if (permaInvulnerable == false)
+        {
+            invulnerable = false;
+        }
+        
     }
 }
