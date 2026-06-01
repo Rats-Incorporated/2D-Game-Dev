@@ -1,0 +1,596 @@
+fileFormatVersion: 2
+guid: 9b42d0757878f63478405223fc40a967
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -417306744059956334
+    second: RatSamuraiLogo_0
+  - first:
+      213: 3064596149286244412
+    second: RatSamuraiLogo_1
+  - first:
+      213: -8322570443431081107
+    second: RatSamuraiLogo_2
+  - first:
+      213: 4438460285504637630
+    second: RatSamuraiLogo_3
+  - first:
+      213: -1988863627552741058
+    second: RatSamuraiLogo_4
+  - first:
+      213: 3663488185120968595
+    second: RatSamuraiLogo_5
+  - first:
+      213: 2579989518254707134
+    second: RatSamuraiLogo_6
+  - first:
+      213: 3703140999245918374
+    second: RatSamuraiLogo_7
+  - first:
+      213: -8570315985928246447
+    second: RatSamuraiLogo_8
+  - first:
+      213: 7346187771728008340
+    second: RatSamuraiLogo_9
+  - first:
+      213: 5638965687056468566
+    second: RatSamuraiLogo_10
+  - first:
+      213: 7226597807374709444
+    second: RatSamuraiLogo_11
+  - first:
+      213: 5846103350814041764
+    second: RatSamuraiLogo_12
+  - first:
+      213: 2150344088296203460
+    second: RatSamuraiLogo_13
+  - first:
+      213: 135457000651951878
+    second: RatSamuraiLogo_14
+  - first:
+      213: -6917383344707445482
+    second: RatSamuraiLogo_15
+  - first:
+      213: -6945215752049990983
+    second: RatSamuraiLogo_16
+  - first:
+      213: -3049775627850253649
+    second: RatSamuraiLogo_17
+  - first:
+      213: 7885396686033518159
+    second: RatSamuraiLogo_18
+  - first:
+      213: 2734961923550256621
+    second: RatSamuraiLogo_19
+  - first:
+      213: -7767692952830420316
+    second: RatSamuraiLogo_20
+  - first:
+      213: -1259656763636328408
+    second: RatSamuraiLogo_21
+  - first:
+      213: -9163163461630492087
+    second: RatSamuraiLogo_22
+  - first:
+      213: 1310881891544515460
+    second: RatSamuraiLogo_23
+  - first:
+      213: -8587826921414269283
+    second: RatSamuraiLogo_24
+  - first:
+      213: -717903381487047915
+    second: RatSamuraiLogo_25
+  - first:
+      213: 8269332509658545042
+    second: RatSamuraiLogo_26
+  - first:
+      213: -8909696037241911889
+    second: RatSamuraiLogo_27
+  - first:
+      213: -6027721088204309306
+    second: RatSamuraiLogo_28
+  - first:
+      213: 229467787264232279
+    second: RatSamuraiLogo_29
+  - first:
+      213: 6807421089099569541
+    second: RatSamuraiLogo_30
+  - first:
+      213: 6875206904582301576
+    second: RatSamuraiLogo_31
+  - first:
+      213: -8724497790422200998
+    second: RatSamuraiLogo_32
+  - first:
+      213: 2157577065610293642
+    second: RatSamuraiLogo_33
+  - first:
+      213: -7180650662172415893
+    second: RatSamuraiLogo_34
+  - first:
+      213: -5284860854822196109
+    second: RatSamuraiLogo_35
+  - first:
+      213: -8529573439843364340
+    second: RatSamuraiLogo_36
+  - first:
+      213: -2949523357431176371
+    second: RatSamuraiLogo_37
+  - first:
+      213: 6082269802945138451
+    second: RatSamuraiLogo_38
+  - first:
+      213: -706021630125514242
+    second: RatSamuraiLogo_39
+  - first:
+      213: -4584241165204045177
+    second: RatSamuraiLogo_40
+  - first:
+      213: 8085730216149023914
+    second: RatSamuraiLogo_41
+  - first:
+      213: 1079492590301941623
+    second: RatSamuraiLogo_42
+  - first:
+      213: 589695151433573541
+    second: RatSamuraiLogo_43
+  - first:
+      213: 3422889791380162955
+    second: RatSamuraiLogo_44
+  - first:
+      213: -2411564454947773905
+    second: RatSamuraiLogo_45
+  - first:
+      213: -2460314770046047862
+    second: RatSamuraiLogo_46
+  - first:
+      213: -8976569720642918864
+    second: RatSamuraiLogo_47
+  - first:
+      213: -1942531500105862885
+    second: RatSamuraiLogo_48
+  - first:
+      213: -8528940844541052930
+    second: RatSamuraiLogo_49
+  - first:
+      213: -1292347237806674326
+    second: RatSamuraiLogo_50
+  - first:
+      213: 3329036777897700057
+    second: RatSamuraiLogo_51
+  - first:
+      213: 1381223929952085316
+    second: RatSamuraiLogo_52
+  - first:
+      213: 9123816036605645512
+    second: RatSamuraiLogo_53
+  - first:
+      213: 7273096575803322303
+    second: RatSamuraiLogo_54
+  - first:
+      213: 5265914677878846845
+    second: RatSamuraiLogo_55
+  - first:
+      213: -5278187984096295337
+    second: RatSamuraiLogo_56
+  - first:
+      213: -5611249528747632513
+    second: RatSamuraiLogo_57
+  - first:
+      213: 5875414577148372246
+    second: RatSamuraiLogo_58
+  - first:
+      213: 3686221148477842322
+    second: RatSamuraiLogo_59
+  - first:
+      213: -4191668659821727926
+    second: RatSamuraiLogo_60
+  - first:
+      213: 1588083354379174517
+    second: RatSamuraiLogo_61
+  - first:
+      213: 8553573494453432135
+    second: RatSamuraiLogo_62
+  - first:
+      213: 4492348597135405113
+    second: RatSamuraiLogo_63
+  - first:
+      213: -5588511856490359771
+    second: RatSamuraiLogo_64
+  - first:
+      213: -8746029581303516429
+    second: RatSamuraiLogo_65
+  - first:
+      213: 323651471475365843
+    second: RatSamuraiLogo_66
+  - first:
+      213: -4926548425239833531
+    second: RatSamuraiLogo_67
+  - first:
+      213: 6117127686732485446
+    second: RatSamuraiLogo_68
+  - first:
+      213: -8867549707735494170
+    second: RatSamuraiLogo_69
+  - first:
+      213: 6074294555964193490
+    second: RatSamuraiLogo_70
+  - first:
+      213: -3136313923593929109
+    second: RatSamuraiLogo_71
+  - first:
+      213: -868167352624115635
+    second: RatSamuraiLogo_72
+  - first:
+      213: 3275463310490743537
+    second: RatSamuraiLogo_73
+  - first:
+      213: 6400043114730682298
+    second: RatSamuraiLogo_74
+  - first:
+      213: 1746673808322689790
+    second: RatSamuraiLogo_75
+  - first:
+      213: 5903783899049680747
+    second: RatSamuraiLogo_76
+  - first:
+      213: 2536454336311177048
+    second: RatSamuraiLogo_77
+  - first:
+      213: 7264298904396860546
+    second: RatSamuraiLogo_78
+  - first:
+      213: 7745747019542736692
+    second: RatSamuraiLogo_79
+  - first:
+      213: 4926782201266231475
+    second: RatSamuraiLogo_80
+  - first:
+      213: -7684344780937719214
+    second: RatSamuraiLogo_81
+  - first:
+      213: -7251499750686122813
+    second: RatSamuraiLogo_82
+  - first:
+      213: 7175174894577009411
+    second: RatSamuraiLogo_83
+  - first:
+      213: -1620272934528909991
+    second: RatSamuraiLogo_84
+  - first:
+      213: -9134941532797992882
+    second: RatSamuraiLogo_85
+  - first:
+      213: -8290091405250181487
+    second: RatSamuraiLogo_86
+  - first:
+      213: 640934067174217543
+    second: RatSamuraiLogo_87
+  - first:
+      213: 2523849814956372706
+    second: RatSamuraiLogo_88
+  - first:
+      213: -4933086287243738030
+    second: RatSamuraiLogo_89
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RatSamuraiLogo_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 708
+        width: 1106
+        height: 344
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2937eed2abd653af0800000000000000
+      internalID: -417306744059956334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RatSamuraiLogo_1
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 708
+        width: 1106
+        height: 344
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c309c3af5f1a78a20800000000000000
+      internalID: 3064596149286244412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RatSamuraiLogo_2
+      rect:
+        serializedVersion: 2
+        x: 2232
+        y: 708
+        width: 1106
+        height: 344
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6b002dc64a408c80800000000000000
+      internalID: -8322570443431081107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RatSamuraiLogo_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 354
+        width: 1106
+        height: 344
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebace2b1d14989d30800000000000000
+      internalID: 4438460285504637630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RatSamuraiLogo_4
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 354
+        width: 1106
+        height: 344
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e39260571132664e0800000000000000
+      internalID: -1988863627552741058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RatSamuraiLogo_5
+      rect:
+        serializedVersion: 2
+        x: 2232
+        y: 354
+        width: 1106
+        height: 344
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39fc9f8281357d230800000000000000
+      internalID: 3663488185120968595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RatSamuraiLogo_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1106
+        height: 344
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb19dc72cc6fdc320800000000000000
+      internalID: 2579989518254707134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RatSamuraiLogo_7
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 0
+        width: 1106
+        height: 344
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a0fc356e13346330800000000000000
+      internalID: 3703140999245918374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RatSamuraiLogo_8
+      rect:
+        serializedVersion: 2
+        x: 2232
+        y: 0
+        width: 1106
+        height: 344
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15b25eda40f101980800000000000000
+      internalID: -8570315985928246447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: cca4d385cfb175943896023c713c103b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1106.0,"y":344.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":10.0,"y":10.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      RatSamuraiLogo_0: -417306744059956334
+      RatSamuraiLogo_1: 3064596149286244412
+      RatSamuraiLogo_2: -8322570443431081107
+      RatSamuraiLogo_3: 4438460285504637630
+      RatSamuraiLogo_4: -1988863627552741058
+      RatSamuraiLogo_5: 3663488185120968595
+      RatSamuraiLogo_6: 2579989518254707134
+      RatSamuraiLogo_7: 3703140999245918374
+      RatSamuraiLogo_8: -8570315985928246447
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
