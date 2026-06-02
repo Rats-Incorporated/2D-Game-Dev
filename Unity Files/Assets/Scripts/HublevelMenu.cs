@@ -56,6 +56,16 @@ public class HublevelMenu : MonoBehaviour
 
         }
 
+        if (Input.GetKeyDown(KeyCode.Escape) && playerInExitZone)
+        {
+            if (Paused == true)
+            {
+                Resume();
+            }
+
+
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
