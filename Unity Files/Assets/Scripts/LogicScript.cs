@@ -9,6 +9,8 @@ public class LogicScript : MonoBehaviour
     public Text InstructionText;
     public Text BottomRightText;
     public Text WinText;
+    public Text TimeText;
+    public Text CheeseText;
     public PlayerController player;
     public GameObject WinScreen;
     public GameObject PauseScreen;
@@ -86,13 +88,14 @@ public class LogicScript : MonoBehaviour
         float totaltime = Time.time - curTime;
 
         string collectablesText = "";
-        if (totalCollectables > 0)
-        {
-            collectablesText = $"\nCheese: {pickedUpCollectables}/{totalCollectables}";
-        }
+       // if (totalCollectables > 0)
+       // {
+            collectablesText = $"{pickedUpCollectables}/{totalCollectables}";
+      //  }
 
 
-        WinText.text = $"LEVEL COMPLETE\nTime:{timeString(totaltime)}{collectablesText}";
+        TimeText.text = timeString(totaltime);
+        CheeseText.text = collectablesText;
         TimerText.text = timeString(totaltime);
 
         string finishTime = timeString(totaltime);
