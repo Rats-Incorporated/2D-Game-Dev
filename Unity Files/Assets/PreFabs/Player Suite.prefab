@@ -23754,6 +23754,7 @@ GameObject:
   - component: {fileID: 5079773566092881514}
   - component: {fileID: 6962179413157139317}
   - component: {fileID: 9041775981676437943}
+  - component: {fileID: 3707476333813372447}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -24159,6 +24160,18 @@ MonoBehaviour:
   playerController: {fileID: 6654558692795548727}
   shuriCount: 3
   shuriCountText: {fileID: 1401180119893491924}
+--- !u!114 &3707476333813372447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8501677913154982329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035edc24320188e498b7e47b39c7c335, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &8538718023124776878
 GameObject:
   m_ObjectHideFlags: 0

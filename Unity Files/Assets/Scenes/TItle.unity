@@ -12249,7 +12249,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press SPACE to jump up here and then attack me!
+  m_text: Press X to jump up here and then attack me!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7b02c425ec4413e4eb5ab1a48f89908c, type: 2}
   m_sharedMaterial: {fileID: -2321010782806834449, guid: 7b02c425ec4413e4eb5ab1a48f89908c, type: 2}
@@ -13025,7 +13025,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hit me for a tutorial!!         Press J or N to attack!
+  m_text: Hit me for a tutorial!!         Press Right Trigger to attack!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7b02c425ec4413e4eb5ab1a48f89908c, type: 2}
   m_sharedMaterial: {fileID: -2321010782806834449, guid: 7b02c425ec4413e4eb5ab1a48f89908c, type: 2}
