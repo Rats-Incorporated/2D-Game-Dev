@@ -27,14 +27,14 @@ public class LogicScript : MonoBehaviour
     void Start()
     {
         curTime = Time.time;
-        pickedUpCollectables = 0;
+        pickedUpCollectables = 3;
         totalCollectables = FindObjectsOfType<CheesePickup>().Length;
 
 
     }
     void Awake()
     {
-        pickedUpCollectables = 0;
+        pickedUpCollectables = 3;
     }
 
     public void TempMessage(string msg, float dur = 2f)
@@ -136,7 +136,7 @@ public class LogicScript : MonoBehaviour
                 BestRunTimeText.text = timeString(totaltime);
                 NewContainer.SetActive(true);
             }
-            else
+            else if (savedScore < totaltime)
             {
                 NewContainer.SetActive(false);
                 BestRunTimeText.text = timeString(savedScore);
