@@ -464,7 +464,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: N
+  m_Text: O
 --- !u!1 &756176263270553436
 GameObject:
   m_ObjectHideFlags: 0
@@ -2164,15 +2164,15 @@ RectTransform:
   m_GameObject: {fileID: 2042578769470737026}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 97109618683923652}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.12, y: -65.7}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 9.67, y: -71.4}
+  m_SizeDelta: {x: 187.5838, y: 53.3402}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3089153162849711468
 CanvasRenderer:
@@ -2204,7 +2204,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 100272f4bcbec764f8835e433b85c75e, type: 3}
-    m_FontSize: 17
+    m_FontSize: 1
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -2215,7 +2215,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: M
+  m_Text: "\u25B3"
 --- !u!1 &2280261921650161217
 GameObject:
   m_ObjectHideFlags: 0
@@ -2429,7 +2429,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SHIFT
+  m_Text: L1
 --- !u!1 &2410795691830987881
 GameObject:
   m_ObjectHideFlags: 0
@@ -2738,7 +2738,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: K
+  m_Text: R1
 --- !u!1 &3023222223779926713
 GameObject:
   m_ObjectHideFlags: 0
@@ -24159,6 +24159,7 @@ MonoBehaviour:
   playerController: {fileID: 6654558692795548727}
   shuriCount: 3
   shuriCountText: {fileID: 1401180119893491924}
+  ShuriSound: {fileID: 0}
 --- !u!1 &8538718023124776878
 GameObject:
   m_ObjectHideFlags: 0
@@ -24312,7 +24313,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: J
+  m_Text: R2
 --- !u!1 &8801040427501187960
 GameObject:
   m_ObjectHideFlags: 0
