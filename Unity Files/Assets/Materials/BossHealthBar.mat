@@ -56,7 +56,7 @@ Material:
     m_Floats:
     - _ColorMask: 15
     - _EnableExternalAlpha: 0
-    - _Fill: 0.71428573
+    - _Fill: 1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Softness: 0
