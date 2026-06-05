@@ -24,6 +24,12 @@ public class MovingEnemyPlatform : MonoBehaviour
     private Animator animator;
     private Vector3 originalScale;
 
+    // bee noise
+    public AudioClip hitSound;
+    public AudioClip hitSound2;
+
+    private bool use1HitSound = true;
+
     private void Awake()
     {
         // Set up movement
@@ -95,6 +101,23 @@ public class MovingEnemyPlatform : MonoBehaviour
     {
         enemyCurrentHealth -= amount;
         enemyCurrentHealth = Mathf.Clamp(enemyCurrentHealth, 0, enemyHealth);
+
+
+        if (AudioController.Instance != null)
+        {
+            if (use1HitSound)
+            {
+                AudioController.Instance.PlaySFX(hitSound);
+            }
+            else
+            {
+                AudioController.Instance.PlaySFX(hitSound2);
+            }
+
+            use1HitSound = !use1HitSound;
+        }
+
+
 
         if (enemyCurrentHealth <= 0)
         {

@@ -38,6 +38,10 @@ public class ScorpionBoss : MonoBehaviour
     public string walkAnim = "Walk";
     public string idleAnim = "Idle";
 
+    [Header("Audio")]
+    public AudioClip jumpSound;
+    public AudioClip stingSound;
+
     // Private / State 
     private Animator animator;
     private Rigidbody2D rb;
@@ -207,6 +211,11 @@ public class ScorpionBoss : MonoBehaviour
 
     void DoStingHitbox()
     {
+        if (AudioController.Instance != null)
+        {
+            AudioController.Instance.PlaySFX(stingSound);
+        }
+
         if (stingHitboxOrigin == null)
         {
             Debug.LogWarning("ScorpionBoss: stingHitboxOrigin is not assigned!");
@@ -272,6 +281,12 @@ public class ScorpionBoss : MonoBehaviour
     void Jump()
     {
         if (rb == null) return;
+
+        if (AudioController.Instance != null)
+        {
+            AudioController.Instance.PlaySFX(jumpSound);
+        }
+
         rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
     }
 
