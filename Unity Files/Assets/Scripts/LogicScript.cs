@@ -134,7 +134,7 @@ public class LogicScript : MonoBehaviour
         if (currentScene.name != null)
         {
             float savedScore = LoadScore("BestRun" + currentScene.name);
-            if (savedScore > totaltime)
+            if (savedScore > totaltime || savedScore == 0)
             {
                 SaveScore("BestRun" + currentScene.name, totaltime);
 
