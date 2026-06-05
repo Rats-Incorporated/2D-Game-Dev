@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     // audio
     public AudioClip jumpSound;
     public AudioClip dashSound;
-   
+
 
     // capacities
     public int jumpTotal = 1;

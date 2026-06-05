@@ -7,7 +7,7 @@ public class JumpPad : MonoBehaviour
     public float bounce = 20f;
     public float cooldown = 0.4f;
     private float cd_timer;
-    
+
     public AudioClip bounceSound;
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -15,7 +15,7 @@ public class flamingoText : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)

@@ -5,7 +5,7 @@ public class HPPickup : MonoBehaviour
 
     public float healPercent = 100f;
 
-    public AudioClip pickupSound; 
+    public AudioClip pickupSound;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -17,7 +17,7 @@ public class HPPickup : MonoBehaviour
                 player.HealDamage(healPercent);
             }
 
-            
+
             if (pickupSound != null && AudioController.Instance != null)
             {
                 AudioController.Instance.PlaySFX(pickupSound);
