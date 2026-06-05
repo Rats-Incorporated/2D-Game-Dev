@@ -172049,6 +172049,10 @@ PrefabInstance:
       propertyPath: flurrySound
       value: 
       objectReference: {fileID: 8300000, guid: 70b7c9ba9d730f642ab94bd3078850fa, type: 3}
+    - target: {fileID: 4081808737413955701, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4194694610661830293, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 164.865

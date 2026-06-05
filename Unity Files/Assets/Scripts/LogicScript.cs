@@ -11,10 +11,12 @@ public class LogicScript : MonoBehaviour
     public Text WinText;
     public Text TimeText;
     public Text CheeseText;
+    public Text BestRunTimeText;
     public PlayerController player;
     public GameObject WinScreen;
     public GameObject PauseScreen;
     public GameObject LoseScreen;
+    public GameObject NewContainer;
     public bool Paused = false;
     private float curTime;
     public Text TimerText;
@@ -71,6 +73,31 @@ public class LogicScript : MonoBehaviour
             }
         }
 
+        if ((Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.LeftCommand))
+        && Input.GetKeyDown(KeyCode.T))
+        {
+            PlayerPrefs.SetFloat("BestRun" + "level1", 99999999999);
+            PlayerPrefs.SetFloat("BestRun" + "Forrest", 99999999999);
+            PlayerPrefs.SetFloat("BestRun" + "Desert", 99999999999);
+            PlayerPrefs.Save();
+        }
+        if ((Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.LeftCommand))
+        && Input.GetKeyDown(KeyCode.R))
+        {
+            Scene currentScene = SceneManager.GetActiveScene();
+            PlayerPrefs.SetFloat("BestRun" + currentScene.name, 99999999999);
+            PlayerPrefs.Save();
+        }
+
+        //if ((Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.LeftCommand))
+        //&& Input.GetKeyDown(KeyCode.Y))
+        //{
+        //    Scene currentScene = SceneManager.GetActiveScene();
+
+        //    float bestrun = PlayerPrefs.GetFloat("BestRun" + currentScene.name);
+        //    Debug.Log(bestrun);
+        //}
+
 
     }
 
@@ -94,6 +121,33 @@ public class LogicScript : MonoBehaviour
         //  }
 
 
+        Scene currentScene = SceneManager.GetActiveScene();
+        
+
+        
+
+        if (currentScene.name != null)
+        {
+            float savedScore = LoadScore("BestRun" + currentScene.name);
+            if (savedScore > totaltime)
+            {
+                SaveScore("BestRun" + currentScene.name, totaltime);
+
+                BestRunTimeText.text = timeString(totaltime);
+                NewContainer.SetActive(true);
+            }
+            else
+            {
+                NewContainer.SetActive(false);
+                BestRunTimeText.text = timeString(savedScore);
+            }
+
+
+        }
+
+        
+
+
         TimeText.text = timeString(totaltime);
         CheeseText.text = collectablesText;
         TimerText.text = timeString(totaltime);
@@ -104,11 +158,24 @@ public class LogicScript : MonoBehaviour
         WinScreen.SetActive(true);
     }
 
+    private void SaveScore(string HighScoreName, float HighScore)
+    {
+            PlayerPrefs.SetFloat(HighScoreName, HighScore);
+            PlayerPrefs.Save();
+    }
+
+    private float LoadScore(string HighScoreName)
+    {
+        float HighScore = PlayerPrefs.GetFloat(HighScoreName, 0);
+        return HighScore;
+    }
+
     public void LoseGame()
     {
         Paused = true;
         Time.timeScale = 0f; // pause physics, animations
         LoseScreen.SetActive(true);
+        
     }
 
     public void LoadHub()
