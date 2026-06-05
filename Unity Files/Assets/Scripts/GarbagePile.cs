@@ -56,7 +56,7 @@ public class garbage_pile : MonoBehaviour
 
                 currentEatTime += Time.deltaTime;
 
-                Debug.Log("Eating progress: " + currentEatTime + " / " + eatTimeRequired);
+                //Debug.Log("Eating progress: " + currentEatTime + " / " + eatTimeRequired);
 
                 if (currentEatTime > 0)
                 {

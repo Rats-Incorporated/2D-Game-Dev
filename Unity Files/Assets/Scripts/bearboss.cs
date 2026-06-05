@@ -285,7 +285,7 @@ public class BearBoss : MonoBehaviour
             AudioController.Instance.PlaySFX(jumpSound);
         }
 
-        
+
 
 
 

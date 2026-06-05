@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DesertEndTriggerCheese : MonoBehaviour
 {
@@ -49,7 +50,11 @@ public class DesertEndTriggerCheese : MonoBehaviour
                 {
                     GarbageLoadingBarContainer.SetActive(true);
                     float eatTimePercent = currentEatTime / eatTimeRequired;
-                    GarbageLoadingBar.GetComponent<RectTransform>().localScale = new Vector3(eatTimePercent * 1.0f, 1f, 1f);
+                    Scene currentScene = SceneManager.GetActiveScene();
+                    if (currentScene.name == "Desert")
+                    {
+                        GarbageLoadingBar.GetComponent<RectTransform>().localScale = new Vector3(eatTimePercent * 1.0f, 1f, 1f);
+                    }
                 }
 
                 if (currentEatTime >= eatTimeRequired)
