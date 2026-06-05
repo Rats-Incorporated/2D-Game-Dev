@@ -127,9 +127,9 @@ public class LogicScript : MonoBehaviour
 
 
         Scene currentScene = SceneManager.GetActiveScene();
-        
 
-        
+
+
 
         if (currentScene.name != null)
         {
@@ -150,7 +150,7 @@ public class LogicScript : MonoBehaviour
 
         }
 
-        
+
 
 
         TimeText.text = timeString(totaltime);
@@ -165,8 +165,8 @@ public class LogicScript : MonoBehaviour
 
     private void SaveScore(string HighScoreName, float HighScore)
     {
-            PlayerPrefs.SetFloat(HighScoreName, HighScore);
-            PlayerPrefs.Save();
+        PlayerPrefs.SetFloat(HighScoreName, HighScore);
+        PlayerPrefs.Save();
     }
 
     private float LoadScore(string HighScoreName)
@@ -180,7 +180,7 @@ public class LogicScript : MonoBehaviour
         Paused = true;
         Time.timeScale = 0f; // pause physics, animations
         LoseScreen.SetActive(true);
-        
+
     }
 
     public void LoadHub()
