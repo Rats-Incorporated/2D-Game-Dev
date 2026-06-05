@@ -9896,7 +9896,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hit me!         Press J or N to attack!
+  m_text: Hit me!         Press R2 to attack!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7b02c425ec4413e4eb5ab1a48f89908c, type: 2}
   m_sharedMaterial: {fileID: -2321010782806834449, guid: 7b02c425ec4413e4eb5ab1a48f89908c, type: 2}
@@ -10464,7 +10464,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press K to throw a shuriken at me!
+  m_text: Press R1 to throw a shuriken at me!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7b02c425ec4413e4eb5ab1a48f89908c, type: 2}
   m_sharedMaterial: {fileID: -2321010782806834449, guid: 7b02c425ec4413e4eb5ab1a48f89908c, type: 2}
@@ -12068,7 +12068,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press SHIFT to dash over here and attack me!
+  m_text: Press L1 to dash over here and attack me!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7b02c425ec4413e4eb5ab1a48f89908c, type: 2}
   m_sharedMaterial: {fileID: -2321010782806834449, guid: 7b02c425ec4413e4eb5ab1a48f89908c, type: 2}
@@ -12261,7 +12261,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press SPACE to jump up here and then attack me!
+  m_text: Press X to jump up here and then attack me!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7b02c425ec4413e4eb5ab1a48f89908c, type: 2}
   m_sharedMaterial: {fileID: -2321010782806834449, guid: 7b02c425ec4413e4eb5ab1a48f89908c, type: 2}
@@ -13037,7 +13037,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hit me for a tutorial!!         Press J or N to attack!
+  m_text: Hit me for a tutorial!!         Press R2 to attack!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7b02c425ec4413e4eb5ab1a48f89908c, type: 2}
   m_sharedMaterial: {fileID: -2321010782806834449, guid: 7b02c425ec4413e4eb5ab1a48f89908c, type: 2}
@@ -14158,7 +14158,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Jump above me, hold S and press j to downward attack me!
+  m_text: Jump above me, hold down and press RT to downward attack me!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7b02c425ec4413e4eb5ab1a48f89908c, type: 2}
   m_sharedMaterial: {fileID: -2321010782806834449, guid: 7b02c425ec4413e4eb5ab1a48f89908c, type: 2}
@@ -14451,7 +14451,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hold M to charge a flurry and attack me!
+  m_text: Hold \u25B2 to charge a flurry and attack me!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7b02c425ec4413e4eb5ab1a48f89908c, type: 2}
   m_sharedMaterial: {fileID: -2321010782806834449, guid: 7b02c425ec4413e4eb5ab1a48f89908c, type: 2}
