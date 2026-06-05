@@ -162,7 +162,7 @@ public class LogicScript : MonoBehaviour
         pickedUpCollectables += 1;
         if (CheeseCount != null)
         {
-            CheeseCount.text = "Cheese Count: " + pickedUpCollectables + "/3";
+            CheeseCount.text = "Cheese: " + pickedUpCollectables + "/3";
         }
     }
 }
