@@ -22469,7 +22469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::JumpPad
   bounce: 20
   cooldown: 0.4
-  bounceSound: {fileID: 0}
+  bounceSound: {fileID: 8300000, guid: 262273cbac955354191f913d3ab74921, type: 3}
 --- !u!1001 &297062100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23355,6 +23355,8 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+  hitSound: {fileID: 8300000, guid: d5b1b935ee5f78b44877ed04b0fd055f, type: 3}
+  hitSound2: {fileID: 8300000, guid: d5b1b935ee5f78b44877ed04b0fd055f, type: 3}
 --- !u!114 &374896914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23465,6 +23467,8 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+  hitSound: {fileID: 8300000, guid: d5b1b935ee5f78b44877ed04b0fd055f, type: 3}
+  hitSound2: {fileID: 8300000, guid: d5b1b935ee5f78b44877ed04b0fd055f, type: 3}
 --- !u!50 &377238554
 Rigidbody2D:
   serializedVersion: 5
@@ -23625,8 +23629,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: 80
   patrolMaxX: 100
-  hitSound: {fileID: 0}
-  hitSound2: {fileID: 0}
+  hitSound: {fileID: 8300000, guid: eb0e35468813e634eb8f9b74ce43ed5c, type: 3}
+  hitSound2: {fileID: 8300000, guid: eb0e35468813e634eb8f9b74ce43ed5c, type: 3}
 --- !u!1001 &401464486
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24167,6 +24171,8 @@ MonoBehaviour:
   bossHealth: 350
   bossHealthBarMaterial: {fileID: 2100000, guid: f15ca975c0da6e14a8bdf5327f3e0858, type: 2}
   HoneyTrigger: {fileID: 911762555}
+  jumpSound: {fileID: 8300000, guid: 2929138be4d58d34c9bfb5ce0cd6d92f, type: 3}
+  pawSpawnSound: {fileID: 8300000, guid: 7d5f75fbe6010fa499ef65644635091e, type: 3}
 --- !u!4 &424859278 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7878350319992209165, guid: dc7fa5519c5c6aa48b236d41b01c8379, type: 3}
@@ -24853,6 +24859,8 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+  hitSound: {fileID: 8300000, guid: d5b1b935ee5f78b44877ed04b0fd055f, type: 3}
+  hitSound2: {fileID: 8300000, guid: d5b1b935ee5f78b44877ed04b0fd055f, type: 3}
 --- !u!50 &495166132
 Rigidbody2D:
   serializedVersion: 5
@@ -25154,7 +25162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::JumpPad
   bounce: 20
   cooldown: 0.4
-  bounceSound: {fileID: 0}
+  bounceSound: {fileID: 8300000, guid: 262273cbac955354191f913d3ab74921, type: 3}
 --- !u!1 &534678708 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2253911629886400664, guid: ce1ac1e11d62ce541b0e649928785bdd, type: 3}
@@ -25556,6 +25564,8 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+  hitSound: {fileID: 8300000, guid: d5b1b935ee5f78b44877ed04b0fd055f, type: 3}
+  hitSound2: {fileID: 8300000, guid: d5b1b935ee5f78b44877ed04b0fd055f, type: 3}
 --- !u!50 &548737153
 Rigidbody2D:
   serializedVersion: 5
@@ -27704,6 +27714,8 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+  hitSound: {fileID: 8300000, guid: d5b1b935ee5f78b44877ed04b0fd055f, type: 3}
+  hitSound2: {fileID: 8300000, guid: d5b1b935ee5f78b44877ed04b0fd055f, type: 3}
 --- !u!50 &696818677
 Rigidbody2D:
   serializedVersion: 5
@@ -28595,8 +28607,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: 120
   patrolMaxX: 140
-  hitSound: {fileID: 0}
-  hitSound2: {fileID: 0}
+  hitSound: {fileID: 8300000, guid: eb0e35468813e634eb8f9b74ce43ed5c, type: 3}
+  hitSound2: {fileID: 8300000, guid: eb0e35468813e634eb8f9b74ce43ed5c, type: 3}
 --- !u!1 &796995801 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2253911629886400664, guid: ce1ac1e11d62ce541b0e649928785bdd, type: 3}
@@ -29858,6 +29870,8 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+  hitSound: {fileID: 8300000, guid: d5b1b935ee5f78b44877ed04b0fd055f, type: 3}
+  hitSound2: {fileID: 8300000, guid: d5b1b935ee5f78b44877ed04b0fd055f, type: 3}
 --- !u!50 &888387785
 Rigidbody2D:
   serializedVersion: 5
@@ -30253,8 +30267,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: 55
   patrolMaxX: 65
-  hitSound: {fileID: 0}
-  hitSound2: {fileID: 0}
+  hitSound: {fileID: 8300000, guid: eb0e35468813e634eb8f9b74ce43ed5c, type: 3}
+  hitSound2: {fileID: 8300000, guid: eb0e35468813e634eb8f9b74ce43ed5c, type: 3}
 --- !u!1 &911762551
 GameObject:
   m_ObjectHideFlags: 0
@@ -30998,6 +31012,8 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+  hitSound: {fileID: 8300000, guid: d5b1b935ee5f78b44877ed04b0fd055f, type: 3}
+  hitSound2: {fileID: 8300000, guid: d5b1b935ee5f78b44877ed04b0fd055f, type: 3}
 --- !u!50 &937879306
 Rigidbody2D:
   serializedVersion: 5
@@ -31453,7 +31469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::EnvironmentHazard
   damageAmount: 1000
   damageInterval: 1.5
-  hazardSound: {fileID: 0}
+  hazardSound: {fileID: 8300000, guid: d0df23a59b968d14f8424b33bba43950, type: 3}
 --- !u!212 &987541746
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -33034,7 +33050,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::JumpPad
   bounce: 20
   cooldown: 0.4
-  bounceSound: {fileID: 0}
+  bounceSound: {fileID: 8300000, guid: 262273cbac955354191f913d3ab74921, type: 3}
 --- !u!1 &1137071109 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9150569185014926769, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
@@ -33660,8 +33676,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: 60
   patrolMaxX: 80
-  hitSound: {fileID: 0}
-  hitSound2: {fileID: 0}
+  hitSound: {fileID: 8300000, guid: eb0e35468813e634eb8f9b74ce43ed5c, type: 3}
+  hitSound2: {fileID: 8300000, guid: eb0e35468813e634eb8f9b74ce43ed5c, type: 3}
 --- !u!4 &1181556312 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7878350319992209165, guid: 7838c6f9ec8a3614c8ed48895c64fbe5, type: 3}
@@ -33907,6 +33923,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4787175349799201049, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e1c1dc57e3f4f9f438b6ac3d069d3d89, type: 3}
     - target: {fileID: 203399843156028958, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 206.913
@@ -35439,6 +35459,8 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+  hitSound: {fileID: 8300000, guid: d5b1b935ee5f78b44877ed04b0fd055f, type: 3}
+  hitSound2: {fileID: 8300000, guid: d5b1b935ee5f78b44877ed04b0fd055f, type: 3}
 --- !u!114 &1335036205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35549,6 +35571,8 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+  hitSound: {fileID: 8300000, guid: d5b1b935ee5f78b44877ed04b0fd055f, type: 3}
+  hitSound2: {fileID: 8300000, guid: d5b1b935ee5f78b44877ed04b0fd055f, type: 3}
 --- !u!50 &1338839299
 Rigidbody2D:
   serializedVersion: 5
@@ -36141,6 +36165,53 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1900068570}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: ce1ac1e11d62ce541b0e649928785bdd, type: 3}
+--- !u!1 &1394215625
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1394215626}
+  - component: {fileID: 1394215627}
+  m_Layer: 0
+  m_Name: Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &1394215626
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394215625}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 38.299995, y: 75.299995, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2045279397}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1394215627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394215625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bd4c2ab254dc2b44aec5466ed0f1b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: GameScripts::AudioController
+  sfxSource: {fileID: 2045279396}
+  musicSource: {fileID: 2045279396}
+  jumpSoundDelay: 0.2
 --- !u!1001 &1394941493
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36241,6 +36312,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6654558692795548727, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
+      propertyPath: dashSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 70b7c9ba9d730f642ab94bd3078850fa, type: 3}
     - target: {fileID: 7022835562606769394, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
       propertyPath: m_SortingOrder
       value: 10
@@ -37145,6 +37220,8 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+  hitSound: {fileID: 8300000, guid: d5b1b935ee5f78b44877ed04b0fd055f, type: 3}
+  hitSound2: {fileID: 8300000, guid: d5b1b935ee5f78b44877ed04b0fd055f, type: 3}
 --- !u!114 &1461605622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37305,8 +37382,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: 100
   patrolMaxX: 120
-  hitSound: {fileID: 0}
-  hitSound2: {fileID: 0}
+  hitSound: {fileID: 8300000, guid: eb0e35468813e634eb8f9b74ce43ed5c, type: 3}
+  hitSound2: {fileID: 8300000, guid: eb0e35468813e634eb8f9b74ce43ed5c, type: 3}
 --- !u!1001 &1481238024
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39669,8 +39746,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: 99
   patrolMaxX: 113
-  hitSound: {fileID: 0}
-  hitSound2: {fileID: 0}
+  hitSound: {fileID: 8300000, guid: eb0e35468813e634eb8f9b74ce43ed5c, type: 3}
+  hitSound2: {fileID: 8300000, guid: eb0e35468813e634eb8f9b74ce43ed5c, type: 3}
 --- !u!1 &1624123395 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2253911629886400664, guid: ce1ac1e11d62ce541b0e649928785bdd, type: 3}
@@ -39858,6 +39935,8 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+  hitSound: {fileID: 8300000, guid: d5b1b935ee5f78b44877ed04b0fd055f, type: 3}
+  hitSound2: {fileID: 8300000, guid: d5b1b935ee5f78b44877ed04b0fd055f, type: 3}
 --- !u!114 &1647422351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40235,7 +40314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::JumpPad
   bounce: 20
   cooldown: 0.4
-  bounceSound: {fileID: 0}
+  bounceSound: {fileID: 8300000, guid: 262273cbac955354191f913d3ab74921, type: 3}
 --- !u!1001 &1671109493
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40998,6 +41077,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4787175349799201049, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e1c1dc57e3f4f9f438b6ac3d069d3d89, type: 3}
     - target: {fileID: 203399843156028958, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 123.473145
@@ -41139,7 +41222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::JumpPad
   bounce: 20
   cooldown: 0.4
-  bounceSound: {fileID: 0}
+  bounceSound: {fileID: 8300000, guid: 262273cbac955354191f913d3ab74921, type: 3}
 --- !u!1001 &1746763268
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41404,6 +41487,8 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+  hitSound: {fileID: 8300000, guid: d5b1b935ee5f78b44877ed04b0fd055f, type: 3}
+  hitSound2: {fileID: 8300000, guid: d5b1b935ee5f78b44877ed04b0fd055f, type: 3}
 --- !u!114 &1753718962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41514,6 +41599,8 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+  hitSound: {fileID: 8300000, guid: d5b1b935ee5f78b44877ed04b0fd055f, type: 3}
+  hitSound2: {fileID: 8300000, guid: d5b1b935ee5f78b44877ed04b0fd055f, type: 3}
 --- !u!50 &1754333481
 Rigidbody2D:
   serializedVersion: 5
@@ -42114,6 +42201,8 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+  hitSound: {fileID: 8300000, guid: d5b1b935ee5f78b44877ed04b0fd055f, type: 3}
+  hitSound2: {fileID: 8300000, guid: d5b1b935ee5f78b44877ed04b0fd055f, type: 3}
 --- !u!50 &1779392855
 Rigidbody2D:
   serializedVersion: 5
@@ -42203,6 +42292,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4686267906447944697, guid: f8b5663622aa19f40b59307efef0d7cc, type: 3}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 53259ae8fc6522b45942a17bca825731, type: 3}
     - target: {fileID: 5301394207634200113, guid: f8b5663622aa19f40b59307efef0d7cc, type: 3}
       propertyPath: m_Name
       value: HP Pickup
@@ -43918,8 +44011,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: 140
   patrolMaxX: 160
-  hitSound: {fileID: 0}
-  hitSound2: {fileID: 0}
+  hitSound: {fileID: 8300000, guid: eb0e35468813e634eb8f9b74ce43ed5c, type: 3}
+  hitSound2: {fileID: 8300000, guid: eb0e35468813e634eb8f9b74ce43ed5c, type: 3}
 --- !u!1001 &1888692908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44439,6 +44532,8 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+  hitSound: {fileID: 8300000, guid: d5b1b935ee5f78b44877ed04b0fd055f, type: 3}
+  hitSound2: {fileID: 8300000, guid: d5b1b935ee5f78b44877ed04b0fd055f, type: 3}
 --- !u!114 &1907483725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80705,8 +80800,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: 20
   patrolMaxX: 30
-  hitSound: {fileID: 0}
-  hitSound2: {fileID: 0}
+  hitSound: {fileID: 8300000, guid: eb0e35468813e634eb8f9b74ce43ed5c, type: 3}
+  hitSound2: {fileID: 8300000, guid: eb0e35468813e634eb8f9b74ce43ed5c, type: 3}
 --- !u!114 &2034231404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80923,6 +81018,136 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &2045279395
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2045279397}
+  - component: {fileID: 2045279396}
+  m_Layer: 0
+  m_Name: Audio Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &2045279396
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045279395}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &2045279397
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045279395}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 123.6, y: 14.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1394215626}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2047508430
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -81152,8 +81377,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: 157
   patrolMaxX: 169
-  hitSound: {fileID: 0}
-  hitSound2: {fileID: 0}
+  hitSound: {fileID: 8300000, guid: eb0e35468813e634eb8f9b74ce43ed5c, type: 3}
+  hitSound2: {fileID: 8300000, guid: eb0e35468813e634eb8f9b74ce43ed5c, type: 3}
 --- !u!1001 &2055244570
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -81302,6 +81527,8 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+  hitSound: {fileID: 8300000, guid: d5b1b935ee5f78b44877ed04b0fd055f, type: 3}
+  hitSound2: {fileID: 8300000, guid: d5b1b935ee5f78b44877ed04b0fd055f, type: 3}
 --- !u!114 &2068215689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82560,3 +82787,4 @@ SceneRoots:
   - {fileID: 284472851}
   - {fileID: 283446523}
   - {fileID: 1537979279}
+  - {fileID: 2045279397}

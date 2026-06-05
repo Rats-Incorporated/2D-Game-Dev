@@ -25,6 +25,9 @@ public class EnemySlap : MonoBehaviour
     private Vector2 currentWanderTarget;
     private Vector3 originalScale;
 
+    public AudioClip slapSound;
+    public AudioClip hitSound;
+
     DamageFlash flash;
 
     private enum EnemyState { Wander, Chase, Attack }
@@ -155,6 +158,11 @@ public class EnemySlap : MonoBehaviour
     // Called by Animation Event during slap
     public void DoSlapDamage()
     {
+        if (AudioController.Instance != null)
+        {
+            AudioController.Instance.PlaySFX(slapSound);
+        }
+
         if (playerTransform == null) return;
 
         float distance = Vector2.Distance(transform.position, playerTransform.position);
@@ -183,6 +191,11 @@ public class EnemySlap : MonoBehaviour
     {
         enemyCurrentHealth -= amount;
         enemyCurrentHealth = Mathf.Clamp(enemyCurrentHealth, 0, enemyHealth);
+
+        if (AudioController.Instance != null)
+        {
+            AudioController.Instance.PlaySFX(hitSound);
+        }
 
         if (flash != null)
             flash.Flash();

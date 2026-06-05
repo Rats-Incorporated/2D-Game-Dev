@@ -318,6 +318,8 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!1001 &4226244
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2795,6 +2797,8 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!1001 &166946074
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4465,7 +4469,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.017241359, y: 0.017241359, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -40261,6 +40265,8 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!1001 &524164962
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41467,6 +41473,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: 120
   patrolMaxX: 140
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!1001 &586952967
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41666,6 +41674,8 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!1001 &587446377
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62430,6 +62440,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: 80
   patrolMaxX: 100
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!1001 &746399417
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62604,6 +62616,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::JumpPad
   bounce: 20
   cooldown: 0.4
+  bounceSound: {fileID: 0}
 --- !u!1001 &747818143
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -63483,6 +63496,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: 99
   patrolMaxX: 113
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!1001 &784001812
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -65166,6 +65181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::JumpPad
   bounce: 20
   cooldown: 0.4
+  bounceSound: {fileID: 0}
 --- !u!1001 &902347577
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66152,6 +66168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::EnvironmentHazard
   damageAmount: 1000
   damageInterval: 1.5
+  hazardSound: {fileID: 0}
 --- !u!212 &1010200293
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -66262,7 +66279,7 @@ MonoBehaviour:
   shotNames:
   - BeeStart
   - Bear
-  - Void
+  - THIS WILL KILL YOU!!!
   - Cave
   mainCamera: {fileID: 95721326}
   locationText: {fileID: 1633703194}
@@ -66712,6 +66729,8 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!1001 &1056604478
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66886,6 +66905,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::JumpPad
   bounce: 20
   cooldown: 0.4
+  bounceSound: {fileID: 0}
 --- !u!1001 &1057621404
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67243,6 +67263,8 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!1001 &1077877691
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68322,6 +68344,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: 140
   patrolMaxX: 160
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!1001 &1118827328
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69023,6 +69047,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: 157
   patrolMaxX: 169
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!1001 &1140362966
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69704,6 +69730,8 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!1001 &1187626096
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69903,6 +69931,8 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!1001 &1193788253
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -70111,6 +70141,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: 20
   patrolMaxX: 30
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!1001 &1199042645
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -70472,6 +70504,8 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!1001 &1202815779
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -70671,6 +70705,8 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!1001 &1206534683
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72242,6 +72278,8 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!1001 &1385533292
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72838,6 +72876,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::JumpPad
   bounce: 20
   cooldown: 0.4
+  bounceSound: {fileID: 0}
 --- !u!1001 &1425581353
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -73037,6 +73076,8 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!1001 &1445462007
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -73245,6 +73286,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: 100
   patrolMaxX: 120
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!1 &1445876707
 GameObject:
   m_ObjectHideFlags: 0
@@ -74614,6 +74657,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: 60
   patrolMaxX: 80
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!1001 &1544299353
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -76346,6 +76391,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: 55
   patrolMaxX: 65
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!1001 &1712493866
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -77144,6 +77191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::JumpPad
   bounce: 20
   cooldown: 0.4
+  bounceSound: {fileID: 0}
 --- !u!1001 &1782375180
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -77501,6 +77549,8 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!1001 &1794291978
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -78844,6 +78894,9 @@ MonoBehaviour:
   backJumpForce: 9
   bossHealth: 350
   bossHealthBarMaterial: {fileID: 2100000, guid: f15ca975c0da6e14a8bdf5327f3e0858, type: 2}
+  HoneyTrigger: {fileID: 0}
+  jumpSound: {fileID: 0}
+  pawSpawnSound: {fileID: 0}
 --- !u!61 &1856846551
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -79675,6 +79728,8 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!1001 &1903414963
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -81334,6 +81389,8 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!1001 &2052340004
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -81857,6 +81914,8 @@ MonoBehaviour:
   setStartPositionOnAwake: 1
   damageAmount: 25
   enemyHealth: 50
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!1001 &2079369377
 PrefabInstance:
   m_ObjectHideFlags: 0

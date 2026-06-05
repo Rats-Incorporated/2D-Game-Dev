@@ -34,6 +34,9 @@ public class EnemyLauncher : MonoBehaviour
     private float jumpTimer;
     private Rigidbody2D rb;
 
+    [Header("Audio")]
+    public AudioClip hitSound;
+
     private enum EnemyState { Wander, Chase }
     private EnemyState currentState = EnemyState.Wander;
 
@@ -178,6 +181,11 @@ public class EnemyLauncher : MonoBehaviour
     {
         enemyCurrentHealth -= amount;
         enemyCurrentHealth = Mathf.Clamp(enemyCurrentHealth, 0, enemyHealth);
+
+        if (AudioController.Instance != null)
+        {
+            AudioController.Instance.PlaySFX(hitSound);
+        }
 
         if (flash != null)
             flash.Flash();

@@ -327,8 +327,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: -157
   patrolMaxX: -92
-  hitSound: {fileID: 0}
-  hitSound2: {fileID: 0}
+  hitSound: {fileID: 8300000, guid: 72b44f93a75278548848dd47a49f9586, type: 3}
+  hitSound2: {fileID: 8300000, guid: 72b44f93a75278548848dd47a49f9586, type: 3}
 --- !u!1001 &13192658
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -569,7 +569,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: GameScripts::HPPickup
   healPercent: 100
-  pickupSound: {fileID: 0}
+  pickupSound: {fileID: 8300000, guid: 53259ae8fc6522b45942a17bca825731, type: 3}
 --- !u!212 &33287631
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -206312,6 +206312,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7836266278710985998, guid: a9e08c7bb7d06ad43896b7c5bbbb35fa, type: 3}
+      propertyPath: pickupcheese
+      value: 
+      objectReference: {fileID: 8300000, guid: 3236fdebabb8e864e81729a078d90fd2, type: 3}
     - target: {fileID: 203399843156028958, guid: a9e08c7bb7d06ad43896b7c5bbbb35fa, type: 3}
       propertyPath: m_LocalPosition.x
       value: -80.8517
@@ -206479,6 +206483,8 @@ MonoBehaviour:
   attackCooldown: 3
   patrolMinX: -116
   patrolMaxX: -110
+  slapSound: {fileID: 8300000, guid: f2f4634045a88cb4f9129751a8668f07, type: 3}
+  hitSound: {fileID: 8300000, guid: b52bc8da474f49e47b01240bf16798cf, type: 3}
 --- !u!1 &110881814 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2253911629886400664, guid: 76928ad62d86f43439474d33946dcef7, type: 3}
@@ -206561,7 +206567,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::EnvironmentHazard
   damageAmount: 25
   damageInterval: 1.5
-  hazardSound: {fileID: 0}
+  hazardSound: {fileID: 8300000, guid: 3fc39290fbfaef14fb12597eeb6da9fa, type: 3}
 --- !u!1 &112899610
 GameObject:
   m_ObjectHideFlags: 0
@@ -207447,8 +207453,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: -157
   patrolMaxX: -92
-  hitSound: {fileID: 0}
-  hitSound2: {fileID: 0}
+  hitSound: {fileID: 8300000, guid: 72b44f93a75278548848dd47a49f9586, type: 3}
+  hitSound2: {fileID: 8300000, guid: 72b44f93a75278548848dd47a49f9586, type: 3}
 --- !u!1 &198103901
 GameObject:
   m_ObjectHideFlags: 0
@@ -207838,7 +207844,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::EnvironmentHazard
   damageAmount: 25
   damageInterval: 1.5
-  hazardSound: {fileID: 0}
+  hazardSound: {fileID: 8300000, guid: 3fc39290fbfaef14fb12597eeb6da9fa, type: 3}
 --- !u!50 &230473391
 Rigidbody2D:
   serializedVersion: 5
@@ -208271,6 +208277,8 @@ MonoBehaviour:
   attackCooldown: 3
   patrolMinX: -92
   patrolMaxX: -87
+  slapSound: {fileID: 8300000, guid: f2f4634045a88cb4f9129751a8668f07, type: 3}
+  hitSound: {fileID: 8300000, guid: b52bc8da474f49e47b01240bf16798cf, type: 3}
 --- !u!114 &281535873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248053,7 +248061,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::EnvironmentHazard
   damageAmount: 25
   damageInterval: 1.5
-  hazardSound: {fileID: 0}
+  hazardSound: {fileID: 8300000, guid: 3fc39290fbfaef14fb12597eeb6da9fa, type: 3}
 --- !u!50 &418992229
 Rigidbody2D:
   serializedVersion: 5
@@ -248335,8 +248343,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: -218
   patrolMaxX: -165
-  hitSound: {fileID: 0}
-  hitSound2: {fileID: 0}
+  hitSound: {fileID: 8300000, guid: 72b44f93a75278548848dd47a49f9586, type: 3}
+  hitSound2: {fileID: 8300000, guid: 72b44f93a75278548848dd47a49f9586, type: 3}
 --- !u!1001 &423798126
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -248345,6 +248353,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7836266278710985998, guid: a9e08c7bb7d06ad43896b7c5bbbb35fa, type: 3}
+      propertyPath: pickupcheese
+      value: 
+      objectReference: {fileID: 8300000, guid: 3236fdebabb8e864e81729a078d90fd2, type: 3}
     - target: {fileID: 203399843156028958, guid: a9e08c7bb7d06ad43896b7c5bbbb35fa, type: 3}
       propertyPath: m_LocalPosition.x
       value: -246.10918
@@ -248703,8 +248715,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: -157
   patrolMaxX: -92
-  hitSound: {fileID: 0}
-  hitSound2: {fileID: 0}
+  hitSound: {fileID: 8300000, guid: 72b44f93a75278548848dd47a49f9586, type: 3}
+  hitSound2: {fileID: 8300000, guid: 72b44f93a75278548848dd47a49f9586, type: 3}
 --- !u!1 &499284242 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2253911629886400664, guid: 24dab801b2e7f6042bc3c439154dd267, type: 3}
@@ -249175,6 +249187,7 @@ MonoBehaviour:
   launchCooldown: 0.4
   jumpForce: 10
   jumpInterval: 3
+  hitSound: {fileID: 8300000, guid: 503709f74ee6d4a46af1e143e60a13f0, type: 3}
 --- !u!1001 &520936838
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -249371,7 +249384,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::EnvironmentHazard
   damageAmount: 25
   damageInterval: 1.5
-  hazardSound: {fileID: 0}
+  hazardSound: {fileID: 8300000, guid: 3fc39290fbfaef14fb12597eeb6da9fa, type: 3}
 --- !u!50 &547534068
 Rigidbody2D:
   serializedVersion: 5
@@ -249886,6 +249899,7 @@ MonoBehaviour:
   launchCooldown: 0.4
   jumpForce: 10
   jumpInterval: 4
+  hitSound: {fileID: 8300000, guid: 503709f74ee6d4a46af1e143e60a13f0, type: 3}
 --- !u!114 &631045764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249992,7 +250006,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::EnvironmentHazard
   damageAmount: 25
   damageInterval: 1.5
-  hazardSound: {fileID: 0}
+  hazardSound: {fileID: 8300000, guid: 3fc39290fbfaef14fb12597eeb6da9fa, type: 3}
 --- !u!50 &646382448
 Rigidbody2D:
   serializedVersion: 5
@@ -251376,8 +251390,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: -218
   patrolMaxX: -165
-  hitSound: {fileID: 0}
-  hitSound2: {fileID: 0}
+  hitSound: {fileID: 8300000, guid: 72b44f93a75278548848dd47a49f9586, type: 3}
+  hitSound2: {fileID: 8300000, guid: 72b44f93a75278548848dd47a49f9586, type: 3}
 --- !u!1 &780835559 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2253911629886400664, guid: c2b2514320dd05c4c9158d6d30afaec8, type: 3}
@@ -251974,8 +251988,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: -218
   patrolMaxX: -165
-  hitSound: {fileID: 0}
-  hitSound2: {fileID: 0}
+  hitSound: {fileID: 8300000, guid: 72b44f93a75278548848dd47a49f9586, type: 3}
+  hitSound2: {fileID: 8300000, guid: 72b44f93a75278548848dd47a49f9586, type: 3}
 --- !u!1 &858733677 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2253911629886400664, guid: c2b2514320dd05c4c9158d6d30afaec8, type: 3}
@@ -252522,7 +252536,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::EnvironmentHazard
   damageAmount: 25
   damageInterval: 1.5
-  hazardSound: {fileID: 0}
+  hazardSound: {fileID: 8300000, guid: 3fc39290fbfaef14fb12597eeb6da9fa, type: 3}
 --- !u!50 &948739790
 Rigidbody2D:
   serializedVersion: 5
@@ -253481,6 +253495,53 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 665040741}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: c2b2514320dd05c4c9158d6d30afaec8, type: 3}
+--- !u!1 &1010153754
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1010153755}
+  - component: {fileID: 1010153756}
+  m_Layer: 0
+  m_Name: Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &1010153755
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010153754}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 38.299995, y: 75.299995, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2088985720}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1010153756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010153754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bd4c2ab254dc2b44aec5466ed0f1b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: GameScripts::AudioController
+  sfxSource: {fileID: 2088985719}
+  musicSource: {fileID: 2088985719}
+  jumpSoundDelay: 0.2
 --- !u!1001 &1018083093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -253630,6 +253691,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4787175349799201049, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e1c1dc57e3f4f9f438b6ac3d069d3d89, type: 3}
     - target: {fileID: 203399843156028958, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -93.39421
@@ -253902,7 +253967,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::EnvironmentHazard
   damageAmount: 25
   damageInterval: 1.5
-  hazardSound: {fileID: 0}
+  hazardSound: {fileID: 8300000, guid: 3fc39290fbfaef14fb12597eeb6da9fa, type: 3}
 --- !u!1001 &1064333185
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -255094,7 +255159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::EnvironmentHazard
   damageAmount: 25
   damageInterval: 1.5
-  hazardSound: {fileID: 0}
+  hazardSound: {fileID: 8300000, guid: 3fc39290fbfaef14fb12597eeb6da9fa, type: 3}
 --- !u!50 &1166064130
 Rigidbody2D:
   serializedVersion: 5
@@ -256310,6 +256375,8 @@ MonoBehaviour:
   attackCooldown: 3
   patrolMinX: -92
   patrolMaxX: -87
+  slapSound: {fileID: 8300000, guid: f2f4634045a88cb4f9129751a8668f07, type: 3}
+  hitSound: {fileID: 8300000, guid: b52bc8da474f49e47b01240bf16798cf, type: 3}
 --- !u!114 &1283602075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258202,6 +258269,7 @@ MonoBehaviour:
   launchCooldown: 0.4
   jumpForce: 10
   jumpInterval: 3
+  hitSound: {fileID: 8300000, guid: 503709f74ee6d4a46af1e143e60a13f0, type: 3}
 --- !u!114 &1485140750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258741,7 +258809,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::EnvironmentHazard
   damageAmount: 25
   damageInterval: 1.5
-  hazardSound: {fileID: 0}
+  hazardSound: {fileID: 8300000, guid: 3fc39290fbfaef14fb12597eeb6da9fa, type: 3}
 --- !u!50 &1535270319
 Rigidbody2D:
   serializedVersion: 5
@@ -258907,7 +258975,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::JumpPad
   bounce: 20
   cooldown: 0.4
-  bounceSound: {fileID: 0}
+  bounceSound: {fileID: 8300000, guid: 262273cbac955354191f913d3ab74921, type: 3}
 --- !u!1 &1542707996
 GameObject:
   m_ObjectHideFlags: 0
@@ -258986,7 +259054,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: GameScripts::HPPickup
   healPercent: 100
-  pickupSound: {fileID: 0}
+  pickupSound: {fileID: 8300000, guid: 53259ae8fc6522b45942a17bca825731, type: 3}
 --- !u!212 &1542707999
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -259631,7 +259699,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::EnvironmentHazard
   damageAmount: 25
   damageInterval: 1.5
-  hazardSound: {fileID: 0}
+  hazardSound: {fileID: 8300000, guid: 3fc39290fbfaef14fb12597eeb6da9fa, type: 3}
 --- !u!1001 &1621460597
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -260075,6 +260143,8 @@ MonoBehaviour:
   stingAnim: Sting
   walkAnim: Walk
   idleAnim: Idle
+  jumpSound: {fileID: 8300000, guid: 2929138be4d58d34c9bfb5ce0cd6d92f, type: 3}
+  stingSound: {fileID: 8300000, guid: e1e121143fce28d4990927a24a26298b, type: 3}
   Logic: {fileID: 0}
 --- !u!50 &1666281051
 Rigidbody2D:
@@ -260692,6 +260762,7 @@ MonoBehaviour:
   launchCooldown: 0.4
   jumpForce: 10
   jumpInterval: 4
+  hitSound: {fileID: 8300000, guid: 503709f74ee6d4a46af1e143e60a13f0, type: 3}
 --- !u!1001 &1757999404
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -260879,6 +260950,7 @@ MonoBehaviour:
   launchCooldown: 0.4
   jumpForce: 10
   jumpInterval: 5
+  hitSound: {fileID: 8300000, guid: 503709f74ee6d4a46af1e143e60a13f0, type: 3}
 --- !u!1001 &1759332718
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -260887,6 +260959,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4787175349799201049, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e1c1dc57e3f4f9f438b6ac3d069d3d89, type: 3}
     - target: {fileID: 203399843156028958, guid: a87d4da4339daa64ea28e19be88c28fb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 96.64949
@@ -262410,6 +262486,8 @@ MonoBehaviour:
   attackCooldown: 3
   patrolMinX: -116
   patrolMaxX: -110
+  slapSound: {fileID: 8300000, guid: f2f4634045a88cb4f9129751a8668f07, type: 3}
+  hitSound: {fileID: 8300000, guid: b52bc8da474f49e47b01240bf16798cf, type: 3}
 --- !u!114 &1880093622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262432,6 +262510,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7836266278710985998, guid: a9e08c7bb7d06ad43896b7c5bbbb35fa, type: 3}
+      propertyPath: pickupcheese
+      value: 
+      objectReference: {fileID: 8300000, guid: 3236fdebabb8e864e81729a078d90fd2, type: 3}
     - target: {fileID: 203399843156028958, guid: a9e08c7bb7d06ad43896b7c5bbbb35fa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 99.15639
@@ -262780,7 +262862,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: GameScripts::HPPickup
   healPercent: 100
-  pickupSound: {fileID: 0}
+  pickupSound: {fileID: 8300000, guid: 53259ae8fc6522b45942a17bca825731, type: 3}
 --- !u!212 &1915887521
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -263041,6 +263123,7 @@ MonoBehaviour:
   launchCooldown: 0.4
   jumpForce: 10
   jumpInterval: 4
+  hitSound: {fileID: 8300000, guid: 503709f74ee6d4a46af1e143e60a13f0, type: 3}
 --- !u!1 &1927265498
 GameObject:
   m_ObjectHideFlags: 0
@@ -263256,6 +263339,8 @@ MonoBehaviour:
   attackCooldown: 3
   patrolMinX: -116
   patrolMaxX: -110
+  slapSound: {fileID: 8300000, guid: f2f4634045a88cb4f9129751a8668f07, type: 3}
+  hitSound: {fileID: 8300000, guid: b52bc8da474f49e47b01240bf16798cf, type: 3}
 --- !u!114 &1936347622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263484,7 +263569,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::EnvironmentHazard
   damageAmount: 25
   damageInterval: 1.5
-  hazardSound: {fileID: 0}
+  hazardSound: {fileID: 8300000, guid: 3fc39290fbfaef14fb12597eeb6da9fa, type: 3}
 --- !u!4 &1988357443 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7878350319992209165, guid: 9e580a689fc7c624fb7de95c2fc331d9, type: 3}
@@ -263793,11 +263878,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2756179398824030747, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -80.85
+      value: -81.5
       objectReference: {fileID: 0}
     - target: {fileID: 2756179398824030747, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -42.38
+      value: -41.7
       objectReference: {fileID: 0}
     - target: {fileID: 2756179398824030747, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -263871,6 +263956,10 @@ PrefabInstance:
       propertyPath: can_win
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6654558692795548727, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
+      propertyPath: dashSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 70b7c9ba9d730f642ab94bd3078850fa, type: 3}
     - target: {fileID: 8175728153579951606, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -28
@@ -264236,6 +264325,136 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7878350319992209165, guid: 9e580a689fc7c624fb7de95c2fc331d9, type: 3}
   m_PrefabInstance: {fileID: 968361844}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2088985718
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2088985720}
+  - component: {fileID: 2088985719}
+  m_Layer: 0
+  m_Name: Audio Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &2088985719
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088985718}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &2088985720
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088985718}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 123.6, y: 14.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1010153755}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2090451172
 GameObject:
   m_ObjectHideFlags: 0
@@ -264765,3 +264984,4 @@ SceneRoots:
   - {fileID: 423798126}
   - {fileID: 84930921}
   - {fileID: 1893398591}
+  - {fileID: 2088985720}

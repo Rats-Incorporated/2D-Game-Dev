@@ -56,6 +56,10 @@ public class BearBoss : MonoBehaviour
     public Material bossHealthBarMaterial;
     public DesertEndTriggerCheese HoneyTrigger;
 
+    [Header("Audio")]
+    public AudioClip jumpSound;
+    public AudioClip pawSpawnSound;
+
 
     // State machine
     private enum BossState { Idle, Moving, Lunging, SwipingPaw, Cooldown, BackJump }
@@ -274,6 +278,17 @@ public class BearBoss : MonoBehaviour
         state = BossState.Lunging;
         lungeDirectionX = Mathf.Sign(player.position.x - transform.position.x);
         lungeHitRegistered = false;
+
+
+        if (AudioController.Instance != null)
+        {
+            AudioController.Instance.PlaySFX(jumpSound);
+        }
+
+        
+
+
+
         rb.linearVelocity = new Vector2(lungeDirectionX * lungeHorizontalSpeed, lungeJumpForce);
     }
 
@@ -359,6 +374,10 @@ public class BearBoss : MonoBehaviour
         if (swipeHitbox != null)
             swipeHitbox.gameObject.SetActive(true);
 
+        if (AudioController.Instance != null)
+        {
+            AudioController.Instance.PlaySFX(pawSpawnSound);
+        }
 
     }
 
