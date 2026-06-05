@@ -27,14 +27,14 @@ public class LogicScript : MonoBehaviour
     void Start()
     {
         curTime = Time.time;
-        pickedUpCollectables = 3;
+        pickedUpCollectables = 0;
         totalCollectables = FindObjectsOfType<CheesePickup>().Length;
 
 
     }
     void Awake()
     {
-        pickedUpCollectables = 3;
+        pickedUpCollectables = 0;
     }
 
     public void TempMessage(string msg, float dur = 2f)
