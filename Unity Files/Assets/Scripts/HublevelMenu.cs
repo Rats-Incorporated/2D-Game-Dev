@@ -41,7 +41,7 @@ public class HublevelMenu : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Return) && playerInExitZone)
+        if (Input.GetKeyDown(KeyCode.Return) || (Input.GetKeyDown(KeyCode.Joystick1Button7)) && playerInExitZone)
         {
             canvasGameObject.SetActive(!canvasGameObject.activeSelf);
             if (Paused == false)
