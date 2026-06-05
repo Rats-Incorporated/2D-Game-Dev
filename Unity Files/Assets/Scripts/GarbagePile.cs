@@ -26,7 +26,7 @@ public class garbage_pile : MonoBehaviour
 
     public BossUI BossUI;
 
-   
+
     public AudioClip eatingSound;
 
     private bool eatingSoundPlayed = false;

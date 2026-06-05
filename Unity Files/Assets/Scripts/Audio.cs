@@ -51,9 +51,9 @@ public class AudioController : MonoBehaviour
         }
     }
 
-    
+
     // SFX (generic)
-    
+
     public void PlaySFX(AudioClip clip, float volume = 1f)
     {
         if (clip == null) return;
@@ -61,9 +61,9 @@ public class AudioController : MonoBehaviour
         sfxSource.PlayOneShot(clip, volume);
     }
 
-    
+
     // JUMP SFX (anti-spam)
-    
+
     public void PlayJumpSFX(AudioClip clip, float volume = 1f)
     {
         if (clip == null) return;
@@ -75,9 +75,9 @@ public class AudioController : MonoBehaviour
         jumpSoundCooldown = jumpSoundDelay;
     }
 
-  
+
     // MUSIC
-   
+
     public void PlayMusic(AudioClip clip, bool loop = true)
     {
         if (clip == null) return;

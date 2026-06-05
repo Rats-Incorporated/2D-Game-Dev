@@ -88,10 +88,10 @@ public class LogicScript : MonoBehaviour
         float totaltime = Time.time - curTime;
 
         string collectablesText = "";
-       // if (totalCollectables > 0)
-       // {
-            collectablesText = $"{pickedUpCollectables}/{totalCollectables}";
-      //  }
+        // if (totalCollectables > 0)
+        // {
+        collectablesText = $"{pickedUpCollectables}/{totalCollectables}";
+        //  }
 
 
         TimeText.text = timeString(totaltime);

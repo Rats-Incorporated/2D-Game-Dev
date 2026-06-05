@@ -223,9 +223,9 @@ public class EnemyDefault : MonoBehaviour
 
             use1HitSound = !use1HitSound;
         }
-    
 
-    Debug.Log("Flash test");
+
+        Debug.Log("Flash test");
         if (flash != null)
             Debug.Log("FLASH");
         flash.Flash();
