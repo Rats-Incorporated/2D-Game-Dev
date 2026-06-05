@@ -89,14 +89,14 @@ public class LogicScript : MonoBehaviour
             PlayerPrefs.Save();
         }
 
-        //if ((Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.LeftCommand))
-        //&& Input.GetKeyDown(KeyCode.Y))
-        //{
-        //    Scene currentScene = SceneManager.GetActiveScene();
+        if ((Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.LeftCommand))
+        && Input.GetKeyDown(KeyCode.Y))
+        {
+            Scene currentScene = SceneManager.GetActiveScene();
 
-        //    float bestrun = PlayerPrefs.GetFloat("BestRun" + currentScene.name);
-        //    Debug.Log(bestrun);
-        //}
+            float bestrun = PlayerPrefs.GetFloat("BestRun" + currentScene.name);
+            Debug.Log(bestrun);
+        }
 
 
     }
