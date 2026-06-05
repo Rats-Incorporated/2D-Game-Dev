@@ -73,6 +73,7 @@ public class LogicScript : MonoBehaviour
             }
         }
 
+        //Reset all high scores. CTRL T
         if ((Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.LeftCommand))
         && Input.GetKeyDown(KeyCode.T))
         {
@@ -81,6 +82,8 @@ public class LogicScript : MonoBehaviour
             PlayerPrefs.SetFloat("BestRun" + "Desert", 99999999999);
             PlayerPrefs.Save();
         }
+
+        //Reset current level high score. CTRL R
         if ((Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.LeftCommand))
         && Input.GetKeyDown(KeyCode.R))
         {
@@ -89,6 +92,8 @@ public class LogicScript : MonoBehaviour
             PlayerPrefs.Save();
         }
 
+
+        //Debug high score. CTRL Y
         if ((Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.LeftCommand))
         && Input.GetKeyDown(KeyCode.Y))
         {
