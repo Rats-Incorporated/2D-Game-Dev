@@ -22,6 +22,8 @@ public class PlayerShuriken : MonoBehaviour
     public int shuriCount = 3;
     public Text shuriCountText;
 
+    public AudioClip ShuriSound;
+
     void Update()
     {
         cooldownTimer += Time.deltaTime;
@@ -55,6 +57,12 @@ public class PlayerShuriken : MonoBehaviour
         // Get player velocity to add to the shuriken
         Vector2 playerVel = playerController.GetPlayerVector();
         shuri.Initialize(direction, new Vector2(playerVel.x, 0)); // only horizontal component
+
+        if (AudioController.Instance != null)
+        {
+            AudioController.Instance.PlaySFX(ShuriSound);
+        }
+
     }
 
     void HandleCooldownUI()

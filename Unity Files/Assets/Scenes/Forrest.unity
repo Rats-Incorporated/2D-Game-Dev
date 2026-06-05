@@ -36264,6 +36264,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.046
       objectReference: {fileID: 0}
+    - target: {fileID: 3545524803519717338, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
+      propertyPath: attackSound
+      value: 
+      objectReference: {fileID: 8300000, guid: efee0f7db9fb34f4199e435db8a5625c, type: 3}
+    - target: {fileID: 3545524803519717338, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
+      propertyPath: flurrySound
+      value: 
+      objectReference: {fileID: 8300000, guid: 75219911672db5541aee0ba70dae1286, type: 3}
     - target: {fileID: 4194694610661830293, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 164.865
@@ -36324,6 +36332,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 9041775981676437943, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
+      propertyPath: ShuriSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a3dba133dafb3044f9e5028fd5bc7746, type: 3}
     - target: {fileID: 9085518074667886538, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
       propertyPath: slide
       value: 1
