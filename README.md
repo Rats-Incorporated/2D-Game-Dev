@@ -1,4 +1,4 @@
-# 2D Platform Video Game
+# Rat Samurai
 
 A 2D platformer developed in Unity. Developed in Unity. OSU CS461-463 Senior Capstone Project.
 
