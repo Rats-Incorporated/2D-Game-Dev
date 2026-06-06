@@ -23,7 +23,23 @@ Roxlynn Beecher – beecheco@oregonstate.edu
 
 # Installation Instructions
 
-## Unity Setup
+## Running the game
+
+1. Go to the latest release page:
+   - GitHub → Releases → Latest
+
+2. Download the build for your platform.
+
+3. Extract the `.zip` file.
+
+4. Open the extracted folder.
+
+5. Run the game:
+   - **Windows:** `RatSamurai.exe`
+   - **Mac:** `RatSamurai.app`
+
+
+## Opening the project in Unity
 
 ### Requirements
 - Unity v.6000.2.8f1
@@ -43,21 +59,6 @@ Roxlynn Beecher – beecheco@oregonstate.edu
 1. File → Build Settings
 2. Select Windows
 3. Click Build
-
-
-## Executable Setup
-
-1. Go to the latest release page:
-   - GitHub → Releases → Latest
-
-2. Download the build for your platform.
-
-3. Extract the `.zip` file.
-
-4. Open the extracted folder.
-
-5. Run:
-   - Rat Samurai.exe
 
 
 # Controls
