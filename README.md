@@ -65,21 +65,22 @@ Roxlynn Beecher – beecheco@oregonstate.edu
 ## Keyboard & Mouse
 - ASD — Move left, down, and right respectively
 - Space — Jump
-- E — Press/Hold to Interact
-- J — Attack with sword swipe
-- N — Attack with sword swing
-- M — Hold to Charge and release flurry rush
-- k — Throw shuriken
+- J — Main Attack with sword swipe
+- M — Hold to Charge and release flurry rush 
+- N — Alt Attack with sword swing
+- K — Throw shuriken
 - Left Shift — Dash
+- E — Press/Hold to Interact
 - Esc — Pause Menu
+- Enter — Board Train
 
 ## Controller
 - Left/Down/Right Gamepad — Move left, down, and right respectively
-- Space — Jump
-- North Button on Action Buttons — Press/Hold to Interact
-- East Button on Action Buttons — Attack with sword swipe
-- North Button on Action Buttons — Attack with sword swing
+- X — Jump
+- Right Trigger — Main attack
 - Right Bumper — Hold to Charge and release flurry rush
-- Right Shoulder — Throw shuriken
-- Left Shoulder — Dash
+- Circle  — Alt Attack with sword swing
+- Square  — Throw shuriken
+- Square — Press/Hold to Interact
+- Left Bumper — Dash
 - Esc — Start Button
