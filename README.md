@@ -1,6 +1,7 @@
 # Rat Samurai
 
-A 2D platformer developed in Unity. Developed in Unity. OSU CS461-463 Senior Capstone Project.
+A 2D platformer game developed in Unity. Developed in Unity. OSU CS461-463 Senior Capstone Project.
+Playable on Windows and Mac.
 
 **Team Members:**  
 Sam Neale – neales@oregonstate.edu  
