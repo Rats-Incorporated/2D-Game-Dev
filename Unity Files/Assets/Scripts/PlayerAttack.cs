@@ -199,7 +199,7 @@ public class PlayerAttack : MonoBehaviour
         else if (upwardAttack)
         {
             // spawn BELOW player
-            spawnPos = transform.position + Vector3.up * attackDistance*0.45f;
+            spawnPos = transform.position + Vector3.up * attackDistance*0.5f;
         }
         else
         {
