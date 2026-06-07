@@ -196,6 +196,10 @@ public class LogicScript : MonoBehaviour
         Time.timeScale = 1.0f;
         SceneManager.LoadScene("TItle");
     }
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 
     public void LoadNext()
     {
