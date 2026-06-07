@@ -234,6 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0baa45ad0a293a41b74d945d6a8cc10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: GameScripts::CheesePickup
+  pickupcheese: {fileID: 0}
 --- !u!114 &37611705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1705,7 +1706,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.017241359, y: 0.017241359, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -208927,6 +208928,7 @@ MonoBehaviour:
   launchCooldown: 0.4
   jumpForce: 10
   jumpInterval: 4
+  hitSound: {fileID: 0}
 --- !u!1 &58820185
 GameObject:
   m_ObjectHideFlags: 0
@@ -209005,6 +209007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0baa45ad0a293a41b74d945d6a8cc10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: GameScripts::CheesePickup
+  pickupcheese: {fileID: 0}
 --- !u!114 &58820188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209123,7 +209126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -209131,8 +209134,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 19b9bfe81b147ba4f91b639e7c1b07d9, type: 3}
-    m_FontSize: 20
+    m_Font: {fileID: 12800000, guid: 100272f4bcbec764f8835e433b85c75e, type: 3}
+    m_FontSize: 25
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 2
@@ -209161,15 +209164,15 @@ RectTransform:
   m_GameObject: {fileID: 80767683}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.1396, y: 4.1396, z: 4.1396}
+  m_LocalScale: {x: 1, y: 1, z: 4.1396}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1049860730}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -383, y: -124}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -241, y: -67}
+  m_SizeDelta: {x: 315, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &122481495
 PrefabInstance:
@@ -209385,6 +209388,8 @@ MonoBehaviour:
   attackCooldown: 3
   patrolMinX: -92
   patrolMaxX: -87
+  slapSound: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!1001 &127861848
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -210248,6 +210253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::EnvironmentHazard
   damageAmount: 25
   damageInterval: 1.5
+  hazardSound: {fileID: 0}
 --- !u!70 &187830756
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -210440,6 +210446,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::EnvironmentHazard
   damageAmount: 25
   damageInterval: 1.5
+  hazardSound: {fileID: 0}
 --- !u!50 &225636408
 Rigidbody2D:
   serializedVersion: 5
@@ -210594,7 +210601,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.017241359, y: 0.017241359, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -249843,6 +249850,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: -218
   patrolMaxX: -165
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!1001 &286353857
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -250253,6 +250262,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: -157
   patrolMaxX: -92
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!1 &408568495
 GameObject:
   m_ObjectHideFlags: 0
@@ -251131,6 +251142,8 @@ MonoBehaviour:
   attackCooldown: 3
   patrolMinX: -116
   patrolMaxX: -110
+  slapSound: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!1001 &503122983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -251506,6 +251519,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::EnvironmentHazard
   damageAmount: 25
   damageInterval: 1.5
+  hazardSound: {fileID: 0}
 --- !u!70 &527681809
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -251667,6 +251681,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::EnvironmentHazard
   damageAmount: 25
   damageInterval: 1.5
+  hazardSound: {fileID: 0}
 --- !u!70 &534010516
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -252606,6 +252621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: GameScripts::HPPickup
   healPercent: 100
+  pickupSound: {fileID: 0}
 --- !u!212 &633218223
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -254151,6 +254167,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: -157
   patrolMaxX: -92
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!1001 &878623157
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -254321,6 +254339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::EnvironmentHazard
   damageAmount: 25
   damageInterval: 1.5
+  hazardSound: {fileID: 0}
 --- !u!50 &880019357
 Rigidbody2D:
   serializedVersion: 5
@@ -255012,6 +255031,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: -218
   patrolMaxX: -165
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!1 &958811572
 GameObject:
   m_ObjectHideFlags: 0
@@ -255566,6 +255587,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::EnvironmentHazard
   damageAmount: 25
   damageInterval: 1.5
+  hazardSound: {fileID: 0}
 --- !u!1001 &1046336397
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -256460,6 +256482,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::EnvironmentHazard
   damageAmount: 25
   damageInterval: 1.5
+  hazardSound: {fileID: 0}
 --- !u!1001 &1111739199
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -257044,6 +257067,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: GameScripts::HPPickup
   healPercent: 100
+  pickupSound: {fileID: 0}
 --- !u!212 &1169363364
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -257568,6 +257592,8 @@ MonoBehaviour:
   attackCooldown: 3
   patrolMinX: -116
   patrolMaxX: -110
+  slapSound: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!1001 &1231292389
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -257778,6 +257804,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: GameScripts::HPPickup
   healPercent: 100
+  pickupSound: {fileID: 0}
 --- !u!212 &1234282727
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -258017,6 +258044,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::EnvironmentHazard
   damageAmount: 25
   damageInterval: 1.5
+  hazardSound: {fileID: 0}
 --- !u!50 &1251263641
 Rigidbody2D:
   serializedVersion: 5
@@ -259398,6 +259426,7 @@ MonoBehaviour:
   launchCooldown: 0.4
   jumpForce: 10
   jumpInterval: 3
+  hitSound: {fileID: 0}
 --- !u!1001 &1364877787
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -259707,6 +259736,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::EnvironmentHazard
   damageAmount: 25
   damageInterval: 1.5
+  hazardSound: {fileID: 0}
 --- !u!50 &1389427805
 Rigidbody2D:
   serializedVersion: 5
@@ -260400,6 +260430,8 @@ MonoBehaviour:
   attackCooldown: 3
   patrolMinX: -92
   patrolMaxX: -87
+  slapSound: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!1001 &1441611138
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -260678,6 +260710,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0baa45ad0a293a41b74d945d6a8cc10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: GameScripts::CheesePickup
+  pickupcheese: {fileID: 0}
 --- !u!114 &1458714396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261301,6 +261334,7 @@ MonoBehaviour:
   launchCooldown: 0.4
   jumpForce: 10
   jumpInterval: 4
+  hitSound: {fileID: 0}
 --- !u!1001 &1514379403
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -261398,6 +261432,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::EnvironmentHazard
   damageAmount: 25
   damageInterval: 1.5
+  hazardSound: {fileID: 0}
 --- !u!70 &1514379406
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -261651,6 +261686,9 @@ MonoBehaviour:
     m_Bits: 8
   patrolMinX: -1000
   patrolMaxX: 10000
+  bossHealthBarMaterial: {fileID: 0}
+  BossUI: {fileID: 0}
+  EndTrigger: {fileID: 0}
   launchForceX: 25
   launchForceY: 18
   launchCooldown: 0.5
@@ -261665,6 +261703,9 @@ MonoBehaviour:
   stingAnim: Sting
   walkAnim: Walk
   idleAnim: Idle
+  jumpSound: {fileID: 0}
+  stingSound: {fileID: 0}
+  Logic: {fileID: 0}
 --- !u!50 &1525992584
 Rigidbody2D:
   serializedVersion: 5
@@ -262127,6 +262168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::EnvironmentHazard
   damageAmount: 25
   damageInterval: 1.5
+  hazardSound: {fileID: 0}
 --- !u!70 &1552721538
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -262288,6 +262330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::EnvironmentHazard
   damageAmount: 25
   damageInterval: 1.5
+  hazardSound: {fileID: 0}
 --- !u!70 &1581060912
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -262560,6 +262603,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: -218
   patrolMaxX: -165
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!1001 &1588693209
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -262717,7 +262762,7 @@ Transform:
   m_GameObject: {fileID: 1596022266}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 108.47, y: -29.37, z: 0}
+  m_LocalPosition: {x: 112.52, y: -29.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -263157,6 +263202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::EnvironmentHazard
   damageAmount: 25
   damageInterval: 1.5
+  hazardSound: {fileID: 0}
 --- !u!50 &1675329730
 Rigidbody2D:
   serializedVersion: 5
@@ -263327,6 +263373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::EnvironmentHazard
   damageAmount: 25
   damageInterval: 1.5
+  hazardSound: {fileID: 0}
 --- !u!50 &1729391353
 Rigidbody2D:
   serializedVersion: 5
@@ -263774,6 +263821,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::JumpPad
   bounce: 20
   cooldown: 0.4
+  bounceSound: {fileID: 0}
 --- !u!1001 &1783554024
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -264314,6 +264362,8 @@ MonoBehaviour:
     m_Bits: 0
   patrolMinX: -157
   patrolMaxX: -92
+  hitSound: {fileID: 0}
+  hitSound2: {fileID: 0}
 --- !u!1 &1822849106
 GameObject:
   m_ObjectHideFlags: 0
@@ -264579,6 +264629,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::EnvironmentHazard
   damageAmount: 25
   damageInterval: 1.5
+  hazardSound: {fileID: 0}
 --- !u!50 &1837413538
 Rigidbody2D:
   serializedVersion: 5
@@ -265057,6 +265108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::EnvironmentHazard
   damageAmount: 25
   damageInterval: 1.5
+  hazardSound: {fileID: 0}
 --- !u!1001 &1932906233
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -265244,6 +265296,7 @@ MonoBehaviour:
   launchCooldown: 0.4
   jumpForce: 10
   jumpInterval: 5
+  hitSound: {fileID: 0}
 --- !u!1 &1951901548
 GameObject:
   m_ObjectHideFlags: 0
@@ -265513,6 +265566,8 @@ MonoBehaviour:
   attackCooldown: 3
   patrolMinX: -116
   patrolMaxX: -110
+  slapSound: {fileID: 0}
+  hitSound: {fileID: 0}
 --- !u!1001 &1961756376
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -265610,6 +265665,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::EnvironmentHazard
   damageAmount: 25
   damageInterval: 1.5
+  hazardSound: {fileID: 0}
 --- !u!70 &1961756379
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -266034,6 +266090,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::EnvironmentHazard
   damageAmount: 25
   damageInterval: 1.5
+  hazardSound: {fileID: 0}
 --- !u!1001 &1997068023
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -266221,6 +266278,7 @@ MonoBehaviour:
   launchCooldown: 0.4
   jumpForce: 10
   jumpInterval: 4
+  hitSound: {fileID: 0}
 --- !u!1 &2011868598
 GameObject:
   m_ObjectHideFlags: 0
@@ -266363,6 +266421,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: GameScripts::EnvironmentHazard
   damageAmount: 25
   damageInterval: 1.5
+  hazardSound: {fileID: 0}
 --- !u!70 &2023506220
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -266935,6 +266994,7 @@ MonoBehaviour:
   launchCooldown: 0.4
   jumpForce: 10
   jumpInterval: 3
+  hitSound: {fileID: 0}
 --- !u!1001 &2122969263
 PrefabInstance:
   m_ObjectHideFlags: 0
