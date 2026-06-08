@@ -10464,7 +10464,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press R1 to throw a shuriken at me!
+  m_text: Press SQUARE to throw a shuriken at me!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7b02c425ec4413e4eb5ab1a48f89908c, type: 2}
   m_sharedMaterial: {fileID: -2321010782806834449, guid: 7b02c425ec4413e4eb5ab1a48f89908c, type: 2}
@@ -10535,7 +10535,7 @@ MonoBehaviour:
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_renderer: {fileID: 888304464}
   m_maskType: 0
 --- !u!23 &888304464
@@ -14451,7 +14451,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hold \u25B2 to charge a flurry and attack me!
+  m_text: Hold R1 to charge a flurry and attack me!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7b02c425ec4413e4eb5ab1a48f89908c, type: 2}
   m_sharedMaterial: {fileID: -2321010782806834449, guid: 7b02c425ec4413e4eb5ab1a48f89908c, type: 2}

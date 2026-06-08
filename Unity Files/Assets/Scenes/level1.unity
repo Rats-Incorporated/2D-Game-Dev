@@ -53958,7 +53958,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 949b2cef15cdc0b478f7ce4092d317d5, type: 3}
     - target: {fileID: 3867453847244762536, guid: 3fd04bca4f6918f49a7ac85f46a3030c, type: 3}
       propertyPath: patrolMaxX
-      value: 1000
+      value: 220
       objectReference: {fileID: 0}
     - target: {fileID: 3867453847244762536, guid: 3fd04bca4f6918f49a7ac85f46a3030c, type: 3}
       propertyPath: patrolMinX
@@ -75053,7 +75053,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 949b2cef15cdc0b478f7ce4092d317d5, type: 3}
     - target: {fileID: 3867453847244762536, guid: 3fd04bca4f6918f49a7ac85f46a3030c, type: 3}
       propertyPath: patrolMaxX
-      value: 1000
+      value: 220
       objectReference: {fileID: 0}
     - target: {fileID: 3867453847244762536, guid: 3fd04bca4f6918f49a7ac85f46a3030c, type: 3}
       propertyPath: patrolMinX
@@ -76711,7 +76711,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 949b2cef15cdc0b478f7ce4092d317d5, type: 3}
     - target: {fileID: 3867453847244762536, guid: 3fd04bca4f6918f49a7ac85f46a3030c, type: 3}
       propertyPath: patrolMaxX
-      value: 1000
+      value: 220
       objectReference: {fileID: 0}
     - target: {fileID: 3867453847244762536, guid: 3fd04bca4f6918f49a7ac85f46a3030c, type: 3}
       propertyPath: patrolMinX
@@ -139560,7 +139560,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 949b2cef15cdc0b478f7ce4092d317d5, type: 3}
     - target: {fileID: 3867453847244762536, guid: 3fd04bca4f6918f49a7ac85f46a3030c, type: 3}
       propertyPath: patrolMaxX
-      value: 1000
+      value: 220
       objectReference: {fileID: 0}
     - target: {fileID: 3867453847244762536, guid: 3fd04bca4f6918f49a7ac85f46a3030c, type: 3}
       propertyPath: patrolMinX
@@ -171533,7 +171533,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 949b2cef15cdc0b478f7ce4092d317d5, type: 3}
     - target: {fileID: 3867453847244762536, guid: 3fd04bca4f6918f49a7ac85f46a3030c, type: 3}
       propertyPath: patrolMaxX
-      value: 1000
+      value: 220
       objectReference: {fileID: 0}
     - target: {fileID: 3867453847244762536, guid: 3fd04bca4f6918f49a7ac85f46a3030c, type: 3}
       propertyPath: patrolMinX
@@ -171941,7 +171941,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 949b2cef15cdc0b478f7ce4092d317d5, type: 3}
     - target: {fileID: 3867453847244762536, guid: 3fd04bca4f6918f49a7ac85f46a3030c, type: 3}
       propertyPath: patrolMaxX
-      value: 1000
+      value: 220
       objectReference: {fileID: 0}
     - target: {fileID: 3867453847244762536, guid: 3fd04bca4f6918f49a7ac85f46a3030c, type: 3}
       propertyPath: patrolMinX

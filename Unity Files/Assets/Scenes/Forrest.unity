@@ -26574,7 +26574,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.62, y: 0.00000015274}
-  m_SizeDelta: {x: 13.938, y: 1.205}
+  m_SizeDelta: {x: 16, y: 1.205}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &618476530
 MonoBehaviour:
@@ -26596,7 +26596,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press 'E' to take back the honey
+  m_text: Press SQUARE to take the honey
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -36406,11 +36406,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2756179398824030747, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -254.34
+      value: -254.8
       objectReference: {fileID: 0}
     - target: {fileID: 2756179398824030747, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -44.72
+      value: -44.43
       objectReference: {fileID: 0}
     - target: {fileID: 3332937391269155187, guid: 73a9ed35e31d3574fbeb4db98f30fb1e, type: 3}
       propertyPath: BearBoss
