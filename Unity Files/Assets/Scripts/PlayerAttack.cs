@@ -84,6 +84,17 @@ public class PlayerAttack : MonoBehaviour
                 }
                 anim.SetTrigger("PlayerAttackDown");
             }
+            // UPWARDS ATTACK
+            else if (Input.GetAxisRaw("UpDown") > 0.5f)
+            {
+                SpawnAttack(facingDirection, false, true);
+                attackTimer = 0f;
+                if (AudioController.Instance != null)
+                {
+                    AudioController.Instance.PlaySFX(attackSound);
+                }
+                anim.SetTrigger("PlayerAttackUp");
+            }
             //NORMAL ATTACK
             else
             {
@@ -176,7 +187,7 @@ public class PlayerAttack : MonoBehaviour
         UpdateCooldownUI(flurryOverlay, flurryText, flurryTimer);
     }
 
-    void SpawnAttack(Vector2 facingDirection, bool downwardAttack = false)
+    void SpawnAttack(Vector2 facingDirection, bool downwardAttack = false, bool upwardAttack = false)
     {
         Vector3 spawnPos;
 
@@ -184,6 +195,11 @@ public class PlayerAttack : MonoBehaviour
         {
             // spawn BELOW player
             spawnPos = transform.position + Vector3.down * attackDistance;
+        }
+        else if (upwardAttack)
+        {
+            // spawn BELOW player
+            spawnPos = transform.position + Vector3.up * attackDistance * 0.5f;
         }
         else
         {
